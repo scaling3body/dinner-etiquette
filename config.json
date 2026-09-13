@@ -1,0 +1,66 @@
+{
+  "football": {
+    "enabled": true,
+    "pct_threshold": 1.30,
+    "point_floor": 12,
+    "scoring_settings": {
+      "_comment_offense": "25 yds/pt = 0.04, 10 yds/pt = 0.1. No 'rec' key = standard (non-PPR), matching the table (no Receptions row).",
+      "pass_yd": 0.04,
+      "pass_td": 4,
+      "pass_int": -1,
+      "pass_2pt": 2,
+      "rush_yd": 0.1,
+      "rush_td": 6,
+      "rush_2pt": 2,
+      "rec_yd": 0.1,
+      "rec_td": 6,
+      "rec_2pt": 2,
+      "fum_lost": -2,
+      "fum_rec_td": 6,
+      "st_td": 6,
+
+      "_comment_kickers": "Field goals made, by distance bucket. Sleeper does not break out missed FGs by distance for scoring purposes.",
+      "fgm_0_19": 3,
+      "fgm_20_29": 3,
+      "fgm_30_39": 3,
+      "fgm_40_49": 4,
+      "fgm_50p": 5,
+      "xpm": 1,
+
+      "_comment_dst": "Defense/Special Teams. pts_allow_* are pre-bucketed flags Sleeper provides (1 if that bracket applies that week, else 0), so they work as plain weights just like everything else.",
+      "sack": 1,
+      "int": 2,
+      "fum_rec": 2,
+      "def_td": 6,
+      "safe": 2,
+      "blk_kick": 2,
+      "pts_allow_0": 10,
+      "pts_allow_1_6": 7,
+      "pts_allow_7_13": 4,
+      "pts_allow_14_20": 1,
+      "pts_allow_21_27": 0,
+      "pts_allow_28_34": -1,
+      "pts_allow_35p": -4
+    }
+  },
+  "basketball": {
+    "enabled": true,
+    "categories": ["pts", "reb", "ast", "stl", "blk", "fg3m", "fgp", "ftp", "to"],
+    "invert_categories": ["to"],
+    "zscore_alert_threshold": 6.0
+  },
+  "notifications": {
+    "method": "telegram",
+    "_comment": "Do NOT put a real bot token here. Set TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID as GitHub repo secrets instead -- see README.md."
+  },
+  "roster_management": {
+    "enabled": false,
+    "_comment": "Set enabled true once Yahoo OAuth is set up (see README.md). Only suggests adds into an already-open bench/IR spot -- never suggests a drop.",
+    "football_league_key": "PUT_YOUR_YAHOO_NFL_LEAGUE_KEY",
+    "football_team_key": "PUT_YOUR_YAHOO_NFL_TEAM_KEY",
+    "basketball_league_key": "PUT_YOUR_YAHOO_NBA_LEAGUE_KEY",
+    "basketball_team_key": "PUT_YOUR_YAHOO_NBA_TEAM_KEY",
+    "suggestion_expiry_minutes": 180
+  },
+  "check_interval_notes": "Actual check frequency is controlled by the GitHub Actions cron schedule, not this file. See .github/workflows/fantasy_alerts.yml"
+}
