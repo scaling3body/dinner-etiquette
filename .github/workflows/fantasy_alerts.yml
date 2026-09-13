@@ -5,7 +5,12 @@ on:
     # Every 10 minutes. GitHub's scheduler is best-effort and can run a few
     # minutes late during busy periods -- that's normal.
     - cron: "*/10 * * * *"
-  workflow_dispatch: {}  # lets you manually trigger a run from the Actions tab to test
+  workflow_dispatch:
+    inputs:
+      send_test:
+        description: 'Send a test Telegram message instead of the real check'
+        type: boolean
+        default: false
 
 permissions:
   contents: write  # needed so the workflow can commit the updated alerted.json
@@ -32,10 +37,18 @@ jobs:
         run: echo "$YAHOO_OAUTH_JSON" > oauth2.json
 
       - name: Run breakout check
+        if: ${{ github.event.inputs.send_test != 'true' }}
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python main.py
+
+      - name: Send test Telegram message
+        if: ${{ github.event.inputs.send_test == 'true' }}
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python test_telegram.py
 
       - name: Persist alert state so we don't re-alert the same breakout
         run: |
