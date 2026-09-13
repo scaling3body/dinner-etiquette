@@ -13,6 +13,8 @@ permissions:
 jobs:
   check:
     runs-on: ubuntu-latest
+    env:
+      YAHOO_OAUTH_JSON: ${{ secrets.YAHOO_OAUTH_JSON }}
     steps:
       - name: Check out repo
         uses: actions/checkout@v4
@@ -26,9 +28,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Write Yahoo OAuth file
-        if: ${{ secrets.YAHOO_OAUTH_JSON != '' }}
-        env:
-          YAHOO_OAUTH_JSON: ${{ secrets.YAHOO_OAUTH_JSON }}
+        if: ${{ env.YAHOO_OAUTH_JSON != '' }}
         run: echo "$YAHOO_OAUTH_JSON" > oauth2.json
 
       - name: Run breakout check
