@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Fantasy Breakout Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body { font-family: -apple-system, Helvetica, Arial, sans-serif; max-width: 640px;
+         margin: 0 auto; padding: 20px; background: #0f1115; color: #e8e8e8; }
+  h1 { font-size: 1.4rem; }
+  h2 { font-size: 1.05rem; margin-top: 2rem; color: #9aa4b2; }
+  .updated { color: #6b7280; font-size: 0.85rem; margin-bottom: 1.5rem; }
+  .card { background: #1a1d24; border-radius: 10px; padding: 12px 16px; margin-bottom: 10px; }
+  .card .msg { white-space: pre-line; }
+  .card .time { color: #6b7280; font-size: 0.8rem; margin-top: 4px; }
+  .pending .code { color: #f4b942; font-weight: 600; }
+  .empty { color: #6b7280; font-style: italic; }
+</style>
+</head>
+<body>
+  <h1>Fantasy Breakout Dashboard</h1>
+  <div class="updated" id="updated">Loading...</div>
+
+  <h2>Pending Add Suggestions</h2>
+  <div id="pending"></div>
+
+  <h2>Recent Breakouts</h2>
+  <div id="alerts"></div>
+
+<script>
+fetch('data.json?_=' + Date.now())
+  .then(r => r.json())
+  .then(data => {
+    document.getElementById('updated').textContent =
+      'Last updated: ' + new Date(data.last_updated).toLocaleString();
+
+    const pendingEl = document.getElementById('pending');
+    if (!data.pending_suggestions.length) {
+      pendingEl.innerHTML = '<div class="empty">None right now.</div>';
+    } else {
+      pendingEl.innerHTML = data.pending_suggestions.map(p => `
+        <div class="card pending">
+          <div class="msg">${p.player_name} (${p.sport.toUpperCase()}) &mdash;
+            reply <span class="code">YES ${p.code}</span> to add</div>
+          <div class="time">Suggested ${new Date(p.created_at).toLocaleString()}</div>
+        </div>
+      `).join('');
+    }
+
+    const alertsEl = document.getElementById('alerts');
+    if (!data.recent_alerts.length) {
+      alertsEl.innerHTML = '<div class="empty">No breakouts yet.</div>';
+    } else {
+      alertsEl.innerHTML = data.recent_alerts.map(a => `
+        <div class="card">
+          <div class="msg">${a.message}</div>
+          <div class="time">${new Date(a.timestamp).toLocaleString()}</div>
+        </div>
+      `).join('');
+    }
+  })
+  .catch(() => {
+    document.getElementById('updated').textContent =
+      'Could not load data.json yet -- it appears after the bot runs at least once.';
+  });
+</script>
+</body>
+</html>
