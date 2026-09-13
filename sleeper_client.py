@@ -38,6 +38,28 @@ def _get(url, params=None):
     return None
 
 
+def _as_player_dict(data):
+    """
+    The unofficial stats/projections endpoints are supposed to return a dict
+    keyed by player_id, but have been observed to sometimes return a list of
+    per-player records instead. Normalize either shape into a
+    {player_id: stat_dict} dict so callers never have to care which one came
+    back.
+    """
+    if data is None:
+        return None
+    if isinstance(data, dict):
+        return data
+    if isinstance(data, list):
+        normalized = {}
+        for entry in data:
+            pid = entry.get("player_id")
+            if pid is not None:
+                normalized[str(pid)] = entry
+        return normalized
+    return data
+
+
 def get_all_players(sport):
     """
     sport: 'nfl' or 'nba'
@@ -60,14 +82,14 @@ def get_nba_state():
 
 def get_nfl_week_projections(season, week, season_type="regular"):
     """Unofficial endpoint. Returns dict keyed by player_id -> projected stat dict."""
-    url = f"{UNOFFICIAL_BASE}/projections/nfl/{season}/{week}"
-    return _get(url, params={"season_type": season_type})
+    url = f"{UNOFFICIAL_BASE}/projections/nfl/{season_type}/{season}/{week}"
+    return _as_player_dict(_get(url))
 
 
 def get_nfl_week_stats(season, week, season_type="regular"):
     """Unofficial endpoint. Returns dict keyed by player_id -> actual stat dict."""
-    url = f"{UNOFFICIAL_BASE}/stats/nfl/{season}/{week}"
-    return _get(url, params={"season_type": season_type})
+    url = f"{UNOFFICIAL_BASE}/stats/nfl/{season_type}/{season}/{week}"
+    return _as_player_dict(_get(url))
 
 
 def get_nba_day_projections(date_str, season, season_type="regular"):
@@ -75,11 +97,11 @@ def get_nba_day_projections(date_str, season, season_type="regular"):
     Unofficial endpoint. date_str format: 'YYYY-MM-DD'.
     Returns dict keyed by player_id -> projected stat dict for that day's games.
     """
-    url = f"{UNOFFICIAL_BASE}/projections/nba/{season}/{date_str}"
-    return _get(url, params={"season_type": season_type})
+    url = f"{UNOFFICIAL_BASE}/projections/nba/{season_type}/{date_str}"
+    return _as_player_dict(_get(url))
 
 
 def get_nba_day_stats(date_str, season, season_type="regular"):
     """Unofficial endpoint. Returns dict keyed by player_id -> actual stat dict for that day."""
-    url = f"{UNOFFICIAL_BASE}/stats/nba/{season}/{date_str}"
-    return _get(url, params={"season_type": season_type})
+    url = f"{UNOFFICIAL_BASE}/stats/nba/{season_type}/{date_str}"
+    return _as_player_dict(_get(url))
