@@ -2,13 +2,14 @@ name: Fantasy Breakout Alerts
 
 on:
   schedule:
-    # Every 10 minutes, but only during hours UTC 16:00-05:59 -- roughly
-    # noon to 1am Eastern (covers both EST and EDT), the outer bound of
-    # when NFL or NBA games are ever actually being played. Combined with
-    # the schedule-aware skip in main.py (see daily_schedule.yml), this
-    # keeps the bot from burning Actions minutes at 4am in July when
-    # nothing's happening.
-    - cron: "*/10 16-23,0-5 * * *"
+    # Every 5 minutes (GitHub Actions' practical floor -- it doesn't reliably
+    # honor anything tighter than 5 min regardless of cron syntax), only
+    # during hours UTC 16:00-05:59 -- roughly noon to 1am Eastern (covers
+    # both EST and EDT), the outer bound of when NFL or NBA games are ever
+    # actually being played. Combined with the schedule-aware skip in
+    # main.py (see daily_schedule.yml), this keeps the bot from burning
+    # Actions minutes at 4am in July when nothing's happening.
+    - cron: "*/5 16-23,0-5 * * *"
   workflow_dispatch:
     inputs:
       send_test:
@@ -18,6 +19,14 @@ on:
 
 permissions:
   contents: write  # needed so the workflow can commit the updated alerted.json
+
+concurrency:
+  # At a 5-minute interval, a slow run (a retried Sleeper URL fallback, a
+  # sluggish Yahoo call) could still be running when the next one triggers.
+  # This makes GitHub queue runs instead of letting them overlap and race
+  # on the same state files / git push.
+  group: fantasy-alerts-check
+  cancel-in-progress: false
 
 jobs:
   check:

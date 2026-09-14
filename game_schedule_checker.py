@@ -16,6 +16,18 @@ config.json and this script will honor it.
 NBA: this one IS a real check, not a heuristic -- Sleeper publishes daily
 projections only for days that have games, so we just ask for today's
 projections and see if anything comes back.
+
+MANUAL RE-CHECK / OVERRIDE: this workflow can also be triggered manually
+from the Actions tab (Daily Game Schedule Check -> Run workflow) at any
+point, not just at 3am. Its "Force NFL active" / "Force NBA active" checkboxes
+bypass the normal detection entirely for that run -- useful if you know
+something changed after the 3am check ran (a weather-postponed game moved to
+an unexpected day, for instance) and want to override the flag immediately
+rather than waiting. A plain re-run with no overrides checked re-runs the
+normal checks fresh, which is a real re-check for NBA (live data) but will
+reproduce the same result for NFL (the heuristic is date-based, not
+data-based) unless you also add the date to extra_nfl_game_dates in
+config.json or use the force checkbox.
 """
 
 import json
@@ -77,8 +89,11 @@ def check_nba_active_today(config):
 def main():
     config = load_json(CONFIG_PATH, {})
 
-    nfl_active = check_nfl_active_today(config)
-    nba_active = check_nba_active_today(config)
+    force_nfl = os.environ.get("FORCE_NFL_ACTIVE") == "true"
+    force_nba = os.environ.get("FORCE_NBA_ACTIVE") == "true"
+
+    nfl_active = True if force_nfl else check_nfl_active_today(config)
+    nba_active = True if force_nba else check_nba_active_today(config)
 
     result = {
         "date": _today_et().isoformat(),
@@ -88,7 +103,13 @@ def main():
     with open(OUTPUT_PATH, "w") as f:
         json.dump(result, f, indent=2)
 
-    print(f"Schedule check for {result['date']}: NFL={nfl_active}, NBA={nba_active}")
+    forced_note = []
+    if force_nfl:
+        forced_note.append("NFL forced")
+    if force_nba:
+        forced_note.append("NBA forced")
+    suffix = f" ({', '.join(forced_note)})" if forced_note else ""
+    print(f"Schedule check for {result['date']}: NFL={nfl_active}, NBA={nba_active}{suffix}")
 
 
 if __name__ == "__main__":

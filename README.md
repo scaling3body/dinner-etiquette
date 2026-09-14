@@ -7,7 +7,7 @@ a categories league).
 
 ## How it works
 
-- Runs every 10 minutes via GitHub Actions (free, no server needed).
+- Runs every 5 minutes via GitHub Actions (free, no server needed).
 - Pulls player projections + live/actual stats from Sleeper's API.
 - Football: alerts when actual points >= 130% of projection AND >= 12 points.
 - Basketball: alerts when a player's combined deviation across all 9
@@ -71,7 +71,7 @@ Copy `config.example.json` to `config.json`, adjust:
 
 ### 5. Turn it on
 The workflow in `.github/workflows/fantasy_alerts.yml` is already set to run
-every 10 minutes automatically once it's on GitHub's default branch. To test
+every 5 minutes automatically once it's on GitHub's default branch. To test
 it immediately without waiting: go to the **Actions** tab -> "Fantasy Breakout
 Alerts" -> **Run workflow**.
 
@@ -140,9 +140,9 @@ a spot is already open, and only acts after you tap Add.
   -- if it ever suggests an add when you don't actually have room (or misses
   a spot that is open), check `get_open_bench_or_ir_slots()` in
   `yahoo_client.py`.
-- Button taps are picked up on the next scheduled run (every 10 min), not
+- Button taps are picked up on the next scheduled run (every 5 min), not
   instantly -- there's no live webhook server involved, so expect up to a
-  ~10 minute delay between tapping Add and the roster move going through.
+  ~5 minute delay between tapping Add and the roster move going through.
 - Game-status tagging (Live/Final) relies on an unofficial Sleeper schedule
   endpoint. It's confirmed to work for NFL; NBA support is unverified and
   may just silently not show a tag if Sleeper's shape differs there. Either
@@ -175,7 +175,7 @@ suggestions, hosted free by GitHub. No login, no server to run.
    Source to "Deploy from a branch", branch `main`, folder `/docs`. Save.
 2. GitHub gives you a URL like `https://yourusername.github.io/your-repo/`.
    Bookmark it on your phone.
-3. It updates automatically each time the bot runs (every 10 min).
+3. It updates automatically each time the bot runs (every 5 min).
 
 **Important:** if your repo is private, GitHub Pages on a free/Pro personal
 account still publishes the page itself *publicly* -- anyone with the exact
@@ -186,7 +186,7 @@ honored from your specific Telegram chat_id (see security note below) --
 but don't share the dashboard URL if you'd rather keep it fully private.
 
 ### 9. (Optional but recommended) Turn on schedule-aware checking
-Without this, the bot checks every 10 minutes, 24/7/365 -- including at
+Without this, the bot checks every 5 minutes, 24/7/365 -- including at
 4am in the middle of July when nothing's happening. This adds a second,
 lightweight workflow that runs once a day (~3am ET) and figures out
 whether today is actually an NFL day and/or NBA day, so the main checker
@@ -209,6 +209,17 @@ The main workflow's cron window is also narrowed to `16:00-05:59 UTC`
 (roughly noon-1am Eastern) rather than running truly 24/7, since games
 never happen outside that window regardless of sport or day.
 
+**Manually re-checking or overriding the schedule:** go to the Actions tab
+-> "Daily Game Schedule Check" -> **Run workflow** any time, not just at
+3am. Two checkboxes there let you force NFL and/or NBA to be treated as
+active today, bypassing the normal detection entirely -- useful if you know
+something changed after the 3am check ran (a weather-postponed game moved
+to an unexpected day, for instance). Note that running it with both boxes
+unchecked re-runs the normal checks fresh: this is a real re-check for NBA
+(it re-queries live data), but will reproduce the same result for NFL,
+since that heuristic is date-based rather than data-based -- use the force
+checkbox or add the date to `extra_nfl_game_dates` instead.
+
 ## Important things to know
 
 - **Button taps are only honored from your own Telegram chat.** Every
@@ -219,11 +230,14 @@ never happen outside that window regardless of sport or day.
   If you don't touch the repo for 2 months, go back into the Actions tab and
   re-enable it (one click).
 - **Private repo Actions minutes are limited** (2,000 free minutes/month on
-  GitHub's free tier). With schedule-aware checking on (step 8), the main
-  workflow only runs during the ~14-hour daily window when games are ever
-  actually happening, cutting usage roughly in half versus running 24/7 --
-  still worth watching if you're close to the limit. The daily scheduler
-  workflow itself is a single run per day and barely registers.
+  GitHub's free tier). At the current 5-minute interval, checks only run
+  during the ~14-hour daily window when games are ever actually happening
+  (step 9), but that still adds up to roughly 5,000 minutes/month -- well
+  over the free tier. If you're on a private repo, either make it public
+  (unlimited free minutes, and the code has no identifying info in it --
+  see the earlier note on league/team keys living in secrets) or space the
+  interval back out in `fantasy_alerts.yml`'s cron. The daily scheduler and
+  digest workflows are a single run each per day and barely register.
 - **Sleeper's stats/projections endpoints are unofficial and undocumented.**
   Community sources disagree on the exact URL shape (whether `/v1/` is
   included, whether `season_type` is a path segment or query param), so
@@ -256,6 +270,6 @@ never happen outside that window regardless of sport or day.
 - `yahoo_auth_setup.py` -- one-time local script to authorize Yahoo access
 - `config.example.json` -- copy to `config.json` and edit
 - `docs/index.html` -- the optional read-only dashboard page
-- `.github/workflows/fantasy_alerts.yml` -- the main 10-min scheduler
+- `.github/workflows/fantasy_alerts.yml` -- the main 5-min scheduler
 - `.github/workflows/daily_schedule.yml` -- the once-a-day schedule check
 - `.github/workflows/daily_digest.yml` -- the once-a-day digest
