@@ -1,0 +1,31 @@
+name: Daily Breakout Digest
+
+on:
+  schedule:
+    # ~11:45pm-12:45am Eastern (lands earlier in the window during EDT,
+    # later during EST -- GitHub Actions cron is UTC and doesn't shift for
+    # DST). Covers the end of a normal game day; very late West Coast NBA
+    # games may finish after this runs -- see daily_digest.py's docstring.
+    - cron: "45 4 * * *"
+  workflow_dispatch: {}  # lets you manually trigger a run from the Actions tab to test
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Send daily digest
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python daily_digest.py

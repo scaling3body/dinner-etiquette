@@ -73,6 +73,54 @@ def _get_stats_or_projections(kind, sport, season_type, season, period):
     return None
 
 
+def _candidate_schedule_urls(sport, season_type, season):
+    """
+    Candidate shapes for the unofficial schedule endpoint. Confirmed shape
+    (per a recent third-party client, Sept 2026) is season_type as a path
+    segment: /schedule/{sport}/{season_type}/{season}. NBA equivalent is
+    unverified -- if none of these work, get_schedule() returns None and
+    callers just omit game-status info gracefully.
+    """
+    return [
+        (f"https://api.sleeper.app/v1/schedule/{sport}/{season_type}/{season}", None),
+        (f"https://api.sleeper.app/schedule/{sport}/{season_type}/{season}", None),
+    ]
+
+
+def get_schedule(sport, season, season_type="regular"):
+    """
+    Returns a list of games for the season/week context Sleeper currently
+    has loaded, each with a 'status' of pre_game/in_game/complete/canceled,
+    plus 'home'/'away' team abbreviations -- or None if no candidate URL
+    shape worked (this endpoint is unofficial and its exact shape isn't
+    100% confirmed, especially for NBA).
+    """
+    for url, params in _candidate_schedule_urls(sport, season_type, season):
+        result = _get(url, params=params)
+        if isinstance(result, list) and len(result) > 0:
+            if DEBUG:
+                print(f"SUCCESS: schedule/{sport} resolved via {url}")
+            return result
+    if DEBUG:
+        print(f"All URL shapes failed for schedule/{sport} season_type={season_type} season={season}")
+    return None
+
+
+def get_team_game_status(schedule, team_abbr):
+    """
+    Given a schedule list from get_schedule() and a team abbreviation,
+    returns that team's game status ('pre_game'/'in_game'/'complete'/
+    'canceled'), or None if not found (schedule unavailable, team on bye,
+    or team abbreviation didn't match -- e.g. 'FA' for a free agent).
+    """
+    if not schedule or not team_abbr:
+        return None
+    for game in schedule:
+        if game.get("home") == team_abbr or game.get("away") == team_abbr:
+            return game.get("status")
+    return None
+
+
 def get_all_players(sport):
     """
     sport: 'nfl' or 'nba'

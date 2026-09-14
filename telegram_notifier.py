@@ -35,13 +35,18 @@ def _call(config, method, payload):
 
 def send_message(config, text, buttons=None):
     """
-    buttons: optional list of (label, callback_data) tuples, rendered as a
-    single row of inline buttons. Returns the sent message_id.
+    buttons: optional list of ROWS, where each row is a list of
+    (label, callback_data) tuples -- e.g. [[("Add X", "add:1"), ("No", "decline:1")]]
+    for one row, or multiple such rows stacked for a batch of players.
+    Returns the sent message_id.
     """
     payload = {"chat_id": _chat_id(config), "text": text}
     if buttons:
         payload["reply_markup"] = {
-            "inline_keyboard": [[{"text": label, "callback_data": data} for label, data in buttons]]
+            "inline_keyboard": [
+                [{"text": label, "callback_data": data} for label, data in row]
+                for row in buttons
+            ]
         }
     result = _call(config, "sendMessage", payload)
     return result["result"]["message_id"]
@@ -105,21 +110,23 @@ def acknowledge_tap(config, callback_query_id, text=""):
     _call(config, "answerCallbackQuery", {"callback_query_id": callback_query_id, "text": text})
 
 
-def format_football_alert(player_name, team, result):
+def format_football_alert(player_name, team, result, label="BREAKOUT", status_tag=None):
+    tag = f" [{status_tag}]" if status_tag else ""
     return (
-        f"\U0001F3C8 BREAKOUT: {player_name} ({team}) scored {result['actual_points']} pts "
+        f"\U0001F3C8 {label}: {player_name} ({team}) scored {result['actual_points']} pts{tag} "
         f"vs a projection of {result['projected_points']} "
         f"({result['pct_of_projection']}% of projection)."
     )
 
 
-def format_basketball_alert(player_name, team, result):
+def format_basketball_alert(player_name, team, result, label="BREAKOUT", status_tag=None):
+    tag = f" [{status_tag}]" if status_tag else ""
     b = result["breakdown"]
     line = (
         f"{b['pts']['actual']}pt/{b['reb']['actual']}reb/{b['ast']['actual']}ast, "
         f"{b['stl']['actual']}stl/{b['blk']['actual']}blk"
     )
     return (
-        f"\U0001F3C0 BREAKOUT: {player_name} ({team}) went {line} "
+        f"\U0001F3C0 {label}: {player_name} ({team}) went {line}{tag} "
         f"(combined z-score {result['total_zscore']} vs. projections)."
     )

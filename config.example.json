@@ -3,6 +3,7 @@
     "enabled": true,
     "pct_threshold": 1.30,
     "point_floor": 12,
+    "extreme_multiplier": 1.5,
     "scoring_settings": {
       "_comment_offense": "25 yds/pt = 0.04, 10 yds/pt = 0.1. No 'rec' key = standard (non-PPR), matching the table (no Receptions row).",
       "pass_yd": 0.04,
@@ -47,7 +48,8 @@
     "enabled": true,
     "categories": ["pts", "reb", "ast", "stl", "blk", "fg3m", "fgp", "ftp", "to"],
     "invert_categories": ["to"],
-    "zscore_alert_threshold": 6.0
+    "zscore_alert_threshold": 6.0,
+    "extreme_multiplier": 1.5
   },
   "notifications": {
     "method": "telegram",
@@ -56,7 +58,8 @@
   "roster_management": {
     "enabled": false,
     "_comment": "Set enabled true once Yahoo OAuth is set up (see README.md). Only suggests adds into an already-open bench/IR spot -- never suggests a drop. League/team keys are NOT stored here -- set them as GitHub secrets YAHOO_NFL_LEAGUE_KEY, YAHOO_NFL_TEAM_KEY, YAHOO_NBA_LEAGUE_KEY, YAHOO_NBA_TEAM_KEY instead, so the repo doesn't reveal which league/team you're in.",
-    "suggestion_expiry_minutes": 180
+    "quiet_rostered_players": true,
+    "suggestion_expiry_minutes": 1440
   },
   "check_interval_notes": "Actual check frequency is controlled by the GitHub Actions cron schedule, not this file. See .github/workflows/fantasy_alerts.yml",
   "scheduling": {

@@ -12,10 +12,29 @@ a categories league).
 - Football: alerts when actual points >= 130% of projection AND >= 12 points.
 - Basketball: alerts when a player's combined deviation across all 9
   categories crosses a z-score threshold (see `scoring.py` for the math).
-- Sends the alert via a Telegram bot. Remembers who it already alerted on so
-  you don't get the same message every 10 minutes.
+- Sends the alert via a Telegram bot. A player isn't just alerted once and
+  ignored for the rest of the game -- each alert resets that player's
+  "baseline" to their current level, and the next alert only fires once they
+  clear the same threshold again relative to that new baseline. Plateauing
+  after a breakout doesn't spam repeat texts, but a player who keeps climbing
+  gets escalating labels: **BREAKOUT** -> **DOUBLE BREAKOUT** -> **3x
+  BREAKOUT** and so on. (Football: baseline * pct_threshold again. Basketball:
+  baseline + zscore_alert_threshold again, since z-scores can be negative.)
 - Optionally (see step 6), if there's an open roster spot, the message
   includes tappable **Add** / **No thanks** buttons.
+- **Extreme outliers get a \U0001F525 fire emoji** on the label -- a performance
+  clearing 1.5x the normal breakout bar (tunable via `extreme_multiplier`)
+  stands out from routine breakouts at a glance.
+- **Multiple breakouts in the same check get combined into ONE message**
+  instead of a flood of separate pings, with one Add/No-thanks button row
+  per addable player.
+- **If a Yahoo manager is set up, game status (Live/Final) gets tagged onto
+  the alert** when resolvable, so you know whether the number could still
+  climb. (No quarter/clock data is available -- just whether the game is
+  still going or over; see the note in step 6.)
+- **An optional once-daily digest** (step 7) sends a single end-of-day
+  summary of everything that broke out, for a catch-up read instead of
+  piecing together scattered pings.
 
 ## One-time setup
 
@@ -64,11 +83,20 @@ Telegram setup is confirmed working end-to-end. (You can also run
 `python test_telegram.py` locally the same way, as long as `config.json`
 exists in that folder.)
 
-### 6. (Optional) Turn on add/drop suggestions
-This adds tappable **Add** / **No thanks** buttons to a breakout message
-whenever there's an open bench/IR spot on your Yahoo roster. It never picks
-who to drop -- it only acts when a spot is already open, and only after you
-tap Add.
+### 6. (Optional) Turn on Yahoo availability + add/drop suggestions
+Once this is on, **every** breakout alert gets a line showing that player's
+status in your Yahoo league: **Available as FA**, **On waivers**, or
+**Rostered**. By default (`quiet_rostered_players: true`), rostered players
+are silently skipped from notification entirely -- since the whole point is
+catching players you might actually add, a breakout from someone already on
+another team isn't actionable and just adds noise. They're still logged to
+the dashboard if you're curious; set `quiet_rostered_players` to `false` in
+`config.json` if you'd rather see every breakout regardless of availability.
+
+On top of that, whenever there's an open bench/IR spot on your roster AND
+the player is actually available, the message also gets tappable **Add** /
+**No thanks** buttons. It never picks who to drop -- it only offers Add when
+a spot is already open, and only acts after you tap Add.
 
 1. Go to https://developer.yahoo.com/apps/create/ and create an app.
    Check "Fantasy Sports" under API Permissions, with Read/Write access.
@@ -96,6 +124,14 @@ tap Add.
   done by name, since the two platforms don't share player IDs. This is
   reliable almost all the time but could rarely mismatch two players with
   identical names -- double-check the name in the message before tapping Add.
+- The availability status only distinguishes what Yahoo's API actually
+  reports: "Available as FA" (free agent, claimable now), "On waivers"
+  (in the locked claim period), or "Rostered" (assumed -- the player wasn't
+  found in the free-agent/waiver scan, most likely because someone owns
+  them, though this shares the name-matching caveat above).
+- One Yahoo connection is built per sport per run (not per player), and its
+  free-agent list is cached for that run -- checking availability on every
+  single breakout is efficient even on a heavy NFL Sunday.
 - If your league uses FAAB (dollar-bid waivers) rather than plain waiver
   priority, the add call doesn't currently submit a bid amount -- see the
   comment in `yahoo_client.py` for where to extend it.
@@ -107,8 +143,31 @@ tap Add.
 - Button taps are picked up on the next scheduled run (every 10 min), not
   instantly -- there's no live webhook server involved, so expect up to a
   ~10 minute delay between tapping Add and the roster move going through.
+- Game-status tagging (Live/Final) relies on an unofficial Sleeper schedule
+  endpoint. It's confirmed to work for NFL; NBA support is unverified and
+  may just silently not show a tag if Sleeper's shape differs there. Either
+  way, only whether the game is underway or over is available -- no
+  quarter/clock detail exists in this data at all.
+- Batched messages (multiple breakouts in one check) don't support editing
+  on confirm/decline, since editing would erase the other players' info in
+  that same message -- tapping Add or No thanks on a batched suggestion
+  sends a short new follow-up message instead, leaving the original message
+  as-is.
 
-### 7. (Optional) Turn on the dashboard
+### 7. (Optional) Turn on the end-of-day digest
+Sends one summary message (see `daily_digest.py`) of everything that broke
+out today, for a single catch-up read instead of piecing together scattered
+pings throughout the day. Only includes what was actually sent to you --
+anything `quiet_rostered_players` suppressed doesn't clutter the digest
+either. Sends nothing on a day with no breakouts.
+
+Nothing to configure -- `.github/workflows/daily_digest.yml` runs once near
+the end of a typical game day and will start working once it's on the
+default branch. "End of day" is an approximation (a fixed daily time, not
+truly "after the last game") -- very late West Coast NBA games might finish
+after it runs; check the dashboard for anything after that point.
+
+### 8. (Optional) Turn on the dashboard
 A simple read-only webpage showing recent breakouts and any pending add
 suggestions, hosted free by GitHub. No login, no server to run.
 
@@ -126,7 +185,7 @@ random stranger can't act on a pending suggestion since button taps are only
 honored from your specific Telegram chat_id (see security note below) --
 but don't share the dashboard URL if you'd rather keep it fully private.
 
-### 8. (Optional but recommended) Turn on schedule-aware checking
+### 9. (Optional but recommended) Turn on schedule-aware checking
 Without this, the bot checks every 10 minutes, 24/7/365 -- including at
 4am in the middle of July when nothing's happening. This adds a second,
 lightweight workflow that runs once a day (~3am ET) and figures out
@@ -192,9 +251,11 @@ never happen outside that window regardless of sport or day.
 - `telegram_notifier.py` -- Telegram message sending + button-tap polling
 - `telegram_setup.py` -- one-time local script to find your chat_id
 - `test_telegram.py` -- sends a fake breakout alert to confirm Telegram setup works
+- `daily_digest.py` -- sends the once-daily breakout summary
 - `yahoo_client.py` -- Yahoo roster/free-agent lookups and adds
 - `yahoo_auth_setup.py` -- one-time local script to authorize Yahoo access
 - `config.example.json` -- copy to `config.json` and edit
 - `docs/index.html` -- the optional read-only dashboard page
 - `.github/workflows/fantasy_alerts.yml` -- the main 10-min scheduler
 - `.github/workflows/daily_schedule.yml` -- the once-a-day schedule check
+- `.github/workflows/daily_digest.yml` -- the once-a-day digest
