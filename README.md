@@ -56,6 +56,14 @@ every 10 minutes automatically once it's on GitHub's default branch. To test
 it immediately without waiting: go to the **Actions** tab -> "Fantasy Breakout
 Alerts" -> **Run workflow**.
 
+**To confirm your Telegram setup works without waiting for a real breakout:**
+check the "Send a test Telegram message" box when you click **Run workflow**.
+This runs `test_telegram.py` instead of the real check and sends a fake
+breakout alert through your actual bot token/chat_id -- if it arrives, your
+Telegram setup is confirmed working end-to-end. (You can also run
+`python test_telegram.py` locally the same way, as long as `config.json`
+exists in that folder.)
+
 ### 6. (Optional) Turn on add/drop suggestions
 This adds tappable **Add** / **No thanks** buttons to a breakout message
 whenever there's an open bench/IR spot on your Yahoo roster. It never picks
@@ -183,6 +191,7 @@ never happen outside that window regardless of sport or day.
 - `scoring.py` -- breakout detection logic for both sports
 - `telegram_notifier.py` -- Telegram message sending + button-tap polling
 - `telegram_setup.py` -- one-time local script to find your chat_id
+- `test_telegram.py` -- sends a fake breakout alert to confirm Telegram setup works
 - `yahoo_client.py` -- Yahoo roster/free-agent lookups and adds
 - `yahoo_auth_setup.py` -- one-time local script to authorize Yahoo access
 - `config.example.json` -- copy to `config.json` and edit

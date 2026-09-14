@@ -8,9 +8,8 @@ config.json and telegram_notifier.py the real bot uses.
 Run locally:
     python test_telegram.py
 
-Or via GitHub Actions (Actions tab -> "Fantasy Breakout Alerts" -> "Run
-workflow" won't call this directly -- see the note at the bottom of this
-file if you want a button for it in Actions too).
+Or via GitHub Actions: Actions tab -> "Fantasy Breakout Alerts" -> "Run
+workflow" -> check the "Send a test Telegram message" box.
 """
 
 import json
