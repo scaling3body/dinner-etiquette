@@ -5,10 +5,12 @@ Thin wrapper around Sleeper's API.
 
 IMPORTANT: The player-list and state endpoints below are OFFICIAL and documented
 (https://docs.sleeper.com/). The stats/projections endpoints are UNOFFICIAL and
-undocumented -- widely used by the fantasy dev community, but Sleeper could change
-or break them without notice. If this bot suddenly stops finding stats, this is
-the file to check/fix first. Print the raw response (see DEBUG flag) to see what
-changed.
+undocumented -- and different community sources disagree on the exact URL shape
+(whether it's prefixed with /v1/, and whether season_type is a path segment or
+a query parameter). Rather than gamble on one guess, _get_stats_or_projections()
+below tries several known candidate formats in order and uses whichever one
+actually returns real data. Set DEBUG = True to see exactly which candidate
+worked (or why all of them failed) in the Actions log.
 """
 
 import requests
@@ -17,7 +19,6 @@ import time
 DEBUG = False
 
 OFFICIAL_BASE = "https://api.sleeper.app/v1"
-UNOFFICIAL_BASE = "https://api.sleeper.app"  # used for projections/stats
 
 _session = requests.Session()
 
@@ -38,26 +39,38 @@ def _get(url, params=None):
     return None
 
 
-def _as_player_dict(data):
+def _candidate_urls(kind, sport, season_type, season, period):
     """
-    The unofficial stats/projections endpoints are supposed to return a dict
-    keyed by player_id, but have been observed to sometimes return a list of
-    per-player records instead. Normalize either shape into a
-    {player_id: stat_dict} dict so callers never have to care which one came
-    back.
+    kind: 'stats' or 'projections'. period: week number (NFL) or 'YYYY-MM-DD' (NBA).
+    Returns a list of (url, params) tuples to try in order, covering the
+    different URL shapes seen in the wild for this undocumented endpoint.
     """
-    if data is None:
-        return None
-    if isinstance(data, dict):
-        return data
-    if isinstance(data, list):
-        normalized = {}
-        for entry in data:
-            pid = entry.get("player_id")
-            if pid is not None:
-                normalized[str(pid)] = entry
-        return normalized
-    return data
+    return [
+        # Shape A: /v1/ prefixed, season_type as a path segment (most commonly
+        # cited shape in community write-ups)
+        (f"https://api.sleeper.app/v1/{kind}/{sport}/{season_type}/{season}/{period}", None),
+        # Shape B: no /v1/, season_type as a path segment
+        (f"https://api.sleeper.app/{kind}/{sport}/{season_type}/{season}/{period}", None),
+        # Shape C: no /v1/, season_type as a query parameter (seen in some Go/JS clients)
+        (f"https://api.sleeper.app/{kind}/{sport}/{season}/{period}", {"season_type": season_type}),
+        # Shape D: /v1/ prefixed, season_type as a query parameter
+        (f"https://api.sleeper.app/v1/{kind}/{sport}/{season}/{period}", {"season_type": season_type}),
+    ]
+
+
+def _get_stats_or_projections(kind, sport, season_type, season, period):
+    for url, params in _candidate_urls(kind, sport, season_type, season, period):
+        result = _get(url, params=params)
+        # A dict with at least one player entry is what we're after -- an
+        # empty dict or non-dict response means this shape didn't work.
+        if isinstance(result, dict) and len(result) > 0:
+            if DEBUG:
+                print(f"SUCCESS: {kind}/{sport} resolved via {url} (params={params})")
+            return result
+    if DEBUG:
+        print(f"All URL shapes failed for {kind}/{sport} season_type={season_type} "
+              f"season={season} period={period}")
+    return None
 
 
 def get_all_players(sport):
@@ -82,14 +95,12 @@ def get_nba_state():
 
 def get_nfl_week_projections(season, week, season_type="regular"):
     """Unofficial endpoint. Returns dict keyed by player_id -> projected stat dict."""
-    url = f"{UNOFFICIAL_BASE}/projections/nfl/{season_type}/{season}/{week}"
-    return _as_player_dict(_get(url))
+    return _get_stats_or_projections("projections", "nfl", season_type, season, week)
 
 
 def get_nfl_week_stats(season, week, season_type="regular"):
     """Unofficial endpoint. Returns dict keyed by player_id -> actual stat dict."""
-    url = f"{UNOFFICIAL_BASE}/stats/nfl/{season_type}/{season}/{week}"
-    return _as_player_dict(_get(url))
+    return _get_stats_or_projections("stats", "nfl", season_type, season, week)
 
 
 def get_nba_day_projections(date_str, season, season_type="regular"):
@@ -97,11 +108,9 @@ def get_nba_day_projections(date_str, season, season_type="regular"):
     Unofficial endpoint. date_str format: 'YYYY-MM-DD'.
     Returns dict keyed by player_id -> projected stat dict for that day's games.
     """
-    url = f"{UNOFFICIAL_BASE}/projections/nba/{season_type}/{date_str}"
-    return _as_player_dict(_get(url))
+    return _get_stats_or_projections("projections", "nba", season_type, season, date_str)
 
 
 def get_nba_day_stats(date_str, season, season_type="regular"):
     """Unofficial endpoint. Returns dict keyed by player_id -> actual stat dict for that day."""
-    url = f"{UNOFFICIAL_BASE}/stats/nba/{season_type}/{date_str}"
-    return _as_player_dict(_get(url))
+    return _get_stats_or_projections("stats", "nba", season_type, season, date_str)

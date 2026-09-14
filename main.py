@@ -34,6 +34,7 @@ PLAYERS_CACHE_NFL = "players_nfl_cache.json"
 PLAYERS_CACHE_NBA = "players_nba_cache.json"
 DASHBOARD_HISTORY_PATH = "dashboard_history.json"
 DASHBOARD_DATA_PATH = "docs/data.json"
+SCHEDULE_WINDOWS_PATH = "schedule_windows.json"
 MAX_HISTORY = 50
 
 
@@ -90,6 +91,23 @@ def write_dashboard(history, pending):
     save_json(DASHBOARD_DATA_PATH, data)
 
 
+def get_yahoo_keys(config, sport):
+    """
+    League/team keys aren't secret credentials (they can't be used to act on
+    your account), but they do identify which specific league/team you're
+    in, so they're read from GitHub Secrets first -- same pattern as the
+    real credentials -- falling back to config.json only for local testing.
+    """
+    rm = config.get("roster_management", {})
+    if sport == "nfl":
+        league_key = os.environ.get("YAHOO_NFL_LEAGUE_KEY") or rm.get("football_league_key")
+        team_key = os.environ.get("YAHOO_NFL_TEAM_KEY") or rm.get("football_team_key")
+    else:
+        league_key = os.environ.get("YAHOO_NBA_LEAGUE_KEY") or rm.get("basketball_league_key")
+        team_key = os.environ.get("YAHOO_NBA_TEAM_KEY") or rm.get("basketball_team_key")
+    return league_key, team_key
+
+
 def maybe_suggest_add(config, pending, sport, player_name, team, breakout_msg):
     """
     If roster_management is enabled and there's an open spot, sends a
@@ -98,19 +116,17 @@ def maybe_suggest_add(config, pending, sport, player_name, team, breakout_msg):
     """
     rm = config.get("roster_management", {})
     if not rm.get("enabled"):
-        notifier.send_message(config, breakout_msg)
+        try:
+            notifier.send_message(config, breakout_msg)
+        except Exception as e:
+            print(f"FAILED to send Telegram alert (check TELEGRAM_BOT_TOKEN/TELEGRAM_CHAT_ID "
+                  f"and that you've messaged your bot at least once): {e}")
         return
 
     try:
         import yahoo_client
-        if sport == "nfl":
-            manager = yahoo_client.YahooRosterManager(
-                "oauth2.json", "nfl", rm["football_league_key"], rm["football_team_key"]
-            )
-        else:
-            manager = yahoo_client.YahooRosterManager(
-                "oauth2.json", "nba", rm["basketball_league_key"], rm["basketball_team_key"]
-            )
+        league_key, team_key = get_yahoo_keys(config, sport)
+        manager = yahoo_client.YahooRosterManager("oauth2.json", sport, league_key, team_key)
 
         if not manager.get_open_bench_or_ir_slots():
             notifier.send_message(config, breakout_msg)
@@ -137,7 +153,11 @@ def maybe_suggest_add(config, pending, sport, player_name, team, breakout_msg):
 
     except Exception as e:
         print(f"Roster management check failed, sending plain alert instead: {e}")
-        notifier.send_message(config, breakout_msg)
+        try:
+            notifier.send_message(config, breakout_msg)
+        except Exception as e2:
+            print(f"FAILED to send Telegram alert (check TELEGRAM_BOT_TOKEN/TELEGRAM_CHAT_ID "
+                  f"and that you've messaged your bot at least once): {e2}")
 
 
 def process_confirmations(config, pending):
@@ -169,16 +189,9 @@ def process_confirmations(config, pending):
             del pending[code]
             continue
 
-        rm_local = config["roster_management"]
         sport = item["sport"]
-        if sport == "nfl":
-            manager = yahoo_client.YahooRosterManager(
-                "oauth2.json", "nfl", rm_local["football_league_key"], rm_local["football_team_key"]
-            )
-        else:
-            manager = yahoo_client.YahooRosterManager(
-                "oauth2.json", "nba", rm_local["basketball_league_key"], rm_local["basketball_team_key"]
-            )
+        league_key, team_key = get_yahoo_keys(config, sport)
+        manager = yahoo_client.YahooRosterManager("oauth2.json", sport, league_key, team_key)
 
         try:
             manager.add_player(item["player_id"])
@@ -234,14 +247,18 @@ def run_football(config, alerted, pending, players, history):
             config["football"]["point_floor"],
         )
         if result:
-            p = players.get(player_id, {})
-            name = p.get("full_name") or f"Player {player_id}"
-            team = p.get("team", "FA")
-            msg = notifier.format_football_alert(name, team, result)
-            print("ALERT:", msg)
-            record_history(history, "nfl", name, msg)
-            maybe_suggest_add(config, pending, "nfl", name, team, msg)
-            alerted[key].append(player_id)
+            try:
+                p = players.get(player_id, {})
+                name = p.get("full_name") or f"Player {player_id}"
+                team = p.get("team", "FA")
+                msg = notifier.format_football_alert(name, team, result)
+                print("ALERT:", msg)
+                record_history(history, "nfl", name, msg)
+                maybe_suggest_add(config, pending, "nfl", name, team, msg)
+            except Exception as e:
+                print(f"Error processing breakout for player {player_id}, continuing with the rest: {e}")
+            finally:
+                alerted[key].append(player_id)
 
 
 def run_basketball(config, alerted, pending, players, history):
@@ -272,14 +289,18 @@ def run_basketball(config, alerted, pending, players, history):
             player_id, actual, proj, projections, cats, invert, threshold
         )
         if result:
-            p = players.get(player_id, {})
-            name = p.get("full_name") or f"Player {player_id}"
-            team = p.get("team", "FA")
-            msg = notifier.format_basketball_alert(name, team, result)
-            print("ALERT:", msg)
-            record_history(history, "nba", name, msg)
-            maybe_suggest_add(config, pending, "nba", name, team, msg)
-            alerted[key].append(player_id)
+            try:
+                p = players.get(player_id, {})
+                name = p.get("full_name") or f"Player {player_id}"
+                team = p.get("team", "FA")
+                msg = notifier.format_basketball_alert(name, team, result)
+                print("ALERT:", msg)
+                record_history(history, "nba", name, msg)
+                maybe_suggest_add(config, pending, "nba", name, team, msg)
+            except Exception as e:
+                print(f"Error processing breakout for player {player_id}, continuing with the rest: {e}")
+            finally:
+                alerted[key].append(player_id)
 
 
 def main():
@@ -295,9 +316,34 @@ def main():
     players_nfl = get_players_cached("nfl", PLAYERS_CACHE_NFL)
     players_nba = get_players_cached("nba", PLAYERS_CACHE_NBA)
 
-    process_confirmations(config, pending)
-    run_football(config, alerted, pending, players_nfl, history)
-    run_basketball(config, alerted, pending, players_nba, history)
+    try:
+        process_confirmations(config, pending)
+    except Exception as e:
+        print(f"process_confirmations failed, continuing: {e}")
+
+    # Skip a sport's check entirely if today's schedule (written once a day
+    # by game_schedule_checker.py) says there's nothing happening. If the
+    # file doesn't exist yet (e.g. the daily job hasn't run), default to
+    # checking both -- fail safe rather than fail silent.
+    schedule = load_json(SCHEDULE_WINDOWS_PATH, {})
+    nfl_today = schedule.get("nfl_active_today", True)
+    nba_today = schedule.get("nba_active_today", True)
+
+    if nfl_today:
+        try:
+            run_football(config, alerted, pending, players_nfl, history)
+        except Exception as e:
+            print(f"run_football failed, continuing to basketball: {e}")
+    else:
+        print("No NFL games scheduled today -- skipping football check.")
+
+    if nba_today:
+        try:
+            run_basketball(config, alerted, pending, players_nba, history)
+        except Exception as e:
+            print(f"run_basketball failed: {e}")
+    else:
+        print("No NBA games scheduled today -- skipping basketball check.")
 
     save_json(ALERTED_PATH, alerted)
     save_json(PENDING_PATH, pending)

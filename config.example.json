@@ -55,12 +55,12 @@
   },
   "roster_management": {
     "enabled": false,
-    "_comment": "Set enabled true once Yahoo OAuth is set up (see README.md). Only suggests adds into an already-open bench/IR spot -- never suggests a drop.",
-    "football_league_key": "PUT_YOUR_YAHOO_NFL_LEAGUE_KEY",
-    "football_team_key": "PUT_YOUR_YAHOO_NFL_TEAM_KEY",
-    "basketball_league_key": "PUT_YOUR_YAHOO_NBA_LEAGUE_KEY",
-    "basketball_team_key": "PUT_YOUR_YAHOO_NBA_TEAM_KEY",
+    "_comment": "Set enabled true once Yahoo OAuth is set up (see README.md). Only suggests adds into an already-open bench/IR spot -- never suggests a drop. League/team keys are NOT stored here -- set them as GitHub secrets YAHOO_NFL_LEAGUE_KEY, YAHOO_NFL_TEAM_KEY, YAHOO_NBA_LEAGUE_KEY, YAHOO_NBA_TEAM_KEY instead, so the repo doesn't reveal which league/team you're in.",
     "suggestion_expiry_minutes": 180
   },
-  "check_interval_notes": "Actual check frequency is controlled by the GitHub Actions cron schedule, not this file. See .github/workflows/fantasy_alerts.yml"
+  "check_interval_notes": "Actual check frequency is controlled by the GitHub Actions cron schedule, not this file. See .github/workflows/fantasy_alerts.yml",
+  "scheduling": {
+    "_comment": "extra_nfl_game_dates: manual override for NFL game days that don't fall on the usual Thu/Sun/Mon (+Sat in weeks 15+), e.g. a Christmas Day game. Format: ['2026-12-25']. NBA doesn't need an override -- it's checked against real Sleeper data, not a day-of-week guess.",
+    "extra_nfl_game_dates": []
+  }
 }

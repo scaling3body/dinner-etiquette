@@ -1,0 +1,39 @@
+name: Daily Game Schedule Check
+
+on:
+  schedule:
+    # ~3am Eastern. GitHub Actions cron is UTC and doesn't shift for DST, so
+    # this lands around 3am ET in winter (EST, UTC-5) and 4am ET in summer
+    # (EDT, UTC-4). That's fine for a "figure out today's game days" check --
+    # being an hour off doesn't matter here.
+    - cron: "0 8 * * *"
+  workflow_dispatch: {}  # lets you manually trigger a run from the Actions tab to test
+
+permissions:
+  contents: write  # needed so the workflow can commit schedule_windows.json
+
+jobs:
+  check_schedule:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Determine today's active sports
+        run: python game_schedule_checker.py
+
+      - name: Commit schedule_windows.json
+        run: |
+          git config user.name "fantasy-alert-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add schedule_windows.json
+          git diff --cached --quiet || git commit -m "Update today's game schedule [skip ci]"
+          git push || true

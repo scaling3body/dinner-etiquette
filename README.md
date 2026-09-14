@@ -76,7 +76,11 @@ tap Add.
    secret called `YAHOO_OAUTH_JSON`. Do not commit the file itself.
 4. Find your league key and team key (visible in your league's Yahoo URL,
    e.g. `nfl.l.123456` is the league key and `nfl.l.123456.t.4` is the team
-   key), and put them in `config.json` under `roster_management`.
+   key). Add them as GitHub secrets rather than in `config.json` -- this
+   keeps the repo from revealing which specific league/team you're in,
+   which matters if you ever make the repo public:
+   - `YAHOO_NFL_LEAGUE_KEY`, `YAHOO_NFL_TEAM_KEY`
+   - `YAHOO_NBA_LEAGUE_KEY`, `YAHOO_NBA_TEAM_KEY`
 5. Set `roster_management.enabled` to `true` in `config.json`.
 
 **Known limitations of this feature:**
@@ -114,6 +118,30 @@ random stranger can't act on a pending suggestion since button taps are only
 honored from your specific Telegram chat_id (see security note below) --
 but don't share the dashboard URL if you'd rather keep it fully private.
 
+### 8. (Optional but recommended) Turn on schedule-aware checking
+Without this, the bot checks every 10 minutes, 24/7/365 -- including at
+4am in the middle of July when nothing's happening. This adds a second,
+lightweight workflow that runs once a day (~3am ET) and figures out
+whether today is actually an NFL day and/or NBA day, so the main checker
+can skip whichever sport isn't in play.
+
+Nothing to configure -- `.github/workflows/daily_schedule.yml` is already
+set up and will start running once it's on the default branch. It writes
+`schedule_windows.json`, which `main.py` reads automatically.
+
+**How "today is a game day" is determined:**
+- **NFL**: a day-of-week heuristic (Thu/Sun/Mon, +Sat from week 15 on) --
+  Sleeper doesn't expose an actual schedule endpoint. For a one-off game
+  that falls outside that pattern (e.g. a Christmas Day game on a
+  Friday), add the date to `scheduling.extra_nfl_game_dates` in
+  `config.json`.
+- **NBA**: a real check, not a guess -- it asks Sleeper for today's
+  projections and treats a non-empty result as "games are happening."
+
+The main workflow's cron window is also narrowed to `16:00-05:59 UTC`
+(roughly noon-1am Eastern) rather than running truly 24/7, since games
+never happen outside that window regardless of sport or day.
+
 ## Important things to know
 
 - **Button taps are only honored from your own Telegram chat.** Every
@@ -124,15 +152,19 @@ but don't share the dashboard URL if you'd rather keep it fully private.
   If you don't touch the repo for 2 months, go back into the Actions tab and
   re-enable it (one click).
 - **Private repo Actions minutes are limited** (2,000 free minutes/month on
-  GitHub's free tier). Running every 10 minutes, 24/7, all season could use
-  a meaningful chunk of that. If you hit the limit, either make the repo
-  public (unlimited free minutes) or narrow the cron schedule in the workflow
-  file to only cover typical game windows (evenings/weekends).
+  GitHub's free tier). With schedule-aware checking on (step 8), the main
+  workflow only runs during the ~14-hour daily window when games are ever
+  actually happening, cutting usage roughly in half versus running 24/7 --
+  still worth watching if you're close to the limit. The daily scheduler
+  workflow itself is a single run per day and barely registers.
 - **Sleeper's stats/projections endpoints are unofficial and undocumented.**
-  They're widely used by the fantasy dev community and have been stable, but
-  Sleeper could change them without warning. If alerts stop working, check
-  `sleeper_client.py` first -- set `DEBUG = True` at the top of that file and
-  look at the raw API responses in the Actions log.
+  Community sources disagree on the exact URL shape (whether `/v1/` is
+  included, whether `season_type` is a path segment or query param), so
+  `sleeper_client.py` tries several known shapes each call and uses
+  whichever one actually returns data -- see `_candidate_urls()`. If alerts
+  ever stop working again, set `DEBUG = True` at the top of that file; the
+  Actions log will show every URL shape it tried and which one (if any)
+  succeeded.
 - The basketball z-score formula is a reasonable heuristic, not gospel --
   feel free to tune `zscore_alert_threshold` in `config.json` after seeing a
   week or two of real alerts (lower it if you want more, raise it for fewer).
@@ -146,6 +178,7 @@ but don't share the dashboard URL if you'd rather keep it fully private.
 ## Files
 
 - `main.py` -- entry point, runs each cycle
+- `game_schedule_checker.py` -- daily job that determines today's active sports
 - `sleeper_client.py` -- all Sleeper API calls
 - `scoring.py` -- breakout detection logic for both sports
 - `telegram_notifier.py` -- Telegram message sending + button-tap polling
@@ -154,4 +187,5 @@ but don't share the dashboard URL if you'd rather keep it fully private.
 - `yahoo_auth_setup.py` -- one-time local script to authorize Yahoo access
 - `config.example.json` -- copy to `config.json` and edit
 - `docs/index.html` -- the optional read-only dashboard page
-- `.github/workflows/fantasy_alerts.yml` -- the scheduler
+- `.github/workflows/fantasy_alerts.yml` -- the main 10-min scheduler
+- `.github/workflows/daily_schedule.yml` -- the once-a-day schedule check
