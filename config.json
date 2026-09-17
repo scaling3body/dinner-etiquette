@@ -57,7 +57,7 @@
     "batch_threshold": 3
   },
   "roster_management": {
-    "enabled": true,
+    "enabled": false,
     "_comment": "Set enabled true once Yahoo OAuth is set up (see README.md). Only suggests adds into an already-open bench/IR spot -- never suggests a drop. League/team keys are NOT stored here -- set them as GitHub secrets YAHOO_NFL_LEAGUE_KEY, YAHOO_NFL_TEAM_KEY, YAHOO_NBA_LEAGUE_KEY, YAHOO_NBA_TEAM_KEY instead, so the repo doesn't reveal which league/team you're in.",
     "quiet_rostered_players": true,
     "suggestion_expiry_minutes": 1440
