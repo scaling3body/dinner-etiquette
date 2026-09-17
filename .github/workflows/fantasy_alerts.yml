@@ -71,6 +71,15 @@ jobs:
         run: |
           git config user.name "fantasy-alert-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add alerted.json pending.json telegram_offset.json dashboard_history.json health_state.json tier_threshold_state.json docs/data.json players_nfl_cache.json players_nba_cache.json tier_cache/*.json || true
+          # nullglob: tier_cache/*.json matches nothing until /check has
+          # populated it, and an unmatched pathspec makes `git add` abort
+          # *before staging anything at all* -- including the other files
+          # here. That's what was silently preventing health_state.json and
+          # telegram_offset.json from ever being committed: the circuit
+          # breaker state never persisted across runs, and Telegram never
+          # learned an old command had been handled, so the bot kept
+          # re-fetching and re-replying to it on every run.
+          shopt -s nullglob
+          git add alerted.json pending.json telegram_offset.json dashboard_history.json health_state.json tier_threshold_state.json docs/data.json players_nfl_cache.json players_nba_cache.json tier_cache/*.json
           git diff --cached --quiet || git commit -m "Update alert state [skip ci]"
           git push || true
