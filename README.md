@@ -256,6 +256,7 @@ unchecked re-runs the normal checks fresh: this is a real re-check for NBA
 since that heuristic is date-based rather than data-based -- use the force
 checkbox or add the date to `extra_nfl_game_dates` instead.
 
+<<<<<<< HEAD
 ### 10. (Optional) The /check command -- on-demand waiver recommendations
 Message the bot **`/check RB`** (or QB, WR, TE, FLEX, K, DST -- DEF, PK, and
 FLX also work as aliases) any time, and it replies with the top available
@@ -318,6 +319,8 @@ Tier data is cached for `tier_check.cache_hours` (default 12) rather than
 re-fetched on every command, both to be a reasonable neighbor to their
 server and to keep replies fast.
 
+=======
+>>>>>>> 09f5570c0eb35a376eeddce419fbfcc47b0de821
 ## Important things to know
 
 - **Button taps are only honored from your own Telegram chat.** Every
