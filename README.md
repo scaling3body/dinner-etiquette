@@ -7,7 +7,7 @@ a categories league).
 
 ## How it works
 
-- Runs every 10 minutes via GitHub Actions (free, no server needed).
+- Runs every 5 minutes via GitHub Actions (free, no server needed).
 - Pulls player projections + live/actual stats from Sleeper's API.
 - Football: alerts when actual points >= 130% of projection AND >= 12 points.
 - Basketball: alerts when a player's combined deviation across all 9
@@ -26,8 +26,17 @@ a categories league).
   clearing 1.5x the normal breakout bar (tunable via `extreme_multiplier`)
   stands out from routine breakouts at a glance.
 - **Multiple breakouts in the same check get combined into ONE message**
-  instead of a flood of separate pings, with one Add/No-thanks button row
-  per addable player.
+  once there are `notifications.batch_threshold` or more (default 3) --
+  below that, each gets sent as its own separate ping, since a couple of
+  alerts feel more immediate that way. Batched messages get one
+  Add/No-thanks button row per addable player.
+- **If a teammate ranked ahead of the breakout player on the depth chart is
+  currently injured, the alert notes it** -- e.g. "May be filling in for
+  [starter] (Questionable)". This is often the single most useful piece of
+  context for deciding whether a breakout is likely to continue, and it
+  comes from data already being fetched (Sleeper's player list), so no
+  extra API calls. No note is shown when there's no clear signal (missing
+  depth chart data, or nobody ranked ahead is hurt).
 - **If a Yahoo manager is set up, game status (Live/Final) gets tagged onto
   the alert** when resolvable, so you know whether the number could still
   climb. (No quarter/clock data is available -- just whether the game is
@@ -71,7 +80,7 @@ Copy `config.example.json` to `config.json`, adjust:
 
 ### 5. Turn it on
 The workflow in `.github/workflows/fantasy_alerts.yml` is already set to run
-every 10 minutes automatically once it's on GitHub's default branch. To test
+every 5 minutes automatically once it's on GitHub's default branch. To test
 it immediately without waiting: go to the **Actions** tab -> "Fantasy Breakout
 Alerts" -> **Run workflow**.
 
@@ -121,9 +130,13 @@ a spot is already open, and only acts after you tap Add.
 
 **Known limitations of this feature:**
 - Player matching between Sleeper (stats source) and Yahoo (your roster) is
-  done by name, since the two platforms don't share player IDs. This is
-  reliable almost all the time but could rarely mismatch two players with
-  identical names -- double-check the name in the message before tapping Add.
+  done by name, since the two platforms don't share player IDs. If two
+  free agents happen to share an exact name, team and then position are
+  used to disambiguate automatically -- this is a safety net only (it
+  never overrides a clean single match), so a same-name collision that
+  also matches on team/position is now handled correctly. In the rare case
+  it's still ambiguous after that, double-check the name in the message
+  before tapping Add.
 - The availability status only distinguishes what Yahoo's API actually
   reports: "Available as FA" (free agent, claimable now), "On waivers"
   (in the locked claim period), or "Rostered" (assumed -- the player wasn't
@@ -140,9 +153,9 @@ a spot is already open, and only acts after you tap Add.
   -- if it ever suggests an add when you don't actually have room (or misses
   a spot that is open), check `get_open_bench_or_ir_slots()` in
   `yahoo_client.py`.
-- Button taps are picked up on the next scheduled run (every 10 min), not
+- Button taps are picked up on the next scheduled run (every 5 min), not
   instantly -- there's no live webhook server involved, so expect up to a
-  ~10 minute delay between tapping Add and the roster move going through.
+  ~5 minute delay between tapping Add and the roster move going through.
 - Game-status tagging (Live/Final) relies on an unofficial Sleeper schedule
   endpoint. It's confirmed to work for NFL; NBA support is unverified and
   may just silently not show a tag if Sleeper's shape differs there. Either
@@ -168,14 +181,15 @@ truly "after the last game") -- very late West Coast NBA games might finish
 after it runs; check the dashboard for anything after that point.
 
 ### 8. (Optional) Turn on the dashboard
-A simple read-only webpage showing recent breakouts and any pending add
-suggestions, hosted free by GitHub. No login, no server to run.
+A simple read-only webpage showing recent breakouts, any pending add
+suggestions, and a system health summary, hosted free by GitHub. No login,
+no server to run.
 
 1. In your repo: Settings -> Pages -> under "Build and deployment", set
    Source to "Deploy from a branch", branch `main`, folder `/docs`. Save.
 2. GitHub gives you a URL like `https://yourusername.github.io/your-repo/`.
    Bookmark it on your phone.
-3. It updates automatically each time the bot runs (every 10 min).
+3. It updates automatically each time the bot runs (every 5 min).
 
 **Important:** if your repo is private, GitHub Pages on a free/Pro personal
 account still publishes the page itself *publicly* -- anyone with the exact
@@ -185,8 +199,30 @@ random stranger can't act on a pending suggestion since button taps are only
 honored from your specific Telegram chat_id (see security note below) --
 but don't share the dashboard URL if you'd rather keep it fully private.
 
+### 8b. Failure alerts, the Yahoo circuit breaker, and dashboard health
+These three are always on -- nothing to set up -- but worth knowing how they
+work together, since they share the same underlying state (`health.py`).
+
+- **Failure alerts:** if Sleeper, Yahoo, or Telegram fails `health_check.
+  failure_alert_threshold` checks in a row (default 6, ~30 min at the
+  5-min interval), you get exactly one Telegram alert about it -- not one
+  per run. It resets once that component recovers, so a later fresh outage
+  can alert again. **Honest limitation:** if Telegram itself is what's
+  broken, the alert *about* that might not arrive either -- the dashboard's
+  health tab (step 8) doesn't depend on Telegram working at all, so that's
+  the real fallback for a Telegram-specific outage.
+- **Yahoo circuit breaker:** after `health_check.yahoo_breaker_threshold`
+  consecutive Yahoo failures (default 3), the bot stops even attempting
+  Yahoo calls for `yahoo_breaker_cooldown_minutes` (default 30) instead of
+  retrying a known-broken connection every 5 minutes. Plain breakout alerts
+  keep working the whole time -- only the roster/availability piece pauses.
+- **Dashboard health tab:** shows each component's status (OK / Retrying /
+  Failing / Circuit open) and how long since its last success, so a glance
+  tells you if something's stale without digging through Actions logs.
+- All three thresholds are tunable under `health_check` in `config.json`.
+
 ### 9. (Optional but recommended) Turn on schedule-aware checking
-Without this, the bot checks every 10 minutes, 24/7/365 -- including at
+Without this, the bot checks every 5 minutes, 24/7/365 -- including at
 4am in the middle of July when nothing's happening. This adds a second,
 lightweight workflow that runs once a day (~3am ET) and figures out
 whether today is actually an NFL day and/or NBA day, so the main checker
@@ -209,6 +245,79 @@ The main workflow's cron window is also narrowed to `16:00-05:59 UTC`
 (roughly noon-1am Eastern) rather than running truly 24/7, since games
 never happen outside that window regardless of sport or day.
 
+**Manually re-checking or overriding the schedule:** go to the Actions tab
+-> "Daily Game Schedule Check" -> **Run workflow** any time, not just at
+3am. Two checkboxes there let you force NFL and/or NBA to be treated as
+active today, bypassing the normal detection entirely -- useful if you know
+something changed after the 3am check ran (a weather-postponed game moved
+to an unexpected day, for instance). Note that running it with both boxes
+unchecked re-runs the normal checks fresh: this is a real re-check for NBA
+(it re-queries live data), but will reproduce the same result for NFL,
+since that heuristic is date-based rather than data-based -- use the force
+checkbox or add the date to `extra_nfl_game_dates` instead.
+
+### 10. (Optional) The /check command -- on-demand waiver recommendations
+Message the bot **`/check RB`** (or QB, WR, TE, FLEX, K, DST -- DEF, PK, and
+FLX also work as aliases) any time, and it replies with the top available
+players at that position, ranked by tier -- e.g.:
+
+```
+🏈 Top available RBs (STD tiers, Tier 6 or better):
+1. Player Name (Tier 2) -- Available as FA
+2. Another Player (Tier 3) -- On waivers
+   May be filling in for Starter Name (Questionable)
+3. Third Player (Tier 3) -- Available as FA
+
+(Tier data pulled 3h ago)
+```
+
+That last line reflects when *this bot* last fetched the data (cached for
+`tier_check.cache_hours`, default 12) -- not necessarily when
+fantasyfootballtiers.com itself last updated its rankings, which isn't
+something the page exposes. If a recommended player has a teammate ranked
+ahead of them on the depth chart who's currently injured, that gets noted
+too -- the same injury-context logic the passive breakout alerts already
+use, at no extra API cost.
+
+**Only players Tier 6 or better get shown by default** -- deep-bench tier
+9/10 players aren't useful recommendations even if technically available.
+Change that bar any time with **`/tier <N>`**, e.g. `/tier 8` to loosen it
+or `/tier 4` to tighten it -- this persists across runs until you change it
+again, it's not a one-off.
+
+**Optional modifiers on /check itself:**
+- A number for how many results you want: `/check RB 5` (default 3, max 10)
+- `refresh` to force a live re-fetch instead of using the cache: `/check RB refresh`
+- Both together, in any order: `/check RB 5 refresh`
+
+**How it works:** tier data comes from
+[fantasyfootballtiers.com](https://fantasyfootballtiers.com) (STD scoring
+only, per your preference -- credit to
+[Boris Chen](https://github.com/borisachen/fftiers) for pioneering this
+style of analysis, built on FantasyPros consensus data). The bot walks that
+position's tier list in order (best players first, matching the site's own
+"pick from the highest tier possible" guidance) and returns players who are
+actually free agents or on waivers in your Yahoo league and within your
+tier threshold -- skipping anyone already rostered or too far down the board.
+
+**Requires roster_management to be enabled** (step 6) -- this command needs
+your Yahoo connection to know who's actually available. NFL only; there's
+no equivalent data source wired up for NBA.
+
+**Response time is up to ~5 minutes, not instant.** Commands are picked up
+the same way button taps are -- on the next scheduled run, not through a
+live listening connection -- so don't expect an immediate reply.
+
+**A real caveat worth knowing:** fantasyfootballtiers.com is a third-party
+site, not an API built for this -- the bot parses "Tier N: ..." text that
+happens to appear on their pages today. If they ever restructure their
+site, this could break; if a `/check` reply says it couldn't fetch tier
+data, that's the first thing to check (`tier_scraper.py`'s fetch/parse
+logic, and whether the live page's format still matches what it expects).
+Tier data is cached for `tier_check.cache_hours` (default 12) rather than
+re-fetched on every command, both to be a reasonable neighbor to their
+server and to keep replies fast.
+
 ## Important things to know
 
 - **Button taps are only honored from your own Telegram chat.** Every
@@ -219,11 +328,14 @@ never happen outside that window regardless of sport or day.
   If you don't touch the repo for 2 months, go back into the Actions tab and
   re-enable it (one click).
 - **Private repo Actions minutes are limited** (2,000 free minutes/month on
-  GitHub's free tier). With schedule-aware checking on (step 8), the main
-  workflow only runs during the ~14-hour daily window when games are ever
-  actually happening, cutting usage roughly in half versus running 24/7 --
-  still worth watching if you're close to the limit. The daily scheduler
-  workflow itself is a single run per day and barely registers.
+  GitHub's free tier). At the current 5-minute interval, checks only run
+  during the ~14-hour daily window when games are ever actually happening
+  (step 9), but that still adds up to roughly 5,000 minutes/month -- well
+  over the free tier. If you're on a private repo, either make it public
+  (unlimited free minutes, and the code has no identifying info in it --
+  see the earlier note on league/team keys living in secrets) or space the
+  interval back out in `fantasy_alerts.yml`'s cron. The daily scheduler and
+  digest workflows are a single run each per day and barely register.
 - **Sleeper's stats/projections endpoints are unofficial and undocumented.**
   Community sources disagree on the exact URL shape (whether `/v1/` is
   included, whether `season_type` is a path segment or query param), so
@@ -245,6 +357,7 @@ never happen outside that window regardless of sport or day.
 ## Files
 
 - `main.py` -- entry point, runs each cycle
+- `health.py` -- failure tracking, alert-once logic, and the Yahoo circuit breaker
 - `game_schedule_checker.py` -- daily job that determines today's active sports
 - `sleeper_client.py` -- all Sleeper API calls
 - `scoring.py` -- breakout detection logic for both sports
@@ -253,9 +366,10 @@ never happen outside that window regardless of sport or day.
 - `test_telegram.py` -- sends a fake breakout alert to confirm Telegram setup works
 - `daily_digest.py` -- sends the once-daily breakout summary
 - `yahoo_client.py` -- Yahoo roster/free-agent lookups and adds
+- `tier_scraper.py` -- fetches/parses fantasyfootballtiers.com tier data for the /check command
 - `yahoo_auth_setup.py` -- one-time local script to authorize Yahoo access
 - `config.example.json` -- copy to `config.json` and edit
 - `docs/index.html` -- the optional read-only dashboard page
-- `.github/workflows/fantasy_alerts.yml` -- the main 10-min scheduler
+- `.github/workflows/fantasy_alerts.yml` -- the main 5-min scheduler
 - `.github/workflows/daily_schedule.yml` -- the once-a-day schedule check
 - `.github/workflows/daily_digest.yml` -- the once-a-day digest

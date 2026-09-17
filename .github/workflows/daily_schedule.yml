@@ -7,7 +7,16 @@ on:
     # (EDT, UTC-4). That's fine for a "figure out today's game days" check --
     # being an hour off doesn't matter here.
     - cron: "0 8 * * *"
-  workflow_dispatch: {}  # lets you manually trigger a run from the Actions tab to test
+  workflow_dispatch:
+    inputs:
+      force_nfl_active:
+        description: 'Force NFL to be treated as active today (e.g. a weather-rescheduled game the day-of-week heuristic would miss)'
+        type: boolean
+        default: false
+      force_nba_active:
+        description: 'Force NBA to be treated as active today'
+        type: boolean
+        default: false
 
 permissions:
   contents: write  # needed so the workflow can commit schedule_windows.json
@@ -17,10 +26,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.11"
 
@@ -28,6 +37,9 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Determine today's active sports
+        env:
+          FORCE_NFL_ACTIVE: ${{ github.event.inputs.force_nfl_active }}
+          FORCE_NBA_ACTIVE: ${{ github.event.inputs.force_nba_active }}
         run: python game_schedule_checker.py
 
       - name: Commit schedule_windows.json

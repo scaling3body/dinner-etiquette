@@ -70,16 +70,25 @@ def _is_authorized(config, update):
     return False
 
 
-def get_new_button_taps(config, offset_state):
+def get_new_updates(config, offset_state):
     """
-    Polls getUpdates for any new callback-button taps since the last check.
+    Polls getUpdates ONCE for anything new since the last check -- both
+    button taps AND plain text messages (like "/check RB") come from this
+    same call, sharing the same offset. Call this once per run and use
+    both parts of the result; a second poll in the same run would see
+    nothing new, since the first call already advances the offset past
+    whatever it returned.
+
     offset_state: dict with an 'offset' key, mutated in place and should be
     saved by the caller afterward so the same update isn't processed twice.
-    Returns a list of dicts: {"callback_data": str, "callback_query_id": str, "message_id": int}
+
+    Returns {"taps": [...], "commands": [...]}
+      taps: list of {"callback_data", "callback_query_id", "message_id"}
+      commands: list of {"text"} -- raw message text, e.g. "/check RB"
     """
     token = _token(config)
     if not token:
-        return []
+        return {"taps": [], "commands": []}
 
     url = API_BASE.format(token=token, method="getUpdates")
     params = {"timeout": 0}
@@ -90,7 +99,7 @@ def get_new_button_taps(config, offset_state):
     resp.raise_for_status()
     updates = resp.json().get("result", [])
 
-    taps = []
+    taps, commands = [], []
     for update in updates:
         offset_state["offset"] = update["update_id"] + 1
         if not _is_authorized(config, update):
@@ -102,7 +111,11 @@ def get_new_button_taps(config, offset_state):
                 "callback_query_id": cq["id"],
                 "message_id": cq["message"]["message_id"],
             })
-    return taps
+            continue
+        msg = update.get("message")
+        if msg and msg.get("text"):
+            commands.append({"text": msg["text"]})
+    return {"taps": taps, "commands": commands}
 
 
 def acknowledge_tap(config, callback_query_id, text=""):

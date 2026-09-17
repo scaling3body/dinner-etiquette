@@ -1,5 +1,7 @@
 {
   "last_updated": null,
   "recent_alerts": [],
-  "pending_suggestions": []
+  "pending_suggestions": [],
+  "health": {},
+  "health_failure_threshold": 6
 }

@@ -15,11 +15,22 @@
   .card .time { color: #6b7280; font-size: 0.8rem; margin-top: 4px; }
   .pending .code { color: #f4b942; font-weight: 600; }
   .empty { color: #6b7280; font-style: italic; }
+  .health-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .health-card { background: #1a1d24; border-radius: 10px; padding: 12px 16px; }
+  .health-card .name { font-size: 0.85rem; color: #9aa4b2; margin-bottom: 4px; }
+  .health-card .status { font-weight: 600; }
+  .status.ok { color: #4ade80; }
+  .status.warn { color: #f4b942; }
+  .status.down { color: #f87171; }
+  .health-card .detail { color: #6b7280; font-size: 0.78rem; margin-top: 3px; }
 </style>
 </head>
 <body>
   <h1>Fantasy Breakout Dashboard</h1>
   <div class="updated" id="updated">Loading...</div>
+
+  <h2>System Health</h2>
+  <div class="health-grid" id="health"></div>
 
   <h2>Pending Add Suggestions</h2>
   <div id="pending"></div>
@@ -28,11 +39,52 @@
   <div id="alerts"></div>
 
 <script>
+const COMPONENT_LABELS = {
+  sleeper_nfl: 'Sleeper (NFL)',
+  sleeper_nba: 'Sleeper (NBA)',
+  yahoo: 'Yahoo',
+  telegram: 'Telegram',
+};
+
+function timeAgo(iso) {
+  if (!iso) return 'never';
+  const diffMs = Date.now() - new Date(iso).getTime();
+  const mins = Math.round(diffMs / 60000);
+  if (mins < 1) return 'just now';
+  if (mins < 60) return mins + 'm ago';
+  const hrs = Math.round(mins / 60);
+  if (hrs < 24) return hrs + 'h ago';
+  return Math.round(hrs / 24) + 'd ago';
+}
+
 fetch('data.json?_=' + Date.now())
   .then(r => r.json())
   .then(data => {
     document.getElementById('updated').textContent =
       'Last updated: ' + new Date(data.last_updated).toLocaleString();
+
+    const healthEl = document.getElementById('health');
+    const health = data.health || {};
+    const failThreshold = data.health_failure_threshold || 6;
+    const components = Object.keys(COMPONENT_LABELS).filter(c => health[c]);
+    if (!components.length) {
+      healthEl.innerHTML = '<div class="empty">No health data yet.</div>';
+    } else {
+      healthEl.innerHTML = components.map(c => {
+        const h = health[c];
+        let statusClass = 'ok', statusText = 'OK';
+        if (h.circuit_open) { statusClass = 'down'; statusText = 'Circuit open'; }
+        else if (h.consecutive_failures >= failThreshold) { statusClass = 'down'; statusText = 'Failing'; }
+        else if (h.consecutive_failures > 0) { statusClass = 'warn'; statusText = 'Retrying'; }
+        return `
+          <div class="health-card">
+            <div class="name">${COMPONENT_LABELS[c]}</div>
+            <div class="status ${statusClass}">${statusText}</div>
+            <div class="detail">Last success: ${timeAgo(h.last_success)}</div>
+          </div>
+        `;
+      }).join('');
+    }
 
     const pendingEl = document.getElementById('pending');
     if (!data.pending_suggestions.length) {
@@ -41,7 +93,7 @@ fetch('data.json?_=' + Date.now())
       pendingEl.innerHTML = data.pending_suggestions.map(p => `
         <div class="card pending">
           <div class="msg">${p.player_name} (${p.sport.toUpperCase()}) &mdash;
-            reply <span class="code">YES ${p.code}</span> to add</div>
+            tap Add on the Telegram message to add</div>
           <div class="time">Suggested ${new Date(p.created_at).toLocaleString()}</div>
         </div>
       `).join('');
@@ -54,7 +106,7 @@ fetch('data.json?_=' + Date.now())
       alertsEl.innerHTML = data.recent_alerts.map(a => `
         <div class="card">
           <div class="msg">${a.message}</div>
-          <div class="time">${new Date(a.timestamp).toLocaleString()}</div>
+          <div class="time">${new Date(a.timestamp).toLocaleString()}${a.notified === false ? ' &middot; not sent (rostered, quiet mode)' : ''}</div>
         </div>
       `).join('');
     }

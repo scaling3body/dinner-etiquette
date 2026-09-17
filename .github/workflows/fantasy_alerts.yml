@@ -2,13 +2,14 @@ name: Fantasy Breakout Alerts
 
 on:
   schedule:
-    # Every 10 minutes, but only during hours UTC 16:00-05:59 -- roughly
-    # noon to 1am Eastern (covers both EST and EDT), the outer bound of
-    # when NFL or NBA games are ever actually being played. Combined with
-    # the schedule-aware skip in main.py (see daily_schedule.yml), this
-    # keeps the bot from burning Actions minutes at 4am in July when
-    # nothing's happening.
-    - cron: "*/10 16-23,0-5 * * *"
+    # Every 5 minutes (GitHub Actions' practical floor -- it doesn't reliably
+    # honor anything tighter than 5 min regardless of cron syntax), only
+    # during hours UTC 16:00-05:59 -- roughly noon to 1am Eastern (covers
+    # both EST and EDT), the outer bound of when NFL or NBA games are ever
+    # actually being played. Combined with the schedule-aware skip in
+    # main.py (see daily_schedule.yml), this keeps the bot from burning
+    # Actions minutes at 4am in July when nothing's happening.
+    - cron: "*/5 16-23,0-5 * * *"
   workflow_dispatch:
     inputs:
       send_test:
@@ -19,6 +20,14 @@ on:
 permissions:
   contents: write  # needed so the workflow can commit the updated alerted.json
 
+concurrency:
+  # At a 5-minute interval, a slow run (a retried Sleeper URL fallback, a
+  # sluggish Yahoo call) could still be running when the next one triggers.
+  # This makes GitHub queue runs instead of letting them overlap and race
+  # on the same state files / git push.
+  group: fantasy-alerts-check
+  cancel-in-progress: false
+
 jobs:
   check:
     runs-on: ubuntu-latest
@@ -26,10 +35,10 @@ jobs:
       YAHOO_OAUTH_JSON: ${{ secrets.YAHOO_OAUTH_JSON }}
     steps:
       - name: Check out repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.11"
 
@@ -62,6 +71,6 @@ jobs:
         run: |
           git config user.name "fantasy-alert-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add alerted.json pending.json telegram_offset.json dashboard_history.json docs/data.json players_nfl_cache.json players_nba_cache.json || true
+          git add alerted.json pending.json telegram_offset.json dashboard_history.json health_state.json tier_threshold_state.json docs/data.json players_nfl_cache.json players_nba_cache.json tier_cache/*.json || true
           git diff --cached --quiet || git commit -m "Update alert state [skip ci]"
           git push || true

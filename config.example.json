@@ -53,7 +53,8 @@
   },
   "notifications": {
     "method": "telegram",
-    "_comment": "Do NOT put a real bot token here. Set TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID as GitHub repo secrets instead -- see README.md."
+    "_comment": "Do NOT put a real bot token here. Set TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID as GitHub repo secrets instead -- see README.md. batch_threshold: number of simultaneous breakouts needed before they're combined into one message (default 3) -- fewer than that get sent as separate pings.",
+    "batch_threshold": 3
   },
   "roster_management": {
     "enabled": false,
@@ -65,5 +66,15 @@
   "scheduling": {
     "_comment": "extra_nfl_game_dates: manual override for NFL game days that don't fall on the usual Thu/Sun/Mon (+Sat in weeks 15+), e.g. a Christmas Day game. Format: ['2026-12-25']. NBA doesn't need an override -- it's checked against real Sleeper data, not a day-of-week guess.",
     "extra_nfl_game_dates": []
+  },
+  "health_check": {
+    "_comment": "failure_alert_threshold: consecutive failures before sending one Telegram alert (~30 min at threshold 6 on a 5-min interval). yahoo_breaker_threshold: consecutive Yahoo failures before pausing retries. yahoo_breaker_cooldown_minutes: how long that pause lasts.",
+    "failure_alert_threshold": 6,
+    "yahoo_breaker_threshold": 3,
+    "yahoo_breaker_cooldown_minutes": 30
+  },
+  "tier_check": {
+    "_comment": "Backs the /check <position> Telegram command (NFL only). Pulls STD-scoring tier lists from fantasyfootballtiers.com and cross-references against your Yahoo league's available players. cache_hours: how long a fetched tier list is reused before re-fetching (the site updates periodically, not every few minutes, so this avoids hammering it on every command).",
+    "cache_hours": 12
   }
 }

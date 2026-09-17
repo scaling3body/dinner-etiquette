@@ -25,8 +25,8 @@ a bid amount and will need a small extension -- see add_player() below.
 
 PERFORMANCE NOTE: create one YahooRosterManager per sport per run (not one
 per breakout) -- it caches the free-agent scan for its own lifetime, so
-reusing one instance across every alert in a run avoids re-scanning Yahoo's
-API for every single player.
+reusing it across every alert in a run avoids re-scanning Yahoo's API for
+every single player.
 """
 
 import re
@@ -122,21 +122,49 @@ class YahooRosterManager:
         self._open_slot_cache = False
         return False
 
-    def find_player(self, full_name, team_abbr=None):
+    def find_player(self, full_name, team_abbr=None, position=None):
         """
         Looks for a matching free agent or waiver player in the league by
         name. Returns a dict with player_id/name/status, or None if not
         found (e.g. the player is rostered by another team already).
+
+        If multiple free agents share the exact same name (rare but
+        possible), team_abbr and then position are used to disambiguate --
+        purely a safety net: this never causes a valid single match to be
+        rejected, it only narrows down when there's a genuine collision.
+        If still ambiguous after both filters, falls back to the first
+        match, same as before this existed.
         """
         target = _normalize(full_name)
-        for c in self._get_available_players():
-            if _normalize(c["name"]) == target:
-                if team_abbr and c.get("editorial_team_abbr", "").lower() != team_abbr.lower():
-                    continue
-                return c
-        return None
+        matches = [c for c in self._get_available_players() if _normalize(c["name"]) == target]
 
-    def get_player_status(self, full_name, team_abbr=None):
+        if not matches:
+            return None
+        if len(matches) == 1:
+            return matches[0]
+
+        # Collision: narrow by team first.
+        if team_abbr:
+            team_matches = [c for c in matches if c.get("editorial_team_abbr", "").lower() == team_abbr.lower()]
+            if team_matches:
+                matches = team_matches
+                if len(matches) == 1:
+                    return matches[0]
+
+        # Still ambiguous -- narrow by position if we have it on both sides.
+        if position:
+            def _candidate_positions(c):
+                elig = c.get("eligible_positions") or []
+                single = c.get("position") or c.get("display_position")
+                return set(elig) | ({single} if single else set())
+
+            pos_matches = [c for c in matches if position in _candidate_positions(c)]
+            if pos_matches:
+                matches = pos_matches
+
+        return matches[0]  # best effort if still ambiguous after all filters
+
+    def get_player_status(self, full_name, team_abbr=None, position=None):
         """
         Returns (status_label, player_dict_or_None) for use in alert text.
         status_label is one of "Available as FA", "On waivers", "Rostered",
@@ -144,7 +172,7 @@ class YahooRosterManager:
         player_dict is the matched Yahoo player record if found (needed to
         add them), or None if not found/rostered.
         """
-        match = self.find_player(full_name, team_abbr)
+        match = self.find_player(full_name, team_abbr, position)
         if not match:
             return "Rostered", None
         label = STATUS_LABELS.get(match.get("status"), "Available")

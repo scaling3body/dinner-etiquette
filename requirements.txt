@@ -1,3 +1,4 @@
 requests>=2.31.0
+beautifulsoup4>=4.12.0
 yahoo_oauth>=2.0
 yahoo_fantasy_api>=2.12.0

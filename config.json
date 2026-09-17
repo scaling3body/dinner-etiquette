@@ -3,6 +3,7 @@
     "enabled": true,
     "pct_threshold": 1.30,
     "point_floor": 12,
+    "extreme_multiplier": 1.5,
     "scoring_settings": {
       "_comment_offense": "25 yds/pt = 0.04, 10 yds/pt = 0.1. No 'rec' key = standard (non-PPR), matching the table (no Receptions row).",
       "pass_yd": 0.04,
@@ -47,20 +48,33 @@
     "enabled": true,
     "categories": ["pts", "reb", "ast", "stl", "blk", "fg3m", "fgp", "ftp", "to"],
     "invert_categories": ["to"],
-    "zscore_alert_threshold": 6.0
+    "zscore_alert_threshold": 6.0,
+    "extreme_multiplier": 1.5
   },
   "notifications": {
     "method": "telegram",
-    "_comment": "Do NOT put a real bot token here. Set TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID as GitHub repo secrets instead -- see README.md."
+    "_comment": "Do NOT put a real bot token here. Set TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID as GitHub repo secrets instead -- see README.md. batch_threshold: number of simultaneous breakouts needed before they're combined into one message (default 3) -- fewer than that get sent as separate pings.",
+    "batch_threshold": 3
   },
   "roster_management": {
-    "enabled": false,
-    "_comment": "Set enabled true once Yahoo OAuth is set up (see README.md). Only suggests adds into an already-open bench/IR spot -- never suggests a drop.",
-    "football_league_key": "PUT_YOUR_YAHOO_NFL_LEAGUE_KEY",
-    "football_team_key": "PUT_YOUR_YAHOO_NFL_TEAM_KEY",
-    "basketball_league_key": "PUT_YOUR_YAHOO_NBA_LEAGUE_KEY",
-    "basketball_team_key": "PUT_YOUR_YAHOO_NBA_TEAM_KEY",
-    "suggestion_expiry_minutes": 180
+    "enabled": true,
+    "_comment": "Set enabled true once Yahoo OAuth is set up (see README.md). Only suggests adds into an already-open bench/IR spot -- never suggests a drop. League/team keys are NOT stored here -- set them as GitHub secrets YAHOO_NFL_LEAGUE_KEY, YAHOO_NFL_TEAM_KEY, YAHOO_NBA_LEAGUE_KEY, YAHOO_NBA_TEAM_KEY instead, so the repo doesn't reveal which league/team you're in.",
+    "quiet_rostered_players": true,
+    "suggestion_expiry_minutes": 1440
   },
-  "check_interval_notes": "Actual check frequency is controlled by the GitHub Actions cron schedule, not this file. See .github/workflows/fantasy_alerts.yml"
+  "check_interval_notes": "Actual check frequency is controlled by the GitHub Actions cron schedule, not this file. See .github/workflows/fantasy_alerts.yml",
+  "scheduling": {
+    "_comment": "extra_nfl_game_dates: manual override for NFL game days that don't fall on the usual Thu/Sun/Mon (+Sat in weeks 15+), e.g. a Christmas Day game. Format: ['2026-12-25']. NBA doesn't need an override -- it's checked against real Sleeper data, not a day-of-week guess.",
+    "extra_nfl_game_dates": []
+  },
+  "health_check": {
+    "_comment": "failure_alert_threshold: consecutive failures before sending one Telegram alert (~30 min at threshold 6 on a 5-min interval). yahoo_breaker_threshold: consecutive Yahoo failures before pausing retries. yahoo_breaker_cooldown_minutes: how long that pause lasts.",
+    "failure_alert_threshold": 6,
+    "yahoo_breaker_threshold": 3,
+    "yahoo_breaker_cooldown_minutes": 30
+  },
+  "tier_check": {
+    "_comment": "Backs the /check <position> Telegram command (NFL only). Pulls STD-scoring tier lists from fantasyfootballtiers.com and cross-references against your Yahoo league's available players. cache_hours: how long a fetched tier list is reused before re-fetching (the site updates periodically, not every few minutes, so this avoids hammering it on every command).",
+    "cache_hours": 12
+  }
 }
