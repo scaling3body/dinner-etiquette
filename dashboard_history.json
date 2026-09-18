@@ -26,5 +26,19 @@
     "player_name": "Jared Goff",
     "message": "\ud83c\udfc8 BREAKOUT: Jared Goff (DET) scored 22.66 pts [Final] vs a projection of 16.28 (139.2% of projection).",
     "notified": true
+  },
+  {
+    "timestamp": "2026-09-18T03:32:57.480296+00:00",
+    "sport": "nfl",
+    "player_name": "Jared Goff",
+    "message": "\ud83c\udfc8 DOUBLE BREAKOUT: Jared Goff (DET) scored 29.78 pts [Live] vs a projection of 16.28 (182.9% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-09-18T03:32:57.481273+00:00",
+    "sport": "nfl",
+    "player_name": "Amon-Ra St. Brown",
+    "message": "\ud83c\udfc8 \ud83d\udd25 DOUBLE BREAKOUT: Amon-Ra St. Brown (DET) scored 26.2 pts [Live] vs a projection of 11.0 (238.2% of projection).",
+    "notified": true
   }
 ]
