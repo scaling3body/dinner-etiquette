@@ -1,0 +1,8 @@
+# Yahoo OAuth credentials -- written at runtime from the YAHOO_OAUTH_JSON
+# GitHub secret (see .github/workflows/fantasy_alerts.yml). Never commit
+# this file: it previously leaked real Yahoo OAuth tokens into git history
+# (scrubbed via git filter-repo) -- see the commit that added this file.
+oauth2.json
+
+__pycache__/
+*.pyc
