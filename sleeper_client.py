@@ -106,19 +106,31 @@ def get_schedule(sport, season, season_type="regular"):
     return None
 
 
-def get_team_game_status(schedule, team_abbr):
+def get_team_game_status(schedule, team_abbr, week=None):
     """
     Given a schedule list from get_schedule() and a team abbreviation,
     returns that team's game status ('pre_game'/'in_game'/'complete'/
     'canceled'), or None if not found (schedule unavailable, team on bye,
     or team abbreviation didn't match -- e.g. 'FA' for a free agent).
+
+    get_schedule()'s URL has no week segment, so this list may span the
+    whole season rather than just the current week -- a team's FIRST
+    matching entry could be an old, already-completed game rather than
+    today's. If a `week` is given and entries carry a 'week' field, this
+    filters to that week first; if no entry declares a week at all, it
+    falls back to the old first-match behavior rather than returning
+    nothing.
     """
     if not schedule or not team_abbr:
         return None
-    for game in schedule:
-        if game.get("home") == team_abbr or game.get("away") == team_abbr:
-            return game.get("status")
-    return None
+    matches = [g for g in schedule if g.get("home") == team_abbr or g.get("away") == team_abbr]
+    if not matches:
+        return None
+    if week is not None:
+        this_week = [g for g in matches if g.get("week") == week]
+        if this_week:
+            return this_week[0].get("status")
+    return matches[0].get("status")
 
 
 def get_all_players(sport):

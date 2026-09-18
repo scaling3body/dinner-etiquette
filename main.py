@@ -184,10 +184,10 @@ def build_yahoo_manager(config, sport, health_state):
         return None
 
 
-def get_game_status_tag(schedule, team):
+def get_game_status_tag(schedule, team, week=None):
     if not schedule or not team:
         return None
-    status = sleeper.get_team_game_status(schedule, team)
+    status = sleeper.get_team_game_status(schedule, team, week)
     return GAME_STATUS_DISPLAY.get(status)  # None for pre_game or unresolved -- nothing useful to show
 
 
@@ -662,7 +662,7 @@ def run_football(config, alerted, players, history, manager, batch, health_state
                 name = p.get("full_name") or f"Player {player_id}"
                 team = p.get("team", "FA")
                 label = scoring.breakout_label(result["count"], result["is_extreme"])
-                status_tag = get_game_status_tag(schedule, team)
+                status_tag = get_game_status_tag(schedule, team, week)
                 msg = notifier.format_football_alert(name, team, result, label=label, status_tag=status_tag)
                 injury_note = find_starter_injury_context(players, p)
                 if injury_note:
