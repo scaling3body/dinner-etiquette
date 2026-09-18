@@ -32,22 +32,24 @@ config.json or use the force checkbox.
 
 import json
 import os
-from datetime import date, timezone, timedelta
+from datetime import datetime
+from zoneinfo import ZoneInfo
 
 import sleeper_client as sleeper
 
 CONFIG_PATH = "config.json"
 OUTPUT_PATH = "schedule_windows.json"
 
-# Rough Eastern Time "today" -- good enough for a once-a-day check where being
-# off by an hour around midnight doesn't matter much. Avoids adding a
-# timezone library dependency.
-ET_OFFSET_HOURS = -5  # EST; during EDT this is off by an hour, which is fine here
+ET_ZONE = ZoneInfo("America/New_York")  # stdlib since Python 3.9 -- no extra dependency,
+# and handles EST/EDT correctly rather than a fixed offset that drifts an hour
+# half the year (and, at the day-boundary, could give the wrong CALENDAR DAY
+# entirely -- not just an hour off -- if this were ever run outside the early
+# UTC-morning window where the old fixed -5h heuristic happened to still agree
+# with actual Eastern time).
 
 
 def _today_et():
-    return (date.today())  # date.today() is server-local (UTC on GH Actions);
-    # close enough for a day-level check -- see note above.
+    return datetime.now(ET_ZONE).date()
 
 
 def load_json(path, default):
@@ -79,7 +81,7 @@ def check_nfl_active_today(config):
 
 def check_nba_active_today(config):
     nba_state = sleeper.get_nba_state()
-    season = nba_state.get("season") if nba_state else str(date.today().year)
+    season = nba_state.get("season") if nba_state else str(_today_et().year)
     today_str = _today_et().isoformat()
 
     projections = sleeper.get_nba_day_projections(today_str, season)

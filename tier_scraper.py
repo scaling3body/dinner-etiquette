@@ -24,7 +24,6 @@ one exists.
 import json
 import os
 import re
-import time
 from datetime import datetime, timezone
 
 import requests
@@ -125,10 +124,18 @@ def get_tier_list(position, max_age_hours=CACHE_MAX_AGE_HOURS):
     path = _cache_path(position)
 
     if os.path.exists(path):
-        age_hours = (time.time() - os.path.getmtime(path)) / 3600
-        if age_hours < max_age_hours:
-            with open(path) as f:
-                return json.load(f)
+        with open(path) as f:
+            cached = json.load(f)
+        # Freshness comes from the payload's own "fetched_at", NOT file
+        # mtime -- GitHub Actions does a fresh `git checkout` every run,
+        # which resets mtime to "now" regardless of the original commit
+        # time, so an mtime-based check would always read as fresh and
+        # this cache would never actually refresh past its first fetch.
+        fetched_at = cached.get("fetched_at")
+        if fetched_at:
+            age_hours = (datetime.now(timezone.utc) - datetime.fromisoformat(fetched_at)).total_seconds() / 3600
+            if age_hours < max_age_hours:
+                return cached
 
     fresh = _fetch_and_parse(position)
     if fresh is not None:

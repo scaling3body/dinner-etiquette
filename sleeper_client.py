@@ -117,9 +117,17 @@ def get_team_game_status(schedule, team_abbr, week=None):
     whole season rather than just the current week -- a team's FIRST
     matching entry could be an old, already-completed game rather than
     today's. If a `week` is given and entries carry a 'week' field, this
-    filters to that week first; if no entry declares a week at all, it
-    falls back to the old first-match behavior rather than returning
-    nothing.
+    filters to that week first (comparing as strings so an int/str type
+    mismatch between the schedule's 'week' and the caller's `week` -- an
+    unverified third-party API, so its exact types aren't guaranteed --
+    doesn't cause a spurious miss).
+
+    If NO entry declares a week at all, this falls back to the old
+    first-match behavior (best effort against an unknown schema). But if
+    entries DO declare a week and none matches, that's suspicious rather
+    than "field absent" -- returning the wrong-week status would be
+    exactly the stale-tag bug this filtering exists to prevent, so this
+    returns None (no tag shown) instead of guessing.
     """
     if not schedule or not team_abbr:
         return None
@@ -127,9 +135,15 @@ def get_team_game_status(schedule, team_abbr, week=None):
     if not matches:
         return None
     if week is not None:
-        this_week = [g for g in matches if g.get("week") == week]
+        this_week = [g for g in matches if g.get("week") is not None and str(g.get("week")) == str(week)]
         if this_week:
             return this_week[0].get("status")
+        if any(g.get("week") is not None for g in matches):
+            if DEBUG:
+                print(f"get_team_game_status: {team_abbr} has schedule entries with a 'week' "
+                      f"field, but none match week={week!r} -- withholding status rather than "
+                      f"guessing from a different week.")
+            return None
     return matches[0].get("status")
 
 

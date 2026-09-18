@@ -27,12 +27,23 @@ import os
 import random
 import re
 import sys
-from datetime import date, datetime, timedelta, timezone
+from datetime import datetime, timedelta, timezone
+from zoneinfo import ZoneInfo
 
 import sleeper_client as sleeper
 import scoring
 import telegram_notifier as notifier
 import health
+
+ET_ZONE = ZoneInfo("America/New_York")  # NBA's "today" is a calendar day in Eastern
+# time, not UTC -- using UTC date.today() here would query the wrong day's
+# Sleeper slate during the evening/night UTC hours (roughly 8pm ET onward),
+# once UTC has already rolled to the next calendar date but Eastern hasn't.
+
+
+def today_et():
+    return datetime.now(ET_ZONE).date()
+
 
 CONFIG_PATH = "config.json"
 ALERTED_PATH = "alerted.json"
@@ -62,14 +73,25 @@ def save_json(path, data):
 
 
 def get_players_cached(sport, cache_path):
-    if os.path.exists(cache_path):
-        age_seconds = os.path.getmtime(cache_path)
-        import time
-        if time.time() - age_seconds < 24 * 3600:
+    """
+    Caches Sleeper's full player list for 24h. Freshness is tracked via a
+    sidecar "<cache_path>.fetched_at" file holding an ISO timestamp, NOT
+    filesystem mtime -- GitHub Actions does a fresh `git checkout` every
+    run, which sets every file's mtime to "now" regardless of when it was
+    actually committed, so an mtime-based check would always read as
+    freshly-fetched and this cache would never actually refresh.
+    """
+    meta_path = cache_path + ".fetched_at"
+    if os.path.exists(cache_path) and os.path.exists(meta_path):
+        with open(meta_path) as f:
+            fetched_at = datetime.fromisoformat(f.read().strip())
+        if datetime.now(timezone.utc) - fetched_at < timedelta(hours=24):
             return load_json(cache_path, {})
     players = sleeper.get_all_players(sport)
     if players:
         save_json(cache_path, players)
+        with open(meta_path, "w") as f:
+            f.write(datetime.now(timezone.utc).isoformat())
         return players
     return load_json(cache_path, {})
 
@@ -681,8 +703,8 @@ def run_basketball(config, alerted, players, history, manager, batch, health_sta
     if not config["basketball"]["enabled"]:
         return
     nba_state = sleeper.get_nba_state()
-    season = nba_state.get("season") if nba_state else str(date.today().year)
-    today_str = date.today().isoformat()
+    season = nba_state.get("season") if nba_state else str(today_et().year)
+    today_str = today_et().isoformat()
 
     projections = sleeper.get_nba_day_projections(today_str, season)
     stats = sleeper.get_nba_day_stats(today_str, season)
