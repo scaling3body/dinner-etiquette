@@ -271,5 +271,12 @@
     "player_name": "Jaxon Smith-Njigba",
     "message": "\ud83c\udfc8 BREAKOUT: Jaxon Smith-Njigba (SEA) scored 16.8 pts [Live] vs a projection of 12.75 (131.8% of projection).",
     "notified": true
+  },
+  {
+    "timestamp": "2026-09-20T22:18:11.013921+00:00",
+    "sport": "nfl",
+    "player_name": "Jaxon Smith-Njigba",
+    "message": "\ud83c\udfc8 DOUBLE BREAKOUT: Jaxon Smith-Njigba (SEA) scored 23.5 pts [Live] vs a projection of 12.75 (184.3% of projection).",
+    "notified": true
   }
 ]
