@@ -82,5 +82,19 @@
     "player_name": "DeVonta Smith",
     "message": "\ud83c\udfc8 BREAKOUT: DeVonta Smith (PHI) scored 12.6 pts [Live] vs a projection of 9.62 (131.0% of projection).",
     "notified": true
+  },
+  {
+    "timestamp": "2026-09-20T18:28:52.273952+00:00",
+    "sport": "nfl",
+    "player_name": "TreVeyon Henderson",
+    "message": "\ud83c\udfc8 BREAKOUT: TreVeyon Henderson (NE) scored 12.5 pts [Live] vs a projection of 7.35 (170.1% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-09-20T18:28:52.276647+00:00",
+    "sport": "nfl",
+    "player_name": "Chase McLaughlin",
+    "message": "\ud83c\udfc8 BREAKOUT: Chase McLaughlin (TB) scored 12.0 pts [Live] vs a projection of 6.65 (180.5% of projection).",
+    "notified": true
   }
 ]
