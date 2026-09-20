@@ -40,5 +40,19 @@
     "player_name": "Amon-Ra St. Brown",
     "message": "\ud83c\udfc8 \ud83d\udd25 DOUBLE BREAKOUT: Amon-Ra St. Brown (DET) scored 26.2 pts [Live] vs a projection of 11.0 (238.2% of projection).",
     "notified": true
+  },
+  {
+    "timestamp": "2026-09-20T17:13:38.898718+00:00",
+    "sport": "nfl",
+    "player_name": "Player PIT",
+    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Player PIT (PIT) scored 12.0 pts [Live] vs a projection of 5.68 (211.3% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-09-20T17:13:38.903060+00:00",
+    "sport": "nfl",
+    "player_name": "Player CAR",
+    "message": "\ud83c\udfc8 BREAKOUT: Player CAR (CAR) scored 12.0 pts [Live] vs a projection of 7.31 (164.2% of projection).",
+    "notified": true
   }
 ]

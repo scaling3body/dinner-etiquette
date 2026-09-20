@@ -15,6 +15,14 @@
     "3163": {
       "count": 2,
       "baseline": 29.78
+    },
+    "PIT": {
+      "count": 1,
+      "baseline": 12.0
+    },
+    "CAR": {
+      "count": 1,
+      "baseline": 12.0
     }
   },
   "nba-2026-09-18": {},
