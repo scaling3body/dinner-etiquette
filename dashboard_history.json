@@ -61,5 +61,12 @@
     "player_name": "Player TEN",
     "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Player TEN (TEN) scored 12.0 pts [Live] vs a projection of 4.29 (279.7% of projection).",
     "notified": true
+  },
+  {
+    "timestamp": "2026-09-20T17:59:21.666968+00:00",
+    "sport": "nfl",
+    "player_name": "Player HOU",
+    "message": "\ud83c\udfc8 BREAKOUT: Player HOU (HOU) scored 12.0 pts [Live] vs a projection of 6.18 (194.2% of projection).",
+    "notified": true
   }
 ]
