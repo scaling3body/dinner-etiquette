@@ -278,5 +278,12 @@
     "player_name": "Jaxon Smith-Njigba",
     "message": "\ud83c\udfc8 DOUBLE BREAKOUT: Jaxon Smith-Njigba (SEA) scored 23.5 pts [Live] vs a projection of 12.75 (184.3% of projection).",
     "notified": true
+  },
+  {
+    "timestamp": "2026-09-20T22:29:18.195314+00:00",
+    "sport": "nfl",
+    "player_name": "Brock Purdy",
+    "message": "\ud83c\udfc8 BREAKOUT: Brock Purdy (SF) scored 26.08 pts [Live] vs a projection of 19.98 (130.5% of projection).",
+    "notified": true
   }
 ]
