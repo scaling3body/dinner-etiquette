@@ -180,5 +180,19 @@
     "player_name": "Chris Olave",
     "message": "\ud83c\udfc8 BREAKOUT: Chris Olave (NO) scored 12.8 pts [Live] vs a projection of 9.74 (131.4% of projection).",
     "notified": true
+  },
+  {
+    "timestamp": "2026-09-20T19:37:13.831357+00:00",
+    "sport": "nfl",
+    "player_name": "Evan McPherson",
+    "message": "\ud83c\udfc8 BREAKOUT: Evan McPherson (CIN) scored 12.0 pts [Live] vs a projection of 6.29 (190.8% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-09-20T19:37:13.843160+00:00",
+    "sport": "nfl",
+    "player_name": "Player MIN",
+    "message": "\ud83c\udfc8 \ud83d\udd25 DOUBLE BREAKOUT: Player MIN (MIN) scored 16.0 pts [Live] vs a projection of 5.62 (284.7% of projection).",
+    "notified": true
   }
 ]

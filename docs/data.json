@@ -1,6 +1,20 @@
 {
-  "last_updated": "2026-09-20T19:29:49.721706+00:00",
+  "last_updated": "2026-09-20T19:38:19.010043+00:00",
   "recent_alerts": [
+    {
+      "timestamp": "2026-09-20T19:37:13.843160+00:00",
+      "sport": "nfl",
+      "player_name": "Player MIN",
+      "message": "\ud83c\udfc8 \ud83d\udd25 DOUBLE BREAKOUT: Player MIN (MIN) scored 16.0 pts [Live] vs a projection of 5.62 (284.7% of projection).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-09-20T19:37:13.831357+00:00",
+      "sport": "nfl",
+      "player_name": "Evan McPherson",
+      "message": "\ud83c\udfc8 BREAKOUT: Evan McPherson (CIN) scored 12.0 pts [Live] vs a projection of 6.29 (190.8% of projection).",
+      "notified": true
+    },
     {
       "timestamp": "2026-09-20T19:28:43.952797+00:00",
       "sport": "nfl",
@@ -188,17 +202,17 @@
   "health": {
     "sleeper_nfl": {
       "consecutive_failures": 0,
-      "last_success": "2026-09-20T19:28:34.638021+00:00",
+      "last_success": "2026-09-20T19:37:04.651939+00:00",
       "circuit_open": false
     },
     "sleeper_nba": {
       "consecutive_failures": 0,
-      "last_success": "2026-09-20T19:29:39.717149+00:00",
+      "last_success": "2026-09-20T19:38:08.949607+00:00",
       "circuit_open": false
     },
     "telegram": {
       "consecutive_failures": 0,
-      "last_success": "2026-09-20T19:29:49.720565+00:00",
+      "last_success": "2026-09-20T19:38:19.009035+00:00",
       "circuit_open": false
     }
   },

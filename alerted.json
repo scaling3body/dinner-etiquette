@@ -57,8 +57,8 @@
       "baseline": 12.8
     },
     "MIN": {
-      "count": 1,
-      "baseline": 12.0
+      "count": 2,
+      "baseline": 16.0
     },
     "9228": {
       "count": 1,
@@ -91,6 +91,10 @@
     "8144": {
       "count": 1,
       "baseline": 12.8
+    },
+    "7839": {
+      "count": 1,
+      "baseline": 12.0
     }
   },
   "nba-2026-09-18": {},
