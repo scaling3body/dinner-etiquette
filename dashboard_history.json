@@ -285,5 +285,26 @@
     "player_name": "Brock Purdy",
     "message": "\ud83c\udfc8 BREAKOUT: Brock Purdy (SF) scored 26.08 pts [Live] vs a projection of 19.98 (130.5% of projection).",
     "notified": true
+  },
+  {
+    "timestamp": "2026-09-20T22:40:03.946115+00:00",
+    "sport": "nfl",
+    "player_name": "Jake Ferguson",
+    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Jake Ferguson (DAL) scored 15.6 pts [Live] vs a projection of 5.74 (271.8% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-09-20T22:40:03.954668+00:00",
+    "sport": "nfl",
+    "player_name": "Bhayshul Tuten",
+    "message": "\ud83c\udfc8 BREAKOUT: Bhayshul Tuten (JAX) scored 12.3 pts [Live] vs a projection of 7.37 (166.9% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-09-20T22:40:03.956804+00:00",
+    "sport": "nfl",
+    "player_name": "George Kittle",
+    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: George Kittle (SF) scored 14.0 pts [Live] vs a projection of 6.76 (207.1% of projection).",
+    "notified": true
   }
 ]
