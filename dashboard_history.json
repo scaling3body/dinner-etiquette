@@ -152,5 +152,33 @@
     "player_name": "Denzel Boston",
     "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Denzel Boston (CLE) scored 13.8 pts [Live] vs a projection of 5.91 (233.5% of projection).",
     "notified": true
+  },
+  {
+    "timestamp": "2026-09-20T19:28:43.938985+00:00",
+    "sport": "nfl",
+    "player_name": "Player NE",
+    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Player NE (NE) scored 17.0 pts [Live] vs a projection of 7.72 (220.2% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-09-20T19:28:43.943805+00:00",
+    "sport": "nfl",
+    "player_name": "Andre Szmyt",
+    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Andre Szmyt (CLE) scored 12.0 pts [Live] vs a projection of 4.88 (245.9% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-09-20T19:28:43.946679+00:00",
+    "sport": "nfl",
+    "player_name": "Player CAR",
+    "message": "\ud83c\udfc8 \ud83d\udd25 DOUBLE BREAKOUT: Player CAR (CAR) scored 22.0 pts [Live] vs a projection of 7.31 (301.0% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-09-20T19:28:43.952797+00:00",
+    "sport": "nfl",
+    "player_name": "Chris Olave",
+    "message": "\ud83c\udfc8 BREAKOUT: Chris Olave (NO) scored 12.8 pts [Live] vs a projection of 9.74 (131.4% of projection).",
+    "notified": true
   }
 ]

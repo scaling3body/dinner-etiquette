@@ -21,8 +21,8 @@
       "baseline": 12.0
     },
     "CAR": {
-      "count": 1,
-      "baseline": 12.0
+      "count": 2,
+      "baseline": 22.0
     },
     "TEN": {
       "count": 1,
@@ -79,6 +79,18 @@
     "13346": {
       "count": 1,
       "baseline": 13.8
+    },
+    "NE": {
+      "count": 1,
+      "baseline": 17.0
+    },
+    "11261": {
+      "count": 1,
+      "baseline": 12.0
+    },
+    "8144": {
+      "count": 1,
+      "baseline": 12.8
     }
   },
   "nba-2026-09-18": {},
