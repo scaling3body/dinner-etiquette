@@ -201,5 +201,19 @@
     "player_name": "Chase McLaughlin",
     "message": "\ud83c\udfc8 \ud83d\udd25 DOUBLE BREAKOUT: Chase McLaughlin (TB) scored 16.0 pts [Live] vs a projection of 6.65 (240.6% of projection).",
     "notified": true
+  },
+  {
+    "timestamp": "2026-09-20T19:52:32.637486+00:00",
+    "sport": "nfl",
+    "player_name": "Tyler Shough",
+    "message": "\ud83c\udfc8 BREAKOUT: Tyler Shough (NO) scored 22.48 pts [Live] vs a projection of 15.48 (145.2% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-09-20T19:52:32.648238+00:00",
+    "sport": "nfl",
+    "player_name": "Deshaun Watson",
+    "message": "\ud83c\udfc8 BREAKOUT: Deshaun Watson (CLE) scored 19.82 pts [Live] vs a projection of 13.92 (142.4% of projection).",
+    "notified": true
   }
 ]
