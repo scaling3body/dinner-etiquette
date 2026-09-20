@@ -54,5 +54,12 @@
     "player_name": "Player CAR",
     "message": "\ud83c\udfc8 BREAKOUT: Player CAR (CAR) scored 12.0 pts [Live] vs a projection of 7.31 (164.2% of projection).",
     "notified": true
+  },
+  {
+    "timestamp": "2026-09-20T17:25:01.183988+00:00",
+    "sport": "nfl",
+    "player_name": "Player TEN",
+    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Player TEN (TEN) scored 12.0 pts [Live] vs a projection of 4.29 (279.7% of projection).",
+    "notified": true
   }
 ]

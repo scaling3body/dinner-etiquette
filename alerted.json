@@ -23,6 +23,10 @@
     "CAR": {
       "count": 1,
       "baseline": 12.0
+    },
+    "TEN": {
+      "count": 1,
+      "baseline": 12.0
     }
   },
   "nba-2026-09-18": {},
