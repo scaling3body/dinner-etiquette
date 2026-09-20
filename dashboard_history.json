@@ -215,5 +215,12 @@
     "player_name": "Deshaun Watson",
     "message": "\ud83c\udfc8 BREAKOUT: Deshaun Watson (CLE) scored 19.82 pts [Live] vs a projection of 13.92 (142.4% of projection).",
     "notified": true
+  },
+  {
+    "timestamp": "2026-09-20T20:00:33.523482+00:00",
+    "sport": "nfl",
+    "player_name": "DeVonta Smith",
+    "message": "\ud83c\udfc8 DOUBLE BREAKOUT: DeVonta Smith (PHI) scored 17.7 pts [Live] vs a projection of 9.62 (184.0% of projection).",
+    "notified": true
   }
 ]
