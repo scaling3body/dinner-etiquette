@@ -229,5 +229,12 @@
     "player_name": "Dalton Schultz",
     "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Dalton Schultz (HOU) scored 14.0 pts [Live] vs a projection of 6.52 (214.7% of projection).",
     "notified": true
+  },
+  {
+    "timestamp": "2026-09-20T20:26:53.750809+00:00",
+    "sport": "nfl",
+    "player_name": "Player LAC",
+    "message": "\ud83c\udfc8 BREAKOUT: Player LAC (LAC) scored 12.0 pts [Live] vs a projection of 8.05 (149.1% of projection).",
+    "notified": true
   }
 ]
