@@ -341,5 +341,12 @@
     "player_name": "Cody White",
     "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Cody White (LV) scored 14.4 pts [Live] vs a projection of 0.28 (5142.9% of projection).",
     "notified": true
+  },
+  {
+    "timestamp": "2026-09-20T23:08:10.194109+00:00",
+    "sport": "nfl",
+    "player_name": "Brandon Aubrey",
+    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Brandon Aubrey (DAL) scored 15.0 pts [Live] vs a projection of 7.41 (202.4% of projection).",
+    "notified": true
   }
 ]
