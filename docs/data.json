@@ -1,6 +1,13 @@
 {
-  "last_updated": "2026-09-20T21:18:11.518084+00:00",
+  "last_updated": "2026-09-20T21:29:51.765289+00:00",
   "recent_alerts": [
+    {
+      "timestamp": "2026-09-20T21:28:47.227424+00:00",
+      "sport": "nfl",
+      "player_name": "Tre Tucker",
+      "message": "\ud83c\udfc8 \ud83d\udd25 DOUBLE BREAKOUT: Tre Tucker (LV) scored 17.0 pts [Live] vs a projection of 5.84 (291.1% of projection).",
+      "notified": true
+    },
     {
       "timestamp": "2026-09-20T21:02:39.263916+00:00",
       "sport": "nfl",
@@ -258,17 +265,17 @@
   "health": {
     "sleeper_nfl": {
       "consecutive_failures": 0,
-      "last_success": "2026-09-20T21:16:58.035422+00:00",
+      "last_success": "2026-09-20T21:28:38.076158+00:00",
       "circuit_open": false
     },
     "sleeper_nba": {
       "consecutive_failures": 0,
-      "last_success": "2026-09-20T21:18:02.328120+00:00",
+      "last_success": "2026-09-20T21:29:42.108613+00:00",
       "circuit_open": false
     },
     "telegram": {
       "consecutive_failures": 0,
-      "last_success": "2026-09-20T21:03:45.475367+00:00",
+      "last_success": "2026-09-20T21:29:51.764046+00:00",
       "circuit_open": false
     }
   },

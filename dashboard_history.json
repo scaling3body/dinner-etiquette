@@ -250,5 +250,12 @@
     "player_name": "Tre Tucker",
     "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Tre Tucker (LV) scored 12.8 pts [Live] vs a projection of 5.84 (219.2% of projection).",
     "notified": true
+  },
+  {
+    "timestamp": "2026-09-20T21:28:47.227424+00:00",
+    "sport": "nfl",
+    "player_name": "Tre Tucker",
+    "message": "\ud83c\udfc8 \ud83d\udd25 DOUBLE BREAKOUT: Tre Tucker (LV) scored 17.0 pts [Live] vs a projection of 5.84 (291.1% of projection).",
+    "notified": true
   }
 ]
