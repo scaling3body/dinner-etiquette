@@ -1,6 +1,13 @@
 {
-  "last_updated": "2026-09-20T18:29:57.467116+00:00",
+  "last_updated": "2026-09-20T18:42:07.616957+00:00",
   "recent_alerts": [
+    {
+      "timestamp": "2026-09-20T18:41:02.958635+00:00",
+      "sport": "nfl",
+      "player_name": "Daniel Carlson",
+      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Daniel Carlson (NO) scored 12.0 pts [Live] vs a projection of 5.82 (206.2% of projection).",
+      "notified": true
+    },
     {
       "timestamp": "2026-09-20T18:28:52.276647+00:00",
       "sport": "nfl",
@@ -104,17 +111,17 @@
   "health": {
     "sleeper_nfl": {
       "consecutive_failures": 0,
-      "last_success": "2026-09-20T18:28:43.085093+00:00",
+      "last_success": "2026-09-20T18:40:53.794173+00:00",
       "circuit_open": false
     },
     "sleeper_nba": {
       "consecutive_failures": 0,
-      "last_success": "2026-09-20T18:29:47.369687+00:00",
+      "last_success": "2026-09-20T18:41:57.935644+00:00",
       "circuit_open": false
     },
     "telegram": {
       "consecutive_failures": 0,
-      "last_success": "2026-09-20T18:29:57.466142+00:00",
+      "last_success": "2026-09-20T18:42:07.616294+00:00",
       "circuit_open": false
     }
   },

@@ -96,5 +96,12 @@
     "player_name": "Chase McLaughlin",
     "message": "\ud83c\udfc8 BREAKOUT: Chase McLaughlin (TB) scored 12.0 pts [Live] vs a projection of 6.65 (180.5% of projection).",
     "notified": true
+  },
+  {
+    "timestamp": "2026-09-20T18:41:02.958635+00:00",
+    "sport": "nfl",
+    "player_name": "Daniel Carlson",
+    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Daniel Carlson (NO) scored 12.0 pts [Live] vs a projection of 5.82 (206.2% of projection).",
+    "notified": true
   }
 ]
