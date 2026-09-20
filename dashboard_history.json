@@ -103,5 +103,19 @@
     "player_name": "Daniel Carlson",
     "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Daniel Carlson (NO) scored 12.0 pts [Live] vs a projection of 5.82 (206.2% of projection).",
     "notified": true
+  },
+  {
+    "timestamp": "2026-09-20T18:50:17.223538+00:00",
+    "sport": "nfl",
+    "player_name": "Rashod Bateman",
+    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Rashod Bateman (BAL) scored 12.8 pts [Live] vs a projection of 6.2 (206.5% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-09-20T18:50:17.228432+00:00",
+    "sport": "nfl",
+    "player_name": "Player MIN",
+    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Player MIN (MIN) scored 12.0 pts [Live] vs a projection of 5.62 (213.5% of projection).",
+    "notified": true
   }
 ]
