@@ -222,5 +222,12 @@
     "player_name": "DeVonta Smith",
     "message": "\ud83c\udfc8 DOUBLE BREAKOUT: DeVonta Smith (PHI) scored 17.7 pts [Live] vs a projection of 9.62 (184.0% of projection).",
     "notified": true
+  },
+  {
+    "timestamp": "2026-09-20T20:14:55.552201+00:00",
+    "sport": "nfl",
+    "player_name": "Dalton Schultz",
+    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Dalton Schultz (HOU) scored 14.0 pts [Live] vs a projection of 6.52 (214.7% of projection).",
+    "notified": true
   }
 ]
