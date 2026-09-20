@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-09-18T02:46:10.391272+00:00",
-    "sport": "nfl",
-    "player_name": "Josh Allen",
-    "message": "\ud83c\udfc8 BREAKOUT: Josh Allen (BUF) scored 38.76 pts [Final] vs a projection of 22.01 (176.1% of projection).",
-    "notified": true
-  },
-  {
-    "timestamp": "2026-09-18T02:54:51.099023+00:00",
-    "sport": "nfl",
-    "player_name": "Jared Goff",
-    "message": "\ud83c\udfc8 BREAKOUT: Jared Goff (DET) scored 22.66 pts [Final] vs a projection of 16.28 (139.2% of projection).",
-    "notified": true
-  },
-  {
     "timestamp": "2026-09-18T03:32:57.480296+00:00",
     "sport": "nfl",
     "player_name": "Jared Goff",
@@ -347,6 +333,20 @@
     "sport": "nfl",
     "player_name": "Stefon Diggs",
     "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Stefon Diggs (WAS) scored 16.7 pts [Live] vs a projection of 7.94 (210.3% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-09-20T23:29:50.649685+00:00",
+    "sport": "nfl",
+    "player_name": "CeeDee Lamb",
+    "message": "\ud83c\udfc8 \ud83d\udd25 DOUBLE BREAKOUT: CeeDee Lamb (DAL) scored 27.3 pts [Live] vs a projection of 11.93 (228.8% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-09-20T23:29:50.654656+00:00",
+    "sport": "nfl",
+    "player_name": "Dak Prescott",
+    "message": "\ud83c\udfc8 BREAKOUT: Dak Prescott (DAL) scored 29.76 pts [Live] vs a projection of 19.46 (152.9% of projection).",
     "notified": true
   }
 ]
