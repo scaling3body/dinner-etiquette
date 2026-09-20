@@ -264,5 +264,12 @@
     "player_name": "Omarion Hampton",
     "message": "\ud83c\udfc8 BREAKOUT: Omarion Hampton (LAC) scored 14.8 pts [Live] vs a projection of 10.68 (138.6% of projection).",
     "notified": true
+  },
+  {
+    "timestamp": "2026-09-20T21:54:43.741287+00:00",
+    "sport": "nfl",
+    "player_name": "Jaxon Smith-Njigba",
+    "message": "\ud83c\udfc8 BREAKOUT: Jaxon Smith-Njigba (SEA) scored 16.8 pts [Live] vs a projection of 12.75 (131.8% of projection).",
+    "notified": true
   }
 ]
