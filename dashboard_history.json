@@ -236,5 +236,12 @@
     "player_name": "Player LAC",
     "message": "\ud83c\udfc8 BREAKOUT: Player LAC (LAC) scored 12.0 pts [Live] vs a projection of 8.05 (149.1% of projection).",
     "notified": true
+  },
+  {
+    "timestamp": "2026-09-20T20:37:33.992419+00:00",
+    "sport": "nfl",
+    "player_name": "Player LV",
+    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Player LV (LV) scored 13.0 pts [Live] vs a projection of 3.84 (338.5% of projection).",
+    "notified": true
   }
 ]
