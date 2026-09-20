@@ -257,5 +257,12 @@
     "player_name": "Tre Tucker",
     "message": "\ud83c\udfc8 \ud83d\udd25 DOUBLE BREAKOUT: Tre Tucker (LV) scored 17.0 pts [Live] vs a projection of 5.84 (291.1% of projection).",
     "notified": true
+  },
+  {
+    "timestamp": "2026-09-20T21:39:05.770815+00:00",
+    "sport": "nfl",
+    "player_name": "Omarion Hampton",
+    "message": "\ud83c\udfc8 BREAKOUT: Omarion Hampton (LAC) scored 14.8 pts [Live] vs a projection of 10.68 (138.6% of projection).",
+    "notified": true
   }
 ]

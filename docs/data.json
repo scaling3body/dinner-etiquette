@@ -1,6 +1,13 @@
 {
-  "last_updated": "2026-09-20T21:29:51.765289+00:00",
+  "last_updated": "2026-09-20T21:40:10.215490+00:00",
   "recent_alerts": [
+    {
+      "timestamp": "2026-09-20T21:39:05.770815+00:00",
+      "sport": "nfl",
+      "player_name": "Omarion Hampton",
+      "message": "\ud83c\udfc8 BREAKOUT: Omarion Hampton (LAC) scored 14.8 pts [Live] vs a projection of 10.68 (138.6% of projection).",
+      "notified": true
+    },
     {
       "timestamp": "2026-09-20T21:28:47.227424+00:00",
       "sport": "nfl",
@@ -265,17 +272,17 @@
   "health": {
     "sleeper_nfl": {
       "consecutive_failures": 0,
-      "last_success": "2026-09-20T21:28:38.076158+00:00",
+      "last_success": "2026-09-20T21:38:56.621799+00:00",
       "circuit_open": false
     },
     "sleeper_nba": {
       "consecutive_failures": 0,
-      "last_success": "2026-09-20T21:29:42.108613+00:00",
+      "last_success": "2026-09-20T21:40:00.559677+00:00",
       "circuit_open": false
     },
     "telegram": {
       "consecutive_failures": 0,
-      "last_success": "2026-09-20T21:29:51.764046+00:00",
+      "last_success": "2026-09-20T21:40:10.214645+00:00",
       "circuit_open": false
     }
   },
