@@ -306,5 +306,19 @@
     "player_name": "George Kittle",
     "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: George Kittle (SF) scored 14.0 pts [Live] vs a projection of 6.76 (207.1% of projection).",
     "notified": true
+  },
+  {
+    "timestamp": "2026-09-20T22:49:32.967397+00:00",
+    "sport": "nfl",
+    "player_name": "Drew Lock",
+    "message": "\ud83c\udfc8 BREAKOUT: Drew Lock (SEA) scored 21.24 pts [Live] vs a projection of 13.27 (160.1% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-09-20T22:49:32.969879+00:00",
+    "sport": "nfl",
+    "player_name": "Jaxon Smith-Njigba",
+    "message": "\ud83c\udfc8 \ud83d\udd25 3x BREAKOUT: Jaxon Smith-Njigba (SEA) scored 33.1 pts [Live] vs a projection of 12.75 (259.6% of projection).",
+    "notified": true
   }
 ]
