@@ -320,5 +320,26 @@
     "player_name": "Jaxon Smith-Njigba",
     "message": "\ud83c\udfc8 \ud83d\udd25 3x BREAKOUT: Jaxon Smith-Njigba (SEA) scored 33.1 pts [Live] vs a projection of 12.75 (259.6% of projection).",
     "notified": true
+  },
+  {
+    "timestamp": "2026-09-20T22:57:05.424997+00:00",
+    "sport": "nfl",
+    "player_name": "Jaylen Waddle",
+    "message": "\ud83c\udfc8 BREAKOUT: Jaylen Waddle (DEN) scored 13.8 pts [Live] vs a projection of 8.15 (169.3% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-09-20T22:57:05.427261+00:00",
+    "sport": "nfl",
+    "player_name": "Kirk Cousins",
+    "message": "\ud83c\udfc8 BREAKOUT: Kirk Cousins (LV) scored 21.52 pts [Live] vs a projection of 13.54 (158.9% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-09-20T22:57:05.433681+00:00",
+    "sport": "nfl",
+    "player_name": "Cody White",
+    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Cody White (LV) scored 14.4 pts [Live] vs a projection of 0.28 (5142.9% of projection).",
+    "notified": true
   }
 ]
