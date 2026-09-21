@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-18T03:32:57.480296+00:00",
-    "sport": "nfl",
-    "player_name": "Jared Goff",
-    "message": "\ud83c\udfc8 DOUBLE BREAKOUT: Jared Goff (DET) scored 29.78 pts [Live] vs a projection of 16.28 (182.9% of projection).",
-    "notified": true
-  },
-  {
     "timestamp": "2026-09-18T03:32:57.481273+00:00",
     "sport": "nfl",
     "player_name": "Amon-Ra St. Brown",
@@ -347,6 +340,13 @@
     "sport": "nfl",
     "player_name": "Dak Prescott",
     "message": "\ud83c\udfc8 BREAKOUT: Dak Prescott (DAL) scored 29.76 pts [Live] vs a projection of 19.46 (152.9% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-09-21T02:35:48.241314+00:00",
+    "sport": "nfl",
+    "player_name": "Travis Kelce",
+    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Travis Kelce (KC) scored 13.3 pts [Live] vs a projection of 6.21 (214.2% of projection).",
     "notified": true
   }
 ]
