@@ -1,6 +1,20 @@
 {
-  "last_updated": "2026-09-21T03:51:31.622637+00:00",
+  "last_updated": "2026-09-21T04:00:30.044277+00:00",
   "recent_alerts": [
+    {
+      "timestamp": "2026-09-21T03:59:25.079352+00:00",
+      "sport": "nfl",
+      "player_name": "Kenneth Walker",
+      "message": "\ud83c\udfc8 BREAKOUT: Kenneth Walker (KC) scored 17.8 pts [Final] vs a projection of 13.57 (131.2% of projection).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-09-21T03:59:25.069611+00:00",
+      "sport": "nfl",
+      "player_name": "Harrison Butker",
+      "message": "\ud83c\udfc8 \ud83d\udd25 DOUBLE BREAKOUT: Harrison Butker (KC) scored 17.0 pts [Final] vs a projection of 6.37 (266.9% of projection).",
+      "notified": true
+    },
     {
       "timestamp": "2026-09-21T03:50:27.039978+00:00",
       "sport": "nfl",
@@ -336,37 +350,23 @@
       "player_name": "DeVonta Smith",
       "message": "\ud83c\udfc8 BREAKOUT: DeVonta Smith (PHI) scored 12.6 pts [Live] vs a projection of 9.62 (131.0% of projection).",
       "notified": true
-    },
-    {
-      "timestamp": "2026-09-20T18:14:24.257569+00:00",
-      "sport": "nfl",
-      "player_name": "Player CLE",
-      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Player CLE (CLE) scored 12.0 pts [Live] vs a projection of 4.39 (273.3% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-09-20T17:59:21.666968+00:00",
-      "sport": "nfl",
-      "player_name": "Player HOU",
-      "message": "\ud83c\udfc8 BREAKOUT: Player HOU (HOU) scored 12.0 pts [Live] vs a projection of 6.18 (194.2% of projection).",
-      "notified": true
     }
   ],
   "pending_suggestions": [],
   "health": {
     "sleeper_nfl": {
       "consecutive_failures": 0,
-      "last_success": "2026-09-21T03:50:17.852911+00:00",
+      "last_success": "2026-09-21T03:59:15.903137+00:00",
       "circuit_open": false
     },
     "sleeper_nba": {
       "consecutive_failures": 0,
-      "last_success": "2026-09-21T03:51:22.041658+00:00",
+      "last_success": "2026-09-21T04:00:20.027508+00:00",
       "circuit_open": false
     },
     "telegram": {
       "consecutive_failures": 0,
-      "last_success": "2026-09-21T03:51:31.621278+00:00",
+      "last_success": "2026-09-21T04:00:30.043278+00:00",
       "circuit_open": false
     }
   },
