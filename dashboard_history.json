@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-09-20T18:28:52.276647+00:00",
-    "sport": "nfl",
-    "player_name": "Chase McLaughlin",
-    "message": "\ud83c\udfc8 BREAKOUT: Chase McLaughlin (TB) scored 12.0 pts [Live] vs a projection of 6.65 (180.5% of projection).",
-    "notified": true
-  },
-  {
-    "timestamp": "2026-09-20T18:41:02.958635+00:00",
-    "sport": "nfl",
-    "player_name": "Daniel Carlson",
-    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Daniel Carlson (NO) scored 12.0 pts [Live] vs a projection of 5.82 (206.2% of projection).",
-    "notified": true
-  },
-  {
     "timestamp": "2026-09-20T18:50:17.223538+00:00",
     "sport": "nfl",
     "player_name": "Rashod Bateman",
@@ -347,6 +333,20 @@
     "sport": "nfl",
     "player_name": "Player LAR",
     "message": "\ud83c\udfc8 BREAKOUT: Player LAR (LAR) scored 13.0 pts [Live] vs a projection of 7.97 (163.1% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-09-22T02:23:53.845448+00:00",
+    "sport": "nfl",
+    "player_name": "Matthew Stafford",
+    "message": "\ud83c\udfc8 BREAKOUT: Matthew Stafford (LAR) scored 21.92 pts [Live] vs a projection of 15.77 (139.0% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-09-22T02:23:53.850495+00:00",
+    "sport": "nfl",
+    "player_name": "Davante Adams",
+    "message": "\ud83c\udfc8 \ud83d\udd25 DOUBLE BREAKOUT: Davante Adams (LAR) scored 31.5 pts [Live] vs a projection of 9.03 (348.8% of projection).\nMay be filling in for Puka Nacua (Questionable)",
     "notified": true
   }
 ]
