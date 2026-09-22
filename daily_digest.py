@@ -40,6 +40,7 @@ digest ran.
 
 import json
 import os
+import re
 import sys
 from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
@@ -48,7 +49,7 @@ import telegram_notifier as notifier
 
 CONFIG_PATH = "config.json"
 DASHBOARD_HISTORY_PATH = "dashboard_history.json"
-ET_ZONE = ZoneInfo("America/New_York")
+ET_ZONE_NAME = "America/New_York"
 DAY_BOUNDARY_BUFFER_HOURS = 6
 
 
@@ -59,6 +60,57 @@ def load_json(path, default):
     return default
 
 
+def _breakout_level(entry):
+    """Return the escalation level encoded in an alert-history message."""
+    message = entry.get("message", "")
+    if "DOUBLE BREAKOUT" in message:
+        return 2
+    match = re.search(r"\b(\d+)x BREAKOUT\b", message)
+    if match:
+        return int(match.group(1))
+    return 1
+
+
+def _breakout_label(level):
+    if level == 1:
+        return "BREAKOUT"
+    if level == 2:
+        return "DOUBLE BREAKOUT"
+    return f"{level}x BREAKOUT"
+
+
+def collapse_breakouts(entries):
+    """Keep one entry per player/sport, retaining their highest escalation."""
+    collapsed = {}
+    for entry in entries:
+        key = (entry["sport"], entry["player_name"])
+        level = _breakout_level(entry)
+        collapsed[key] = max(level, collapsed.get(key, 0))
+    return [(sport, name, level) for (sport, name), level in collapsed.items()]
+
+
+def build_digest(today_entries):
+    """Format a digest with each player listed once at their highest level."""
+    breakouts = collapse_breakouts(today_entries)
+    nfl_entries = [(name, level) for sport, name, level in breakouts if sport == "nfl"]
+    nba_entries = [(name, level) for sport, name, level in breakouts if sport == "nba"]
+
+    lines = [f"\U0001F4CB Today's breakout digest -- {len(breakouts)} total\n"]
+
+    if nfl_entries:
+        lines.append(f"\U0001F3C8 Football ({len(nfl_entries)}):")
+        for name, level in nfl_entries:
+            lines.append(f"  \u2022 {name} — {_breakout_label(level)}")
+        lines.append("")
+
+    if nba_entries:
+        lines.append(f"\U0001F3C0 Basketball ({len(nba_entries)}):")
+        for name, level in nba_entries:
+            lines.append(f"  \u2022 {name} — {_breakout_label(level)}")
+
+    return "\n".join(lines).strip()
+
+
 def main():
     if not os.path.exists(CONFIG_PATH):
         print(f"Missing {CONFIG_PATH}. Copy config.example.json to config.json and fill it in.")
@@ -66,18 +118,19 @@ def main():
 
     config = load_json(CONFIG_PATH, {})
     history = load_json(DASHBOARD_HISTORY_PATH, [])
+    et_zone = ZoneInfo(ET_ZONE_NAME)
 
     # See module docstring for why this subtracts a buffer rather than just
     # taking "today in ET right now" -- the run itself can already be past
     # ET midnight (during EDT), which would otherwise make it summarize the
     # day about to start instead of the one that just ended.
-    target_day = (datetime.now(ET_ZONE) - timedelta(hours=DAY_BOUNDARY_BUFFER_HOURS)).date()
+    target_day = (datetime.now(et_zone) - timedelta(hours=DAY_BOUNDARY_BUFFER_HOURS)).date()
 
     def _is_target_day(entry):
         ts = entry.get("timestamp")
         if not ts:
             return False
-        return datetime.fromisoformat(ts).astimezone(ET_ZONE).date() == target_day
+        return datetime.fromisoformat(ts).astimezone(et_zone).date() == target_day
 
     today_entries = [h for h in history if _is_target_day(h) and h.get("notified", True)]
 
@@ -85,23 +138,7 @@ def main():
         print("No breakouts today -- not sending a digest.")
         return
 
-    nfl_entries = [h for h in today_entries if h["sport"] == "nfl"]
-    nba_entries = [h for h in today_entries if h["sport"] == "nba"]
-
-    lines = [f"\U0001F4CB Today's breakout digest -- {len(today_entries)} total\n"]
-
-    if nfl_entries:
-        lines.append(f"\U0001F3C8 Football ({len(nfl_entries)}):")
-        for h in nfl_entries:
-            lines.append(f"  \u2022 {h['player_name']}")
-        lines.append("")
-
-    if nba_entries:
-        lines.append(f"\U0001F3C0 Basketball ({len(nba_entries)}):")
-        for h in nba_entries:
-            lines.append(f"  \u2022 {h['player_name']}")
-
-    text = "\n".join(lines).strip()
+    text = build_digest(today_entries)
 
     try:
         notifier.send_message(config, text)
