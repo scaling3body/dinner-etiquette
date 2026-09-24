@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-24T05:11:14.450213+00:00",
+  "last_updated": "2026-09-24T05:24:40.899658+00:00",
   "recent_alerts": [
     {
       "timestamp": "2026-09-22T02:23:53.850495+00:00",
@@ -361,7 +361,7 @@
     },
     "sleeper_nba": {
       "consecutive_failures": 0,
-      "last_success": "2026-09-24T05:11:05.284367+00:00",
+      "last_success": "2026-09-24T05:24:31.743675+00:00",
       "circuit_open": false
     },
     "telegram": {
