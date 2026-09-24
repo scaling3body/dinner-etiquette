@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-24T22:14:53.145417+00:00",
+  "last_updated": "2026-09-24T22:28:35.969708+00:00",
   "recent_alerts": [
     {
       "timestamp": "2026-09-22T02:23:53.850495+00:00",
@@ -356,12 +356,12 @@
   "health": {
     "sleeper_nfl": {
       "consecutive_failures": 0,
-      "last_success": "2026-09-24T22:13:38.376598+00:00",
+      "last_success": "2026-09-24T22:27:20.851420+00:00",
       "circuit_open": false
     },
     "sleeper_nba": {
       "consecutive_failures": 0,
-      "last_success": "2026-09-24T22:14:43.805200+00:00",
+      "last_success": "2026-09-24T22:28:26.704250+00:00",
       "circuit_open": false
     },
     "telegram": {
