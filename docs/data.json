@@ -1,6 +1,13 @@
 {
-  "last_updated": "2026-09-25T03:05:15.824339+00:00",
+  "last_updated": "2026-09-25T03:20:38.076788+00:00",
   "recent_alerts": [
+    {
+      "timestamp": "2026-09-25T03:19:32.403997+00:00",
+      "sport": "nfl",
+      "player_name": "Christian Watson",
+      "message": "\ud83c\udfc8 BREAKOUT: Christian Watson (GB) scored 15.6 pts [Live] vs a projection of 11.68 (133.6% of projection).",
+      "notified": true
+    },
     {
       "timestamp": "2026-09-25T03:04:09.795766+00:00",
       "sport": "nfl",
@@ -343,30 +350,23 @@
       "player_name": "Denzel Boston",
       "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Denzel Boston (CLE) scored 13.8 pts [Live] vs a projection of 5.91 (233.5% of projection).",
       "notified": true
-    },
-    {
-      "timestamp": "2026-09-20T19:19:11.097958+00:00",
-      "sport": "nfl",
-      "player_name": "Ja'Marr Chase",
-      "message": "\ud83c\udfc8 BREAKOUT: Ja'Marr Chase (CIN) scored 19.0 pts [Live] vs a projection of 11.18 (169.9% of projection).",
-      "notified": true
     }
   ],
   "pending_suggestions": [],
   "health": {
     "sleeper_nfl": {
       "consecutive_failures": 0,
-      "last_success": "2026-09-25T03:04:00.499217+00:00",
+      "last_success": "2026-09-25T03:19:23.105982+00:00",
       "circuit_open": false
     },
     "sleeper_nba": {
       "consecutive_failures": 0,
-      "last_success": "2026-09-25T03:05:05.783600+00:00",
+      "last_success": "2026-09-25T03:20:28.053016+00:00",
       "circuit_open": false
     },
     "telegram": {
       "consecutive_failures": 0,
-      "last_success": "2026-09-25T03:05:15.822425+00:00",
+      "last_success": "2026-09-25T03:20:38.074873+00:00",
       "circuit_open": false
     }
   },
