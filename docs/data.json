@@ -1,6 +1,13 @@
 {
-  "last_updated": "2026-09-25T00:19:35.700885+00:00",
+  "last_updated": "2026-09-25T00:40:38.818743+00:00",
   "recent_alerts": [
+    {
+      "timestamp": "2026-09-25T00:39:34.042244+00:00",
+      "sport": "nfl",
+      "player_name": "Player GB",
+      "message": "\ud83c\udfc8 BREAKOUT: Player GB (GB) scored 12.0 pts [Live] vs a projection of 7.96 (150.8% of projection).",
+      "notified": true
+    },
     {
       "timestamp": "2026-09-22T02:23:53.850495+00:00",
       "sport": "nfl",
@@ -343,30 +350,23 @@
       "player_name": "Player MIN",
       "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Player MIN (MIN) scored 12.0 pts [Live] vs a projection of 5.62 (213.5% of projection).",
       "notified": true
-    },
-    {
-      "timestamp": "2026-09-20T18:50:17.223538+00:00",
-      "sport": "nfl",
-      "player_name": "Rashod Bateman",
-      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Rashod Bateman (BAL) scored 12.8 pts [Live] vs a projection of 6.2 (206.5% of projection).",
-      "notified": true
     }
   ],
   "pending_suggestions": [],
   "health": {
     "sleeper_nfl": {
       "consecutive_failures": 0,
-      "last_success": "2026-09-25T00:18:22.116805+00:00",
+      "last_success": "2026-09-25T00:39:24.865476+00:00",
       "circuit_open": false
     },
     "sleeper_nba": {
       "consecutive_failures": 0,
-      "last_success": "2026-09-25T00:19:26.450970+00:00",
+      "last_success": "2026-09-25T00:40:29.064205+00:00",
       "circuit_open": false
     },
     "telegram": {
       "consecutive_failures": 0,
-      "last_success": "2026-09-22T02:24:59.208562+00:00",
+      "last_success": "2026-09-25T00:40:38.816862+00:00",
       "circuit_open": false
     }
   },
