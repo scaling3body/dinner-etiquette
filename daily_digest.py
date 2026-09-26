@@ -79,28 +79,44 @@ def _breakout_label(level):
     return f"{level}x BREAKOUT"
 
 
+def _projection_summary(entry):
+    """Extract the football projection percentage recorded in an alert message."""
+    match = re.search(r"\(([-\d.]+)% of projection\)", entry.get("message", ""))
+    if not match:
+        return None
+    percentage = float(match.group(1))
+    return f"{percentage:g}% of projection ({percentage - 100:+g}% over)"
+
+
 def collapse_breakouts(entries):
     """Keep one entry per player/sport, retaining their highest escalation."""
     collapsed = {}
     for entry in entries:
         key = (entry["sport"], entry["player_name"])
         level = _breakout_level(entry)
-        collapsed[key] = max(level, collapsed.get(key, 0))
-    return [(sport, name, level) for (sport, name), level in collapsed.items()]
+        current = collapsed.get(key)
+        if current is None or level >= current["level"]:
+            collapsed[key] = {"level": level, "entry": entry}
+    return [
+        (sport, name, details["level"], details["entry"])
+        for (sport, name), details in collapsed.items()
+    ]
 
 
 def build_digest(today_entries):
     """Format a digest with each player listed once at their highest level."""
     breakouts = collapse_breakouts(today_entries)
-    nfl_entries = [(name, level) for sport, name, level in breakouts if sport == "nfl"]
-    nba_entries = [(name, level) for sport, name, level in breakouts if sport == "nba"]
+    nfl_entries = [(name, level, _projection_summary(entry))
+                   for sport, name, level, entry in breakouts if sport == "nfl"]
+    nba_entries = [(name, level) for sport, name, level, entry in breakouts if sport == "nba"]
 
     lines = [f"\U0001F4CB Today's breakout digest -- {len(breakouts)} total\n"]
 
     if nfl_entries:
         lines.append(f"\U0001F3C8 Football ({len(nfl_entries)}):")
-        for name, level in nfl_entries:
-            lines.append(f"  \u2022 {name} — {_breakout_label(level)}")
+        for name, level, projection in nfl_entries:
+            suffix = f"; {projection}" if projection else ""
+            lines.append(f"  \u2022 {name} — {_breakout_label(level)}{suffix}")
         lines.append("")
 
     if nba_entries:
