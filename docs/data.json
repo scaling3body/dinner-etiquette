@@ -1,6 +1,41 @@
 {
-  "last_updated": "2026-09-27T23:10:47.250751+00:00",
+  "last_updated": "2026-09-27T23:23:28.284931+00:00",
   "recent_alerts": [
+    {
+      "timestamp": "2026-09-27T23:22:24.199118+00:00",
+      "sport": "nfl",
+      "player_name": "Brock Bowers",
+      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Brock Bowers (LV) scored 17.6 pts [Live] vs a projection of 7.59 (231.9% of projection).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-09-27T23:22:24.186958+00:00",
+      "sport": "nfl",
+      "player_name": "Will Reichard",
+      "message": "\ud83c\udfc8 \ud83d\udd25 DOUBLE BREAKOUT: Will Reichard (MIN) scored 16.0 pts [Live] vs a projection of 8.0 (200.0% of projection).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-09-27T23:22:24.180644+00:00",
+      "sport": "nfl",
+      "player_name": "Kirk Cousins",
+      "message": "\ud83c\udfc8 BREAKOUT: Kirk Cousins (LV) scored 22.42 pts [Live] vs a projection of 14.82 (151.3% of projection).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-09-27T23:22:24.178230+00:00",
+      "sport": "nfl",
+      "player_name": "Matt Gay",
+      "message": "\ud83c\udfc8 BREAKOUT: Matt Gay (LV) scored 12.0 pts [Live] vs a projection of 8.08 (148.5% of projection).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-09-27T23:22:24.173898+00:00",
+      "sport": "nfl",
+      "player_name": "Chad Ryland",
+      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Chad Ryland (ARI) scored 14.0 pts [Final] vs a projection of 7.06 (198.3% of projection).",
+      "notified": true
+    },
     {
       "timestamp": "2026-09-27T23:09:42.891474+00:00",
       "sport": "nfl",
@@ -315,58 +350,23 @@
       "player_name": "Player LAC",
       "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Player LAC (LAC) scored 12.0 pts vs a projection of 3.52 (340.9% of projection).",
       "notified": true
-    },
-    {
-      "timestamp": "2026-09-25T03:19:32.403997+00:00",
-      "sport": "nfl",
-      "player_name": "Christian Watson",
-      "message": "\ud83c\udfc8 BREAKOUT: Christian Watson (GB) scored 15.6 pts [Live] vs a projection of 11.68 (133.6% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-09-25T03:04:09.795766+00:00",
-      "sport": "nfl",
-      "player_name": "Bijan Robinson",
-      "message": "\ud83c\udfc8 \ud83d\udd25 DOUBLE BREAKOUT: Bijan Robinson (ATL) scored 33.3 pts [Live] vs a projection of 15.97 (208.5% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-09-25T02:54:35.678224+00:00",
-      "sport": "nfl",
-      "player_name": "Matthew Golden",
-      "message": "\ud83c\udfc8 BREAKOUT: Matthew Golden (GB) scored 14.0 pts [Live] vs a projection of 7.18 (195.0% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-09-25T02:44:51.568449+00:00",
-      "sport": "nfl",
-      "player_name": "Drake London",
-      "message": "\ud83c\udfc8 BREAKOUT: Drake London (ATL) scored 15.4 pts [Live] vs a projection of 8.8 (175.0% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-09-25T02:20:05.868962+00:00",
-      "sport": "nfl",
-      "player_name": "Bijan Robinson",
-      "message": "\ud83c\udfc8 BREAKOUT: Bijan Robinson (ATL) scored 23.4 pts [Live] vs a projection of 15.97 (146.5% of projection).",
-      "notified": true
     }
   ],
   "pending_suggestions": [],
   "health": {
     "sleeper_nfl": {
       "consecutive_failures": 0,
-      "last_success": "2026-09-27T23:09:33.756119+00:00",
+      "last_success": "2026-09-27T23:22:15.071709+00:00",
       "circuit_open": false
     },
     "sleeper_nba": {
       "consecutive_failures": 0,
-      "last_success": "2026-09-27T23:10:37.505721+00:00",
+      "last_success": "2026-09-27T23:23:18.728853+00:00",
       "circuit_open": false
     },
     "telegram": {
       "consecutive_failures": 0,
-      "last_success": "2026-09-27T23:10:47.246931+00:00",
+      "last_success": "2026-09-27T23:23:28.263122+00:00",
       "circuit_open": false
     }
   },
