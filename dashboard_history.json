@@ -1,26 +1,5 @@
 [
   {
-    "timestamp": "2026-09-20T22:18:11.013921+00:00",
-    "sport": "nfl",
-    "player_name": "Jaxon Smith-Njigba",
-    "message": "\ud83c\udfc8 DOUBLE BREAKOUT: Jaxon Smith-Njigba (SEA) scored 23.5 pts [Live] vs a projection of 12.75 (184.3% of projection).",
-    "notified": true
-  },
-  {
-    "timestamp": "2026-09-20T22:29:18.195314+00:00",
-    "sport": "nfl",
-    "player_name": "Brock Purdy",
-    "message": "\ud83c\udfc8 BREAKOUT: Brock Purdy (SF) scored 26.08 pts [Live] vs a projection of 19.98 (130.5% of projection).",
-    "notified": true
-  },
-  {
-    "timestamp": "2026-09-20T22:40:03.946115+00:00",
-    "sport": "nfl",
-    "player_name": "Jake Ferguson",
-    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Jake Ferguson (DAL) scored 15.6 pts [Live] vs a projection of 5.74 (271.8% of projection).",
-    "notified": true
-  },
-  {
     "timestamp": "2026-09-20T22:40:03.954668+00:00",
     "sport": "nfl",
     "player_name": "Bhayshul Tuten",
@@ -347,6 +326,27 @@
     "sport": "nfl",
     "player_name": "Spencer Shrader",
     "message": "\ud83c\udfc8 BREAKOUT: Spencer Shrader (IND) scored 12.0 pts [Live] vs a projection of 9.14 (131.3% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-09-27T19:42:12.406273+00:00",
+    "sport": "nfl",
+    "player_name": "Geno Smith",
+    "message": "\ud83c\udfc8 BREAKOUT: Geno Smith (NYJ) scored 26.4 pts [Live] vs a projection of 15.78 (167.3% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-09-27T19:42:12.410029+00:00",
+    "sport": "nfl",
+    "player_name": "Jakobi Meyers",
+    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Jakobi Meyers (JAX) scored 12.4 pts [Live] vs a projection of 5.08 (244.1% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-09-27T19:42:12.411583+00:00",
+    "sport": "nfl",
+    "player_name": "Garrett Wilson",
+    "message": "\ud83c\udfc8 BREAKOUT: Garrett Wilson (NYJ) scored 16.0 pts [Live] vs a projection of 10.35 (154.6% of projection).",
     "notified": true
   }
 ]
