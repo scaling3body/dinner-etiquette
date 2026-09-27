@@ -1,26 +1,5 @@
 [
   {
-    "timestamp": "2026-09-21T03:38:26.997998+00:00",
-    "sport": "nfl",
-    "player_name": "Harrison Butker",
-    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Harrison Butker (KC) scored 13.0 pts [Live] vs a projection of 6.37 (204.1% of projection).",
-    "notified": true
-  },
-  {
-    "timestamp": "2026-09-21T03:50:27.039978+00:00",
-    "sport": "nfl",
-    "player_name": "Spencer Shrader",
-    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Spencer Shrader (IND) scored 14.0 pts [Live] vs a projection of 6.66 (210.2% of projection).",
-    "notified": true
-  },
-  {
-    "timestamp": "2026-09-21T03:59:25.069611+00:00",
-    "sport": "nfl",
-    "player_name": "Harrison Butker",
-    "message": "\ud83c\udfc8 \ud83d\udd25 DOUBLE BREAKOUT: Harrison Butker (KC) scored 17.0 pts [Final] vs a projection of 6.37 (266.9% of projection).",
-    "notified": true
-  },
-  {
     "timestamp": "2026-09-21T03:59:25.079352+00:00",
     "sport": "nfl",
     "player_name": "Kenneth Walker",
@@ -347,6 +326,27 @@
     "sport": "nfl",
     "player_name": "Juwan Johnson",
     "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Juwan Johnson (NO) scored 15.5 pts [Live] vs a projection of 6.23 (248.8% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-09-27T22:39:37.677449+00:00",
+    "sport": "nfl",
+    "player_name": "Tyler Shough",
+    "message": "\ud83c\udfc8 BREAKOUT: Tyler Shough (NO) scored 26.44 pts [Live] vs a projection of 18.39 (143.8% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-09-27T22:39:37.682584+00:00",
+    "sport": "nfl",
+    "player_name": "Jeremiyah Love",
+    "message": "\ud83c\udfc8 BREAKOUT: Jeremiyah Love (ARI) scored 15.3 pts [Live] vs a projection of 10.92 (140.1% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-09-27T22:39:37.687908+00:00",
+    "sport": "nfl",
+    "player_name": "Noah Fant",
+    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Noah Fant (NO) scored 14.8 pts [Live] vs a projection of 2.29 (646.3% of projection).",
     "notified": true
   }
 ]
