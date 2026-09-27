@@ -1,6 +1,13 @@
 {
-  "last_updated": "2026-09-27T22:50:47.595443+00:00",
+  "last_updated": "2026-09-27T22:58:48.001402+00:00",
   "recent_alerts": [
+    {
+      "timestamp": "2026-09-27T22:57:43.500465+00:00",
+      "sport": "nfl",
+      "player_name": "Chase McLaughlin",
+      "message": "\ud83c\udfc8 BREAKOUT: Chase McLaughlin (TB) scored 12.0 pts [Live] vs a projection of 7.86 (152.7% of projection).",
+      "notified": true
+    },
     {
       "timestamp": "2026-09-27T22:49:43.053980+00:00",
       "sport": "nfl",
@@ -343,30 +350,23 @@
       "player_name": "Player LAR",
       "message": "\ud83c\udfc8 BREAKOUT: Player LAR (LAR) scored 13.0 pts [Live] vs a projection of 7.97 (163.1% of projection).",
       "notified": true
-    },
-    {
-      "timestamp": "2026-09-22T01:03:03.933475+00:00",
-      "sport": "nfl",
-      "player_name": "Davante Adams",
-      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Davante Adams (LAR) scored 17.8 pts [Live] vs a projection of 9.03 (197.1% of projection).\nMay be filling in for Puka Nacua (Questionable)",
-      "notified": true
     }
   ],
   "pending_suggestions": [],
   "health": {
     "sleeper_nfl": {
       "consecutive_failures": 0,
-      "last_success": "2026-09-27T22:49:33.877102+00:00",
+      "last_success": "2026-09-27T22:57:34.318177+00:00",
       "circuit_open": false
     },
     "sleeper_nba": {
       "consecutive_failures": 0,
-      "last_success": "2026-09-27T22:50:37.983434+00:00",
+      "last_success": "2026-09-27T22:58:38.365848+00:00",
       "circuit_open": false
     },
     "telegram": {
       "consecutive_failures": 0,
-      "last_success": "2026-09-27T22:50:47.593184+00:00",
+      "last_success": "2026-09-27T22:58:47.999561+00:00",
       "circuit_open": false
     }
   },
