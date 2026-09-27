@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-27T17:19:28.582123+00:00",
-    "sport": "nfl",
-    "player_name": "Player HOU",
-    "message": "\ud83c\udfc8 BREAKOUT: Player HOU (HOU) scored 13.0 pts [Live] vs a projection of 7.24 (179.6% of projection).",
-    "notified": true
-  },
-  {
     "timestamp": "2026-09-27T17:19:28.585364+00:00",
     "sport": "nfl",
     "player_name": "Player WAS",
@@ -347,6 +340,13 @@
     "sport": "nfl",
     "player_name": "Player LV",
     "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Player LV (LV) scored 12.0 pts [Live] vs a projection of 4.97 (241.4% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-09-27T23:51:56.681329+00:00",
+    "sport": "nfl",
+    "player_name": "Tyler Loop",
+    "message": "\ud83c\udfc8 BREAKOUT: Tyler Loop (BAL) scored 12.0 pts [Final] vs a projection of 8.52 (140.8% of projection).",
     "notified": true
   }
 ]
