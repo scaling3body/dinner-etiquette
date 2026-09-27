@@ -1,6 +1,34 @@
 {
-  "last_updated": "2026-09-27T19:21:39.161996+00:00",
+  "last_updated": "2026-09-27T19:32:15.461908+00:00",
   "recent_alerts": [
+    {
+      "timestamp": "2026-09-27T19:31:09.539401+00:00",
+      "sport": "nfl",
+      "player_name": "Spencer Shrader",
+      "message": "\ud83c\udfc8 BREAKOUT: Spencer Shrader (IND) scored 12.0 pts [Live] vs a projection of 9.14 (131.3% of projection).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-09-27T19:31:09.531659+00:00",
+      "sport": "nfl",
+      "player_name": "Joe Burrow",
+      "message": "\ud83c\udfc8 BREAKOUT: Joe Burrow (CIN) scored 22.98 pts [Live] vs a projection of 17.5 (131.3% of projection).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-09-27T19:31:09.525858+00:00",
+      "sport": "nfl",
+      "player_name": "Tee Higgins",
+      "message": "\ud83c\udfc8 BREAKOUT: Tee Higgins (CIN) scored 14.2 pts [Live] vs a projection of 9.44 (150.4% of projection).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-09-27T19:31:09.523342+00:00",
+      "sport": "nfl",
+      "player_name": "Ryan Fitzgerald",
+      "message": "\ud83c\udfc8 BREAKOUT: Ryan Fitzgerald (CAR) scored 12.0 pts [Live] vs a projection of 7.31 (164.2% of projection).",
+      "notified": true
+    },
     {
       "timestamp": "2026-09-27T19:20:32.903134+00:00",
       "sport": "nfl",
@@ -322,51 +350,23 @@
       "player_name": "Jaxon Smith-Njigba",
       "message": "\ud83c\udfc8 DOUBLE BREAKOUT: Jaxon Smith-Njigba (SEA) scored 23.5 pts [Live] vs a projection of 12.75 (184.3% of projection).",
       "notified": true
-    },
-    {
-      "timestamp": "2026-09-20T21:54:43.741287+00:00",
-      "sport": "nfl",
-      "player_name": "Jaxon Smith-Njigba",
-      "message": "\ud83c\udfc8 BREAKOUT: Jaxon Smith-Njigba (SEA) scored 16.8 pts [Live] vs a projection of 12.75 (131.8% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-09-20T21:39:05.770815+00:00",
-      "sport": "nfl",
-      "player_name": "Omarion Hampton",
-      "message": "\ud83c\udfc8 BREAKOUT: Omarion Hampton (LAC) scored 14.8 pts [Live] vs a projection of 10.68 (138.6% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-09-20T21:28:47.227424+00:00",
-      "sport": "nfl",
-      "player_name": "Tre Tucker",
-      "message": "\ud83c\udfc8 \ud83d\udd25 DOUBLE BREAKOUT: Tre Tucker (LV) scored 17.0 pts [Live] vs a projection of 5.84 (291.1% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-09-20T21:02:39.263916+00:00",
-      "sport": "nfl",
-      "player_name": "Tre Tucker",
-      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Tre Tucker (LV) scored 12.8 pts [Live] vs a projection of 5.84 (219.2% of projection).",
-      "notified": true
     }
   ],
   "pending_suggestions": [],
   "health": {
     "sleeper_nfl": {
       "consecutive_failures": 0,
-      "last_success": "2026-09-27T19:20:23.604683+00:00",
+      "last_success": "2026-09-27T19:31:00.068747+00:00",
       "circuit_open": false
     },
     "sleeper_nba": {
       "consecutive_failures": 0,
-      "last_success": "2026-09-27T19:21:29.100436+00:00",
+      "last_success": "2026-09-27T19:32:05.621233+00:00",
       "circuit_open": false
     },
     "telegram": {
       "consecutive_failures": 0,
-      "last_success": "2026-09-27T19:21:39.160424+00:00",
+      "last_success": "2026-09-27T19:32:15.460030+00:00",
       "circuit_open": false
     }
   },
