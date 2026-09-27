@@ -388,12 +388,24 @@
       "baseline": 14.8
     },
     "4217": {
-      "count": 1,
-      "baseline": 12.2
+      "count": 2,
+      "baseline": 20.2
     },
     "6650": {
       "count": 1,
       "baseline": 12.0
+    },
+    "11792": {
+      "count": 1,
+      "baseline": 12.0
+    },
+    "8183": {
+      "count": 1,
+      "baseline": 31.38
+    },
+    "3257": {
+      "count": 1,
+      "baseline": 24.2
     }
   },
   "nba-2026-09-22": {},
