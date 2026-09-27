@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-09-20T22:40:03.954668+00:00",
-    "sport": "nfl",
-    "player_name": "Bhayshul Tuten",
-    "message": "\ud83c\udfc8 BREAKOUT: Bhayshul Tuten (JAX) scored 12.3 pts [Live] vs a projection of 7.37 (166.9% of projection).",
-    "notified": true
-  },
-  {
-    "timestamp": "2026-09-20T22:40:03.956804+00:00",
-    "sport": "nfl",
-    "player_name": "George Kittle",
-    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: George Kittle (SF) scored 14.0 pts [Live] vs a projection of 6.76 (207.1% of projection).",
-    "notified": true
-  },
-  {
     "timestamp": "2026-09-20T22:49:32.967397+00:00",
     "sport": "nfl",
     "player_name": "Drew Lock",
@@ -347,6 +333,20 @@
     "sport": "nfl",
     "player_name": "Garrett Wilson",
     "message": "\ud83c\udfc8 BREAKOUT: Garrett Wilson (NYJ) scored 16.0 pts [Live] vs a projection of 10.35 (154.6% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-09-27T19:50:28.565441+00:00",
+    "sport": "nfl",
+    "player_name": "Sam Darnold",
+    "message": "\ud83c\udfc8 BREAKOUT: Sam Darnold (SEA) scored 22.86 pts [Live] vs a projection of 16.97 (134.7% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-09-27T19:50:28.573325+00:00",
+    "sport": "nfl",
+    "player_name": "Bhayshul Tuten",
+    "message": "\ud83c\udfc8 BREAKOUT: Bhayshul Tuten (JAX) scored 15.0 pts [Live] vs a projection of 9.71 (154.5% of projection).",
     "notified": true
   }
 ]
