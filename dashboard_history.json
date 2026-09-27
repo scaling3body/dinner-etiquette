@@ -1,26 +1,5 @@
 [
   {
-    "timestamp": "2026-09-20T19:28:43.946679+00:00",
-    "sport": "nfl",
-    "player_name": "Player CAR",
-    "message": "\ud83c\udfc8 \ud83d\udd25 DOUBLE BREAKOUT: Player CAR (CAR) scored 22.0 pts [Live] vs a projection of 7.31 (301.0% of projection).",
-    "notified": true
-  },
-  {
-    "timestamp": "2026-09-20T19:28:43.952797+00:00",
-    "sport": "nfl",
-    "player_name": "Chris Olave",
-    "message": "\ud83c\udfc8 BREAKOUT: Chris Olave (NO) scored 12.8 pts [Live] vs a projection of 9.74 (131.4% of projection).",
-    "notified": true
-  },
-  {
-    "timestamp": "2026-09-20T19:37:13.831357+00:00",
-    "sport": "nfl",
-    "player_name": "Evan McPherson",
-    "message": "\ud83c\udfc8 BREAKOUT: Evan McPherson (CIN) scored 12.0 pts [Live] vs a projection of 6.29 (190.8% of projection).",
-    "notified": true
-  },
-  {
     "timestamp": "2026-09-20T19:37:13.843160+00:00",
     "sport": "nfl",
     "player_name": "Player MIN",
@@ -347,6 +326,27 @@
     "sport": "nfl",
     "player_name": "Player WAS",
     "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Player WAS (WAS) scored 12.0 pts [Live] vs a projection of 4.99 (240.5% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-09-27T17:31:18.332682+00:00",
+    "sport": "nfl",
+    "player_name": "Player NYJ",
+    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Player NYJ (NYJ) scored 12.0 pts [Live] vs a projection of 3.03 (396.0% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-09-27T17:31:18.336836+00:00",
+    "sport": "nfl",
+    "player_name": "Roman Wilson",
+    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Roman Wilson (PIT) scored 12.0 pts [Live] vs a projection of 3.52 (340.9% of projection).\nMay be filling in for Michael Pittman (Questionable)",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-09-27T17:31:18.339944+00:00",
+    "sport": "nfl",
+    "player_name": "Player JAX",
+    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Player JAX (JAX) scored 13.0 pts [Live] vs a projection of 5.94 (218.9% of projection).",
     "notified": true
   }
 ]
