@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-09-21T02:57:02.698124+00:00",
-    "sport": "nfl",
-    "player_name": "Jonathan Taylor",
-    "message": "\ud83c\udfc8 BREAKOUT: Jonathan Taylor (IND) scored 22.9 pts [Live] vs a projection of 15.98 (143.3% of projection).",
-    "notified": true
-  },
-  {
-    "timestamp": "2026-09-21T03:24:24.045484+00:00",
-    "sport": "nfl",
-    "player_name": "Patrick Mahomes",
-    "message": "\ud83c\udfc8 BREAKOUT: Patrick Mahomes (KC) scored 24.76 pts [Live] vs a projection of 17.66 (140.2% of projection).",
-    "notified": true
-  },
-  {
     "timestamp": "2026-09-21T03:38:26.997998+00:00",
     "sport": "nfl",
     "player_name": "Harrison Butker",
@@ -347,6 +333,20 @@
     "sport": "nfl",
     "player_name": "Jordan Addison",
     "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Jordan Addison (MIN) scored 13.5 pts [Live] vs a projection of 6.27 (215.3% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-09-27T22:26:57.051259+00:00",
+    "sport": "nfl",
+    "player_name": "Michael Wilson",
+    "message": "\ud83c\udfc8 BREAKOUT: Michael Wilson (ARI) scored 12.1 pts [Live] vs a projection of 8.0 (151.2% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-09-27T22:26:57.072145+00:00",
+    "sport": "nfl",
+    "player_name": "Juwan Johnson",
+    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Juwan Johnson (NO) scored 15.5 pts [Live] vs a projection of 6.23 (248.8% of projection).",
     "notified": true
   }
 ]

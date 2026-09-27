@@ -1,6 +1,20 @@
 {
-  "last_updated": "2026-09-27T22:14:13.314842+00:00",
+  "last_updated": "2026-09-27T22:28:03.047771+00:00",
   "recent_alerts": [
+    {
+      "timestamp": "2026-09-27T22:26:57.072145+00:00",
+      "sport": "nfl",
+      "player_name": "Juwan Johnson",
+      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Juwan Johnson (NO) scored 15.5 pts [Live] vs a projection of 6.23 (248.8% of projection).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-09-27T22:26:57.051259+00:00",
+      "sport": "nfl",
+      "player_name": "Michael Wilson",
+      "message": "\ud83c\udfc8 BREAKOUT: Michael Wilson (ARI) scored 12.1 pts [Live] vs a projection of 8.0 (151.2% of projection).",
+      "notified": true
+    },
     {
       "timestamp": "2026-09-27T21:19:36.928278+00:00",
       "sport": "nfl",
@@ -336,37 +350,23 @@
       "player_name": "Harrison Butker",
       "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Harrison Butker (KC) scored 13.0 pts [Live] vs a projection of 6.37 (204.1% of projection).",
       "notified": true
-    },
-    {
-      "timestamp": "2026-09-21T03:24:24.045484+00:00",
-      "sport": "nfl",
-      "player_name": "Patrick Mahomes",
-      "message": "\ud83c\udfc8 BREAKOUT: Patrick Mahomes (KC) scored 24.76 pts [Live] vs a projection of 17.66 (140.2% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-09-21T02:57:02.698124+00:00",
-      "sport": "nfl",
-      "player_name": "Jonathan Taylor",
-      "message": "\ud83c\udfc8 BREAKOUT: Jonathan Taylor (IND) scored 22.9 pts [Live] vs a projection of 15.98 (143.3% of projection).",
-      "notified": true
     }
   ],
   "pending_suggestions": [],
   "health": {
     "sleeper_nfl": {
       "consecutive_failures": 0,
-      "last_success": "2026-09-27T22:13:00.519214+00:00",
+      "last_success": "2026-09-27T22:26:47.753021+00:00",
       "circuit_open": false
     },
     "sleeper_nba": {
       "consecutive_failures": 0,
-      "last_success": "2026-09-27T22:14:04.204551+00:00",
+      "last_success": "2026-09-27T22:27:52.525769+00:00",
       "circuit_open": false
     },
     "telegram": {
       "consecutive_failures": 0,
-      "last_success": "2026-09-27T21:20:41.166821+00:00",
+      "last_success": "2026-09-27T22:28:03.045914+00:00",
       "circuit_open": false
     }
   },
