@@ -1,6 +1,20 @@
 {
-  "last_updated": "2026-09-28T03:51:35.563964+00:00",
+  "last_updated": "2026-09-28T04:01:48.340425+00:00",
   "recent_alerts": [
+    {
+      "timestamp": "2026-09-28T04:00:41.798211+00:00",
+      "sport": "nfl",
+      "player_name": "Kyren Williams",
+      "message": "\ud83c\udfc8 BREAKOUT: Kyren Williams (LAR) scored 15.8 pts [Final] vs a projection of 11.41 (138.5% of projection).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-09-28T04:00:41.785435+00:00",
+      "sport": "nfl",
+      "player_name": "Tyler Higbee",
+      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Tyler Higbee (LAR) scored 12.2 pts [Final] vs a projection of 0.97 (1257.7% of projection).\nMay be filling in for Colby Parkinson (Questionable)",
+      "notified": true
+    },
     {
       "timestamp": "2026-09-28T03:50:31.193365+00:00",
       "sport": "nfl",
@@ -336,37 +350,23 @@
       "player_name": "Kenyon Sadiq",
       "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Kenyon Sadiq (NYJ) scored 14.3 pts [Live] vs a projection of 4.96 (288.3% of projection).",
       "notified": true
-    },
-    {
-      "timestamp": "2026-09-27T19:20:32.894884+00:00",
-      "sport": "nfl",
-      "player_name": "Aaron Rodgers",
-      "message": "\ud83c\udfc8 BREAKOUT: Aaron Rodgers (PIT) scored 21.36 pts [Live] vs a projection of 14.27 (149.7% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-09-27T19:08:27.360731+00:00",
-      "sport": "nfl",
-      "player_name": "Jahmyr Gibbs",
-      "message": "\ud83c\udfc8 BREAKOUT: Jahmyr Gibbs (DET) scored 26.8 pts [Live] vs a projection of 19.24 (139.3% of projection).",
-      "notified": true
     }
   ],
   "pending_suggestions": [],
   "health": {
     "sleeper_nfl": {
       "consecutive_failures": 0,
-      "last_success": "2026-09-28T03:50:22.059493+00:00",
+      "last_success": "2026-09-28T04:00:32.410596+00:00",
       "circuit_open": false
     },
     "sleeper_nba": {
       "consecutive_failures": 0,
-      "last_success": "2026-09-28T03:51:25.911801+00:00",
+      "last_success": "2026-09-28T04:01:37.886176+00:00",
       "circuit_open": false
     },
     "telegram": {
       "consecutive_failures": 0,
-      "last_success": "2026-09-28T03:51:35.561774+00:00",
+      "last_success": "2026-09-28T04:01:48.337819+00:00",
       "circuit_open": false
     }
   },
