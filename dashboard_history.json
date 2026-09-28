@@ -1,26 +1,5 @@
 [
   {
-    "timestamp": "2026-09-27T17:31:18.339944+00:00",
-    "sport": "nfl",
-    "player_name": "Player JAX",
-    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Player JAX (JAX) scored 13.0 pts [Live] vs a projection of 5.94 (218.9% of projection).",
-    "notified": true
-  },
-  {
-    "timestamp": "2026-09-27T17:42:56.455161+00:00",
-    "sport": "nfl",
-    "player_name": "Player IND",
-    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Player IND (IND) scored 12.0 pts [Live] vs a projection of 6.03 (199.0% of projection).",
-    "notified": true
-  },
-  {
-    "timestamp": "2026-09-27T17:42:56.457827+00:00",
-    "sport": "nfl",
-    "player_name": "Player LAC",
-    "message": "\ud83c\udfc8 \ud83d\udd25 DOUBLE BREAKOUT: Player LAC (LAC) scored 17.0 pts [Live] vs a projection of 3.52 (483.0% of projection).",
-    "notified": true
-  },
-  {
     "timestamp": "2026-09-27T18:57:31.687835+00:00",
     "sport": "nfl",
     "player_name": "Dominic Zvada",
@@ -347,6 +326,27 @@
     "sport": "nfl",
     "player_name": "Harrison Mevis",
     "message": "\ud83c\udfc8 BREAKOUT: Harrison Mevis (LAR) scored 15.0 pts [Live] vs a projection of 8.04 (186.6% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-09-28T03:36:08.244220+00:00",
+    "sport": "nfl",
+    "player_name": "Matthew Stafford",
+    "message": "\ud83c\udfc8 BREAKOUT: Matthew Stafford (LAR) scored 21.78 pts [Live] vs a projection of 15.92 (136.8% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-09-28T03:36:08.257805+00:00",
+    "sport": "nfl",
+    "player_name": "Konata Mumpfield",
+    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Konata Mumpfield (LAR) scored 15.3 pts [Live] vs a projection of 1.19 (1285.7% of projection).\nMay be filling in for Puka Nacua (Doubtful)",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-09-28T03:36:08.259944+00:00",
+    "sport": "nfl",
+    "player_name": "Pat Bryant",
+    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Pat Bryant (DEN) scored 12.4 pts [Live] vs a projection of 4.52 (274.3% of projection).",
     "notified": true
   }
 ]
