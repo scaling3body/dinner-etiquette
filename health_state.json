@@ -1,14 +1,14 @@
 {
   "sleeper_nfl": {
     "consecutive_failures": 0,
-    "last_success": "2026-09-28T00:21:54.302672+00:00",
+    "last_success": "2026-09-28T00:43:19.033372+00:00",
     "last_failure": null,
     "notified": false,
     "circuit_open_until": null
   },
   "sleeper_nba": {
     "consecutive_failures": 0,
-    "last_success": "2026-09-28T00:22:59.517808+00:00",
+    "last_success": "2026-09-28T00:44:22.637390+00:00",
     "last_failure": null,
     "notified": false,
     "circuit_open_until": null
