@@ -1,26 +1,5 @@
 [
   {
-    "timestamp": "2026-09-27T17:19:28.585364+00:00",
-    "sport": "nfl",
-    "player_name": "Player WAS",
-    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Player WAS (WAS) scored 12.0 pts [Live] vs a projection of 4.99 (240.5% of projection).",
-    "notified": true
-  },
-  {
-    "timestamp": "2026-09-27T17:31:18.332682+00:00",
-    "sport": "nfl",
-    "player_name": "Player NYJ",
-    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Player NYJ (NYJ) scored 12.0 pts [Live] vs a projection of 3.03 (396.0% of projection).",
-    "notified": true
-  },
-  {
-    "timestamp": "2026-09-27T17:31:18.336836+00:00",
-    "sport": "nfl",
-    "player_name": "Roman Wilson",
-    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Roman Wilson (PIT) scored 12.0 pts [Live] vs a projection of 3.52 (340.9% of projection).\nMay be filling in for Michael Pittman (Questionable)",
-    "notified": true
-  },
-  {
     "timestamp": "2026-09-27T17:31:18.339944+00:00",
     "sport": "nfl",
     "player_name": "Player JAX",
@@ -347,6 +326,27 @@
     "sport": "nfl",
     "player_name": "Tyler Loop",
     "message": "\ud83c\udfc8 BREAKOUT: Tyler Loop (BAL) scored 12.0 pts [Final] vs a projection of 8.52 (140.8% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-09-28T03:20:10.708576+00:00",
+    "sport": "nfl",
+    "player_name": "Davante Adams",
+    "message": "\ud83c\udfc8 BREAKOUT: Davante Adams (LAR) scored 13.7 pts [Live] vs a projection of 9.29 (147.5% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-09-28T03:20:10.724295+00:00",
+    "sport": "nfl",
+    "player_name": "Player DEN",
+    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Player DEN (DEN) scored 12.0 pts [Live] vs a projection of 5.73 (209.4% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-09-28T03:20:10.726245+00:00",
+    "sport": "nfl",
+    "player_name": "Harrison Mevis",
+    "message": "\ud83c\udfc8 BREAKOUT: Harrison Mevis (LAR) scored 15.0 pts [Live] vs a projection of 8.04 (186.6% of projection).",
     "notified": true
   }
 ]

@@ -1,6 +1,27 @@
 {
-  "last_updated": "2026-09-28T03:02:56.064833+00:00",
+  "last_updated": "2026-09-28T03:21:16.860360+00:00",
   "recent_alerts": [
+    {
+      "timestamp": "2026-09-28T03:20:10.726245+00:00",
+      "sport": "nfl",
+      "player_name": "Harrison Mevis",
+      "message": "\ud83c\udfc8 BREAKOUT: Harrison Mevis (LAR) scored 15.0 pts [Live] vs a projection of 8.04 (186.6% of projection).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-09-28T03:20:10.724295+00:00",
+      "sport": "nfl",
+      "player_name": "Player DEN",
+      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Player DEN (DEN) scored 12.0 pts [Live] vs a projection of 5.73 (209.4% of projection).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-09-28T03:20:10.708576+00:00",
+      "sport": "nfl",
+      "player_name": "Davante Adams",
+      "message": "\ud83c\udfc8 BREAKOUT: Davante Adams (LAR) scored 13.7 pts [Live] vs a projection of 9.29 (147.5% of projection).",
+      "notified": true
+    },
     {
       "timestamp": "2026-09-27T23:51:56.681329+00:00",
       "sport": "nfl",
@@ -329,44 +350,23 @@
       "player_name": "Player JAX",
       "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Player JAX (JAX) scored 13.0 pts [Live] vs a projection of 5.94 (218.9% of projection).",
       "notified": true
-    },
-    {
-      "timestamp": "2026-09-27T17:31:18.336836+00:00",
-      "sport": "nfl",
-      "player_name": "Roman Wilson",
-      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Roman Wilson (PIT) scored 12.0 pts [Live] vs a projection of 3.52 (340.9% of projection).\nMay be filling in for Michael Pittman (Questionable)",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-09-27T17:31:18.332682+00:00",
-      "sport": "nfl",
-      "player_name": "Player NYJ",
-      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Player NYJ (NYJ) scored 12.0 pts [Live] vs a projection of 3.03 (396.0% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-09-27T17:19:28.585364+00:00",
-      "sport": "nfl",
-      "player_name": "Player WAS",
-      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Player WAS (WAS) scored 12.0 pts [Live] vs a projection of 4.99 (240.5% of projection).",
-      "notified": true
     }
   ],
   "pending_suggestions": [],
   "health": {
     "sleeper_nfl": {
       "consecutive_failures": 0,
-      "last_success": "2026-09-28T03:01:43.131431+00:00",
+      "last_success": "2026-09-28T03:20:01.260376+00:00",
       "circuit_open": false
     },
     "sleeper_nba": {
       "consecutive_failures": 0,
-      "last_success": "2026-09-28T03:02:46.936606+00:00",
+      "last_success": "2026-09-28T03:21:07.088315+00:00",
       "circuit_open": false
     },
     "telegram": {
       "consecutive_failures": 0,
-      "last_success": "2026-09-27T23:53:01.206687+00:00",
+      "last_success": "2026-09-28T03:21:16.858378+00:00",
       "circuit_open": false
     }
   },
