@@ -1,6 +1,13 @@
 {
-  "last_updated": "2026-09-29T00:31:05.696363+00:00",
+  "last_updated": "2026-09-29T00:50:27.676654+00:00",
   "recent_alerts": [
+    {
+      "timestamp": "2026-09-29T00:49:23.145870+00:00",
+      "sport": "nfl",
+      "player_name": "Player CHI",
+      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Player CHI (CHI) scored 12.0 pts [Live] vs a projection of 5.39 (222.6% of projection).",
+      "notified": true
+    },
     {
       "timestamp": "2026-09-28T04:00:41.798211+00:00",
       "sport": "nfl",
@@ -343,30 +350,23 @@
       "player_name": "Terry McLaurin",
       "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Terry McLaurin (WAS) scored 12.5 pts [Live] vs a projection of 6.22 (201.0% of projection).",
       "notified": true
-    },
-    {
-      "timestamp": "2026-09-27T19:20:32.895538+00:00",
-      "sport": "nfl",
-      "player_name": "Kenyon Sadiq",
-      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Kenyon Sadiq (NYJ) scored 14.3 pts [Live] vs a projection of 4.96 (288.3% of projection).",
-      "notified": true
     }
   ],
   "pending_suggestions": [],
   "health": {
     "sleeper_nfl": {
       "consecutive_failures": 0,
-      "last_success": "2026-09-29T00:29:52.329910+00:00",
+      "last_success": "2026-09-29T00:49:13.964520+00:00",
       "circuit_open": false
     },
     "sleeper_nba": {
       "consecutive_failures": 0,
-      "last_success": "2026-09-29T00:30:56.518125+00:00",
+      "last_success": "2026-09-29T00:50:18.086295+00:00",
       "circuit_open": false
     },
     "telegram": {
       "consecutive_failures": 0,
-      "last_success": "2026-09-28T04:01:48.337819+00:00",
+      "last_success": "2026-09-29T00:50:27.674593+00:00",
       "circuit_open": false
     }
   },
