@@ -1,6 +1,13 @@
 {
-  "last_updated": "2026-09-29T01:03:10.141821+00:00",
+  "last_updated": "2026-09-29T01:19:32.342771+00:00",
   "recent_alerts": [
+    {
+      "timestamp": "2026-09-29T01:18:27.631453+00:00",
+      "sport": "nfl",
+      "player_name": "Luther Burden",
+      "message": "\ud83c\udfc8 BREAKOUT: Luther Burden (CHI) scored 12.5 pts [Live] vs a projection of 6.48 (192.9% of projection).",
+      "notified": true
+    },
     {
       "timestamp": "2026-09-29T00:49:23.145870+00:00",
       "sport": "nfl",
@@ -343,30 +350,23 @@
       "player_name": "Marcus Mariota",
       "message": "\ud83c\udfc8 BREAKOUT: Marcus Mariota (WAS) scored 17.92 pts [Live] vs a projection of 12.78 (140.2% of projection).",
       "notified": true
-    },
-    {
-      "timestamp": "2026-09-27T19:20:32.900579+00:00",
-      "sport": "nfl",
-      "player_name": "Terry McLaurin",
-      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Terry McLaurin (WAS) scored 12.5 pts [Live] vs a projection of 6.22 (201.0% of projection).",
-      "notified": true
     }
   ],
   "pending_suggestions": [],
   "health": {
     "sleeper_nfl": {
       "consecutive_failures": 0,
-      "last_success": "2026-09-29T01:01:56.623460+00:00",
+      "last_success": "2026-09-29T01:18:18.453168+00:00",
       "circuit_open": false
     },
     "sleeper_nba": {
       "consecutive_failures": 0,
-      "last_success": "2026-09-29T01:03:00.969769+00:00",
+      "last_success": "2026-09-29T01:19:22.541589+00:00",
       "circuit_open": false
     },
     "telegram": {
       "consecutive_failures": 0,
-      "last_success": "2026-09-29T00:50:27.674593+00:00",
+      "last_success": "2026-09-29T01:19:32.340739+00:00",
       "circuit_open": false
     }
   },
