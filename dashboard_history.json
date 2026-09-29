@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-09-27T19:20:32.903134+00:00",
-    "sport": "nfl",
-    "player_name": "Marcus Mariota",
-    "message": "\ud83c\udfc8 BREAKOUT: Marcus Mariota (WAS) scored 17.92 pts [Live] vs a projection of 12.78 (140.2% of projection).",
-    "notified": true
-  },
-  {
-    "timestamp": "2026-09-27T19:31:09.523342+00:00",
-    "sport": "nfl",
-    "player_name": "Ryan Fitzgerald",
-    "message": "\ud83c\udfc8 BREAKOUT: Ryan Fitzgerald (CAR) scored 12.0 pts [Live] vs a projection of 7.31 (164.2% of projection).",
-    "notified": true
-  },
-  {
     "timestamp": "2026-09-27T19:31:09.525858+00:00",
     "sport": "nfl",
     "player_name": "Tee Higgins",
@@ -347,6 +333,20 @@
     "sport": "nfl",
     "player_name": "Luther Burden",
     "message": "\ud83c\udfc8 BREAKOUT: Luther Burden (CHI) scored 12.5 pts [Live] vs a projection of 6.48 (192.9% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-09-29T02:21:52.006305+00:00",
+    "sport": "nfl",
+    "player_name": "Kalif Raymond",
+    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Kalif Raymond (CHI) scored 15.0 pts [Live] vs a projection of 4.32 (347.2% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-09-29T02:21:52.009127+00:00",
+    "sport": "nfl",
+    "player_name": "Case Keenum",
+    "message": "\ud83c\udfc8 BREAKOUT: Case Keenum (CHI) scored 17.68 pts [Live] vs a projection of 11.74 (150.6% of projection).",
     "notified": true
   }
 ]
