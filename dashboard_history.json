@@ -1,26 +1,5 @@
 [
   {
-    "timestamp": "2026-09-28T03:20:10.724295+00:00",
-    "sport": "nfl",
-    "player_name": "Player DEN",
-    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Player DEN (DEN) scored 12.0 pts [Live] vs a projection of 5.73 (209.4% of projection).",
-    "notified": true
-  },
-  {
-    "timestamp": "2026-09-28T03:20:10.726245+00:00",
-    "sport": "nfl",
-    "player_name": "Harrison Mevis",
-    "message": "\ud83c\udfc8 BREAKOUT: Harrison Mevis (LAR) scored 15.0 pts [Live] vs a projection of 8.04 (186.6% of projection).",
-    "notified": true
-  },
-  {
-    "timestamp": "2026-09-28T03:36:08.244220+00:00",
-    "sport": "nfl",
-    "player_name": "Matthew Stafford",
-    "message": "\ud83c\udfc8 BREAKOUT: Matthew Stafford (LAR) scored 21.78 pts [Live] vs a projection of 15.92 (136.8% of projection).",
-    "notified": true
-  },
-  {
     "timestamp": "2026-09-28T03:36:08.257805+00:00",
     "sport": "nfl",
     "player_name": "Konata Mumpfield",
@@ -347,6 +326,27 @@
     "sport": "nfl",
     "player_name": "Matt Gay",
     "message": "\ud83c\udfc8 DOUBLE BREAKOUT: Matt Gay (LV) scored 16.0 pts [Live] vs a projection of 8.3 (192.8% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-10-04T23:21:00.924331+00:00",
+    "sport": "nfl",
+    "player_name": "George Kittle",
+    "message": "\ud83c\udfc8 BREAKOUT: George Kittle (SF) scored 13.0 pts [Live] vs a projection of 7.7 (168.8% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-10-04T23:21:00.926615+00:00",
+    "sport": "nfl",
+    "player_name": "Kenneth Walker",
+    "message": "\ud83c\udfc8 BREAKOUT: Kenneth Walker (KC) scored 29.7 pts [Live] vs a projection of 15.88 (187.0% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-10-04T23:21:00.937582+00:00",
+    "sport": "nfl",
+    "player_name": "Tyquan Thornton",
+    "message": "\ud83c\udfc8 \ud83d\udd25 DOUBLE BREAKOUT: Tyquan Thornton (KC) scored 23.1 pts [Live] vs a projection of 3.56 (648.9% of projection).",
     "notified": true
   }
 ]
