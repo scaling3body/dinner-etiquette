@@ -1,6 +1,167 @@
 {
-  "last_updated": "2026-10-04T10:51:01.115226+00:00",
+  "last_updated": "2026-10-04T20:50:11.721720+00:00",
   "recent_alerts": [
+    {
+      "timestamp": "2026-10-04T20:49:05.850512+00:00",
+      "sport": "nfl",
+      "player_name": "Javonte Williams",
+      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Javonte Williams (DAL) scored 26.3 pts [Final] vs a projection of 12.38 (212.4% of projection).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-10-04T20:49:05.849766+00:00",
+      "sport": "nfl",
+      "player_name": "Drake Maye",
+      "message": "\ud83c\udfc8 BREAKOUT: Drake Maye (NE) scored 27.16 pts [Final] vs a projection of 17.81 (152.5% of projection).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-10-04T20:49:05.848263+00:00",
+      "sport": "nfl",
+      "player_name": "Spencer Shrader",
+      "message": "\ud83c\udfc8 BREAKOUT: Spencer Shrader (IND) scored 16.0 pts [Final] vs a projection of 9.4 (170.2% of projection).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-10-04T20:49:05.845989+00:00",
+      "sport": "nfl",
+      "player_name": "Ka'imi Fairbairn",
+      "message": "\ud83c\udfc8 BREAKOUT: Ka'imi Fairbairn (HOU) scored 16.0 pts [Final] vs a projection of 9.03 (177.2% of projection).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-10-04T20:49:05.844404+00:00",
+      "sport": "nfl",
+      "player_name": "Zay Flowers",
+      "message": "\ud83c\udfc8 BREAKOUT: Zay Flowers (BAL) scored 18.6 pts [Final] vs a projection of 11.07 (168.0% of projection).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-10-04T20:49:05.843185+00:00",
+      "sport": "nfl",
+      "player_name": "Player NYG",
+      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Player NYG (NYG) scored 14.0 pts [Final] vs a projection of 5.87 (238.5% of projection).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-10-04T20:49:05.842683+00:00",
+      "sport": "nfl",
+      "player_name": "Keon Coleman",
+      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Keon Coleman (BUF) scored 17.6 pts [Final] vs a projection of 2.96 (594.6% of projection).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-10-04T20:49:05.841708+00:00",
+      "sport": "nfl",
+      "player_name": "Romeo Doubs",
+      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Romeo Doubs (NE) scored 17.8 pts [Final] vs a projection of 5.96 (298.7% of projection).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-10-04T20:49:05.841051+00:00",
+      "sport": "nfl",
+      "player_name": "Kyren Williams",
+      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Kyren Williams (LAR) scored 26.6 pts [Final] vs a projection of 11.8 (225.4% of projection).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-10-04T20:49:05.840323+00:00",
+      "sport": "nfl",
+      "player_name": "Rhamondre Stevenson",
+      "message": "\ud83c\udfc8 BREAKOUT: Rhamondre Stevenson (NE) scored 15.4 pts [Final] vs a projection of 10.19 (151.1% of projection).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-10-04T20:49:05.838714+00:00",
+      "sport": "nfl",
+      "player_name": "Darius Cooper",
+      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Darius Cooper (PHI) scored 15.3 pts [Final] vs a projection of 3.31 (462.2% of projection).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-10-04T20:49:05.837718+00:00",
+      "sport": "nfl",
+      "player_name": "Kyle Monangai",
+      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Kyle Monangai (CHI) scored 27.0 pts [Final] vs a projection of 7.18 (376.0% of projection).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-10-04T20:49:05.835123+00:00",
+      "sport": "nfl",
+      "player_name": "Cam Little",
+      "message": "\ud83c\udfc8 BREAKOUT: Cam Little (JAX) scored 14.0 pts [Final] vs a projection of 8.25 (169.7% of projection).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-10-04T20:49:05.833876+00:00",
+      "sport": "nfl",
+      "player_name": "Joe Burrow",
+      "message": "\ud83c\udfc8 BREAKOUT: Joe Burrow (CIN) scored 25.72 pts [Final] vs a projection of 19.57 (131.4% of projection).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-10-04T20:49:05.833049+00:00",
+      "sport": "nfl",
+      "player_name": "Malik Nabers",
+      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Malik Nabers (NYG) scored 17.2 pts [Final] vs a projection of 8.8 (195.5% of projection).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-10-04T20:49:05.831891+00:00",
+      "sport": "nfl",
+      "player_name": "Carnell Tate",
+      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Carnell Tate (TEN) scored 12.5 pts [Final] vs a projection of 5.62 (222.4% of projection).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-10-04T20:49:05.829084+00:00",
+      "sport": "nfl",
+      "player_name": "Puka Nacua",
+      "message": "\ud83c\udfc8 BREAKOUT: Puka Nacua (LAR) scored 18.7 pts [Final] vs a projection of 13.03 (143.5% of projection).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-10-04T20:49:05.826933+00:00",
+      "sport": "nfl",
+      "player_name": "Nico Collins",
+      "message": "\ud83c\udfc8 BREAKOUT: Nico Collins (HOU) scored 23.8 pts [Final] vs a projection of 13.06 (182.2% of projection).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-10-04T20:49:05.825125+00:00",
+      "sport": "nfl",
+      "player_name": "Tee Higgins",
+      "message": "\ud83c\udfc8 BREAKOUT: Tee Higgins (CIN) scored 15.7 pts [Final] vs a projection of 11.62 (135.1% of projection).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-10-04T20:49:05.824199+00:00",
+      "sport": "nfl",
+      "player_name": "Isaiah Williams",
+      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Isaiah Williams (NYJ) scored 13.3 pts [Final] vs a projection of 3.7 (359.5% of projection).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-10-04T20:49:05.822938+00:00",
+      "sport": "nfl",
+      "player_name": "Dominic Zvada",
+      "message": "\ud83c\udfc8 BREAKOUT: Dominic Zvada (NYG) scored 14.0 pts [Final] vs a projection of 7.66 (182.8% of projection).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-10-04T20:49:05.819809+00:00",
+      "sport": "nfl",
+      "player_name": "CeeDee Lamb",
+      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: CeeDee Lamb (DAL) scored 24.3 pts [Final] vs a projection of 11.42 (212.8% of projection).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-10-04T20:49:05.818902+00:00",
+      "sport": "nfl",
+      "player_name": "Brandon Aubrey",
+      "message": "\ud83c\udfc8 BREAKOUT: Brandon Aubrey (DAL) scored 12.0 pts [Final] vs a projection of 9.0 (133.3% of projection).",
+      "notified": true
+    },
     {
       "timestamp": "2026-10-02T03:48:14.392008+00:00",
       "sport": "nfl",
@@ -189,184 +350,23 @@
       "player_name": "Brock Purdy",
       "message": "\ud83c\udfc8 BREAKOUT: Brock Purdy (SF) scored 31.38 pts [Live] vs a projection of 21.54 (145.7% of projection).",
       "notified": true
-    },
-    {
-      "timestamp": "2026-09-27T23:09:42.885075+00:00",
-      "sport": "nfl",
-      "player_name": "George Kittle",
-      "message": "\ud83c\udfc8 \ud83d\udd25 DOUBLE BREAKOUT: George Kittle (SF) scored 20.2 pts [Live] vs a projection of 7.91 (255.4% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-09-27T23:09:42.881260+00:00",
-      "sport": "nfl",
-      "player_name": "Will Reichard",
-      "message": "\ud83c\udfc8 BREAKOUT: Will Reichard (MIN) scored 12.0 pts [Live] vs a projection of 8.0 (150.0% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-09-27T22:57:43.500465+00:00",
-      "sport": "nfl",
-      "player_name": "Chase McLaughlin",
-      "message": "\ud83c\udfc8 BREAKOUT: Chase McLaughlin (TB) scored 12.0 pts [Live] vs a projection of 7.86 (152.7% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-09-27T22:49:43.053980+00:00",
-      "sport": "nfl",
-      "player_name": "George Kittle",
-      "message": "\ud83c\udfc8 BREAKOUT: George Kittle (SF) scored 12.2 pts [Live] vs a projection of 7.91 (154.2% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-09-27T22:39:37.687908+00:00",
-      "sport": "nfl",
-      "player_name": "Noah Fant",
-      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Noah Fant (NO) scored 14.8 pts [Live] vs a projection of 2.29 (646.3% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-09-27T22:39:37.682584+00:00",
-      "sport": "nfl",
-      "player_name": "Jeremiyah Love",
-      "message": "\ud83c\udfc8 BREAKOUT: Jeremiyah Love (ARI) scored 15.3 pts [Live] vs a projection of 10.92 (140.1% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-09-27T22:39:37.677449+00:00",
-      "sport": "nfl",
-      "player_name": "Tyler Shough",
-      "message": "\ud83c\udfc8 BREAKOUT: Tyler Shough (NO) scored 26.44 pts [Live] vs a projection of 18.39 (143.8% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-09-27T22:26:57.072145+00:00",
-      "sport": "nfl",
-      "player_name": "Juwan Johnson",
-      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Juwan Johnson (NO) scored 15.5 pts [Live] vs a projection of 6.23 (248.8% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-09-27T22:26:57.051259+00:00",
-      "sport": "nfl",
-      "player_name": "Michael Wilson",
-      "message": "\ud83c\udfc8 BREAKOUT: Michael Wilson (ARI) scored 12.1 pts [Live] vs a projection of 8.0 (151.2% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-09-27T21:19:36.928278+00:00",
-      "sport": "nfl",
-      "player_name": "Jordan Addison",
-      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Jordan Addison (MIN) scored 13.5 pts [Live] vs a projection of 6.27 (215.3% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-09-27T20:36:48.398001+00:00",
-      "sport": "nfl",
-      "player_name": "Deebo Samuel",
-      "message": "\ud83c\udfc8 BREAKOUT: Deebo Samuel (SF) scored 14.0 pts [Live] vs a projection of 7.56 (185.2% of projection).\nMay be filling in for Mike Evans (Questionable)",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-09-27T20:25:01.483802+00:00",
-      "sport": "nfl",
-      "player_name": "James Cook",
-      "message": "\ud83c\udfc8 BREAKOUT: James Cook (BUF) scored 19.4 pts [Final] vs a projection of 14.37 (135.0% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-09-27T20:11:16.276807+00:00",
-      "sport": "nfl",
-      "player_name": "Spencer Shrader",
-      "message": "\ud83c\udfc8 DOUBLE BREAKOUT: Spencer Shrader (IND) scored 17.0 pts [Live] vs a projection of 9.14 (186.0% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-09-27T20:11:16.275316+00:00",
-      "sport": "nfl",
-      "player_name": "Deshaun Watson",
-      "message": "\ud83c\udfc8 BREAKOUT: Deshaun Watson (CLE) scored 18.3 pts [Live] vs a projection of 13.75 (133.1% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-09-27T20:11:16.272572+00:00",
-      "sport": "nfl",
-      "player_name": "Harold Fannin",
-      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Harold Fannin (CLE) scored 17.2 pts [Live] vs a projection of 5.69 (302.3% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-09-27T20:11:16.270369+00:00",
-      "sport": "nfl",
-      "player_name": "Jaylen Warren",
-      "message": "\ud83c\udfc8 BREAKOUT: Jaylen Warren (PIT) scored 17.0 pts [Live] vs a projection of 12.67 (134.2% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-09-27T20:11:16.265813+00:00",
-      "sport": "nfl",
-      "player_name": "Keenan Allen",
-      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Keenan Allen (IND) scored 12.3 pts [Live] vs a projection of 4.37 (281.5% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-09-27T20:11:16.263830+00:00",
-      "sport": "nfl",
-      "player_name": "Chris Boswell",
-      "message": "\ud83c\udfc8 BREAKOUT: Chris Boswell (PIT) scored 13.0 pts [Live] vs a projection of 7.92 (164.1% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-09-27T20:11:16.257067+00:00",
-      "sport": "nfl",
-      "player_name": "Ja'Marr Chase",
-      "message": "\ud83c\udfc8 BREAKOUT: Ja'Marr Chase (CIN) scored 15.8 pts [Live] vs a projection of 10.98 (143.9% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-09-27T20:11:16.254249+00:00",
-      "sport": "nfl",
-      "player_name": "Jaxon Smith-Njigba",
-      "message": "\ud83c\udfc8 BREAKOUT: Jaxon Smith-Njigba (SEA) scored 20.86 pts [Live] vs a projection of 15.23 (137.0% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-09-27T19:50:28.573325+00:00",
-      "sport": "nfl",
-      "player_name": "Bhayshul Tuten",
-      "message": "\ud83c\udfc8 BREAKOUT: Bhayshul Tuten (JAX) scored 15.0 pts [Live] vs a projection of 9.71 (154.5% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-09-27T19:50:28.565441+00:00",
-      "sport": "nfl",
-      "player_name": "Sam Darnold",
-      "message": "\ud83c\udfc8 BREAKOUT: Sam Darnold (SEA) scored 22.86 pts [Live] vs a projection of 16.97 (134.7% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-09-27T19:42:12.411583+00:00",
-      "sport": "nfl",
-      "player_name": "Garrett Wilson",
-      "message": "\ud83c\udfc8 BREAKOUT: Garrett Wilson (NYJ) scored 16.0 pts [Live] vs a projection of 10.35 (154.6% of projection).",
-      "notified": true
     }
   ],
   "pending_suggestions": [],
   "health": {
     "sleeper_nfl": {
       "consecutive_failures": 0,
-      "last_success": "2026-10-02T05:57:06.731204+00:00",
+      "last_success": "2026-10-04T20:48:56.458047+00:00",
       "circuit_open": false
     },
     "sleeper_nba": {
       "consecutive_failures": 0,
-      "last_success": "2026-10-04T10:50:51.759523+00:00",
+      "last_success": "2026-10-04T20:50:01.742338+00:00",
       "circuit_open": false
     },
     "telegram": {
       "consecutive_failures": 0,
-      "last_success": "2026-10-02T03:49:18.849522+00:00",
+      "last_success": "2026-10-04T20:50:11.719706+00:00",
       "circuit_open": false
     }
   },
