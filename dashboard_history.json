@@ -1,26 +1,5 @@
 [
   {
-    "timestamp": "2026-09-28T03:36:08.257805+00:00",
-    "sport": "nfl",
-    "player_name": "Konata Mumpfield",
-    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Konata Mumpfield (LAR) scored 15.3 pts [Live] vs a projection of 1.19 (1285.7% of projection).\nMay be filling in for Puka Nacua (Doubtful)",
-    "notified": true
-  },
-  {
-    "timestamp": "2026-09-28T03:36:08.259944+00:00",
-    "sport": "nfl",
-    "player_name": "Pat Bryant",
-    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Pat Bryant (DEN) scored 12.4 pts [Live] vs a projection of 4.52 (274.3% of projection).",
-    "notified": true
-  },
-  {
-    "timestamp": "2026-09-28T03:50:31.193365+00:00",
-    "sport": "nfl",
-    "player_name": "Bo Nix",
-    "message": "\ud83c\udfc8 BREAKOUT: Bo Nix (DEN) scored 25.14 pts [Live] vs a projection of 17.31 (145.2% of projection).",
-    "notified": true
-  },
-  {
     "timestamp": "2026-09-28T04:00:41.785435+00:00",
     "sport": "nfl",
     "player_name": "Tyler Higbee",
@@ -347,6 +326,27 @@
     "sport": "nfl",
     "player_name": "Tyquan Thornton",
     "message": "\ud83c\udfc8 \ud83d\udd25 DOUBLE BREAKOUT: Tyquan Thornton (KC) scored 23.1 pts [Live] vs a projection of 3.56 (648.9% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-10-04T23:34:45.139294+00:00",
+    "sport": "nfl",
+    "player_name": "Cameron Dicker",
+    "message": "\ud83c\udfc8 BREAKOUT: Cameron Dicker (LAC) scored 12.0 pts [Live] vs a projection of 7.2 (166.7% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-10-04T23:34:45.141472+00:00",
+    "sport": "nfl",
+    "player_name": "Kirk Cousins",
+    "message": "\ud83c\udfc8 BREAKOUT: Kirk Cousins (LV) scored 22.44 pts [Live] vs a projection of 14.74 (152.2% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-10-04T23:34:45.158912+00:00",
+    "sport": "nfl",
+    "player_name": "Brock Bowers",
+    "message": "\ud83c\udfc8 BREAKOUT: Brock Bowers (LV) scored 14.6 pts [Live] vs a projection of 8.93 (163.5% of projection).",
     "notified": true
   }
 ]
