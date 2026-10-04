@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-09-27T23:22:24.173898+00:00",
-    "sport": "nfl",
-    "player_name": "Chad Ryland",
-    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Chad Ryland (ARI) scored 14.0 pts [Final] vs a projection of 7.06 (198.3% of projection).",
-    "notified": true
-  },
-  {
-    "timestamp": "2026-09-27T23:22:24.178230+00:00",
-    "sport": "nfl",
-    "player_name": "Matt Gay",
-    "message": "\ud83c\udfc8 BREAKOUT: Matt Gay (LV) scored 12.0 pts [Live] vs a projection of 8.08 (148.5% of projection).",
-    "notified": true
-  },
-  {
     "timestamp": "2026-09-27T23:22:24.180644+00:00",
     "sport": "nfl",
     "player_name": "Kirk Cousins",
@@ -347,6 +333,20 @@
     "sport": "nfl",
     "player_name": "Emanuel Wilson",
     "message": "\ud83c\udfc8 BREAKOUT: Emanuel Wilson (SEA) scored 12.2 pts [Live] vs a projection of 8.74 (139.6% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-10-04T22:01:09.831382+00:00",
+    "sport": "nfl",
+    "player_name": "Player SEA",
+    "message": "\ud83c\udfc8 BREAKOUT: Player SEA (SEA) scored 13.0 pts [Live] vs a projection of 7.99 (162.7% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-10-04T22:01:09.842577+00:00",
+    "sport": "nfl",
+    "player_name": "Emanuel Wilson",
+    "message": "\ud83c\udfc8 \ud83d\udd25 DOUBLE BREAKOUT: Emanuel Wilson (SEA) scored 19.0 pts [Live] vs a projection of 8.74 (217.4% of projection).",
     "notified": true
   }
 ]
