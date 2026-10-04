@@ -1,6 +1,13 @@
 {
-  "last_updated": "2026-10-04T22:57:10.842536+00:00",
+  "last_updated": "2026-10-04T23:07:11.284287+00:00",
   "recent_alerts": [
+    {
+      "timestamp": "2026-10-04T23:06:04.804085+00:00",
+      "sport": "nfl",
+      "player_name": "Matt Gay",
+      "message": "\ud83c\udfc8 DOUBLE BREAKOUT: Matt Gay (LV) scored 16.0 pts [Live] vs a projection of 8.3 (192.8% of projection).",
+      "notified": true
+    },
     {
       "timestamp": "2026-10-04T22:56:04.932942+00:00",
       "sport": "nfl",
@@ -343,30 +350,23 @@
       "player_name": "Player DEN",
       "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Player DEN (DEN) scored 12.0 pts [Live] vs a projection of 5.73 (209.4% of projection).",
       "notified": true
-    },
-    {
-      "timestamp": "2026-09-28T03:20:10.708576+00:00",
-      "sport": "nfl",
-      "player_name": "Davante Adams",
-      "message": "\ud83c\udfc8 BREAKOUT: Davante Adams (LAR) scored 13.7 pts [Live] vs a projection of 9.29 (147.5% of projection).",
-      "notified": true
     }
   ],
   "pending_suggestions": [],
   "health": {
     "sleeper_nfl": {
       "consecutive_failures": 0,
-      "last_success": "2026-10-04T22:55:55.587064+00:00",
+      "last_success": "2026-10-04T23:05:55.345193+00:00",
       "circuit_open": false
     },
     "sleeper_nba": {
       "consecutive_failures": 0,
-      "last_success": "2026-10-04T22:57:00.900863+00:00",
+      "last_success": "2026-10-04T23:07:01.179540+00:00",
       "circuit_open": false
     },
     "telegram": {
       "consecutive_failures": 0,
-      "last_success": "2026-10-04T22:57:10.840151+00:00",
+      "last_success": "2026-10-04T23:07:11.281159+00:00",
       "circuit_open": false
     }
   },
