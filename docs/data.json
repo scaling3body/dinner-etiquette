@@ -1,6 +1,13 @@
 {
-  "last_updated": "2026-10-05T03:21:08.541978+00:00",
+  "last_updated": "2026-10-05T03:40:16.741213+00:00",
   "recent_alerts": [
+    {
+      "timestamp": "2026-10-05T03:39:10.386627+00:00",
+      "sport": "nfl",
+      "player_name": "Sam LaPorta",
+      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Sam LaPorta (DET) scored 14.4 pts [Live] vs a projection of 7.0 (205.7% of projection).",
+      "notified": true
+    },
     {
       "timestamp": "2026-10-05T02:49:39.114359+00:00",
       "sport": "nfl",
@@ -343,30 +350,23 @@
       "player_name": "Case Keenum",
       "message": "\ud83c\udfc8 BREAKOUT: Case Keenum (CHI) scored 17.68 pts [Live] vs a projection of 11.74 (150.6% of projection).",
       "notified": true
-    },
-    {
-      "timestamp": "2026-09-29T02:21:52.006305+00:00",
-      "sport": "nfl",
-      "player_name": "Kalif Raymond",
-      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Kalif Raymond (CHI) scored 15.0 pts [Live] vs a projection of 4.32 (347.2% of projection).",
-      "notified": true
     }
   ],
   "pending_suggestions": [],
   "health": {
     "sleeper_nfl": {
       "consecutive_failures": 0,
-      "last_success": "2026-10-05T03:19:55.193926+00:00",
+      "last_success": "2026-10-05T03:39:00.902720+00:00",
       "circuit_open": false
     },
     "sleeper_nba": {
       "consecutive_failures": 0,
-      "last_success": "2026-10-05T03:20:59.384391+00:00",
+      "last_success": "2026-10-05T03:40:06.932177+00:00",
       "circuit_open": false
     },
     "telegram": {
       "consecutive_failures": 0,
-      "last_success": "2026-10-05T02:50:43.734736+00:00",
+      "last_success": "2026-10-05T03:40:16.738257+00:00",
       "circuit_open": false
     }
   },
