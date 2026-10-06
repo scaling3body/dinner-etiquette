@@ -1,6 +1,13 @@
 {
-  "last_updated": "2026-10-06T02:32:34.480376+00:00",
+  "last_updated": "2026-10-06T02:49:07.905297+00:00",
   "recent_alerts": [
+    {
+      "timestamp": "2026-10-06T02:48:02.282838+00:00",
+      "sport": "nfl",
+      "player_name": "Brian Robinson",
+      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Brian Robinson (ATL) scored 16.6 pts [Live] vs a projection of 4.12 (402.9% of projection).",
+      "notified": true
+    },
     {
       "timestamp": "2026-10-06T02:31:29.781121+00:00",
       "sport": "nfl",
@@ -343,30 +350,23 @@
       "player_name": "Quinshon Judkins",
       "message": "\ud83c\udfc8 BREAKOUT: Quinshon Judkins (CLE) scored 12.8 pts [Live] vs a projection of 8.69 (147.3% of projection).",
       "notified": true
-    },
-    {
-      "timestamp": "2026-10-02T01:53:46.755347+00:00",
-      "sport": "nfl",
-      "player_name": "Roman Wilson",
-      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Roman Wilson (PIT) scored 12.1 pts [Live] vs a projection of 3.19 (379.3% of projection).",
-      "notified": true
     }
   ],
   "pending_suggestions": [],
   "health": {
     "sleeper_nfl": {
       "consecutive_failures": 0,
-      "last_success": "2026-10-06T02:31:20.565882+00:00",
+      "last_success": "2026-10-06T02:47:52.807549+00:00",
       "circuit_open": false
     },
     "sleeper_nba": {
       "consecutive_failures": 0,
-      "last_success": "2026-10-06T02:32:24.600496+00:00",
+      "last_success": "2026-10-06T02:48:58.078944+00:00",
       "circuit_open": false
     },
     "telegram": {
       "consecutive_failures": 0,
-      "last_success": "2026-10-06T02:32:34.478158+00:00",
+      "last_success": "2026-10-06T02:49:07.902067+00:00",
       "circuit_open": false
     }
   },
