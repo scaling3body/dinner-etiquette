@@ -8,7 +8,7 @@
   },
   "sleeper_nba": {
     "consecutive_failures": 0,
-    "last_success": "2026-10-07T22:46:25.456106+00:00",
+    "last_success": "2026-10-07T22:58:00.546938+00:00",
     "last_failure": null,
     "notified": false,
     "circuit_open_until": null
