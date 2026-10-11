@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-10-06T03:15:02.408041+00:00",
-    "sport": "nfl",
-    "player_name": "Brian Robinson",
-    "message": "\ud83c\udfc8 \ud83d\udd25 DOUBLE BREAKOUT: Brian Robinson (ATL) scored 24.7 pts [Live] vs a projection of 4.12 (599.5% of projection).",
-    "notified": true
-  },
-  {
-    "timestamp": "2026-10-09T02:00:02.063872+00:00",
-    "sport": "nfl",
-    "player_name": "Bucky Irving",
-    "message": "\ud83c\udfc8 BREAKOUT: Bucky Irving (TB) scored 17.2 pts [Live] vs a projection of 12.21 (140.9% of projection).",
-    "notified": true
-  },
-  {
     "timestamp": "2026-10-09T02:15:26.181348+00:00",
     "sport": "nfl",
     "player_name": "Bucky Irving",
@@ -347,6 +333,20 @@
     "sport": "nfl",
     "player_name": "Player SF",
     "message": "\ud83c\udfc8 \ud83d\udd25 DOUBLE BREAKOUT: Player SF (SF) scored 20.0 pts [Live] vs a projection of 5.6 (357.1% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-10-11T22:37:41.262141+00:00",
+    "sport": "nfl",
+    "player_name": "Jameson Williams",
+    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Jameson Williams (DET) scored 16.7 pts [Live] vs a projection of 8.33 (200.5% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-10-11T22:37:41.270955+00:00",
+    "sport": "nfl",
+    "player_name": "Jason Myers",
+    "message": "\ud83c\udfc8 BREAKOUT: Jason Myers (SEA) scored 14.0 pts [Live] vs a projection of 8.8 (159.1% of projection).",
     "notified": true
   }
 ]
