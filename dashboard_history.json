@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-10-06T01:06:10.579864+00:00",
-    "sport": "nfl",
-    "player_name": "Player ATL",
-    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Player ATL (ATL) scored 12.0 pts [Live] vs a projection of 5.63 (213.1% of projection).",
-    "notified": true
-  },
-  {
     "timestamp": "2026-10-06T02:31:29.781121+00:00",
     "sport": "nfl",
     "player_name": "Bijan Robinson",
@@ -347,6 +340,13 @@
     "sport": "nfl",
     "player_name": "Player DEN",
     "message": "\ud83c\udfc8 BREAKOUT: Player DEN (DEN) scored 12.0 pts [Live] vs a projection of 7.53 (159.4% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-10-11T20:43:55.681336+00:00",
+    "sport": "nfl",
+    "player_name": "Player SF",
+    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Player SF (SF) scored 13.0 pts [Live] vs a projection of 5.6 (232.1% of projection).",
     "notified": true
   }
 ]
