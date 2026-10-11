@@ -1,33 +1,5 @@
 [
   {
-    "timestamp": "2026-10-09T03:00:33.110986+00:00",
-    "sport": "nfl",
-    "player_name": "George Pickens",
-    "message": "\ud83c\udfc8 BREAKOUT: George Pickens (DAL) scored 17.3 pts [Live] vs a projection of 9.28 (186.4% of projection).",
-    "notified": true
-  },
-  {
-    "timestamp": "2026-10-11T16:05:55.938712+00:00",
-    "sport": "nfl",
-    "player_name": "Parker Washington",
-    "message": "\ud83c\udfc8 BREAKOUT: Parker Washington (JAX) scored 13.4 pts [Live] vs a projection of 9.52 (140.8% of projection).",
-    "notified": true
-  },
-  {
-    "timestamp": "2026-10-11T16:05:55.943186+00:00",
-    "sport": "nfl",
-    "player_name": "Darius Cooper",
-    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Darius Cooper (PHI) scored 12.2 pts [Live] vs a projection of 4.31 (283.1% of projection).",
-    "notified": true
-  },
-  {
-    "timestamp": "2026-10-11T16:53:22.804571+00:00",
-    "sport": "nfl",
-    "player_name": "Parker Washington",
-    "message": "\ud83c\udfc8 \ud83d\udd25 DOUBLE BREAKOUT: Parker Washington (JAX) scored 24.4 pts [Live] vs a projection of 9.52 (256.3% of projection).",
-    "notified": true
-  },
-  {
     "timestamp": "2026-10-11T17:19:11.344255+00:00",
     "sport": "nfl",
     "player_name": "Garrett Wilson",
@@ -347,6 +319,34 @@
     "sport": "nfl",
     "player_name": "Jason Myers",
     "message": "\ud83c\udfc8 \ud83d\udd25 DOUBLE BREAKOUT: Jason Myers (SEA) scored 19.0 pts [Live] vs a projection of 8.8 (215.9% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-10-11T23:17:54.359316+00:00",
+    "sport": "nfl",
+    "player_name": "Mike Evans",
+    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Mike Evans (SF) scored 19.3 pts [Live] vs a projection of 9.24 (208.9% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-10-11T23:17:54.365298+00:00",
+    "sport": "nfl",
+    "player_name": "Jahmyr Gibbs",
+    "message": "\ud83c\udfc8 BREAKOUT: Jahmyr Gibbs (DET) scored 32.7 pts [Live] vs a projection of 20.85 (156.8% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-10-11T23:17:54.366250+00:00",
+    "sport": "nfl",
+    "player_name": "Jared Goff",
+    "message": "\ud83c\udfc8 BREAKOUT: Jared Goff (DET) scored 28.94 pts [Live] vs a projection of 21.76 (133.0% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-10-11T23:17:54.378032+00:00",
+    "sport": "nfl",
+    "player_name": "J.K. Dobbins",
+    "message": "\ud83c\udfc8 BREAKOUT: J.K. Dobbins (DEN) scored 13.4 pts [Live] vs a projection of 8.06 (166.3% of projection).",
     "notified": true
   }
 ]
