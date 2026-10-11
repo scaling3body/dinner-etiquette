@@ -853,6 +853,10 @@
     "SF": {
       "count": 1,
       "baseline": 13.0
+    },
+    "ARI": {
+      "count": 1,
+      "baseline": 13.0
     }
   },
   "nba-2026-10-07": {},
