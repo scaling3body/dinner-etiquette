@@ -739,8 +739,8 @@
       "baseline": 26.9
     },
     "12185": {
-      "count": 1,
-      "baseline": 14.0
+      "count": 2,
+      "baseline": 21.0
     },
     "12518": {
       "count": 1,
@@ -755,8 +755,44 @@
       "baseline": 21.0
     },
     "11564": {
+      "count": 2,
+      "baseline": 34.66
+    },
+    "HOU": {
       "count": 1,
-      "baseline": 26.16
+      "baseline": 13.0
+    },
+    "6804": {
+      "count": 1,
+      "baseline": 24.68
+    },
+    "NYJ": {
+      "count": 1,
+      "baseline": 13.0
+    },
+    "12533": {
+      "count": 1,
+      "baseline": 14.2
+    },
+    "11792": {
+      "count": 1,
+      "baseline": 16.0
+    },
+    "11581": {
+      "count": 1,
+      "baseline": 15.7
+    },
+    "12547": {
+      "count": 1,
+      "baseline": 15.1
+    },
+    "6794": {
+      "count": 1,
+      "baseline": 13.9
+    },
+    "12501": {
+      "count": 1,
+      "baseline": 13.6
     }
   },
   "nba-2026-10-07": {},
