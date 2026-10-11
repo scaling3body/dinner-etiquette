@@ -1,6 +1,13 @@
 {
-  "last_updated": "2026-10-11T17:20:16.759276+00:00",
+  "last_updated": "2026-10-11T17:36:02.220376+00:00",
   "recent_alerts": [
+    {
+      "timestamp": "2026-10-11T17:34:58.195416+00:00",
+      "sport": "nfl",
+      "player_name": "Player GB",
+      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Player GB (GB) scored 13.0 pts [Live] vs a projection of 5.83 (223.0% of projection).",
+      "notified": true
+    },
     {
       "timestamp": "2026-10-11T17:19:11.344255+00:00",
       "sport": "nfl",
@@ -343,30 +350,23 @@
       "player_name": "Carnell Tate",
       "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Carnell Tate (TEN) scored 12.5 pts [Final] vs a projection of 5.62 (222.4% of projection).",
       "notified": true
-    },
-    {
-      "timestamp": "2026-10-04T20:49:05.829084+00:00",
-      "sport": "nfl",
-      "player_name": "Puka Nacua",
-      "message": "\ud83c\udfc8 BREAKOUT: Puka Nacua (LAR) scored 18.7 pts [Final] vs a projection of 13.03 (143.5% of projection).",
-      "notified": true
     }
   ],
   "pending_suggestions": [],
   "health": {
     "sleeper_nfl": {
       "consecutive_failures": 0,
-      "last_success": "2026-10-11T17:19:02.017953+00:00",
+      "last_success": "2026-10-11T17:34:49.058543+00:00",
       "circuit_open": false
     },
     "sleeper_nba": {
       "consecutive_failures": 0,
-      "last_success": "2026-10-11T17:20:06.776236+00:00",
+      "last_success": "2026-10-11T17:35:52.663737+00:00",
       "circuit_open": false
     },
     "telegram": {
       "consecutive_failures": 0,
-      "last_success": "2026-10-11T17:20:16.756961+00:00",
+      "last_success": "2026-10-11T17:36:02.218073+00:00",
       "circuit_open": false
     }
   },
