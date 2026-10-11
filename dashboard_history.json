@@ -1,40 +1,5 @@
 [
   {
-    "timestamp": "2026-10-04T23:34:45.158912+00:00",
-    "sport": "nfl",
-    "player_name": "Brock Bowers",
-    "message": "\ud83c\udfc8 BREAKOUT: Brock Bowers (LV) scored 14.6 pts [Live] vs a projection of 8.93 (163.5% of projection).",
-    "notified": true
-  },
-  {
-    "timestamp": "2026-10-05T01:32:21.718119+00:00",
-    "sport": "nfl",
-    "player_name": "Tetairoa McMillan",
-    "message": "\ud83c\udfc8 BREAKOUT: Tetairoa McMillan (CAR) scored 17.0 pts [Live] vs a projection of 10.67 (159.3% of projection).",
-    "notified": true
-  },
-  {
-    "timestamp": "2026-10-05T01:59:17.365192+00:00",
-    "sport": "nfl",
-    "player_name": "Jake Bates",
-    "message": "\ud83c\udfc8 BREAKOUT: Jake Bates (DET) scored 14.0 pts [Live] vs a projection of 8.04 (174.1% of projection).",
-    "notified": true
-  },
-  {
-    "timestamp": "2026-10-05T02:31:57.768385+00:00",
-    "sport": "nfl",
-    "player_name": "Tetairoa McMillan",
-    "message": "\ud83c\udfc8 \ud83d\udd25 DOUBLE BREAKOUT: Tetairoa McMillan (CAR) scored 28.2 pts [Live] vs a projection of 10.67 (264.3% of projection).",
-    "notified": true
-  },
-  {
-    "timestamp": "2026-10-05T02:49:39.114359+00:00",
-    "sport": "nfl",
-    "player_name": "Chuba Hubbard",
-    "message": "\ud83c\udfc8 BREAKOUT: Chuba Hubbard (CAR) scored 19.5 pts [Live] vs a projection of 12.87 (151.5% of projection).",
-    "notified": true
-  },
-  {
     "timestamp": "2026-10-05T03:39:10.386627+00:00",
     "sport": "nfl",
     "player_name": "Sam LaPorta",
@@ -347,6 +312,41 @@
     "sport": "nfl",
     "player_name": "Player GB",
     "message": "\ud83c\udfc8 \ud83d\udd25 DOUBLE BREAKOUT: Player GB (GB) scored 17.0 pts [Live] vs a projection of 5.83 (291.6% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-10-11T20:11:39.829125+00:00",
+    "sport": "nfl",
+    "player_name": "Ollie Gordon",
+    "message": "\ud83c\udfc8 BREAKOUT: Ollie Gordon (MIA) scored 14.8 pts [Live] vs a projection of 10.61 (139.5% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-10-11T20:11:39.831152+00:00",
+    "sport": "nfl",
+    "player_name": "Chris Boswell",
+    "message": "\ud83c\udfc8 BREAKOUT: Chris Boswell (PIT) scored 13.0 pts [Final] vs a projection of 7.44 (174.7% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-10-11T20:11:39.832176+00:00",
+    "sport": "nfl",
+    "player_name": "Malik Nabers",
+    "message": "\ud83c\udfc8 BREAKOUT: Malik Nabers (NYG) scored 14.7 pts [Live] vs a projection of 9.02 (163.0% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-10-11T20:11:39.833971+00:00",
+    "sport": "nfl",
+    "player_name": "Jameis Winston",
+    "message": "\ud83c\udfc8 BREAKOUT: Jameis Winston (NYG) scored 22.62 pts [Live] vs a projection of 14.48 (156.2% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-10-11T20:11:39.838224+00:00",
+    "sport": "nfl",
+    "player_name": "Malik Willis",
+    "message": "\ud83c\udfc8 BREAKOUT: Malik Willis (MIA) scored 20.88 pts [Live] vs a projection of 15.98 (130.7% of projection).",
     "notified": true
   }
 ]
