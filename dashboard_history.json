@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-10-04T20:49:05.822938+00:00",
-    "sport": "nfl",
-    "player_name": "Dominic Zvada",
-    "message": "\ud83c\udfc8 BREAKOUT: Dominic Zvada (NYG) scored 14.0 pts [Final] vs a projection of 7.66 (182.8% of projection).",
-    "notified": true
-  },
-  {
-    "timestamp": "2026-10-04T20:49:05.824199+00:00",
-    "sport": "nfl",
-    "player_name": "Isaiah Williams",
-    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Isaiah Williams (NYJ) scored 13.3 pts [Final] vs a projection of 3.7 (359.5% of projection).",
-    "notified": true
-  },
-  {
     "timestamp": "2026-10-04T20:49:05.825125+00:00",
     "sport": "nfl",
     "player_name": "Tee Higgins",
@@ -347,6 +333,20 @@
     "sport": "nfl",
     "player_name": "George Pickens",
     "message": "\ud83c\udfc8 BREAKOUT: George Pickens (DAL) scored 17.3 pts [Live] vs a projection of 9.28 (186.4% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-10-11T16:05:55.938712+00:00",
+    "sport": "nfl",
+    "player_name": "Parker Washington",
+    "message": "\ud83c\udfc8 BREAKOUT: Parker Washington (JAX) scored 13.4 pts [Live] vs a projection of 9.52 (140.8% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-10-11T16:05:55.943186+00:00",
+    "sport": "nfl",
+    "player_name": "Darius Cooper",
+    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Darius Cooper (PHI) scored 12.2 pts [Live] vs a projection of 4.31 (283.1% of projection).",
     "notified": true
   }
 ]
