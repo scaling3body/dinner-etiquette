@@ -1,33 +1,5 @@
 [
   {
-    "timestamp": "2026-10-04T20:49:05.840323+00:00",
-    "sport": "nfl",
-    "player_name": "Rhamondre Stevenson",
-    "message": "\ud83c\udfc8 BREAKOUT: Rhamondre Stevenson (NE) scored 15.4 pts [Final] vs a projection of 10.19 (151.1% of projection).",
-    "notified": true
-  },
-  {
-    "timestamp": "2026-10-04T20:49:05.841051+00:00",
-    "sport": "nfl",
-    "player_name": "Kyren Williams",
-    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Kyren Williams (LAR) scored 26.6 pts [Final] vs a projection of 11.8 (225.4% of projection).",
-    "notified": true
-  },
-  {
-    "timestamp": "2026-10-04T20:49:05.841708+00:00",
-    "sport": "nfl",
-    "player_name": "Romeo Doubs",
-    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Romeo Doubs (NE) scored 17.8 pts [Final] vs a projection of 5.96 (298.7% of projection).",
-    "notified": true
-  },
-  {
-    "timestamp": "2026-10-04T20:49:05.842683+00:00",
-    "sport": "nfl",
-    "player_name": "Keon Coleman",
-    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Keon Coleman (BUF) scored 17.6 pts [Final] vs a projection of 2.96 (594.6% of projection).",
-    "notified": true
-  },
-  {
     "timestamp": "2026-10-04T20:49:05.843185+00:00",
     "sport": "nfl",
     "player_name": "Player NYG",
@@ -347,6 +319,34 @@
     "sport": "nfl",
     "player_name": "Spencer Shrader",
     "message": "\ud83c\udfc8 BREAKOUT: Spencer Shrader (IND) scored 14.0 pts [Live] vs a projection of 8.68 (161.3% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-10-11T19:19:24.824764+00:00",
+    "sport": "nfl",
+    "player_name": "Tyler Warren",
+    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Tyler Warren (IND) scored 14.4 pts [Live] vs a projection of 5.74 (250.9% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-10-11T19:19:24.830456+00:00",
+    "sport": "nfl",
+    "player_name": "Rhamondre Stevenson",
+    "message": "\ud83c\udfc8 BREAKOUT: Rhamondre Stevenson (NE) scored 14.4 pts [Live] vs a projection of 10.25 (140.5% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-10-11T19:19:24.832702+00:00",
+    "sport": "nfl",
+    "player_name": "C.J. Stroud",
+    "message": "\ud83c\udfc8 BREAKOUT: C.J. Stroud (HOU) scored 21.0 pts [Live] vs a projection of 15.24 (137.8% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-10-11T19:19:24.834185+00:00",
+    "sport": "nfl",
+    "player_name": "Drake Maye",
+    "message": "\ud83c\udfc8 BREAKOUT: Drake Maye (NE) scored 26.16 pts [Live] vs a projection of 19.2 (136.2% of projection).",
     "notified": true
   }
 ]
