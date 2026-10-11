@@ -715,8 +715,8 @@
       "baseline": 13.0
     },
     "GB": {
-      "count": 1,
-      "baseline": 13.0
+      "count": 2,
+      "baseline": 17.0
     },
     "11604": {
       "count": 1,
@@ -795,8 +795,8 @@
       "baseline": 13.6
     },
     "8131": {
-      "count": 1,
-      "baseline": 12.9
+      "count": 2,
+      "baseline": 20.6
     },
     "96": {
       "count": 1,
@@ -813,6 +813,18 @@
     "11566": {
       "count": 1,
       "baseline": 27.74
+    },
+    "13833": {
+      "count": 1,
+      "baseline": 12.0
+    },
+    "9501": {
+      "count": 1,
+      "baseline": 18.5
+    },
+    "11576": {
+      "count": 1,
+      "baseline": 17.0
     }
   },
   "nba-2026-10-07": {},
