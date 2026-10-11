@@ -1,6 +1,13 @@
 {
-  "last_updated": "2026-10-11T16:39:43.714539+00:00",
+  "last_updated": "2026-10-11T16:54:27.164461+00:00",
   "recent_alerts": [
+    {
+      "timestamp": "2026-10-11T16:53:22.804571+00:00",
+      "sport": "nfl",
+      "player_name": "Parker Washington",
+      "message": "\ud83c\udfc8 \ud83d\udd25 DOUBLE BREAKOUT: Parker Washington (JAX) scored 24.4 pts [Live] vs a projection of 9.52 (256.3% of projection).",
+      "notified": true
+    },
     {
       "timestamp": "2026-10-11T16:05:55.943186+00:00",
       "sport": "nfl",
@@ -343,30 +350,23 @@
       "player_name": "Nico Collins",
       "message": "\ud83c\udfc8 BREAKOUT: Nico Collins (HOU) scored 23.8 pts [Final] vs a projection of 13.06 (182.2% of projection).",
       "notified": true
-    },
-    {
-      "timestamp": "2026-10-04T20:49:05.825125+00:00",
-      "sport": "nfl",
-      "player_name": "Tee Higgins",
-      "message": "\ud83c\udfc8 BREAKOUT: Tee Higgins (CIN) scored 15.7 pts [Final] vs a projection of 11.62 (135.1% of projection).",
-      "notified": true
     }
   ],
   "pending_suggestions": [],
   "health": {
     "sleeper_nfl": {
       "consecutive_failures": 0,
-      "last_success": "2026-10-11T16:38:30.541396+00:00",
+      "last_success": "2026-10-11T16:53:13.678893+00:00",
       "circuit_open": false
     },
     "sleeper_nba": {
       "consecutive_failures": 0,
-      "last_success": "2026-10-11T16:39:34.534393+00:00",
+      "last_success": "2026-10-11T16:54:17.395061+00:00",
       "circuit_open": false
     },
     "telegram": {
       "consecutive_failures": 0,
-      "last_success": "2026-10-11T16:07:01.062168+00:00",
+      "last_success": "2026-10-11T16:54:27.162276+00:00",
       "circuit_open": false
     }
   },
