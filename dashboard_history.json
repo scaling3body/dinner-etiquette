@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-10-04T20:49:05.826933+00:00",
-    "sport": "nfl",
-    "player_name": "Nico Collins",
-    "message": "\ud83c\udfc8 BREAKOUT: Nico Collins (HOU) scored 23.8 pts [Final] vs a projection of 13.06 (182.2% of projection).",
-    "notified": true
-  },
-  {
     "timestamp": "2026-10-04T20:49:05.829084+00:00",
     "sport": "nfl",
     "player_name": "Puka Nacua",
@@ -347,6 +340,13 @@
     "sport": "nfl",
     "player_name": "Parker Washington",
     "message": "\ud83c\udfc8 \ud83d\udd25 DOUBLE BREAKOUT: Parker Washington (JAX) scored 24.4 pts [Live] vs a projection of 9.52 (256.3% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-10-11T17:19:11.344255+00:00",
+    "sport": "nfl",
+    "player_name": "Garrett Wilson",
+    "message": "\ud83c\udfc8 BREAKOUT: Garrett Wilson (NYJ) scored 13.0 pts [Live] vs a projection of 9.76 (133.2% of projection).",
     "notified": true
   }
 ]
