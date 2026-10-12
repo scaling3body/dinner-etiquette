@@ -1,6 +1,13 @@
 {
-  "last_updated": "2026-10-12T02:58:02.328555+00:00",
+  "last_updated": "2026-10-12T03:12:30.058809+00:00",
   "recent_alerts": [
+    {
+      "timestamp": "2026-10-12T03:11:25.125349+00:00",
+      "sport": "nfl",
+      "player_name": "Nick Folk",
+      "message": "\ud83c\udfc8 BREAKOUT: Nick Folk (ATL) scored 12.0 pts [Live] vs a projection of 8.33 (144.1% of projection).",
+      "notified": true
+    },
     {
       "timestamp": "2026-10-12T01:50:08.681817+00:00",
       "sport": "nfl",
@@ -343,30 +350,23 @@
       "player_name": "Christian Watson",
       "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Christian Watson (GB) scored 25.1 pts [Live] vs a projection of 11.53 (217.7% of projection).",
       "notified": true
-    },
-    {
-      "timestamp": "2026-10-11T18:34:43.897858+00:00",
-      "sport": "nfl",
-      "player_name": "Ka'imi Fairbairn",
-      "message": "\ud83c\udfc8 BREAKOUT: Ka'imi Fairbairn (HOU) scored 15.0 pts [Live] vs a projection of 8.73 (171.8% of projection).",
-      "notified": true
     }
   ],
   "pending_suggestions": [],
   "health": {
     "sleeper_nfl": {
       "consecutive_failures": 0,
-      "last_success": "2026-10-12T02:56:48.257904+00:00",
+      "last_success": "2026-10-12T03:11:15.753187+00:00",
       "circuit_open": false
     },
     "sleeper_nba": {
       "consecutive_failures": 0,
-      "last_success": "2026-10-12T02:57:53.031983+00:00",
+      "last_success": "2026-10-12T03:12:20.144157+00:00",
       "circuit_open": false
     },
     "telegram": {
       "consecutive_failures": 0,
-      "last_success": "2026-10-12T01:51:14.205082+00:00",
+      "last_success": "2026-10-12T03:12:30.056783+00:00",
       "circuit_open": false
     }
   },
