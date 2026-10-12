@@ -1,6 +1,13 @@
 {
-  "last_updated": "2026-10-12T00:23:10.740035+00:00",
+  "last_updated": "2026-10-12T00:52:32.508368+00:00",
   "recent_alerts": [
+    {
+      "timestamp": "2026-10-12T00:51:28.012193+00:00",
+      "sport": "nfl",
+      "player_name": "Player ATL",
+      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Player ATL (ATL) scored 16.0 pts [Live] vs a projection of 7.13 (224.4% of projection).",
+      "notified": true
+    },
     {
       "timestamp": "2026-10-11T23:33:12.329071+00:00",
       "sport": "nfl",
@@ -343,30 +350,23 @@
       "player_name": "Brock Bowers",
       "message": "\ud83c\udfc8 BREAKOUT: Brock Bowers (LV) scored 12.9 pts [Live] vs a projection of 9.34 (138.1% of projection).",
       "notified": true
-    },
-    {
-      "timestamp": "2026-10-11T17:34:58.195416+00:00",
-      "sport": "nfl",
-      "player_name": "Player GB",
-      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Player GB (GB) scored 13.0 pts [Live] vs a projection of 5.83 (223.0% of projection).",
-      "notified": true
     }
   ],
   "pending_suggestions": [],
   "health": {
     "sleeper_nfl": {
       "consecutive_failures": 0,
-      "last_success": "2026-10-12T00:21:57.472869+00:00",
+      "last_success": "2026-10-12T00:51:18.842130+00:00",
       "circuit_open": false
     },
     "sleeper_nba": {
       "consecutive_failures": 0,
-      "last_success": "2026-10-12T00:23:01.562166+00:00",
+      "last_success": "2026-10-12T00:52:22.838389+00:00",
       "circuit_open": false
     },
     "telegram": {
       "consecutive_failures": 0,
-      "last_success": "2026-10-11T23:34:24.491595+00:00",
+      "last_success": "2026-10-12T00:52:32.503270+00:00",
       "circuit_open": false
     }
   },
