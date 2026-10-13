@@ -1,6 +1,13 @@
 {
-  "last_updated": "2026-10-13T02:14:35.382275+00:00",
+  "last_updated": "2026-10-13T02:34:28.798685+00:00",
   "recent_alerts": [
+    {
+      "timestamp": "2026-10-13T02:33:24.288233+00:00",
+      "sport": "nfl",
+      "player_name": "Blake Corum",
+      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Blake Corum (LAR) scored 13.2 pts [Live] vs a projection of 6.52 (202.5% of projection).",
+      "notified": true
+    },
     {
       "timestamp": "2026-10-12T03:55:28.715231+00:00",
       "sport": "nfl",
@@ -343,30 +350,23 @@
       "player_name": "Spencer Shrader",
       "message": "\ud83c\udfc8 BREAKOUT: Spencer Shrader (IND) scored 14.0 pts [Live] vs a projection of 8.68 (161.3% of projection).",
       "notified": true
-    },
-    {
-      "timestamp": "2026-10-11T19:03:17.624212+00:00",
-      "sport": "nfl",
-      "player_name": "Jaylen Warren",
-      "message": "\ud83c\udfc8 BREAKOUT: Jaylen Warren (PIT) scored 26.9 pts [Live] vs a projection of 16.33 (164.7% of projection).",
-      "notified": true
     }
   ],
   "pending_suggestions": [],
   "health": {
     "sleeper_nfl": {
       "consecutive_failures": 0,
-      "last_success": "2026-10-13T02:13:21.782474+00:00",
+      "last_success": "2026-10-13T02:33:15.122618+00:00",
       "circuit_open": false
     },
     "sleeper_nba": {
       "consecutive_failures": 0,
-      "last_success": "2026-10-13T02:14:26.163042+00:00",
+      "last_success": "2026-10-13T02:34:19.052163+00:00",
       "circuit_open": false
     },
     "telegram": {
       "consecutive_failures": 0,
-      "last_success": "2026-10-12T03:56:33.314275+00:00",
+      "last_success": "2026-10-13T02:34:28.796592+00:00",
       "circuit_open": false
     }
   },

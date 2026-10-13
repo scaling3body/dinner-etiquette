@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-10-11T19:03:17.624212+00:00",
-    "sport": "nfl",
-    "player_name": "Jaylen Warren",
-    "message": "\ud83c\udfc8 BREAKOUT: Jaylen Warren (PIT) scored 26.9 pts [Live] vs a projection of 16.33 (164.7% of projection).",
-    "notified": true
-  },
-  {
     "timestamp": "2026-10-11T19:03:17.626780+00:00",
     "sport": "nfl",
     "player_name": "Spencer Shrader",
@@ -347,6 +340,13 @@
     "sport": "nfl",
     "player_name": "Tyler Huntley",
     "message": "\ud83c\udfc8 \ud83d\udd25 DOUBLE BREAKOUT: Tyler Huntley (BAL) scored 24.04 pts [Final] vs a projection of 12.0 (200.3% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-10-13T02:33:24.288233+00:00",
+    "sport": "nfl",
+    "player_name": "Blake Corum",
+    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Blake Corum (LAR) scored 13.2 pts [Live] vs a projection of 6.52 (202.5% of projection).",
     "notified": true
   }
 ]
