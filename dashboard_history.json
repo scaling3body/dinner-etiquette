@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-10-11T19:19:24.832702+00:00",
-    "sport": "nfl",
-    "player_name": "C.J. Stroud",
-    "message": "\ud83c\udfc8 BREAKOUT: C.J. Stroud (HOU) scored 21.0 pts [Live] vs a projection of 15.24 (137.8% of projection).",
-    "notified": true
-  },
-  {
-    "timestamp": "2026-10-11T19:19:24.834185+00:00",
-    "sport": "nfl",
-    "player_name": "Drake Maye",
-    "message": "\ud83c\udfc8 BREAKOUT: Drake Maye (NE) scored 26.16 pts [Live] vs a projection of 19.2 (136.2% of projection).",
-    "notified": true
-  },
-  {
     "timestamp": "2026-10-11T19:34:35.861683+00:00",
     "sport": "nfl",
     "player_name": "Player HOU",
@@ -347,6 +333,20 @@
     "sport": "nfl",
     "player_name": "Davante Adams",
     "message": "\ud83c\udfc8 BREAKOUT: Davante Adams (LAR) scored 17.1 pts [Live] vs a projection of 11.72 (145.9% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-10-13T03:43:59.172759+00:00",
+    "sport": "nfl",
+    "player_name": "Puka Nacua",
+    "message": "\ud83c\udfc8 BREAKOUT: Puka Nacua (LAR) scored 20.7 pts [Live] vs a projection of 14.26 (145.2% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-10-13T03:43:59.185771+00:00",
+    "sport": "nfl",
+    "player_name": "Josh Allen",
+    "message": "\ud83c\udfc8 BREAKOUT: Josh Allen (BUF) scored 30.2 pts [Live] vs a projection of 21.85 (138.2% of projection).",
     "notified": true
   }
 ]
