@@ -1,26 +1,5 @@
 [
   {
-    "timestamp": "2026-10-11T19:03:17.626780+00:00",
-    "sport": "nfl",
-    "player_name": "Spencer Shrader",
-    "message": "\ud83c\udfc8 BREAKOUT: Spencer Shrader (IND) scored 14.0 pts [Live] vs a projection of 8.68 (161.3% of projection).",
-    "notified": true
-  },
-  {
-    "timestamp": "2026-10-11T19:19:24.824764+00:00",
-    "sport": "nfl",
-    "player_name": "Tyler Warren",
-    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Tyler Warren (IND) scored 14.4 pts [Live] vs a projection of 5.74 (250.9% of projection).",
-    "notified": true
-  },
-  {
-    "timestamp": "2026-10-11T19:19:24.830456+00:00",
-    "sport": "nfl",
-    "player_name": "Rhamondre Stevenson",
-    "message": "\ud83c\udfc8 BREAKOUT: Rhamondre Stevenson (NE) scored 14.4 pts [Live] vs a projection of 10.25 (140.5% of projection).",
-    "notified": true
-  },
-  {
     "timestamp": "2026-10-11T19:19:24.832702+00:00",
     "sport": "nfl",
     "player_name": "C.J. Stroud",
@@ -347,6 +326,27 @@
     "sport": "nfl",
     "player_name": "Blake Corum",
     "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Blake Corum (LAR) scored 13.2 pts [Live] vs a projection of 6.52 (202.5% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-10-13T03:23:37.481022+00:00",
+    "sport": "nfl",
+    "player_name": "Matthew Stafford",
+    "message": "\ud83c\udfc8 BREAKOUT: Matthew Stafford (LAR) scored 25.44 pts [Live] vs a projection of 18.71 (136.0% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-10-13T03:23:37.481698+00:00",
+    "sport": "nfl",
+    "player_name": "James Cook",
+    "message": "\ud83c\udfc8 BREAKOUT: James Cook (BUF) scored 23.2 pts [Live] vs a projection of 13.83 (167.8% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-10-13T03:23:37.484286+00:00",
+    "sport": "nfl",
+    "player_name": "Davante Adams",
+    "message": "\ud83c\udfc8 BREAKOUT: Davante Adams (LAR) scored 17.1 pts [Live] vs a projection of 11.72 (145.9% of projection).",
     "notified": true
   }
 ]
