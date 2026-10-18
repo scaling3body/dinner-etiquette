@@ -946,6 +946,46 @@
     "DEN": {
       "count": 1,
       "baseline": 12.0
+    },
+    "12517": {
+      "count": 1,
+      "baseline": 12.0
+    },
+    "BAL": {
+      "count": 1,
+      "baseline": 13.0
+    },
+    "6790": {
+      "count": 1,
+      "baseline": 17.2
+    },
+    "IND": {
+      "count": 1,
+      "baseline": 12.0
+    },
+    "TB": {
+      "count": 1,
+      "baseline": 14.0
+    },
+    "7523": {
+      "count": 1,
+      "baseline": 28.34
+    },
+    "12490": {
+      "count": 1,
+      "baseline": 20.7
+    },
+    "5985": {
+      "count": 1,
+      "baseline": 12.7
+    },
+    "12536": {
+      "count": 1,
+      "baseline": 16.7
+    },
+    "9758": {
+      "count": 1,
+      "baseline": 23.98
     }
   },
   "nba-2026-10-14": {},
