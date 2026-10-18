@@ -1,26 +1,5 @@
 [
   {
-    "timestamp": "2026-10-11T23:17:54.365298+00:00",
-    "sport": "nfl",
-    "player_name": "Jahmyr Gibbs",
-    "message": "\ud83c\udfc8 BREAKOUT: Jahmyr Gibbs (DET) scored 32.7 pts [Live] vs a projection of 20.85 (156.8% of projection).",
-    "notified": true
-  },
-  {
-    "timestamp": "2026-10-11T23:17:54.366250+00:00",
-    "sport": "nfl",
-    "player_name": "Jared Goff",
-    "message": "\ud83c\udfc8 BREAKOUT: Jared Goff (DET) scored 28.94 pts [Live] vs a projection of 21.76 (133.0% of projection).",
-    "notified": true
-  },
-  {
-    "timestamp": "2026-10-11T23:17:54.378032+00:00",
-    "sport": "nfl",
-    "player_name": "J.K. Dobbins",
-    "message": "\ud83c\udfc8 BREAKOUT: J.K. Dobbins (DEN) scored 13.4 pts [Live] vs a projection of 8.06 (166.3% of projection).",
-    "notified": true
-  },
-  {
     "timestamp": "2026-10-11T23:33:12.329071+00:00",
     "sport": "nfl",
     "player_name": "Jacoby Brissett",
@@ -347,6 +326,27 @@
     "sport": "nfl",
     "player_name": "Daniel Carlson",
     "message": "\ud83c\udfc8 BREAKOUT: Daniel Carlson (NO) scored 14.0 pts [Final] vs a projection of 7.73 (181.1% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-10-18T22:42:09.376680+00:00",
+    "sport": "nfl",
+    "player_name": "Chad Ryland",
+    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Chad Ryland (ARI) scored 15.0 pts [Live] vs a projection of 6.94 (216.1% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-10-18T22:42:09.380518+00:00",
+    "sport": "nfl",
+    "player_name": "Blake Corum",
+    "message": "\ud83c\udfc8 BREAKOUT: Blake Corum (LAR) scored 12.0 pts [Live] vs a projection of 7.22 (166.2% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-10-18T22:42:09.389938+00:00",
+    "sport": "nfl",
+    "player_name": "Tyler Bass",
+    "message": "\ud83c\udfc8 BREAKOUT: Tyler Bass (BUF) scored 13.0 pts [Live] vs a projection of 8.24 (157.8% of projection).",
     "notified": true
   }
 ]
