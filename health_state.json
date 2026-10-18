@@ -1,21 +1,21 @@
 {
   "sleeper_nfl": {
     "consecutive_failures": 0,
-    "last_success": "2026-10-18T18:23:33.678996+00:00",
+    "last_success": "2026-10-18T20:55:37.557597+00:00",
     "last_failure": null,
     "notified": false,
     "circuit_open_until": null
   },
   "sleeper_nba": {
     "consecutive_failures": 0,
-    "last_success": "2026-10-18T18:24:37.724637+00:00",
+    "last_success": "2026-10-18T20:56:41.615839+00:00",
     "last_failure": null,
     "notified": false,
     "circuit_open_until": null
   },
   "telegram": {
     "consecutive_failures": 0,
-    "last_success": "2026-10-18T18:24:47.455332+00:00",
+    "last_success": "2026-10-18T20:56:51.245143+00:00",
     "last_failure": null,
     "notified": false,
     "circuit_open_until": null
