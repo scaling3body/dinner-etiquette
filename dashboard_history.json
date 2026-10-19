@@ -1,19 +1,5 @@
 [
   {
-    "timestamp": "2026-10-13T03:23:37.481022+00:00",
-    "sport": "nfl",
-    "player_name": "Matthew Stafford",
-    "message": "\ud83c\udfc8 BREAKOUT: Matthew Stafford (LAR) scored 25.44 pts [Live] vs a projection of 18.71 (136.0% of projection).",
-    "notified": true
-  },
-  {
-    "timestamp": "2026-10-13T03:23:37.481698+00:00",
-    "sport": "nfl",
-    "player_name": "James Cook",
-    "message": "\ud83c\udfc8 BREAKOUT: James Cook (BUF) scored 23.2 pts [Live] vs a projection of 13.83 (167.8% of projection).",
-    "notified": true
-  },
-  {
     "timestamp": "2026-10-13T03:23:37.484286+00:00",
     "sport": "nfl",
     "player_name": "Davante Adams",
@@ -347,6 +333,20 @@
     "sport": "nfl",
     "player_name": "Player KC",
     "message": "\ud83c\udfc8 BREAKOUT: Player KC (KC) scored 15.0 pts [Final] vs a projection of 8.1 (185.2% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-10-19T05:10:20.386290+00:00",
+    "sport": "nfl",
+    "player_name": "Trey Smack",
+    "message": "\ud83c\udfc8 BREAKOUT: Trey Smack (GB) scored 12.0 pts [Final] vs a projection of 9.08 (132.2% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-10-19T05:10:20.397483+00:00",
+    "sport": "nfl",
+    "player_name": "Matthew Golden",
+    "message": "\ud83c\udfc8 BREAKOUT: Matthew Golden (GB) scored 16.4 pts [Final] vs a projection of 10.66 (153.8% of projection).",
     "notified": true
   }
 ]
