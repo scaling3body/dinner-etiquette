@@ -1088,8 +1088,32 @@
       "baseline": 12.0
     },
     "7042": {
+      "count": 2,
+      "baseline": 17.0
+    },
+    "8138": {
+      "count": 1,
+      "baseline": 21.3
+    },
+    "4227": {
       "count": 1,
       "baseline": 13.0
+    },
+    "6083": {
+      "count": 1,
+      "baseline": 12.0
+    },
+    "10213": {
+      "count": 1,
+      "baseline": 21.7
+    },
+    "8151": {
+      "count": 1,
+      "baseline": 25.9
+    },
+    "KC": {
+      "count": 1,
+      "baseline": 15.0
     }
   },
   "nba-2026-10-14": {},

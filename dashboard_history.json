@@ -1,54 +1,5 @@
 [
   {
-    "timestamp": "2026-10-11T23:33:12.329071+00:00",
-    "sport": "nfl",
-    "player_name": "Jacoby Brissett",
-    "message": "\ud83c\udfc8 BREAKOUT: Jacoby Brissett (ARI) scored 25.28 pts [Final] vs a projection of 18.15 (139.3% of projection).",
-    "notified": true
-  },
-  {
-    "timestamp": "2026-10-12T00:51:28.012193+00:00",
-    "sport": "nfl",
-    "player_name": "Player ATL",
-    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Player ATL (ATL) scored 16.0 pts [Live] vs a projection of 7.13 (224.4% of projection).",
-    "notified": true
-  },
-  {
-    "timestamp": "2026-10-12T01:50:08.681817+00:00",
-    "sport": "nfl",
-    "player_name": "Tyler Loop",
-    "message": "\ud83c\udfc8 BREAKOUT: Tyler Loop (BAL) scored 13.0 pts [Live] vs a projection of 7.61 (170.8% of projection).",
-    "notified": true
-  },
-  {
-    "timestamp": "2026-10-12T03:11:25.125349+00:00",
-    "sport": "nfl",
-    "player_name": "Nick Folk",
-    "message": "\ud83c\udfc8 BREAKOUT: Nick Folk (ATL) scored 12.0 pts [Live] vs a projection of 8.33 (144.1% of projection).",
-    "notified": true
-  },
-  {
-    "timestamp": "2026-10-12T03:32:45.912084+00:00",
-    "sport": "nfl",
-    "player_name": "Tyler Huntley",
-    "message": "\ud83c\udfc8 BREAKOUT: Tyler Huntley (BAL) scored 16.62 pts [Live] vs a projection of 12.0 (138.5% of projection).",
-    "notified": true
-  },
-  {
-    "timestamp": "2026-10-12T03:55:28.715231+00:00",
-    "sport": "nfl",
-    "player_name": "Tyler Huntley",
-    "message": "\ud83c\udfc8 \ud83d\udd25 DOUBLE BREAKOUT: Tyler Huntley (BAL) scored 24.04 pts [Final] vs a projection of 12.0 (200.3% of projection).",
-    "notified": true
-  },
-  {
-    "timestamp": "2026-10-13T02:33:24.288233+00:00",
-    "sport": "nfl",
-    "player_name": "Blake Corum",
-    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Blake Corum (LAR) scored 13.2 pts [Live] vs a projection of 6.52 (202.5% of projection).",
-    "notified": true
-  },
-  {
     "timestamp": "2026-10-13T03:23:37.481022+00:00",
     "sport": "nfl",
     "player_name": "Matthew Stafford",
@@ -347,6 +298,55 @@
     "sport": "nfl",
     "player_name": "Tyler Bass",
     "message": "\ud83c\udfc8 BREAKOUT: Tyler Bass (BUF) scored 13.0 pts [Live] vs a projection of 8.24 (157.8% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-10-19T00:30:54.646112+00:00",
+    "sport": "nfl",
+    "player_name": "James Cook",
+    "message": "\ud83c\udfc8 BREAKOUT: James Cook (BUF) scored 21.3 pts [Final] vs a projection of 15.57 (136.8% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-10-19T00:30:54.649197+00:00",
+    "sport": "nfl",
+    "player_name": "Harrison Butker",
+    "message": "\ud83c\udfc8 BREAKOUT: Harrison Butker (KC) scored 13.0 pts [Final] vs a projection of 7.87 (165.2% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-10-19T00:30:54.651371+00:00",
+    "sport": "nfl",
+    "player_name": "Matt Gay",
+    "message": "\ud83c\udfc8 BREAKOUT: Matt Gay (LV) scored 12.0 pts [Final] vs a projection of 9.16 (131.0% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-10-19T00:30:54.656617+00:00",
+    "sport": "nfl",
+    "player_name": "Tre Tucker",
+    "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Tre Tucker (LV) scored 21.7 pts [Final] vs a projection of 6.1 (355.7% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-10-19T00:30:54.661228+00:00",
+    "sport": "nfl",
+    "player_name": "Kenneth Walker",
+    "message": "\ud83c\udfc8 BREAKOUT: Kenneth Walker (KC) scored 25.9 pts [Final] vs a projection of 18.8 (137.8% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-10-19T00:30:54.667156+00:00",
+    "sport": "nfl",
+    "player_name": "Tyler Bass",
+    "message": "\ud83c\udfc8 \ud83d\udd25 DOUBLE BREAKOUT: Tyler Bass (BUF) scored 17.0 pts [Final] vs a projection of 8.24 (206.3% of projection).",
+    "notified": true
+  },
+  {
+    "timestamp": "2026-10-19T00:30:54.669633+00:00",
+    "sport": "nfl",
+    "player_name": "Player KC",
+    "message": "\ud83c\udfc8 BREAKOUT: Player KC (KC) scored 15.0 pts [Final] vs a projection of 8.1 (185.2% of projection).",
     "notified": true
   }
 ]
