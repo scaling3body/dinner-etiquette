@@ -8,9 +8,9 @@ IMPORTANT: The player-list and state endpoints below are OFFICIAL and documented
 undocumented -- and different community sources disagree on the exact URL shape
 (whether it's prefixed with /v1/, and whether season_type is a path segment or
 a query parameter). Rather than gamble on one guess, _get_stats_or_projections()
-below tries several known candidate formats in order and uses whichever one
-actually returns real data. Set DEBUG = True to see exactly which candidate
-worked (or why all of them failed) in the Actions log.
+below tries several known candidate formats for NFL. NBA uses weekly record
+lists, filtered to the requested date and normalized separately. Set DEBUG
+= True to see requests in the Actions log.
 """
 
 import requests
@@ -41,7 +41,7 @@ def _get(url, params=None):
 
 def _candidate_urls(kind, sport, season_type, season, period):
     """
-    kind: 'stats' or 'projections'. period: week number (NFL) or 'YYYY-MM-DD' (NBA).
+    kind: 'stats' or 'projections'. period: NFL week number.
     Returns a list of (url, params) tuples to try in order, covering the
     different URL shapes seen in the wild for this undocumented endpoint.
     """
@@ -63,7 +63,7 @@ def _get_stats_or_projections(kind, sport, season_type, season, period):
         result = _get(url, params=params)
         # A dict with at least one player entry is what we're after -- an
         # empty dict or non-dict response means this shape didn't work.
-        if isinstance(result, dict) and len(result) > 0:
+        if isinstance(result, dict) and any(isinstance(v, dict) and v for v in result.values()):
             if DEBUG:
                 print(f"SUCCESS: {kind}/{sport} resolved via {url} (params={params})")
             return result
@@ -177,14 +177,48 @@ def get_nfl_week_stats(season, week, season_type="regular"):
     return _get_stats_or_projections("stats", "nfl", season_type, season, week)
 
 
-def get_nba_day_projections(date_str, season, season_type="regular"):
-    """
-    Unofficial endpoint. date_str format: 'YYYY-MM-DD'.
-    Returns dict keyed by player_id -> projected stat dict for that day's games.
-    """
-    return _get_stats_or_projections("projections", "nba", season_type, season, date_str)
+def _normalize_nba_stats(stats):
+    """Translate Sleeper's shooting fields to the configured nine categories."""
+    normalized = dict(stats)
+    normalized["fg3m"] = stats.get("tpm", stats.get("fg3m", 0)) or 0
+    for percentage, made, attempted in (("fgp", "fgm", "fga"), ("ftp", "ftm", "fta")):
+        attempts = stats.get(attempted) or 0
+        normalized[percentage] = ((stats.get(made) or 0) / attempts if attempts
+                                  else stats.get(percentage, 0) or 0)
+    return normalized
 
 
-def get_nba_day_stats(date_str, season, season_type="regular"):
-    """Unofficial endpoint. Returns dict keyed by player_id -> actual stat dict for that day."""
-    return _get_stats_or_projections("stats", "nba", season_type, season, date_str)
+def _get_nba_day_data(kind, date_str, season, season_type, week):
+    # NBA uses a WEEK in the path, not a date. The non-v1 endpoint returns
+    # records with player_id/date/stats; the v1 endpoint can return thousands
+    # of empty player dictionaries with HTTP 200. Even with a date query,
+    # Sleeper can return the whole week, so filter each record explicitly.
+    if week is None:
+        state = get_nba_state() or {}
+        if str(state.get("season")) != str(season):
+            return None
+        week = state.get("week")
+    if not week:
+        return None
+    records = _get(f"https://api.sleeper.app/{kind}/nba/{season}/{week}", params={
+        "season_type": season_type, "grouping": "day", "date": date_str,
+    })
+    if not isinstance(records, list):
+        return None
+    return {
+        str(record["player_id"]): _normalize_nba_stats(record["stats"])
+        for record in records
+        if isinstance(record, dict) and record.get("date") == date_str
+        and record.get("player_id") is not None
+        and isinstance(record.get("stats"), dict) and record["stats"]
+    }
+
+
+def get_nba_day_projections(date_str, season, season_type="regular", week=None):
+    """Return normalized player projections for the requested Eastern date."""
+    return _get_nba_day_data("projections", date_str, season, season_type, week)
+
+
+def get_nba_day_stats(date_str, season, season_type="regular", week=None):
+    """Return normalized player stats for the requested Eastern date."""
+    return _get_nba_day_data("stats", date_str, season, season_type, week)

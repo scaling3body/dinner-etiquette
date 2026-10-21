@@ -174,6 +174,11 @@ pings throughout the day. Only includes what was actually sent to you --
 anything `quiet_rostered_players` suppressed doesn't clutter the digest
 either. Sends nothing on a day with no breakouts.
 
+The heading includes the reporting date. The early-morning UTC run reports
+the previous date, selecting alerts by their Eastern calendar date, even
+when GitHub delays the run. Successful delivery is saved in
+`digest_state.json`; rerunning the workflow skips days already sent.
+
 Nothing to configure -- `.github/workflows/daily_digest.yml` runs once near
 the end of a typical game day and will start working once it's on the
 default branch. "End of day" is an approximation (a fixed daily time, not
@@ -360,6 +365,7 @@ server and to keep replies fast.
 - `health.py` -- failure tracking, alert-once logic, and the Yahoo circuit breaker
 - `game_schedule_checker.py` -- daily job that determines today's active sports
 - `sleeper_client.py` -- all Sleeper API calls
+- `digest_state.json` -- delivered reporting dates, persisted by the digest workflow
 - `scoring.py` -- breakout detection logic for both sports
 - `telegram_notifier.py` -- Telegram message sending + button-tap polling
 - `telegram_setup.py` -- one-time local script to find your chat_id

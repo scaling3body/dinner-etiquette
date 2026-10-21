@@ -84,7 +84,13 @@ def check_nba_active_today(config):
     season = nba_state.get("season") if nba_state else str(_today_et().year)
     today_str = _today_et().isoformat()
 
-    projections = sleeper.get_nba_day_projections(today_str, season)
+    projections = sleeper.get_nba_day_projections(
+        today_str, season, (nba_state or {}).get("season_type", "regular"),
+        week=(nba_state or {}).get("week"),
+    )
+    if projections is None:
+        print("NBA schedule lookup failed -- allowing checks so failures remain visible.")
+        return True
     return bool(projections)
 
 
