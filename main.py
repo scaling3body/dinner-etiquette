@@ -706,9 +706,13 @@ def run_basketball(config, alerted, players, history, manager, batch, health_sta
     season = nba_state.get("season") if nba_state else str(today_et().year)
     today_str = today_et().isoformat()
 
-    projections = sleeper.get_nba_day_projections(today_str, season)
-    stats = sleeper.get_nba_day_stats(today_str, season)
-    if not projections or not stats:
+    season_type = (nba_state or {}).get("season_type", "regular")
+    week = (nba_state or {}).get("week")
+    projections = sleeper.get_nba_day_projections(today_str, season, season_type, week=week)
+    stats = sleeper.get_nba_day_stats(today_str, season, season_type, week=week)
+    matched = {pid: actual for pid, actual in (stats or {}).items()
+               if actual and (projections or {}).get(pid)}
+    if not matched:
         print("No basketball projections/stats available yet this run (maybe no games today).")
         # Only a real anomaly if today is a confirmed NBA day (checked by the
         # caller before run_basketball is even invoked) -- so this counts.
@@ -718,7 +722,9 @@ def run_basketball(config, alerted, players, history, manager, batch, health_sta
 
     health.record_success(health_state, "sleeper_nba")
 
-    schedule = sleeper.get_schedule("nba", season, "regular")  # NBA schedule shape is unverified -- may be None
+    print(f"NBA {today_str}: {len(projections)} projections, {len(stats)} stat lines, "
+          f"{len(matched)} matched players.")
+    schedule = sleeper.get_schedule("nba", season, season_type)  # may be unavailable
 
     extreme_multiplier = config["basketball"].get("extreme_multiplier", scoring.DEFAULT_EXTREME_MULTIPLIER)
     key = f"nba-{today_str}"
@@ -728,7 +734,7 @@ def run_basketball(config, alerted, players, history, manager, batch, health_sta
     invert = config["basketball"]["invert_categories"]
     threshold = config["basketball"]["zscore_alert_threshold"]
 
-    for player_id, actual in stats.items():
+    for player_id, actual in matched.items():
         proj = projections.get(player_id)
         prior = alerted[key].get(player_id)
         prior_count = prior["count"] if prior else 0
@@ -802,8 +808,9 @@ def main():
     # file doesn't exist yet (e.g. the daily job hasn't run), default to
     # checking both -- fail safe rather than fail silent.
     schedule_windows = load_json(SCHEDULE_WINDOWS_PATH, {})
-    nfl_today = schedule_windows.get("nfl_active_today", True)
-    nba_today = schedule_windows.get("nba_active_today", True)
+    current_schedule = schedule_windows.get("date") == today_et().isoformat()
+    nfl_today = schedule_windows.get("nfl_active_today", True) if current_schedule else True
+    nba_today = schedule_windows.get("nba_active_today", True) if current_schedule else True
 
     batch = []  # collected across both sports, sent as one message by dispatch_alerts()
 

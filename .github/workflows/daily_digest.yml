@@ -2,12 +2,21 @@ name: Daily Breakout Digest
 
 on:
   schedule:
-    # ~11:45pm-12:45am Eastern (lands earlier in the window during EDT,
-    # later during EST -- GitHub Actions cron is UTC and doesn't shift for
+    # ~11:45pm-12:45am Eastern (lands later in the window during EDT,
+    # earlier during EST -- GitHub Actions cron is UTC and doesn't shift for
     # DST). Covers the end of a normal game day; very late West Coast NBA
     # games may finish after this runs -- see daily_digest.py's docstring.
     - cron: "45 4 * * *"
   workflow_dispatch: {}  # lets you manually trigger a run from the Actions tab to test
+
+permissions:
+  contents: write
+
+concurrency:
+  # Share the alert check's lock: read current state after queuing, then
+  # persist digest delivery before another run can check it again.
+  group: fantasy-alerts-check
+  cancel-in-progress: false
 
 jobs:
   digest:
@@ -29,3 +38,18 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python daily_digest.py
+
+      - name: Persist delivered digest dates
+        run: |
+          if [ ! -f digest_state.json ]; then exit 0; fi
+          git config user.name "fantasy-alert-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add digest_state.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Update digest delivery state [skip ci]"
+          for attempt in 1 2 3; do
+            git pull --rebase origin "$GITHUB_REF_NAME"
+            if git push origin "HEAD:$GITHUB_REF_NAME"; then exit 0; fi
+          done
+          echo "Failed to persist digest delivery state"
+          exit 1
