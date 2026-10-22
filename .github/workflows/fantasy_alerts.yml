@@ -9,7 +9,9 @@ on:
     # actually being played. Combined with the schedule-aware skip in
     # main.py (see daily_schedule.yml), this keeps the bot from burning
     # Actions minutes at 4am in July when nothing's happening.
-    - cron: "*/5 16-23,0-5 * * *"
+    # Offset to :02, :07, ... :57, avoiding the busiest :00/:30 boundaries.
+    # Updating the cron refreshes the schedule; actual dispatch remains best effort.
+    - cron: "2-59/5 16-23,0-5 * * *"
   workflow_dispatch:
     inputs:
       send_test:
