@@ -1,6 +1,174 @@
 {
-  "last_updated": "2026-10-22T04:30:50.882565+00:00",
+  "last_updated": "2026-10-22T04:34:12.368657+00:00",
   "recent_alerts": [
+    {
+      "timestamp": "2026-10-22T04:34:08.422196+00:00",
+      "sport": "nba",
+      "player_name": "Obi Toppin",
+      "message": "\ud83c\udfc0 BREAKOUT: Obi Toppin (IND) went 20.0pt/3.0reb/1.0ast, 2.0stl/0blk (combined z-score 6.47 vs. projections).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-10-22T04:34:08.417818+00:00",
+      "sport": "nba",
+      "player_name": "Ty Jerome",
+      "message": "\ud83c\udfc0 \ud83d\udd25 BREAKOUT: Ty Jerome (MEM) went 45.0pt/7.0reb/6.0ast, 0stl/1.0blk (combined z-score 13.07 vs. projections).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-10-22T04:34:08.415369+00:00",
+      "sport": "nba",
+      "player_name": "Jaxson Hayes",
+      "message": "\ud83c\udfc0 \ud83d\udd25 BREAKOUT: Jaxson Hayes (UTA) went 5.0pt/5.0reb/3.0ast, 2.0stl/6.0blk (combined z-score 11.76 vs. projections).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-10-22T04:34:08.406951+00:00",
+      "sport": "nba",
+      "player_name": "Wendell Carter",
+      "message": "\ud83c\udfc0 BREAKOUT: Wendell Carter (ORL) went 22.0pt/7.0reb/0ast, 1.0stl/0blk (combined z-score 8.96 vs. projections).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-10-22T04:34:08.378708+00:00",
+      "sport": "nba",
+      "player_name": "GG Jackson",
+      "message": "\ud83c\udfc0 \ud83d\udd25 BREAKOUT: GG Jackson (MEM) went 12.0pt/8.0reb/0ast, 0stl/2.0blk (combined z-score 10.38 vs. projections).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-10-22T04:34:08.376258+00:00",
+      "sport": "nba",
+      "player_name": "Gradey Dick",
+      "message": "\ud83c\udfc0 BREAKOUT: Gradey Dick (LAC) went 11.0pt/2.0reb/0ast, 0stl/0blk (combined z-score 8.56 vs. projections).\nMay be filling in for Max Strus (Out)",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-10-22T04:34:08.371903+00:00",
+      "sport": "nba",
+      "player_name": "Marcus Sasser",
+      "message": "\ud83c\udfc0 \ud83d\udd25 BREAKOUT: Marcus Sasser (DAL) went 17.0pt/1.0reb/1.0ast, 1.0stl/0blk (combined z-score 17.13 vs. projections).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-10-22T04:34:08.349367+00:00",
+      "sport": "nba",
+      "player_name": "Immanuel Quickley",
+      "message": "\ud83c\udfc0 BREAKOUT: Immanuel Quickley (TOR) went 23.0pt/4.0reb/7.0ast, 2.0stl/0blk (combined z-score 7.89 vs. projections).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-10-22T04:34:08.289183+00:00",
+      "sport": "nba",
+      "player_name": "Paolo Banchero",
+      "message": "\ud83c\udfc0 BREAKOUT: Paolo Banchero (ORL) went 35.0pt/7.0reb/10.0ast, 1.0stl/0blk (combined z-score 6.3 vs. projections).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-10-22T04:34:08.282630+00:00",
+      "sport": "nba",
+      "player_name": "Aaron Wiggins",
+      "message": "\ud83c\udfc0 BREAKOUT: Aaron Wiggins (ATL) went 16.0pt/3.0reb/0ast, 2.0stl/0blk (combined z-score 8.96 vs. projections).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-10-22T04:34:08.222572+00:00",
+      "sport": "nba",
+      "player_name": "Toumani Camara",
+      "message": "\ud83c\udfc0 BREAKOUT: Toumani Camara (POR) went 18.0pt/2.0reb/3.0ast, 0stl/0blk (combined z-score 6.49 vs. projections).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-10-22T04:34:08.211924+00:00",
+      "sport": "nba",
+      "player_name": "Jock Landale",
+      "message": "\ud83c\udfc0 \ud83d\udd25 BREAKOUT: Jock Landale (ATL) went 10.0pt/2.0reb/3.0ast, 0stl/1.0blk (combined z-score 10.64 vs. projections).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-10-22T04:34:08.205216+00:00",
+      "sport": "nba",
+      "player_name": "Quentin Grimes",
+      "message": "\ud83c\udfc0 BREAKOUT: Quentin Grimes (LAL) went 10.0pt/2.0reb/4.0ast, 1.0stl/1.0blk (combined z-score 6.59 vs. projections).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-10-22T04:34:08.143891+00:00",
+      "sport": "nba",
+      "player_name": "Quenton Jackson",
+      "message": "\ud83c\udfc0 \ud83d\udd25 BREAKOUT: Quenton Jackson (IND) went 6.0pt/4.0reb/1.0ast, 3.0stl/0blk (combined z-score 15.81 vs. projections).\nMay be filling in for T.J. McConnell (Out)",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-10-22T04:34:08.139676+00:00",
+      "sport": "nba",
+      "player_name": "Moussa Diabat\u00e9",
+      "message": "\ud83c\udfc0 \ud83d\udd25 BREAKOUT: Moussa Diabat\u00e9 (CHA) went 17.0pt/8.0reb/3.0ast, 5.0stl/0blk (combined z-score 11.99 vs. projections).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-10-22T04:34:08.137279+00:00",
+      "sport": "nba",
+      "player_name": "Jabari Smith",
+      "message": "\ud83c\udfc0 \ud83d\udd25 BREAKOUT: Jabari Smith (HOU) went 30.0pt/5.0reb/1.0ast, 2.0stl/0blk (combined z-score 9.53 vs. projections).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-10-22T04:34:08.132857+00:00",
+      "sport": "nba",
+      "player_name": "Brandon Williams",
+      "message": "\ud83c\udfc0 BREAKOUT: Brandon Williams (GSW) went 14.0pt/4.0reb/3.0ast, 3.0stl/0blk (combined z-score 6.19 vs. projections).\nMay be filling in for Brandin Podziemski (Out)",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-10-22T04:34:08.106846+00:00",
+      "sport": "nba",
+      "player_name": "Domantas Sabonis",
+      "message": "\ud83c\udfc0 BREAKOUT: Domantas Sabonis (SAC) went 14.0pt/16.0reb/7.0ast, 1.0stl/0blk (combined z-score 8.76 vs. projections).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-10-22T04:34:08.096474+00:00",
+      "sport": "nba",
+      "player_name": "Damian Lillard",
+      "message": "\ud83c\udfc0 \ud83d\udd25 BREAKOUT: Damian Lillard (POR) went 25.0pt/3.0reb/6.0ast, 1.0stl/0blk (combined z-score 10.4 vs. projections).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-10-22T04:34:08.089916+00:00",
+      "sport": "nba",
+      "player_name": "Kawhi Leonard",
+      "message": "\ud83c\udfc0 BREAKOUT: Kawhi Leonard (TOR) went 23.0pt/6.0reb/2.0ast, 4.0stl/1.0blk (combined z-score 7.05 vs. projections).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-10-22T04:34:08.045454+00:00",
+      "sport": "nba",
+      "player_name": "Dyson Daniels",
+      "message": "\ud83c\udfc0 BREAKOUT: Dyson Daniels (ATL) went 20.0pt/4.0reb/3.0ast, 5.0stl/0blk (combined z-score 6.15 vs. projections).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-10-22T04:34:08.041003+00:00",
+      "sport": "nba",
+      "player_name": "Justin Champagnie",
+      "message": "\ud83c\udfc0 BREAKOUT: Justin Champagnie (WAS) went 8.0pt/8.0reb/1.0ast, 0stl/0blk (combined z-score 7.27 vs. projections).\nMay be filling in for AJ Dybantsa (Out)",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-10-22T04:34:08.024762+00:00",
+      "sport": "nba",
+      "player_name": "Anthony Edwards",
+      "message": "\ud83c\udfc0 \ud83d\udd25 BREAKOUT: Anthony Edwards (MIN) went 45.0pt/10.0reb/3.0ast, 2.0stl/1.0blk (combined z-score 13.51 vs. projections).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-10-22T04:34:08.014152+00:00",
+      "sport": "nba",
+      "player_name": "Dejounte Murray",
+      "message": "\ud83c\udfc0 \ud83d\udd25 BREAKOUT: Dejounte Murray (NOP) went 23.0pt/3.0reb/7.0ast, 2.0stl/3.0blk (combined z-score 11.83 vs. projections).",
+      "notified": true
+    },
     {
       "timestamp": "2026-10-22T00:58:15.522442+00:00",
       "sport": "nba",
@@ -182,191 +350,23 @@
       "player_name": "Omar Cooper",
       "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Omar Cooper (NYJ) scored 16.3 pts [Final] vs a projection of 3.42 (476.6% of projection).",
       "notified": true
-    },
-    {
-      "timestamp": "2026-10-18T20:55:46.761022+00:00",
-      "sport": "nfl",
-      "player_name": "Malik Nabers",
-      "message": "\ud83c\udfc8 BREAKOUT: Malik Nabers (NYG) scored 16.5 pts [Final] vs a projection of 9.15 (180.3% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-10-18T20:55:46.760206+00:00",
-      "sport": "nfl",
-      "player_name": "Chris Boswell",
-      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Chris Boswell (PIT) scored 18.0 pts [Final] vs a projection of 7.85 (229.3% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-10-18T20:55:46.759408+00:00",
-      "sport": "nfl",
-      "player_name": "DeVonta Smith",
-      "message": "\ud83c\udfc8 BREAKOUT: DeVonta Smith (PHI) scored 13.5 pts [Final] vs a projection of 7.41 (182.2% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-10-18T20:55:46.758414+00:00",
-      "sport": "nfl",
-      "player_name": "Carnell Tate",
-      "message": "\ud83c\udfc8 BREAKOUT: Carnell Tate (TEN) scored 13.0 pts [Final] vs a projection of 7.85 (165.6% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-10-18T20:55:46.757721+00:00",
-      "sport": "nfl",
-      "player_name": "Michael Penix",
-      "message": "\ud83c\udfc8 BREAKOUT: Michael Penix (ATL) scored 23.1 pts [Final] vs a projection of 14.62 (158.0% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-10-18T20:55:46.756889+00:00",
-      "sport": "nfl",
-      "player_name": "Tyrone Tracy",
-      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Tyrone Tracy (NYG) scored 16.5 pts [Final] vs a projection of 2.94 (561.2% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-10-18T20:55:46.755483+00:00",
-      "sport": "nfl",
-      "player_name": "J.J. McCarthy",
-      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: J.J. McCarthy (NYG) scored 17.32 pts [Final] vs a projection of 0.86 (2014.0% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-10-18T20:55:46.754149+00:00",
-      "sport": "nfl",
-      "player_name": "Jason Sanders",
-      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Jason Sanders (NYJ) scored 15.0 pts [Final] vs a projection of 6.94 (216.1% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-10-18T20:55:46.751793+00:00",
-      "sport": "nfl",
-      "player_name": "Tommy Tremble",
-      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Tommy Tremble (CAR) scored 16.6 pts [Final] vs a projection of 1.83 (907.1% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-10-18T20:55:46.750215+00:00",
-      "sport": "nfl",
-      "player_name": "Chase McLaughlin",
-      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Chase McLaughlin (TB) scored 17.0 pts [Final] vs a projection of 7.58 (224.3% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-10-18T20:55:46.749319+00:00",
-      "sport": "nfl",
-      "player_name": "Tyler Shough",
-      "message": "\ud83c\udfc8 BREAKOUT: Tyler Shough (NO) scored 26.96 pts [Final] vs a projection of 17.06 (158.0% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-10-18T20:55:46.747848+00:00",
-      "sport": "nfl",
-      "player_name": "DeMario Douglas",
-      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: DeMario Douglas (NE) scored 12.6 pts [Final] vs a projection of 2.75 (458.2% of projection).\nMay be filling in for A.J. Brown (Questionable)",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-10-18T20:55:46.746802+00:00",
-      "sport": "nfl",
-      "player_name": "Isaiah Likely",
-      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Isaiah Likely (NYG) scored 17.9 pts [Final] vs a projection of 8.45 (211.8% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-10-18T20:55:46.743047+00:00",
-      "sport": "nfl",
-      "player_name": "Jahan Dotson",
-      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Jahan Dotson (ATL) scored 14.7 pts [Final] vs a projection of 2.46 (597.6% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-10-18T20:55:46.740383+00:00",
-      "sport": "nfl",
-      "player_name": "Kyle Pitts",
-      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Kyle Pitts (ATL) scored 18.0 pts [Final] vs a projection of 4.94 (364.4% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-10-18T18:23:42.872004+00:00",
-      "sport": "nfl",
-      "player_name": "C.J. Stroud",
-      "message": "\ud83c\udfc8 BREAKOUT: C.J. Stroud (HOU) scored 23.98 pts [Final] vs a projection of 15.37 (156.0% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-10-18T18:23:42.866421+00:00",
-      "sport": "nfl",
-      "player_name": "Jaylin Noel",
-      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Jaylin Noel (HOU) scored 16.7 pts [Final] vs a projection of 3.69 (452.6% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-10-18T18:23:42.864079+00:00",
-      "sport": "nfl",
-      "player_name": "Foster Moreau",
-      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Foster Moreau (HOU) scored 12.7 pts [Final] vs a projection of 2.31 (549.8% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-10-18T18:23:42.862514+00:00",
-      "sport": "nfl",
-      "player_name": "Bhayshul Tuten",
-      "message": "\ud83c\udfc8 BREAKOUT: Bhayshul Tuten (JAX) scored 20.7 pts [Final] vs a projection of 11.17 (185.3% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-10-18T18:23:42.860122+00:00",
-      "sport": "nfl",
-      "player_name": "Trevor Lawrence",
-      "message": "\ud83c\udfc8 BREAKOUT: Trevor Lawrence (JAX) scored 28.34 pts [Final] vs a projection of 18.41 (153.9% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-10-18T18:23:42.858191+00:00",
-      "sport": "nfl",
-      "player_name": "Player TB",
-      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Player TB (TB) scored 14.0 pts [Live] vs a projection of 6.57 (213.1% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-10-18T18:23:42.855034+00:00",
-      "sport": "nfl",
-      "player_name": "Player IND",
-      "message": "\ud83c\udfc8 BREAKOUT: Player IND (IND) scored 12.0 pts [Live] vs a projection of 8.06 (148.9% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-10-18T18:23:42.854527+00:00",
-      "sport": "nfl",
-      "player_name": "D'Andre Swift",
-      "message": "\ud83c\udfc8 BREAKOUT: D'Andre Swift (CHI) scored 17.2 pts [Live] vs a projection of 12.9 (133.3% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-10-18T18:23:42.852818+00:00",
-      "sport": "nfl",
-      "player_name": "Player BAL",
-      "message": "\ud83c\udfc8 BREAKOUT: Player BAL (BAL) scored 13.0 pts [Live] vs a projection of 7.79 (166.9% of projection).",
-      "notified": true
     }
   ],
   "pending_suggestions": [],
   "health": {
     "sleeper_nfl": {
-      "consecutive_failures": 1,
+      "consecutive_failures": 2,
       "last_success": "2026-10-20T08:52:09.042373+00:00",
       "circuit_open": false
     },
     "sleeper_nba": {
-      "consecutive_failures": 1,
-      "last_success": "2026-10-22T00:58:05.900617+00:00",
+      "consecutive_failures": 0,
+      "last_success": "2026-10-22T04:33:58.700028+00:00",
       "circuit_open": false
     },
     "telegram": {
       "consecutive_failures": 0,
-      "last_success": "2026-10-22T00:58:16.230643+00:00",
+      "last_success": "2026-10-22T04:34:12.366081+00:00",
       "circuit_open": false
     }
   },
