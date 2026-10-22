@@ -9,6 +9,7 @@ from datetime import date
 from unittest.mock import patch
 
 import alert_engine
+import bot_commands
 import delivery
 import main
 from state_store import load, save
@@ -88,6 +89,70 @@ class CycleTests(unittest.TestCase):
         command = [item for item in journal['items'].values() if item['kind'] == 'command']
         self.assertEqual(len(command), 1)
         self.assertTrue(command[0]['delivered_at'])
+
+    def scan_reply(self):
+        journal = load(delivery.PATH, {})
+        commands = [item for item in journal['items'].values() if item['kind'] == 'command']
+        self.assertEqual(len(commands), 1)
+        self.assertTrue(commands[0]['delivered_at'])
+        self.assertEqual(load(alert_engine.RUNTIME_PATH, {})['scan_requests'], [])
+        return commands[0]['text']
+
+    def test_scan_checks_fresh_data_reports_results_and_deduplicates_updates(self):
+        rows, _ = self.run_twice([{'text': '/scan@MyBot NBA', 'update_id': 102}])
+        self.assertEqual(len(rows), 2)
+        text = self.scan_reply()
+        self.assertIn('NBA: 2 player checks', text)
+        self.assertIn('New breakout alerts: 2', text)
+        self.assertNotIn('NFL:', text)
+
+    def test_scan_rechecks_completed_slates_without_repeating_alerts(self):
+        self.run_twice()
+        runtime = load(alert_engine.RUNTIME_PATH, {})
+        runtime['checked_days']['2026-10-20']['complete'] = True
+        save(alert_engine.RUNTIME_PATH, runtime)
+        rows, _ = self.run_twice([{'text': '/scan nba', 'update_id': 103}])
+        self.assertEqual(len(rows), 2)
+        text = self.scan_reply()
+        self.assertIn('NBA: 2 player checks', text)
+        self.assertIn('New breakout alerts: 0', text)
+
+    def test_scan_survives_restart_after_telegram_offset_is_saved(self):
+        command = {'text': '/scan', 'update_id': 104}
+        runtime = {}
+        with patch.object(main.notifier, 'get_new_updates', return_value={'taps': [], 'commands': [command]}):
+            main.poll_and_handle_telegram(self.config, {}, {}, {}, {}, {}, runtime=runtime, batch=[])
+        self.assertEqual(load(alert_engine.RUNTIME_PATH, {})['scan_requests'][0]['event_id'], 'scan:104')
+        self.run_twice()
+        text = self.scan_reply()
+        self.assertIn('New breakout alerts: 2', text)
+        self.assertIn('NFL: disabled', text)
+
+    def test_scan_reports_upstream_failure_instead_of_a_successful_empty_scan(self):
+        with patch.object(self, 'stats', side_effect=RuntimeError('offline')):
+            self.run_twice([{'text': '/scan nba', 'update_id': 105}])
+        self.assertIn('some data unavailable or incomplete', self.scan_reply())
+
+    def test_scan_summary_distinguishes_new_alerts_waiting_for_delivery(self):
+        request = {'sports': ['nba']}
+        checks = [{'sport': 'nba', 'status': 'checked', 'matched': 25}]
+        fresh = [{'event_id': 'new:1', 'sport': 'nba', 'kind': 'breakout'},
+                 {'event_id': 'new:2', 'sport': 'nba', 'kind': 'opportunity'}]
+        journal = {'items': {delivery.event_id(fresh[0]): {'delivered_at': '2026-10-22T12:00:00+00:00'}}}
+        text = bot_commands.scan_summary(request, self.config, checks, fresh, journal)
+        self.assertIn('New breakout alerts: 1; opportunity/trend alerts: 1', text)
+        self.assertIn('1 new alerts queued for delivery retry', text)
+
+    def test_scan_parser_and_usage(self):
+        self.assertEqual(bot_commands.scan_sports('/scan'), ('nba', 'nfl'))
+        self.assertEqual(bot_commands.scan_sports('/scan@MyBot NFL'), ('nfl',))
+        self.assertEqual(bot_commands.scan_sports('/scan baseball'), ())
+        self.assertIsNone(bot_commands.scan_sports('/scanner'))
+        rows, _ = self.run_twice([{'text': '/scan baseball', 'update_id': 106}])
+        self.assertEqual(len(rows), 2)
+        journal = load(delivery.PATH, {})
+        text = next(item['text'] for item in journal['items'].values() if item['kind'] == 'command')
+        self.assertIn('Usage: /scan', text)
 
 
 if __name__ == '__main__':

@@ -65,6 +65,13 @@ updates to arrive. Catch-up and retried delivery messages are labeled.
 
 ## Commands and dashboard
 
+- `/scan [nba|nfl]`: check fresh data for new breakouts and reply with the
+  scan result, including an empty result or unavailable data. Without a
+  sport, both enabled sports are requested. This rechecks completed NBA
+  slates within the configured catch-up window, retains duplicate
+  protection, and reports queued delivery failures. Scheduled checks of
+  other enabled sports still run normally. Multiple scan commands received
+  together share one collection cycle and each receives a result.
 - `/status`: completed/started checks, source freshness and failed deliveries.
 - `/recent [nba|nfl] [1-10]`: confirmed alerts, newest first.
 - `/settings`: scoring, screening, batching, catch-up and Yahoo status.
@@ -72,7 +79,11 @@ updates to arrive. Catch-up and retried delivery messages are labeled.
 - Existing `/check` and `/tier` commands remain available.
 
 Commands are collected during bot runs, so GitHub scheduler delays also
-delay replies. Commands do not enter the performance digest. The dashboard
+delay replies. Sending `/scan` does not wake a stopped GitHub runner;
+outside scheduled hours it waits until the next execution (or a manual
+workflow run). Scan requests are saved before Telegram updates are
+acknowledged, and result replies use the persistent delivery queue.
+Commands do not enter the performance digest. The dashboard
 shows check age, underlying NBA stat age, game progress and pending/failed
 message parts. Its browser clock updates the overdue warning even when the
 JSON snapshot stops updating. It refreshes data every minute and renders

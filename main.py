@@ -558,12 +558,23 @@ def poll_and_handle_telegram(config, pending, managers, health_state, players_nf
         text = command["text"]
         try:
             import bot_commands
+            sports = bot_commands.scan_sports(text)
+            if sports and runtime is not None:
+                import delivery
+                identity = f"scan:{command.get('update_id', text)}"
+                receipt = delivery.event_id({"event_id": identity})
+                journal = load_json(delivery.PATH, {})
+                requests = runtime.setdefault("scan_requests", [])
+                if receipt not in journal.get("items", {}) and not any(r["event_id"] == identity for r in requests):
+                    requests.append({"event_id": identity, "sports": list(sports)})
+                # Persist the request before acknowledging its Telegram update.
+                from alert_engine import RUNTIME_PATH
+                save_json(RUNTIME_PATH, runtime)
+                continue
             response = bot_commands.reply(text, config, health_state, history or [], runtime or {})
             if response is not None:
                 if batch is not None:
-                    batch.append({"event_id": f"command:{command.get('update_id', text)}", "kind": "command",
-                                  "send": True, "text": response, "sport": "system", "player_name": "Command reply",
-                                  "addable": False, "exclude_history": True})
+                    batch.append(bot_commands.command_item(f"command:{command.get('update_id', text)}", response))
                 else:
                     notifier.send_message(config, response)
                 continue
