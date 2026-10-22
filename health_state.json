@@ -22,7 +22,7 @@
   },
   "scoreboard": {
     "consecutive_failures": 0,
-    "last_success": "2026-10-22T19:43:36.893950+00:00",
+    "last_success": "2026-10-22T22:46:31.726301+00:00",
     "last_failure": null,
     "notified": false,
     "circuit_open_until": null
