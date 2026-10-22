@@ -29,6 +29,7 @@ jobs:
         uses: actions/setup-python@v6
         with:
           python-version: "3.11"
+          cache: pip
 
       - name: Install dependencies
         run: pip install -r requirements.txt
@@ -39,17 +40,6 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python daily_digest.py
 
-      - name: Persist delivered digest dates
-        run: |
-          if [ ! -f digest_state.json ]; then exit 0; fi
-          git config user.name "fantasy-alert-bot"
-          git config user.email "actions@users.noreply.github.com"
-          git add digest_state.json
-          if git diff --cached --quiet; then exit 0; fi
-          git commit -m "Update digest delivery state [skip ci]"
-          for attempt in 1 2 3; do
-            git pull --rebase origin "$GITHUB_REF_NAME"
-            if git push origin "HEAD:$GITHUB_REF_NAME"; then exit 0; fi
-          done
-          echo "Failed to persist digest delivery state"
-          exit 1
+      - name: Persist delivered digest dates and partial receipts
+        if: ${{ always() }}
+        run: python .github/scripts/persist_state.py digest

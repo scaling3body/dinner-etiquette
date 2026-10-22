@@ -31,8 +31,17 @@ one huge stat line.
 """
 
 import statistics
+import math
 
 DEFAULT_EXTREME_MULTIPLIER = 1.5
+
+
+def number(value):
+    try:
+        value = float(value)
+        return value if math.isfinite(value) else 0.0
+    except (ValueError, TypeError):
+        return 0.0
 
 
 def breakout_label(count, is_extreme=False):
@@ -55,7 +64,7 @@ def calc_fantasy_points(stat_line, scoring_settings):
     for stat_key, weight in scoring_settings.items():
         if not isinstance(weight, (int, float)):
             continue  # skips "_comment_*" explanatory keys in config.json
-        total += stat_line.get(stat_key, 0) * weight
+        total += number(stat_line.get(stat_key)) * weight
     return round(total, 2)
 
 
@@ -109,29 +118,39 @@ def _category_stdevs(all_projections, categories):
     stdevs = {}
     for cat in categories:
         values = [
-            p.get(cat, 0)
+            number(p.get(cat, 0))
             for p in all_projections.values()
             if p and p.get(cat) is not None
         ]
-        values = [v for v in values if v > 0]
+        floors = {"pts": 4, "reb": 2, "ast": 1.5, "stl": .6, "blk": .6, "fg3m": 1, "to": 1}
         if len(values) >= 5:
-            stdevs[cat] = statistics.pstdev(values) or 1.0
+            stdevs[cat] = max(statistics.pstdev(values), floors.get(cat, .05))
         else:
             stdevs[cat] = 1.0  # fallback so we never divide by zero
     return stdevs
 
 
-def compute_zscore(actual_stats, projected_stats, all_day_projections, categories, invert_categories):
-    stdevs = _category_stdevs(all_day_projections, categories)
+def compute_zscore(actual_stats, projected_stats, all_day_projections, categories, invert_categories, stdevs=None):
+    stdevs = stdevs or _category_stdevs(all_day_projections, categories)
     total_z = 0.0
     breakdown = {}
     for cat in categories:
-        actual_val = actual_stats.get(cat, 0) or 0
-        proj_val = projected_stats.get(cat, 0) or 0
+        actual_val = number(actual_stats.get(cat, 0))
+        proj_val = number(projected_stats.get(cat, 0))
         diff = actual_val - proj_val
         if cat in invert_categories:
             diff = -diff
-        z = diff / stdevs[cat]
+        if cat in ("fgp", "ftp"):
+            # Percentages need volume: 1/1 shooting must not dominate an
+            # entire stat line. Zero attempts provide no positive/negative lift.
+            attempts_key, made_key, minimum = (("fga", "fgm", 5) if cat == "fgp" else ("fta", "ftm", 3))
+            attempts = number(actual_stats.get(attempts_key))
+            expected_attempts = number(projected_stats.get(attempts_key))
+            probability = min(1, max(0, proj_val))
+            scale = math.sqrt(max(1, expected_attempts * probability * (1 - probability)))
+            z = max(-3, min(3, (number(actual_stats.get(made_key)) - attempts * probability) / scale)) if attempts >= minimum else 0
+        else:
+            z = diff / stdevs[cat]
         total_z += z
         breakdown[cat] = {"actual": actual_val, "projected": proj_val, "z": round(z, 2)}
     return total_z, breakdown
@@ -140,7 +159,7 @@ def compute_zscore(actual_stats, projected_stats, all_day_projections, categorie
 def basketball_breakout_level(actual_stats, projected_stats, all_day_projections,
                                categories, invert_categories, zscore_threshold,
                                prior_count, prior_baseline,
-                               extreme_multiplier=DEFAULT_EXTREME_MULTIPLIER):
+                               extreme_multiplier=DEFAULT_EXTREME_MULTIPLIER, stdevs=None):
     """
     Same escalation pattern as football_breakout_level(), but additive
     instead of multiplicative since z-scores can be zero or negative:
@@ -153,7 +172,7 @@ def basketball_breakout_level(actual_stats, projected_stats, all_day_projections
                 "total_zscore": None, "breakdown": None}
 
     total_z, breakdown = compute_zscore(actual_stats, projected_stats, all_day_projections,
-                                         categories, invert_categories)
+                                         categories, invert_categories, stdevs)
     total_z = round(total_z, 2)
     is_extreme = bool(total_z >= zscore_threshold * extreme_multiplier)
 

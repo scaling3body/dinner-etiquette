@@ -22,9 +22,7 @@ are committed back to the repo by the GitHub Actions workflow so they
 persist between runs.
 """
 
-import json
 import os
-import random
 import re
 import sys
 from datetime import datetime, timedelta, timezone
@@ -34,6 +32,7 @@ import sleeper_client as sleeper
 import scoring
 import telegram_notifier as notifier
 import health
+from state_store import load, save, timestamp
 
 ET_ZONE = ZoneInfo("America/New_York")  # NBA's "today" is a calendar day in Eastern
 # time, not UTC -- using UTC date.today() here would query the wrong day's
@@ -67,15 +66,11 @@ DEFAULT_SUGGESTION_EXPIRY_MINUTES = 1440  # ~24 hours -- you may not be watching
 
 
 def load_json(path, default):
-    if os.path.exists(path):
-        with open(path) as f:
-            return json.load(f)
-    return default
+    return load(path, default)
 
 
 def save_json(path, data):
-    with open(path, "w") as f:
-        json.dump(data, f, indent=2)
+    save(path, data)
 
 
 def get_players_cached(sport, cache_path):
@@ -90,8 +85,8 @@ def get_players_cached(sport, cache_path):
     meta_path = cache_path + ".fetched_at"
     if os.path.exists(cache_path) and os.path.exists(meta_path):
         with open(meta_path) as f:
-            fetched_at = datetime.fromisoformat(f.read().strip())
-        if datetime.now(timezone.utc) - fetched_at < timedelta(hours=24):
+            fetched_at = timestamp(f.read().strip())
+        if fetched_at and timedelta(0) <= datetime.now(timezone.utc) - fetched_at < timedelta(hours=24):
             return load_json(cache_path, {})
     players = sleeper.get_all_players(sport)
     if players:
@@ -113,11 +108,13 @@ def record_history(history, sport, player_name, message, notified=True):
     del history[:-MAX_HISTORY]  # keep only the most recent MAX_HISTORY entries
 
 
-def write_dashboard(history, pending, health_state, config):
+def write_dashboard(history, pending, health_state, config, runtime=None):
+    import delivery
     hc = config.get("health_check", {})
+    runtime = runtime or load("runtime_state.json", {})
     data = {
         "last_updated": datetime.now(timezone.utc).isoformat(),
-        "recent_alerts": list(reversed(history)),  # newest first
+        "recent_alerts": list(reversed(history))[:200],
         "pending_suggestions": [
             {
                 "code": code,
@@ -129,6 +126,9 @@ def write_dashboard(history, pending, health_state, config):
         ],
         "health": health.summary_for_dashboard(health_state),
         "health_failure_threshold": hc.get("failure_alert_threshold", health.FAILURE_ALERT_THRESHOLD),
+        "stale_after_minutes": hc.get("stale_minutes", 15),
+        "runtime": runtime,
+        "delivery": delivery.summary(load(delivery.PATH, {})),
     }
     os.makedirs(os.path.dirname(DASHBOARD_DATA_PATH), exist_ok=True)
     save_json(DASHBOARD_DATA_PATH, data)
@@ -150,6 +150,7 @@ def maybe_send_failure_alert(config, health_state, component, friendly_name):
                f"(last success: {c.get('last_success') or 'never'}). Check the Actions log.")
         try:
             notifier.send_message(config, msg)
+            health_state[component]["notified"] = True
         except Exception as e:
             print(f"Also failed to send the failure-alert itself: {e}")
 
@@ -187,26 +188,29 @@ def build_yahoo_manager(config, sport, health_state):
     if not rm.get("enabled"):
         return None
 
-    if health.yahoo_circuit_is_open(health_state):
+    component = f"yahoo_{sport}"
+    if health.yahoo_circuit_is_open(health_state, component):
         print(f"Yahoo circuit breaker is open (recent repeated failures) -- skipping {sport} this run.")
         return None
 
     try:
         import yahoo_client
         league_key, team_key = get_yahoo_keys(config, sport)
+        if not league_key or not team_key:
+            raise ValueError("Yahoo league/team keys are not configured")
         manager = yahoo_client.YahooRosterManager("oauth2.json", sport, league_key, team_key)
         manager.get_open_bench_or_ir_slots()  # validation call, also warms the cache
-        health.record_success(health_state, "yahoo")
+        health.record_success(health_state, component)
         return manager
     except Exception as e:
-        print(f"Could not set up Yahoo roster manager for {sport}, alerts will be plain this run: {e}")
-        failures = health.record_failure(health_state, "yahoo")
-        maybe_send_failure_alert(config, health_state, "yahoo", "Yahoo")
+        print(f"Could not set up Yahoo roster manager for {sport}: {type(e).__name__}")
+        failures = health.record_failure(health_state, component)
+        maybe_send_failure_alert(config, health_state, component, f"Yahoo {sport.upper()}")
         hc = config.get("health_check", {})
         breaker_threshold = hc.get("yahoo_breaker_threshold", health.YAHOO_BREAKER_THRESHOLD)
         breaker_cooldown = hc.get("yahoo_breaker_cooldown_minutes", health.YAHOO_BREAKER_COOLDOWN_MINUTES)
         if failures >= breaker_threshold:
-            health.open_yahoo_circuit(health_state, breaker_cooldown)
+            health.open_yahoo_circuit(health_state, breaker_cooldown, component)
             print(f"Yahoo has failed {failures} times in a row -- opening circuit breaker "
                   f"for {breaker_cooldown} minutes.")
         return None
@@ -236,12 +240,13 @@ def find_starter_injury_context(players, breakout_player):
     my_depth = breakout_player.get("depth_chart_order")
     if not team or not position or my_depth is None:
         return None
+    my_depth = scoring.number(my_depth)
 
     for p in players.values():
         if p.get("team") != team or p.get("position") != position:
             continue
         other_depth = p.get("depth_chart_order")
-        if other_depth is None or other_depth >= my_depth:
+        if other_depth is None or scoring.number(other_depth) >= my_depth:
             continue  # not ranked ahead of the breakout player
         injury = p.get("injury_status")
         if injury:
@@ -274,105 +279,36 @@ def evaluate_breakout_item(config, sport, player_name, team, breakout_msg, manag
         status_label, match = manager.get_player_status(player_name, team, position)
         is_rostered = match is None
 
-        if is_rostered and rm.get("quiet_rostered_players", True):
+        if is_rostered and status_label != "On your roster" and rm.get("quiet_rostered_players", True):
             return {"send": False, "text": breakout_msg, "addable": False,
                     "player_id": None, "player_name": player_name, "sport": sport}
 
-        text = f"{breakout_msg}\n\n{status_label}"
+        text = f"{breakout_msg}\n\n{status_label}\n{manager.roster_context(position)}"
         has_open_slot = manager.get_open_bench_or_ir_slots()
-        addable = bool(has_open_slot and match)
+        addable = bool(has_open_slot and match and match.get("status") == "FA")
         if addable:
             text += f" -- add {player_name}?"
 
         return {"send": True, "text": text, "addable": addable,
                 "player_id": match["player_id"] if match else None,
-                "player_name": player_name, "sport": sport}
+                "player_name": player_name, "sport": sport, "availability": status_label}
 
     except Exception as e:
-        print(f"Roster management check failed for {player_name}, sending plain alert instead: {e}")
+        print(f"Roster context unavailable for {player_name}: {type(e).__name__}")
         # Deliberately record_failure only, not record_success anywhere in
         # this function -- a per-player failure here shouldn't be masked by
         # other players in the same run succeeding, and connection-level
         # success is already tracked once per run in build_yahoo_manager.
-        health.record_failure(health_state, "yahoo")
-        maybe_send_failure_alert(config, health_state, "yahoo", "Yahoo")
+        health.record_failure(health_state, f"yahoo_{sport}")
+        maybe_send_failure_alert(config, health_state, f"yahoo_{sport}", f"Yahoo {sport.upper()}")
         return {"send": True, "text": breakout_msg, "addable": False,
                 "player_id": None, "player_name": player_name, "sport": sport}
 
 
-def _send_single_alert(config, pending, item, health_state):
-    """Sends one item as its own message, with edit-on-resolve buttons if addable."""
-    if item["addable"]:
-        code = str(random.randint(1000, 9999))
-        buttons = [[(f"Add {item['player_name']}", f"add:{code}"), ("No thanks", f"decline:{code}")]]
-        try:
-            message_id = notifier.send_message(config, item["text"], buttons=buttons)
-            pending[code] = {
-                "sport": item["sport"], "player_id": item["player_id"],
-                "player_name": item["player_name"], "message_id": message_id,
-                "batched": False, "created_at": datetime.now(timezone.utc).isoformat(),
-            }
-            health.record_success(health_state, "telegram")
-        except Exception as e:
-            print(f"FAILED to send Telegram alert: {e}")
-            health.record_failure(health_state, "telegram")
-            maybe_send_failure_alert(config, health_state, "telegram", "Telegram")
-    else:
-        try:
-            notifier.send_message(config, item["text"])
-            health.record_success(health_state, "telegram")
-        except Exception as e:
-            print(f"FAILED to send Telegram alert: {e}")
-            health.record_failure(health_state, "telegram")
-            maybe_send_failure_alert(config, health_state, "telegram", "Telegram")
-
-
-def dispatch_alerts(config, pending, batch, health_state):
-    """
-    Sends each of this run's alerts as its own message (with edit-on-resolve
-    buttons if addable) when there are fewer than notifications.batch_threshold
-    of them (default 3) -- below that, separate pings feel more immediate
-    than a combined message. At or above the threshold, everything gets
-    combined into ONE message instead of a flood of separate pings, with one
-    Add/No-thanks button row per addable player. Batched messages get a
-    "batched": True flag on their pending entries so process_confirmations()
-    knows to send a fresh follow-up message on resolve instead of editing
-    the shared message (editing would blow away the other players' info in it).
-    """
-    items = [b for b in batch if b["send"]]
-    if not items:
-        return
-
-    threshold = config.get("notifications", {}).get("batch_threshold", 3)
-
-    if len(items) < threshold:
-        for item in items:
-            _send_single_alert(config, pending, item, health_state)
-        return
-
-    header = f"\U0001F514 {len(items)} breakouts this check:\n\n"
-    text = header + "\n\n".join(i["text"] for i in items)
-    button_rows = []
-    codes_for_items = []
-    for i in items:
-        if i["addable"]:
-            code = str(random.randint(1000, 9999))
-            button_rows.append([(f"Add {i['player_name']}", f"add:{code}"), ("No thanks", f"decline:{code}")])
-            codes_for_items.append((code, i))
-
-    try:
-        message_id = notifier.send_message(config, text, buttons=button_rows or None)
-        for code, i in codes_for_items:
-            pending[code] = {
-                "sport": i["sport"], "player_id": i["player_id"],
-                "player_name": i["player_name"], "message_id": message_id,
-                "batched": True, "created_at": datetime.now(timezone.utc).isoformat(),
-            }
-        health.record_success(health_state, "telegram")
-    except Exception as e:
-        print(f"FAILED to send batched Telegram alert: {e}")
-        health.record_failure(health_state, "telegram")
-        maybe_send_failure_alert(config, health_state, "telegram", "Telegram")
+def dispatch_alerts(config, pending, batch, health_state, alerted=None, history=None):
+    import delivery
+    return delivery.dispatch(config, pending, batch, health_state,
+                             alerted if alerted is not None else {}, history if history is not None else [])
 
 
 def process_confirmations(config, pending, managers, taps):
@@ -382,20 +318,29 @@ def process_confirmations(config, pending, managers, taps):
 
     for tap in taps:
         action, _, code = tap["callback_data"].partition(":")
+        if action not in ("add", "decline"):
+            notifier.acknowledge_tap(config, tap["callback_query_id"], "Unknown action.")
+            continue
         item = pending.get(code)
         if not item:
+            notifier.acknowledge_tap(config, tap["callback_query_id"], "This suggestion expired.")
+            continue
+        created = timestamp(item.get("created_at"))
+        if not created or datetime.now(timezone.utc) - created > timedelta(minutes=rm.get("suggestion_expiry_minutes", DEFAULT_SUGGESTION_EXPIRY_MINUTES)):
+            pending.pop(code, None)
             notifier.acknowledge_tap(config, tap["callback_query_id"], "This suggestion expired.")
             continue
 
         batched = item.get("batched", False)
 
         if action == "decline":
+            pending.pop(code, None)
+            save_json(PENDING_PATH, pending)
             if not batched:
                 notifier.edit_message(config, item["message_id"], f"Skipped {item['player_name']}.")
             else:
                 notifier.send_message(config, f"Skipped {item['player_name']}.")
             notifier.acknowledge_tap(config, tap["callback_query_id"])
-            del pending[code]
             continue
 
         manager = managers.get(item["sport"])
@@ -412,27 +357,29 @@ def process_confirmations(config, pending, managers, taps):
         try:
             manager.add_player(item["player_id"])
             msg = f"\u2705 Added {item['player_name']}!"
+            response = "Added!"
+        except Exception:
+            msg = f"Could not confirm the add for {item['player_name']}. Check Yahoo before trying again."
+            response = "Check Yahoo -- see message."
+        # Consume the action before editing Telegram: a failed edit must not
+        # turn a completed transaction into a retryable Add button.
+        pending.pop(code, None)
+        save_json(PENDING_PATH, pending)
+        try:
             if not batched:
                 notifier.edit_message(config, item["message_id"], msg)
             else:
                 notifier.send_message(config, msg)
-            notifier.acknowledge_tap(config, tap["callback_query_id"], "Added!")
-        except Exception as e:
-            msg = f"\u274c Failed to add {item['player_name']}: {e}"
-            if not batched:
-                notifier.edit_message(config, item["message_id"], msg)
-            else:
-                notifier.send_message(config, msg)
-            notifier.acknowledge_tap(config, tap["callback_query_id"], "Failed -- see message.")
-
-        del pending[code]
+            notifier.acknowledge_tap(config, tap["callback_query_id"], response)
+        except Exception:
+            print("Roster action consumed; Telegram confirmation could not be updated.")
 
     # Expire old pending suggestions
     expiry_minutes = rm.get("suggestion_expiry_minutes", DEFAULT_SUGGESTION_EXPIRY_MINUTES)
     now = datetime.now(timezone.utc)
     for code in list(pending.keys()):
-        created = datetime.fromisoformat(pending[code]["created_at"])
-        if (now - created) > timedelta(minutes=expiry_minutes):
+        created = timestamp(pending[code].get("created_at"))
+        if not created or (now - created) > timedelta(minutes=expiry_minutes):
             item = pending.pop(code)
             if not item.get("batched", False):
                 try:
@@ -588,7 +535,8 @@ def handle_check_command(config, text, nfl_manager, players_nfl, tier_threshold)
     notifier.send_message(config, "\n".join(lines))
 
 
-def poll_and_handle_telegram(config, pending, managers, health_state, players_nfl, tier_threshold_state):
+def poll_and_handle_telegram(config, pending, managers, health_state, players_nfl, tier_threshold_state,
+                             history=None, runtime=None, batch=None):
     """
     Polls Telegram ONCE per run for anything new -- button taps, "/check
     <position>" commands, and "/tier <N>" commands all come from this
@@ -601,21 +549,37 @@ def poll_and_handle_telegram(config, pending, managers, health_state, players_nf
     except Exception as e:
         print(f"Could not check Telegram for updates: {e}")
         result = {"taps": [], "commands": []}
-    save_json(TELEGRAM_OFFSET_PATH, offset_state)
 
     rm = config.get("roster_management", {})
-    if rm.get("enabled") and pending:
-        process_confirmations(config, pending, managers, result["taps"])
+    if pending:
+        process_confirmations(config, pending, managers, result["taps"] if rm.get("enabled") else [])
 
     for command in result["commands"]:
         text = command["text"]
         try:
+            import bot_commands
+            response = bot_commands.reply(text, config, health_state, history or [], runtime or {})
+            if response is not None:
+                if batch is not None:
+                    batch.append({"event_id": f"command:{command.get('update_id', text)}", "kind": "command",
+                                  "send": True, "text": response, "sport": "system", "player_name": "Command reply",
+                                  "addable": False, "exclude_history": True})
+                else:
+                    notifier.send_message(config, response)
+                continue
             if handle_tier_threshold_command(config, text, tier_threshold_state):
                 continue  # was a /tier command, handled (or reported invalid) -- don't also try /check
             handle_check_command(config, text, managers.get("nfl"), players_nfl,
                                   tier_threshold_state.get("threshold", DEFAULT_TIER_THRESHOLD))
         except Exception as e:
-            print(f"Error handling command {text!r}: {e}")
+            print(f"Error handling command: {type(e).__name__}")
+            if command.get("update_id") is not None:
+                offset_state["offset"] = min(offset_state.get("offset", command["update_id"]), command["update_id"])
+            break
+    if batch:
+        import delivery
+        delivery.dispatch(config, pending, batch, health_state, {}, [], send=False)
+    save_json(TELEGRAM_OFFSET_PATH, offset_state)
 
 
 def _ensure_new_alerted_format(value):
@@ -631,224 +595,21 @@ def _ensure_new_alerted_format(value):
     return value
 
 
-def run_football(config, alerted, players, history, manager, batch, health_state):
-    if not config["football"]["enabled"]:
-        return
-    state = sleeper.get_nfl_state()
-    if not state:
-        print("Could not fetch NFL state, skipping football check.")
-        health.record_failure(health_state, "sleeper_nfl")
-        maybe_send_failure_alert(config, health_state, "sleeper_nfl", "Sleeper (NFL)")
-        return
-    season, week = state.get("season"), state.get("week")
-    if not season or not week:
-        return
-
-    projections = sleeper.get_nfl_week_projections(season, week)
-    stats = sleeper.get_nfl_week_stats(season, week)
-    if not projections or not stats:
-        print("No football projections/stats available yet this run.")
-        # Only a real anomaly if today is a confirmed NFL day (checked by the
-        # caller before run_football is even invoked) -- so this counts.
-        health.record_failure(health_state, "sleeper_nfl")
-        maybe_send_failure_alert(config, health_state, "sleeper_nfl", "Sleeper (NFL)")
-        return
-
-    health.record_success(health_state, "sleeper_nfl")
-    schedule = sleeper.get_schedule("nfl", season, state.get("season_type", "regular"))
-
-    extreme_multiplier = config["football"].get("extreme_multiplier", scoring.DEFAULT_EXTREME_MULTIPLIER)
-    key = f"nfl-{season}-{week}"
-    alerted[key] = _ensure_new_alerted_format(alerted.get(key, {}))
-
-    for player_id, actual in stats.items():
-        proj = projections.get(player_id)
-        prior = alerted[key].get(player_id)
-        prior_count = prior["count"] if prior else 0
-        prior_baseline = prior["baseline"] if prior else None
-
-        if prior_count > 0 and prior_baseline is None:
-            # Migrated from the old format -- we don't know their actual
-            # baseline, so backfill it silently this run without alerting,
-            # then resume normal escalation checks from here on.
-            actual_pts = scoring.calc_fantasy_points(actual, config["football"]["scoring_settings"])
-            alerted[key][player_id] = {"count": prior_count, "baseline": actual_pts}
-            continue
-
-        result = scoring.football_breakout_level(
-            actual, proj,
-            config["football"]["scoring_settings"],
-            config["football"]["pct_threshold"],
-            config["football"]["point_floor"],
-            prior_count, prior_baseline,
-            extreme_multiplier,
-        )
-
-        if result["is_breakout"]:
-            try:
-                p = players.get(player_id, {})
-                name = p.get("full_name") or f"Player {player_id}"
-                team = p.get("team", "FA")
-                label = scoring.breakout_label(result["count"], result["is_extreme"])
-                status_tag = get_game_status_tag(schedule, team, week)
-                msg = notifier.format_football_alert(name, team, result, label=label, status_tag=status_tag)
-                injury_note = find_starter_injury_context(players, p)
-                if injury_note:
-                    msg += f"\n{injury_note}"
-                print("ALERT:", msg)
-                item = evaluate_breakout_item(config, "nfl", name, team, msg, manager, health_state, position=p.get("position"))
-                record_history(history, "nfl", name, msg, notified=item["send"])
-                batch.append(item)
-            except Exception as e:
-                print(f"Error processing breakout for player {player_id}, continuing with the rest: {e}")
-            finally:
-                alerted[key][player_id] = {"count": result["count"], "baseline": result["baseline"]}
+def run_football(config, alerted, players, history, manager, batch, health_state, **kwargs):
+    import alert_engine
+    return alert_engine.run_football(config, alerted, players, history, manager, batch, health_state,
+                                     bot=sys.modules[__name__], **kwargs)
 
 
-def run_basketball(config, alerted, players, history, manager, batch, health_state):
-    if not config["basketball"]["enabled"]:
-        return
-    game_day = nba_game_day()
-    nba_state = sleeper.get_nba_state()
-    season = nba_state.get("season") if nba_state else str(game_day.year)
-    today_str = game_day.isoformat()
-
-    season_type = (nba_state or {}).get("season_type", "regular")
-    week = (nba_state or {}).get("week")
-    projections = sleeper.get_nba_day_projections(today_str, season, season_type, week=week)
-    stats = sleeper.get_nba_day_stats(today_str, season, season_type, week=week)
-    matched = {pid: actual for pid, actual in (stats or {}).items()
-               if actual and (projections or {}).get(pid)}
-    if not matched:
-        print("No basketball projections/stats available yet this run (maybe no games today).")
-        # Only a real anomaly if today is a confirmed NBA day (checked by the
-        # caller before run_basketball is even invoked) -- so this counts.
-        health.record_failure(health_state, "sleeper_nba")
-        maybe_send_failure_alert(config, health_state, "sleeper_nba", "Sleeper (NBA)")
-        return
-
-    health.record_success(health_state, "sleeper_nba")
-
-    print(f"NBA {today_str}: {len(projections)} projections, {len(stats)} stat lines, "
-          f"{len(matched)} matched players.")
-    schedule = sleeper.get_schedule("nba", season, season_type)  # may be unavailable
-
-    extreme_multiplier = config["basketball"].get("extreme_multiplier", scoring.DEFAULT_EXTREME_MULTIPLIER)
-    key = f"nba-{today_str}"
-    alerted[key] = _ensure_new_alerted_format(alerted.get(key, {}))
-
-    cats = config["basketball"]["categories"]
-    invert = config["basketball"]["invert_categories"]
-    threshold = config["basketball"]["zscore_alert_threshold"]
-
-    for player_id, actual in matched.items():
-        proj = projections.get(player_id)
-        prior = alerted[key].get(player_id)
-        prior_count = prior["count"] if prior else 0
-        prior_baseline = prior["baseline"] if prior else None
-
-        if prior_count > 0 and prior_baseline is None:
-            # Migrated from the old format -- backfill silently this run,
-            # no alert, then resume normal escalation checks from here.
-            total_z, _ = scoring.compute_zscore(actual or {}, proj or {}, projections, cats, invert)
-            alerted[key][player_id] = {"count": prior_count, "baseline": round(total_z, 2)}
-            continue
-
-        result = scoring.basketball_breakout_level(
-            actual, proj, projections, cats, invert, threshold, prior_count, prior_baseline,
-            extreme_multiplier,
-        )
-
-        if result["is_breakout"]:
-            try:
-                p = players.get(player_id, {})
-                name = p.get("full_name") or f"Player {player_id}"
-                team = p.get("team", "FA")
-                label = scoring.breakout_label(result["count"], result["is_extreme"])
-                status_tag = get_game_status_tag(schedule, team)
-                msg = notifier.format_basketball_alert(name, team, result, label=label, status_tag=status_tag)
-                injury_note = find_starter_injury_context(players, p)
-                if injury_note:
-                    msg += f"\n{injury_note}"
-                print("ALERT:", msg)
-                item = evaluate_breakout_item(config, "nba", name, team, msg, manager, health_state, position=p.get("position"))
-                record_history(history, "nba", name, msg, notified=item["send"])
-                batch.append(item)
-            except Exception as e:
-                print(f"Error processing breakout for player {player_id}, continuing with the rest: {e}")
-            finally:
-                alerted[key][player_id] = {"count": result["count"], "baseline": result["baseline"]}
+def run_basketball(config, alerted, players, history, manager, batch, health_state, **kwargs):
+    import alert_engine
+    return alert_engine.run_basketball(config, alerted, players, history, manager, batch, health_state,
+                                       bot=sys.modules[__name__], **kwargs)
 
 
 def main():
-    if not os.path.exists(CONFIG_PATH):
-        print(f"Missing {CONFIG_PATH}. Copy config.example.json to config.json and fill it in.")
-        sys.exit(1)
-
-    config = load_json(CONFIG_PATH, {})
-    alerted = load_json(ALERTED_PATH, {})
-    pending = load_json(PENDING_PATH, {})
-    history = load_json(DASHBOARD_HISTORY_PATH, [])
-    health_state = health.load()
-    tier_threshold_state = load_json(TIER_THRESHOLD_PATH, {"threshold": DEFAULT_TIER_THRESHOLD})
-
-    players_nfl = get_players_cached("nfl", PLAYERS_CACHE_NFL)
-    players_nba = get_players_cached("nba", PLAYERS_CACHE_NBA)
-
-    # Build one Yahoo manager per sport for this whole run (not one per
-    # breakout) -- each caches its own free-agent scan and open-slot check,
-    # so reusing them across every alert and every confirmation avoids
-    # re-hitting Yahoo's API repeatedly. None if roster_management is off,
-    # the circuit breaker is open, or setup fails.
-    managers = {
-        "nfl": build_yahoo_manager(config, "nfl", health_state),
-        "nba": build_yahoo_manager(config, "nba", health_state),
-    }
-
-    try:
-        poll_and_handle_telegram(config, pending, managers, health_state, players_nfl, tier_threshold_state)
-    except Exception as e:
-        print(f"poll_and_handle_telegram failed, continuing: {e}")
-
-    # Skip a sport's check entirely if today's schedule (written once a day
-    # by game_schedule_checker.py) says there's nothing happening. If the
-    # file doesn't exist yet (e.g. the daily job hasn't run), default to
-    # checking both -- fail safe rather than fail silent.
-    schedule_windows = load_json(SCHEDULE_WINDOWS_PATH, {})
-    current_schedule = schedule_windows.get("date") == today_et().isoformat()
-    nfl_today = schedule_windows.get("nfl_active_today", True) if current_schedule else True
-    current_nba_schedule = schedule_windows.get("date") == nba_game_day().isoformat()
-    nba_today = schedule_windows.get("nba_active_today", True) if current_nba_schedule else True
-
-    batch = []  # collected across both sports, sent as one message by dispatch_alerts()
-
-    if nfl_today:
-        try:
-            run_football(config, alerted, players_nfl, history, managers["nfl"], batch, health_state)
-        except Exception as e:
-            print(f"run_football failed, continuing to basketball: {e}")
-    else:
-        print("No NFL games scheduled today -- skipping football check.")
-
-    if nba_today:
-        try:
-            run_basketball(config, alerted, players_nba, history, managers["nba"], batch, health_state)
-        except Exception as e:
-            print(f"run_basketball failed: {e}")
-    else:
-        print("No NBA games scheduled today -- skipping basketball check.")
-
-    try:
-        dispatch_alerts(config, pending, batch, health_state)
-    except Exception as e:
-        print(f"dispatch_alerts failed: {e}")
-
-    save_json(ALERTED_PATH, alerted)
-    save_json(PENDING_PATH, pending)
-    save_json(DASHBOARD_HISTORY_PATH, history)
-    save_json(TIER_THRESHOLD_PATH, tier_threshold_state)
-    health.save(health_state)
-    write_dashboard(history, pending, health_state, config)
+    import alert_engine
+    return alert_engine.run_cycle(sys.modules[__name__])
 
 
 if __name__ == "__main__":

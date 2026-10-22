@@ -15,27 +15,38 @@ lists, filtered to the requested date and normalized separately. Set DEBUG
 
 import requests
 import time
+from datetime import date, timedelta
+from scoring import number
 
 DEBUG = False
 
 OFFICIAL_BASE = "https://api.sleeper.app/v1"
 
 _session = requests.Session()
+_request_cache = {}
 
 
 def _get(url, params=None):
+    cache_key = (url, tuple(sorted((params or {}).items())))
+    if cache_key in _request_cache:
+        return _request_cache[cache_key]
     for attempt in range(3):
         try:
             resp = _session.get(url, params=params, timeout=15)
             if DEBUG:
                 print(f"GET {resp.url} -> {resp.status_code}")
             if resp.status_code == 200:
-                return resp.json()
+                result = resp.json()
+                _request_cache[cache_key] = result
+                return result
+            if resp.status_code in (400, 401, 403, 404):
+                break  # retrying the same invalid endpoint only wastes time
             time.sleep(1.5 * (attempt + 1))
-        except requests.RequestException as e:
+        except (requests.RequestException, ValueError) as e:
             if DEBUG:
                 print(f"Request error: {e}")
             time.sleep(1.5 * (attempt + 1))
+    _request_cache[cache_key] = None
     return None
 
 
@@ -179,12 +190,12 @@ def get_nfl_week_stats(season, week, season_type="regular"):
 
 def _normalize_nba_stats(stats):
     """Translate Sleeper's shooting fields to the configured nine categories."""
-    normalized = dict(stats)
-    normalized["fg3m"] = stats.get("tpm", stats.get("fg3m", 0)) or 0
+    normalized = {key: number(value) for key, value in stats.items()}
+    normalized["min"] = normalized.get("min") or normalized.get("sp", 0) / 60
+    normalized["fg3m"] = number(stats.get("tpm", stats.get("fg3m", 0)))
     for percentage, made, attempted in (("fgp", "fgm", "fga"), ("ftp", "ftm", "fta")):
-        attempts = stats.get(attempted) or 0
-        normalized[percentage] = ((stats.get(made) or 0) / attempts if attempts
-                                  else stats.get(percentage, 0) or 0)
+        attempts = normalized.get(attempted) or 0
+        normalized[percentage] = (normalized.get(made, 0) / attempts if attempts else number(stats.get(percentage)))
     return normalized
 
 
@@ -205,13 +216,32 @@ def _get_nba_day_data(kind, date_str, season, season_type, week):
     })
     if not isinstance(records, list):
         return None
-    return {
-        str(record["player_id"]): _normalize_nba_stats(record["stats"])
-        for record in records
-        if isinstance(record, dict) and record.get("date") == date_str
-        and record.get("player_id") is not None
-        and isinstance(record.get("stats"), dict) and record["stats"]
-    }
+    output = {}
+    for record in records:
+        if not isinstance(record, dict) or record.get("date") != date_str or record.get("player_id") is None:
+            continue
+        if not isinstance(record.get("stats"), dict) or not record["stats"]:
+            continue
+        stats = _normalize_nba_stats(record["stats"])
+        player = record.get("player") or {}
+        stats["_meta"] = {"game_id": str(record.get("game_id") or ""), "date": date_str,
+                          "team": record.get("team"), "opponent": record.get("opponent"),
+                          "name": " ".join(filter(None, (player.get("first_name"), player.get("last_name")))),
+                          "updated_at": record.get("updated_at"), "week": record.get("week"),
+                          "position": player.get("position")}
+        output[str(record["player_id"])] = stats
+    return output
+
+
+def nba_week_for_day(day, state):
+    """Use the requested slate's week across Monday and season boundaries."""
+    target = date.fromisoformat(str(day))
+    start = state.get("season_start_date")
+    if start:
+        opening = date.fromisoformat(start)
+        first_monday = opening - timedelta(days=opening.weekday())
+        return max(1, (target - first_monday).days // 7 + 1)
+    return state.get("week")
 
 
 def get_nba_day_projections(date_str, season, season_type="regular", week=None):

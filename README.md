@@ -1,5 +1,9 @@
 # Fantasy Breakout Alert Bot
 
+The current alert, screening, catch-up, Telegram-command and dashboard
+behavior is documented in [docs/FEATURES.md](docs/FEATURES.md), including
+delivery guarantees, configuration defaults and the disabled Yahoo setup.
+
 Messages you on Telegram when an NFL or NBA player massively outperforms
 their projection in a game -- football uses your league's point scoring,
 basketball uses a 9-cat z-score (since there's no single "points" number in
