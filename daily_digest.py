@@ -33,12 +33,12 @@ point won't be included. Check the dashboard for anything from after the
 digest ran.
 """
 
-import json
 import os
 import re
 import sys
 from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
+from state_store import load, save
 
 import telegram_notifier as notifier
 
@@ -49,10 +49,7 @@ ET_ZONE_NAME = "America/New_York"
 
 
 def load_json(path, default):
-    if os.path.exists(path):
-        with open(path) as f:
-            return json.load(f)
-    return default
+    return load(path, default)
 
 
 def _breakout_level(entry):
@@ -87,38 +84,49 @@ def collapse_breakouts(entries):
     """Keep one entry per player/sport, retaining their highest escalation."""
     collapsed = {}
     for entry in entries:
-        key = (entry["sport"], entry["player_name"])
+        key = (entry["sport"], entry["player_name"], entry.get("game_id") or entry.get("game_date", ""))
         level = _breakout_level(entry)
         current = collapsed.get(key)
-        if current is None or level >= current["level"]:
+        priority = {"breakout": 2, "trend": 1, "opportunity": 0}
+        strength = (priority.get(entry.get("kind", "breakout"), 0), level, entry.get("score") or 0)
+        old_strength = (priority.get(current["entry"].get("kind", "breakout"), 0), current["level"], current["entry"].get("score") or 0) if current else None
+        if current is None or strength >= old_strength:
             collapsed[key] = {"level": level, "entry": entry}
     return [
         (sport, name, details["level"], details["entry"])
-        for (sport, name), details in collapsed.items()
+        for (sport, name, game), details in collapsed.items()
     ]
 
 
 def build_digest(today_entries, target_day=None):
     """Format a digest with each player listed once at their highest level."""
     breakouts = collapse_breakouts(today_entries)
-    nfl_entries = [(name, level, _projection_summary(entry))
-                   for sport, name, level, entry in breakouts if sport == "nfl"]
-    nba_entries = [(name, level) for sport, name, level, entry in breakouts if sport == "nba"]
-
     title = f"Breakout digest for {target_day.isoformat()}" if target_day else "Today's breakout digest"
     lines = [f"\U0001F4CB {title} -- {len(breakouts)} total\n"]
-
-    if nfl_entries:
-        lines.append(f"\U0001F3C8 Football ({len(nfl_entries)}):")
-        for name, level, projection in nfl_entries:
-            suffix = f"; {projection}" if projection else ""
-            lines.append(f"  \u2022 {name} — {_breakout_label(level)}{suffix}")
+    for sport, title in (("nfl", "🏈 Football"), ("nba", "🏀 Basketball")):
+        rows = [(name, level, entry) for kind, name, level, entry in breakouts if kind == sport]
+        if not rows:
+            continue
+        lines.append(f"{title} ({len(rows)}):")
+        grouped = {}
+        for row in rows:
+            grouped.setdefault(row[2].get("game_label") or "Other performances", []).append(row)
+        for label, group in grouped.items():
+            lines.append(label)
+            group.sort(key=lambda row: (row[1], row[2].get("score") or 0), reverse=True)
+            for name, level, entry in group:
+                kind = entry.get("kind", "breakout")
+                detail = _breakout_label(level) if kind == "breakout" else kind.upper()
+                projection = _projection_summary(entry) if sport == "nfl" else None
+                if projection:
+                    detail += f"; {projection}"
+                stats = entry.get("actual_stats") or {}
+                if sport == "nba" and stats:
+                    detail += f"; {stats.get('pts', 0):g} PTS / {stats.get('reb', 0):g} REB / {stats.get('ast', 0):g} AST"
+                    if entry.get("score") is not None:
+                        detail += f"; score {entry['score']:g}"
+                lines.append(f"  • {name} — {detail}")
         lines.append("")
-
-    if nba_entries:
-        lines.append(f"\U0001F3C0 Basketball ({len(nba_entries)}):")
-        for name, level in nba_entries:
-            lines.append(f"  \u2022 {name} — {_breakout_label(level)}")
 
     return "\n".join(lines).strip()
 
@@ -129,7 +137,7 @@ def digest_target_day(now=None):
     return now.astimezone(timezone.utc).date() - timedelta(days=1)
 
 
-def send_daily_digest(config, history, state, now=None):
+def send_daily_digest(config, history, state, now=None, persist=None):
     now = now or datetime.now(timezone.utc)
     target_day = digest_target_day(now)
     day_key = target_day.isoformat()
@@ -143,18 +151,33 @@ def send_daily_digest(config, history, state, now=None):
         ts = entry.get("timestamp")
         if not ts or not entry.get("notified", True):
             continue
-        if datetime.fromisoformat(ts).astimezone(et_zone).date() == target_day:
+        entry_day = entry.get("game_date") or datetime.fromisoformat(ts).astimezone(et_zone).date().isoformat()
+        if entry_day == day_key:
             entries.append(entry)
-    if not entries:
+    if not entries and day_key not in state.get("in_progress", {}):
         print(f"No breakouts for {day_key} -- not sending a digest.")
         return False
 
     # Only record delivery after Telegram confirms it. A failed send stays
     # retryable. Workflow concurrency serializes sends and state persistence.
-    message_id = notifier.send_message(config, build_digest(entries, target_day))
+    plan = state.setdefault("in_progress", {}).setdefault(day_key, {
+        "parts": notifier.split_text(build_digest(entries, target_day)), "sent": {},
+    })
+    if persist:
+        persist()
+    for index, part in enumerate(plan["parts"]):
+        if str(index) in plan["sent"]:
+            continue
+        plan["sent"][str(index)] = notifier.send_message(config, part)
+        if persist:
+            persist()
     state.setdefault("sent_days", {})[day_key] = {
-        "sent_at": now.astimezone(timezone.utc).isoformat(), "message_id": message_id,
+        "sent_at": now.astimezone(timezone.utc).isoformat(),
+        "message_id": plan["sent"][str(len(plan["parts"]) - 1)],
     }
+    state["in_progress"].pop(day_key, None)
+    if persist:
+        persist()
     print(f"Digest for {day_key} sent.")
     return True
 
@@ -169,11 +192,7 @@ def main():
     state = load_json(DIGEST_STATE_PATH, {})
 
     try:
-        if send_daily_digest(config, history, state):
-            temp_path = DIGEST_STATE_PATH + ".tmp"
-            with open(temp_path, "w") as f:
-                json.dump(state, f, indent=2)
-            os.replace(temp_path, DIGEST_STATE_PATH)
+        send_daily_digest(config, history, state, persist=lambda: save(DIGEST_STATE_PATH, state))
     except Exception as e:
         print(f"Failed to send digest: {e}")
         sys.exit(1)

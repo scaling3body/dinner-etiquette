@@ -62,8 +62,8 @@ class DailyDigestTests(unittest.TestCase):
         with patch.object(digest.notifier, "send_message", side_effect=RuntimeError("offline")) as send:
             with self.assertRaises(RuntimeError):
                 send_daily_digest({}, history, state, now)
-            self.assertEqual(state, {})
-            self.assertFalse(send_daily_digest({}, [], state, now))
+            self.assertNotIn("2026-10-19", state.get("sent_days", {}))
+            self.assertFalse(send_daily_digest({}, [], {}, now))
             self.assertEqual(send.call_count, 1)
 
     def test_keeps_only_highest_breakout_for_each_player(self):

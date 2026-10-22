@@ -9,6 +9,11 @@ import sleeper_client as sleeper
 
 
 class NbaDataTests(unittest.TestCase):
+    def setUp(self):
+        scoreboard = patch("game_context.fetch_games", return_value=None)
+        scoreboard.start()
+        self.addCleanup(scoreboard.stop)
+
     def test_overnight_check_keeps_the_evenings_game_date(self):
         for timestamp in ["2026-10-22T00:58:00+00:00", "2026-10-22T04:30:00+00:00",
                           "2026-10-22T09:59:00+00:00"]:
@@ -81,7 +86,7 @@ class NbaDataTests(unittest.TestCase):
                               for pid, stats in projections.items()]
         stats_records = [{"player_id": "0", "date": "2026-10-20", "stats": {
             "pts": 40, "reb": 15, "ast": 12, "stl": 4, "blk": 4, "tpm": 6,
-            "fgm": 15, "fga": 20, "ftm": 4, "fta": 4, "to": 1,
+            "fgm": 15, "fga": 20, "ftm": 4, "fta": 4, "to": 1, "sp": 1800,
         }}]
         batch, history, state = [], [], {}
         with patch.object(main, "nba_game_day", return_value=date(2026, 10, 20)), \
@@ -93,7 +98,8 @@ class NbaDataTests(unittest.TestCase):
                                 history, None, batch, state)
         self.assertEqual(len(batch), 1)
         self.assertTrue(batch[0]["send"])
-        self.assertEqual(history[0]["sport"], "nba")
+        self.assertEqual(history, [])  # detection is not confirmed delivery
+        self.assertEqual(batch[0]["history"]["sport"], "nba")
         self.assertEqual(state["sleeper_nba"]["consecutive_failures"], 0)
         send.assert_not_called()
 

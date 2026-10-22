@@ -7,3 +7,4 @@ oauth2.json
 __pycache__/
 *.pyc
 .venv/
+*.json.tmp

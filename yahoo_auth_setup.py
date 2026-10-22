@@ -38,7 +38,7 @@ def main():
 
     # This will walk you through the interactive browser-based OAuth flow
     # and rewrite oauth2.json with access_token / refresh_token included.
-    sc = OAuth2(None, None, from_file="oauth2.json")
+    OAuth2(None, None, from_file="oauth2.json")
     print("\nAuthenticated! oauth2.json now contains your tokens.")
     print("Paste the FULL CONTENTS of oauth2.json into a GitHub secret named YAHOO_OAUTH_JSON.")
 

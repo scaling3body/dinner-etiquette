@@ -30,6 +30,7 @@ every single player.
 """
 
 import re
+import unicodedata
 from yahoo_oauth import OAuth2
 import yahoo_fantasy_api as yfa
 
@@ -43,7 +44,11 @@ ALL_POSITIONS = ("QB", "RB", "WR", "TE", "K", "DEF",
 
 
 def _normalize(name):
-    return re.sub(r"[^a-z]", "", name.lower())
+    if isinstance(name, dict):
+        name = name.get("full", "")
+    name = unicodedata.normalize("NFKD", name or "").encode("ascii", "ignore").decode().lower()
+    name = re.sub(r"\b(jr|sr|ii|iii|iv)\b\.?", "", name)
+    return re.sub(r"[^a-z]", "", name)
 
 
 class YahooRosterManager:
@@ -60,6 +65,10 @@ class YahooRosterManager:
         self.team = self.league.to_team(team_key)
         self._free_agent_cache = None  # populated lazily, reused for this instance's life
         self._open_slot_cache = None
+        self.sport = sport
+        self._roster_cache = None
+        self._settings_cache = None
+        self._name_index = None
 
     def _get_available_players(self):
         """
@@ -72,11 +81,11 @@ class YahooRosterManager:
             return self._free_agent_cache
 
         candidates = []
-        for pos in ALL_POSITIONS:
-            try:
-                candidates.extend(self.league.free_agents(pos))
-            except Exception:
-                continue
+        positions = ("QB", "RB", "WR", "TE", "K", "DEF") if self.sport == "nfl" else ("PG", "SG", "SF", "PF", "C")
+        # A failed scan must not silently classify missing players as rostered.
+        for pos in positions:
+            candidates.extend(dict(p, status="FA") for p in self.league.free_agents(pos))
+        candidates.extend(dict(p, status="W") for p in self.league.waivers())
 
         seen_ids = set()
         deduped = []
@@ -86,7 +95,26 @@ class YahooRosterManager:
                 deduped.append(c)
 
         self._free_agent_cache = deduped
+        self._name_index = {}
+        for candidate in deduped:
+            self._name_index.setdefault(_normalize(candidate["name"]), []).append(candidate)
         return deduped
+
+    def roster(self):
+        if self._roster_cache is None:
+            self._roster_cache = self.team.roster()
+        return self._roster_cache
+
+    def roster_context(self, position=None):
+        roster = self.roster()
+        injured = sum(bool(p.get("status") or p.get("injury_status")) for p in roster)
+        matches = sum(position in (p.get("eligible_positions") or []) for p in roster) if position else None
+        parts = ["Open active/bench slot" if self.get_open_bench_or_ir_slots() else "Roster full; no automatic drop suggested"]
+        if matches is not None:
+            parts.append(f"{matches} roster players eligible at {position}")
+        if injured:
+            parts.append(f"{injured} roster players carry status flags")
+        return "; ".join(parts)
 
     def get_open_bench_or_ir_slots(self):
         """
@@ -99,28 +127,14 @@ class YahooRosterManager:
         if self._open_slot_cache is not None:
             return self._open_slot_cache
 
-        settings = self.league.settings()
-        roster_positions = settings.get("roster_positions", [])
-        allowed = {}
-        for rp in roster_positions:
-            pos = rp.get("roster_position", {}).get("position")
-            count = int(rp.get("roster_position", {}).get("count", 0))
-            if pos:
-                allowed[pos] = allowed.get(pos, 0) + count
-
-        roster = self.team.roster()
-        filled = {}
-        for p in roster:
-            pos = p.get("selected_position")
-            if pos:
-                filled[pos] = filled.get(pos, 0) + 1
-
-        for bench_like in ("BN", "IR", "IR+"):
-            if allowed.get(bench_like, 0) > filled.get(bench_like, 0):
-                self._open_slot_cache = True
-                return True
-        self._open_slot_cache = False
-        return False
+        allowed = {position: int(info.get("count", 0)) for position, info in self.league.positions().items()}
+        roster = self.roster()
+        reserved = {"IR", "IR+", "IL", "IL+", "NA"}
+        capacity = sum(count for position, count in allowed.items() if position not in reserved)
+        filled = sum(p.get("selected_position") not in reserved for p in roster)
+        # An empty IR-only slot does not make a healthy free agent addable.
+        self._open_slot_cache = capacity > filled
+        return self._open_slot_cache
 
     def find_player(self, full_name, team_abbr=None, position=None):
         """
@@ -136,7 +150,8 @@ class YahooRosterManager:
         match, same as before this existed.
         """
         target = _normalize(full_name)
-        matches = [c for c in self._get_available_players() if _normalize(c["name"]) == target]
+        self._get_available_players()
+        matches = list(self._name_index.get(target, []))
 
         if not matches:
             return None
@@ -150,6 +165,8 @@ class YahooRosterManager:
                 matches = team_matches
                 if len(matches) == 1:
                     return matches[0]
+            else:
+                raise ValueError("Ambiguous Yahoo names with no team match")
 
         # Still ambiguous -- narrow by position if we have it on both sides.
         if position:
@@ -162,7 +179,9 @@ class YahooRosterManager:
             if pos_matches:
                 matches = pos_matches
 
-        return matches[0]  # best effort if still ambiguous after all filters
+        if len(matches) != 1:
+            raise ValueError("Ambiguous Yahoo player match; no roster action offered")
+        return matches[0]
 
     def get_player_status(self, full_name, team_abbr=None, position=None):
         """
@@ -174,7 +193,8 @@ class YahooRosterManager:
         """
         match = self.find_player(full_name, team_abbr, position)
         if not match:
-            return "Rostered", None
+            own = any(_normalize(p.get("name")) == _normalize(full_name) for p in self.roster())
+            return "On your roster" if own else "Rostered / unavailable", None
         label = STATUS_LABELS.get(match.get("status"), "Available")
         return label, match
 
@@ -190,4 +210,11 @@ class YahooRosterManager:
         yahoo_fantasy_api's Team.add_player signature for your installed
         version.
         """
+        self._roster_cache = self._open_slot_cache = self._free_agent_cache = self._name_index = None
+        if not self.get_open_bench_or_ir_slots():
+            raise ValueError("No open bench/IR slot; roster move refused")
+        available = next((p for p in self._get_available_players() if str(p["player_id"]) == str(player_id)), None)
+        if not available or available.get("status") != "FA":
+            raise ValueError("Player is not currently a free agent; roster move refused")
         self.team.add_player(player_id)
+        self._roster_cache = self._open_slot_cache = self._free_agent_cache = self._name_index = None

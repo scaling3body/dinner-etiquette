@@ -1,0 +1,25 @@
+name: Bot regression tests
+on:
+  pull_request:
+    paths: ["**.py", "**.js", "requirements.txt", ".github/workflows/**", "docs/**", "config*.json"]
+  push:
+    branches: [main]
+    paths: ["**.py", "**.js", "requirements.txt", ".github/workflows/**", "docs/**", "config*.json"]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Run offline regression tests (no notifications or roster moves)
+        run: python -m unittest discover -v
+      - name: Check dashboard JavaScript
+        run: |
+          node --check docs/dashboard.js
+          node test_dashboard.js
