@@ -1,0 +1,2252 @@
+{
+  "players": {
+    "nba:1362": [
+      {
+        "date": "2026-10-20",
+        "score": 1.41,
+        "qualifies": false,
+        "minutes": 33.75
+      }
+    ],
+    "nba:1534": [
+      {
+        "date": "2026-10-20",
+        "score": -1.14,
+        "qualifies": false,
+        "minutes": 8.48
+      }
+    ],
+    "nba:1801": [
+      {
+        "date": "2026-10-20",
+        "score": 0.53,
+        "qualifies": false,
+        "minutes": 24.7
+      }
+    ],
+    "nba:1872": [
+      {
+        "date": "2026-10-20",
+        "score": -0.07,
+        "qualifies": false,
+        "minutes": 31.93
+      }
+    ],
+    "nba:1899": [
+      {
+        "date": "2026-10-20",
+        "score": -1.38,
+        "qualifies": false,
+        "minutes": 24.52
+      }
+    ],
+    "nba:1957": [
+      {
+        "date": "2026-10-20",
+        "score": 7.75,
+        "qualifies": true,
+        "minutes": 36.08
+      }
+    ],
+    "nba:2065": [
+      {
+        "date": "2026-10-20",
+        "score": 0.54,
+        "qualifies": false,
+        "minutes": 19.63
+      }
+    ],
+    "nba:2267": [
+      {
+        "date": "2026-10-20",
+        "score": -2.03,
+        "qualifies": false,
+        "minutes": 35.28
+      }
+    ],
+    "nba:2566": [
+      {
+        "date": "2026-10-20",
+        "score": -0.58,
+        "qualifies": false,
+        "minutes": 33.25
+      }
+    ],
+    "nba:2772": [
+      {
+        "date": "2026-10-20",
+        "score": -3.84,
+        "qualifies": false,
+        "minutes": 22.67
+      }
+    ],
+    "nba:4752": [
+      {
+        "date": "2026-10-20",
+        "score": -1.37,
+        "qualifies": false,
+        "minutes": 9.72
+      }
+    ],
+    "nba:4753": [
+      {
+        "date": "2026-10-20",
+        "score": -2.33,
+        "qualifies": false,
+        "minutes": 6.48
+      }
+    ],
+    "nba:1141": [
+      {
+        "date": "2026-10-20",
+        "score": 3.53,
+        "qualifies": false,
+        "minutes": 26.1
+      }
+    ],
+    "nba:1934": [
+      {
+        "date": "2026-10-20",
+        "score": -3.49,
+        "qualifies": false,
+        "minutes": 17.42
+      }
+    ],
+    "nba:2146": [
+      {
+        "date": "2026-10-20",
+        "score": -5.53,
+        "qualifies": false,
+        "minutes": 30.87
+      }
+    ],
+    "nba:2268": [
+      {
+        "date": "2026-10-20",
+        "score": -1.27,
+        "qualifies": false,
+        "minutes": 8.35
+      }
+    ],
+    "nba:2494": [
+      {
+        "date": "2026-10-20",
+        "score": 5.79,
+        "qualifies": false,
+        "minutes": 30.02
+      }
+    ],
+    "nba:2577": [
+      {
+        "date": "2026-10-20",
+        "score": -1.01,
+        "qualifies": false,
+        "minutes": 34.15
+      }
+    ],
+    "nba:1131": [
+      {
+        "date": "2026-10-20",
+        "score": 7.94,
+        "qualifies": true,
+        "minutes": 24.45
+      }
+    ],
+    "nba:1759": [
+      {
+        "date": "2026-10-20",
+        "score": -0.73,
+        "qualifies": false,
+        "minutes": 12.62
+      }
+    ],
+    "nba:1803": [
+      {
+        "date": "2026-10-20",
+        "score": -0.21,
+        "qualifies": false,
+        "minutes": 30.27
+      }
+    ],
+    "nba:1822": [
+      {
+        "date": "2026-10-20",
+        "score": -6.01,
+        "qualifies": false,
+        "minutes": 37.82
+      }
+    ],
+    "nba:1831": [
+      {
+        "date": "2026-10-20",
+        "score": -5.43,
+        "qualifies": false,
+        "minutes": 31.58
+      }
+    ],
+    "nba:1961": [
+      {
+        "date": "2026-10-20",
+        "score": 4.0,
+        "qualifies": false,
+        "minutes": 27.82
+      }
+    ],
+    "nba:1967": [
+      {
+        "date": "2026-10-20",
+        "score": -4.96,
+        "qualifies": false,
+        "minutes": 34.08
+      }
+    ],
+    "nba:1975": [
+      {
+        "date": "2026-10-20",
+        "score": -6.5,
+        "qualifies": false,
+        "minutes": 33.05
+      }
+    ],
+    "nba:2256": [
+      {
+        "date": "2026-10-20",
+        "score": -4.99,
+        "qualifies": false,
+        "minutes": 13.5
+      }
+    ],
+    "nba:2722": [
+      {
+        "date": "2026-10-20",
+        "score": -1.29,
+        "qualifies": false,
+        "minutes": 28.38
+      }
+    ],
+    "nba:1613": [
+      {
+        "date": "2026-10-20",
+        "score": -0.64,
+        "qualifies": false,
+        "minutes": 23.55
+      }
+    ],
+    "nba:1711": [
+      {
+        "date": "2026-10-20",
+        "score": 2.82,
+        "qualifies": false,
+        "minutes": 34.9
+      }
+    ],
+    "nba:1830": [
+      {
+        "date": "2026-10-20",
+        "score": -1.27,
+        "qualifies": false,
+        "minutes": 35.92
+      }
+    ],
+    "nba:1887": [
+      {
+        "date": "2026-10-20",
+        "score": -1.83,
+        "qualifies": false,
+        "minutes": 18.1
+      }
+    ],
+    "nba:2126": [
+      {
+        "date": "2026-10-20",
+        "score": 7.42,
+        "qualifies": true,
+        "minutes": 39.57
+      }
+    ],
+    "nba:2128": [
+      {
+        "date": "2026-10-20",
+        "score": -1.65,
+        "qualifies": false,
+        "minutes": 16.7
+      }
+    ],
+    "nba:2329": [
+      {
+        "date": "2026-10-20",
+        "score": 2.04,
+        "qualifies": false,
+        "minutes": 18.17
+      }
+    ],
+    "nba:2438": [
+      {
+        "date": "2026-10-20",
+        "score": 1.68,
+        "qualifies": false,
+        "minutes": 28.03
+      }
+    ],
+    "nba:2475": [
+      {
+        "date": "2026-10-20",
+        "score": -4.06,
+        "qualifies": false,
+        "minutes": 16.87
+      }
+    ],
+    "nba:2713": [
+      {
+        "date": "2026-10-20",
+        "score": 6.57,
+        "qualifies": true,
+        "minutes": 22.15
+      }
+    ],
+    "nba:2749": [
+      {
+        "date": "2026-10-20",
+        "score": -2.3,
+        "qualifies": false,
+        "minutes": 9.58
+      }
+    ],
+    "nba:4754": [
+      {
+        "date": "2026-10-20",
+        "score": -2.0,
+        "qualifies": false,
+        "minutes": 31.7
+      }
+    ],
+    "nba:1074": [
+      {
+        "date": "2026-10-20",
+        "score": 15.83,
+        "qualifies": true,
+        "minutes": 30.58
+      }
+    ],
+    "nba:1511": [
+      {
+        "date": "2026-10-20",
+        "score": 3.27,
+        "qualifies": false,
+        "minutes": 33.43
+      }
+    ],
+    "nba:1809": [
+      {
+        "date": "2026-10-20",
+        "score": -1.76,
+        "qualifies": false,
+        "minutes": 25.47
+      }
+    ],
+    "nba:1941": [
+      {
+        "date": "2026-10-20",
+        "score": -1.29,
+        "qualifies": false,
+        "minutes": 18.27
+      }
+    ],
+    "nba:2125": [
+      {
+        "date": "2026-10-20",
+        "score": -0.1,
+        "qualifies": false,
+        "minutes": 19.28
+      }
+    ],
+    "nba:2302": [
+      {
+        "date": "2026-10-20",
+        "score": 0.44,
+        "qualifies": false,
+        "minutes": 22.13
+      }
+    ],
+    "nba:2453": [
+      {
+        "date": "2026-10-20",
+        "score": -1.23,
+        "qualifies": false,
+        "minutes": 29.93
+      }
+    ],
+    "nba:2477": [
+      {
+        "date": "2026-10-20",
+        "score": -2.22,
+        "qualifies": false,
+        "minutes": 2.62
+      }
+    ],
+    "nba:2608": [
+      {
+        "date": "2026-10-20",
+        "score": 1.09,
+        "qualifies": false,
+        "minutes": 13.47
+      }
+    ],
+    "nba:2721": [
+      {
+        "date": "2026-10-20",
+        "score": 2.58,
+        "qualifies": false,
+        "minutes": 18.23
+      }
+    ],
+    "nba:2776": [
+      {
+        "date": "2026-10-20",
+        "score": -3.94,
+        "qualifies": false,
+        "minutes": 15.33
+      }
+    ],
+    "nba:4737": [
+      {
+        "date": "2026-10-20",
+        "score": -5.6,
+        "qualifies": false,
+        "minutes": 34.75
+      }
+    ],
+    "nba:4888": [
+      {
+        "date": "2026-10-20",
+        "score": 2.24,
+        "qualifies": false,
+        "minutes": 11.72
+      }
+    ],
+    "nba:1092": [
+      {
+        "date": "2026-10-20",
+        "score": -0.34,
+        "qualifies": false,
+        "minutes": 9.27
+      }
+    ],
+    "nba:1983": [
+      {
+        "date": "2026-10-20",
+        "score": 1.48,
+        "qualifies": false,
+        "minutes": 25.27
+      }
+    ],
+    "nba:2142": [
+      {
+        "date": "2026-10-20",
+        "score": -2.63,
+        "qualifies": false,
+        "minutes": 27.5
+      }
+    ],
+    "nba:2322": [
+      {
+        "date": "2026-10-20",
+        "score": 5.37,
+        "qualifies": false,
+        "minutes": 16.48
+      }
+    ],
+    "nba:2455": [
+      {
+        "date": "2026-10-20",
+        "score": 2.08,
+        "qualifies": false,
+        "minutes": 30.52
+      }
+    ],
+    "nba:2586": [
+      {
+        "date": "2026-10-20",
+        "score": -4.42,
+        "qualifies": false,
+        "minutes": 19.25
+      }
+    ],
+    "nba:2836": [
+      {
+        "date": "2026-10-20",
+        "score": -3.47,
+        "qualifies": false,
+        "minutes": 2.75
+      }
+    ],
+    "nba:1589": [
+      {
+        "date": "2026-10-21",
+        "score": -0.62,
+        "qualifies": false,
+        "minutes": 24.58
+      }
+    ],
+    "nba:1604": [
+      {
+        "date": "2026-10-21",
+        "score": -3.49,
+        "qualifies": false,
+        "minutes": 27.73
+      }
+    ],
+    "nba:1671": [
+      {
+        "date": "2026-10-21",
+        "score": -2.38,
+        "qualifies": false,
+        "minutes": 19.88
+      }
+    ],
+    "nba:1713": [
+      {
+        "date": "2026-10-21",
+        "score": 6.12,
+        "qualifies": true,
+        "minutes": 34.35
+      }
+    ],
+    "nba:1841": [
+      {
+        "date": "2026-10-21",
+        "score": 1.96,
+        "qualifies": false,
+        "minutes": 17.15
+      }
+    ],
+    "nba:1913": [
+      {
+        "date": "2026-10-21",
+        "score": -5.87,
+        "qualifies": false,
+        "minutes": 28.65
+      }
+    ],
+    "nba:1924": [
+      {
+        "date": "2026-10-21",
+        "score": -2.5,
+        "qualifies": false,
+        "minutes": 28.08
+      }
+    ],
+    "nba:2036": [
+      {
+        "date": "2026-10-21",
+        "score": 4.04,
+        "qualifies": false,
+        "minutes": 32.68
+      }
+    ],
+    "nba:2133": [
+      {
+        "date": "2026-10-21",
+        "score": 11.99,
+        "qualifies": true,
+        "minutes": 32.6
+      }
+    ],
+    "nba:2136": [
+      {
+        "date": "2026-10-21",
+        "score": -7.2,
+        "qualifies": false,
+        "minutes": 29.3
+      }
+    ],
+    "nba:2141": [
+      {
+        "date": "2026-10-21",
+        "score": -1.51,
+        "qualifies": false,
+        "minutes": 3.23
+      }
+    ],
+    "nba:2145": [
+      {
+        "date": "2026-10-21",
+        "score": -3.45,
+        "qualifies": false,
+        "minutes": 13.4
+      }
+    ],
+    "nba:2286": [
+      {
+        "date": "2026-10-21",
+        "score": -4.95,
+        "qualifies": false,
+        "minutes": 16.9
+      }
+    ],
+    "nba:2301": [
+      {
+        "date": "2026-10-21",
+        "score": -3.18,
+        "qualifies": false,
+        "minutes": 32.83
+      }
+    ],
+    "nba:2305": [
+      {
+        "date": "2026-10-21",
+        "score": -5.56,
+        "qualifies": false,
+        "minutes": 32.08
+      }
+    ],
+    "nba:2313": [
+      {
+        "date": "2026-10-21",
+        "score": -12.02,
+        "qualifies": false,
+        "minutes": 24.02
+      }
+    ],
+    "nba:2324": [
+      {
+        "date": "2026-10-21",
+        "score": 0.03,
+        "qualifies": false,
+        "minutes": 20.7
+      }
+    ],
+    "nba:2447": [
+      {
+        "date": "2026-10-21",
+        "score": -4.4,
+        "qualifies": false,
+        "minutes": 3.08
+      }
+    ],
+    "nba:2449": [
+      {
+        "date": "2026-10-21",
+        "score": 3.54,
+        "qualifies": false,
+        "minutes": 34.63
+      }
+    ],
+    "nba:2482": [
+      {
+        "date": "2026-10-21",
+        "score": 1.14,
+        "qualifies": false,
+        "minutes": 21.07
+      }
+    ],
+    "nba:2537": [
+      {
+        "date": "2026-10-21",
+        "score": -7.39,
+        "qualifies": false,
+        "minutes": 13.85
+      }
+    ],
+    "nba:2562": [
+      {
+        "date": "2026-10-21",
+        "score": -2.8,
+        "qualifies": false,
+        "minutes": 12.17
+      }
+    ],
+    "nba:2581": [
+      {
+        "date": "2026-10-21",
+        "score": -5.03,
+        "qualifies": false,
+        "minutes": 13.57
+      }
+    ],
+    "nba:2716": [
+      {
+        "date": "2026-10-21",
+        "score": -3.31,
+        "qualifies": false,
+        "minutes": 19.72
+      }
+    ],
+    "nba:2733": [
+      {
+        "date": "2026-10-21",
+        "score": -4.9,
+        "qualifies": false,
+        "minutes": 24.3
+      }
+    ],
+    "nba:2753": [
+      {
+        "date": "2026-10-21",
+        "score": 2.81,
+        "qualifies": false,
+        "minutes": 27.73
+      }
+    ],
+    "nba:2768": [
+      {
+        "date": "2026-10-21",
+        "score": 0.66,
+        "qualifies": false,
+        "minutes": 23.87
+      }
+    ],
+    "nba:4744": [
+      {
+        "date": "2026-10-21",
+        "score": -8.18,
+        "qualifies": false,
+        "minutes": 26.78
+      }
+    ],
+    "nba:4751": [
+      {
+        "date": "2026-10-21",
+        "score": 2.98,
+        "qualifies": false,
+        "minutes": 18.08
+      }
+    ],
+    "nba:4755": [
+      {
+        "date": "2026-10-21",
+        "score": -0.74,
+        "qualifies": false,
+        "minutes": 19.62
+      }
+    ],
+    "nba:4758": [
+      {
+        "date": "2026-10-21",
+        "score": 4.16,
+        "qualifies": false,
+        "minutes": 24.3
+      }
+    ],
+    "nba:4759": [
+      {
+        "date": "2026-10-21",
+        "score": 7.66,
+        "qualifies": true,
+        "minutes": 26.18
+      }
+    ],
+    "nba:4764": [
+      {
+        "date": "2026-10-21",
+        "score": -6.06,
+        "qualifies": false,
+        "minutes": 16.75
+      }
+    ],
+    "nba:4778": [
+      {
+        "date": "2026-10-21",
+        "score": -4.31,
+        "qualifies": false,
+        "minutes": 26.8
+      }
+    ],
+    "nba:4787": [
+      {
+        "date": "2026-10-21",
+        "score": -1.48,
+        "qualifies": false,
+        "minutes": 18.73
+      }
+    ],
+    "nba:4791": [
+      {
+        "date": "2026-10-21",
+        "score": 0.44,
+        "qualifies": false,
+        "minutes": 12.0
+      }
+    ],
+    "nba:4873": [
+      {
+        "date": "2026-10-21",
+        "score": -6.14,
+        "qualifies": false,
+        "minutes": 33.1
+      }
+    ],
+    "nba:4882": [
+      {
+        "date": "2026-10-21",
+        "score": -6.12,
+        "qualifies": false,
+        "minutes": 31.1
+      }
+    ],
+    "nba:4890": [
+      {
+        "date": "2026-10-21",
+        "score": -1.88,
+        "qualifies": false,
+        "minutes": 5.25
+      }
+    ],
+    "nba:1085": [
+      {
+        "date": "2026-10-21",
+        "score": -2.92,
+        "qualifies": false,
+        "minutes": 21.17
+      }
+    ],
+    "nba:1178": [
+      {
+        "date": "2026-10-21",
+        "score": 2.48,
+        "qualifies": false,
+        "minutes": 27.12
+      }
+    ],
+    "nba:1308": [
+      {
+        "date": "2026-10-21",
+        "score": 4.9,
+        "qualifies": false,
+        "minutes": 23.93
+      }
+    ],
+    "nba:1350": [
+      {
+        "date": "2026-10-21",
+        "score": -5.7,
+        "qualifies": false,
+        "minutes": 33.48
+      }
+    ],
+    "nba:1380": [
+      {
+        "date": "2026-10-21",
+        "score": -4.88,
+        "qualifies": false,
+        "minutes": 29.78
+      }
+    ],
+    "nba:1444": [
+      {
+        "date": "2026-10-21",
+        "score": 7.06,
+        "qualifies": true,
+        "minutes": 23.85
+      }
+    ],
+    "nba:1525": [
+      {
+        "date": "2026-10-21",
+        "score": -7.18,
+        "qualifies": false,
+        "minutes": 27.32
+      }
+    ],
+    "nba:1535": [
+      {
+        "date": "2026-10-21",
+        "score": 4.66,
+        "qualifies": false,
+        "minutes": 37.83
+      }
+    ],
+    "nba:1548": [
+      {
+        "date": "2026-10-21",
+        "score": 0.48,
+        "qualifies": false,
+        "minutes": 4.98
+      }
+    ],
+    "nba:1691": [
+      {
+        "date": "2026-10-21",
+        "score": 7.46,
+        "qualifies": true,
+        "minutes": 26.85
+      }
+    ],
+    "nba:1739": [
+      {
+        "date": "2026-10-21",
+        "score": 2.56,
+        "qualifies": false,
+        "minutes": 33.57
+      }
+    ],
+    "nba:1799": [
+      {
+        "date": "2026-10-21",
+        "score": 0.24,
+        "qualifies": false,
+        "minutes": 27.08
+      }
+    ],
+    "nba:1846": [
+      {
+        "date": "2026-10-21",
+        "score": -0.82,
+        "qualifies": false,
+        "minutes": 30.52
+      }
+    ],
+    "nba:1959": [
+      {
+        "date": "2026-10-21",
+        "score": 0.76,
+        "qualifies": false,
+        "minutes": 28.8
+      }
+    ],
+    "nba:1972": [
+      {
+        "date": "2026-10-21",
+        "score": -7.8,
+        "qualifies": false,
+        "minutes": 20.85
+      }
+    ],
+    "nba:2120": [
+      {
+        "date": "2026-10-21",
+        "score": -1.01,
+        "qualifies": false,
+        "minutes": 17.7
+      }
+    ],
+    "nba:2161": [
+      {
+        "date": "2026-10-21",
+        "score": 0.98,
+        "qualifies": false,
+        "minutes": 33.52
+      }
+    ],
+    "nba:2179": [
+      {
+        "date": "2026-10-21",
+        "score": 1.31,
+        "qualifies": false,
+        "minutes": 28.58
+      }
+    ],
+    "nba:2181": [
+      {
+        "date": "2026-10-21",
+        "score": 1.32,
+        "qualifies": false,
+        "minutes": 23.45
+      }
+    ],
+    "nba:2233": [
+      {
+        "date": "2026-10-21",
+        "score": 2.35,
+        "qualifies": false,
+        "minutes": 28.73
+      }
+    ],
+    "nba:2260": [
+      {
+        "date": "2026-10-21",
+        "score": -3.54,
+        "qualifies": false,
+        "minutes": 14.87
+      }
+    ],
+    "nba:2280": [
+      {
+        "date": "2026-10-21",
+        "score": 2.58,
+        "qualifies": false,
+        "minutes": 24.07
+      }
+    ],
+    "nba:2303": [
+      {
+        "date": "2026-10-21",
+        "score": -3.52,
+        "qualifies": false,
+        "minutes": 3.85
+      }
+    ],
+    "nba:2397": [
+      {
+        "date": "2026-10-21",
+        "score": 4.4,
+        "qualifies": false,
+        "minutes": 17.82
+      }
+    ],
+    "nba:2444": [
+      {
+        "date": "2026-10-21",
+        "score": 1.31,
+        "qualifies": false,
+        "minutes": 17.93
+      }
+    ],
+    "nba:2445": [
+      {
+        "date": "2026-10-21",
+        "score": 7.41,
+        "qualifies": true,
+        "minutes": 36.47
+      }
+    ],
+    "nba:2474": [
+      {
+        "date": "2026-10-21",
+        "score": 5.61,
+        "qualifies": false,
+        "minutes": 33.63
+      }
+    ],
+    "nba:2480": [
+      {
+        "date": "2026-10-21",
+        "score": -1.15,
+        "qualifies": false,
+        "minutes": 24.03
+      }
+    ],
+    "nba:2521": [
+      {
+        "date": "2026-10-21",
+        "score": 6.81,
+        "qualifies": true,
+        "minutes": 15.52
+      }
+    ],
+    "nba:2583": [
+      {
+        "date": "2026-10-21",
+        "score": 1.43,
+        "qualifies": false,
+        "minutes": 31.38
+      }
+    ],
+    "nba:2621": [
+      {
+        "date": "2026-10-21",
+        "score": -4.4,
+        "qualifies": false,
+        "minutes": 26.0
+      }
+    ],
+    "nba:2719": [
+      {
+        "date": "2026-10-21",
+        "score": -3.56,
+        "qualifies": false,
+        "minutes": 15.75
+      }
+    ],
+    "nba:2720": [
+      {
+        "date": "2026-10-21",
+        "score": 10.73,
+        "qualifies": true,
+        "minutes": 29.92
+      }
+    ],
+    "nba:2724": [
+      {
+        "date": "2026-10-21",
+        "score": -5.47,
+        "qualifies": false,
+        "minutes": 15.7
+      }
+    ],
+    "nba:2766": [
+      {
+        "date": "2026-10-21",
+        "score": -3.1,
+        "qualifies": false,
+        "minutes": 8.97
+      }
+    ],
+    "nba:4748": [
+      {
+        "date": "2026-10-21",
+        "score": -2.9,
+        "qualifies": false,
+        "minutes": 27.82
+      }
+    ],
+    "nba:4765": [
+      {
+        "date": "2026-10-21",
+        "score": 4.68,
+        "qualifies": false,
+        "minutes": 14.35
+      }
+    ],
+    "nba:4773": [
+      {
+        "date": "2026-10-21",
+        "score": 3.93,
+        "qualifies": false,
+        "minutes": 20.17
+      }
+    ],
+    "nba:4777": [
+      {
+        "date": "2026-10-21",
+        "score": 2.36,
+        "qualifies": false,
+        "minutes": 13.97
+      }
+    ],
+    "nba:4876": [
+      {
+        "date": "2026-10-21",
+        "score": -2.32,
+        "qualifies": false,
+        "minutes": 15.23
+      }
+    ],
+    "nba:4880": [
+      {
+        "date": "2026-10-21",
+        "score": 6.57,
+        "qualifies": true,
+        "minutes": 19.45
+      }
+    ],
+    "nba:1029": [
+      {
+        "date": "2026-10-21",
+        "score": -2.49,
+        "qualifies": false,
+        "minutes": 17.88
+      }
+    ],
+    "nba:1081": [
+      {
+        "date": "2026-10-21",
+        "score": -2.1,
+        "qualifies": false,
+        "minutes": 16.25
+      }
+    ],
+    "nba:1257": [
+      {
+        "date": "2026-10-21",
+        "score": -3.74,
+        "qualifies": false,
+        "minutes": 17.3
+      }
+    ],
+    "nba:1450": [
+      {
+        "date": "2026-10-21",
+        "score": -0.97,
+        "qualifies": false,
+        "minutes": 24.65
+      }
+    ],
+    "nba:1526": [
+      {
+        "date": "2026-10-21",
+        "score": -1.88,
+        "qualifies": false,
+        "minutes": 34.22
+      }
+    ],
+    "nba:1541": [
+      {
+        "date": "2026-10-21",
+        "score": -4.43,
+        "qualifies": false,
+        "minutes": 7.85
+      }
+    ],
+    "nba:1637": [
+      {
+        "date": "2026-10-21",
+        "score": -1.79,
+        "qualifies": false,
+        "minutes": 22.25
+      }
+    ],
+    "nba:1716": [
+      {
+        "date": "2026-10-21",
+        "score": -2.87,
+        "qualifies": false,
+        "minutes": 35.28
+      }
+    ],
+    "nba:1717": [
+      {
+        "date": "2026-10-21",
+        "score": 6.33,
+        "qualifies": true,
+        "minutes": 29.57
+      }
+    ],
+    "nba:1718": [
+      {
+        "date": "2026-10-21",
+        "score": -1.76,
+        "qualifies": false,
+        "minutes": 21.8
+      }
+    ],
+    "nba:1726": [
+      {
+        "date": "2026-10-21",
+        "score": -7.14,
+        "qualifies": false,
+        "minutes": 18.3
+      }
+    ],
+    "nba:1932": [
+      {
+        "date": "2026-10-21",
+        "score": -1.03,
+        "qualifies": false,
+        "minutes": 15.82
+      }
+    ],
+    "nba:1970": [
+      {
+        "date": "2026-10-21",
+        "score": 2.6,
+        "qualifies": false,
+        "minutes": 29.7
+      }
+    ],
+    "nba:2012": [
+      {
+        "date": "2026-10-21",
+        "score": -0.47,
+        "qualifies": false,
+        "minutes": 14.65
+      }
+    ],
+    "nba:2040": [
+      {
+        "date": "2026-10-21",
+        "score": 9.34,
+        "qualifies": true,
+        "minutes": 22.6
+      }
+    ],
+    "nba:2131": [
+      {
+        "date": "2026-10-21",
+        "score": -2.59,
+        "qualifies": false,
+        "minutes": 23.62
+      }
+    ],
+    "nba:2143": [
+      {
+        "date": "2026-10-21",
+        "score": -0.19,
+        "qualifies": false,
+        "minutes": 33.1
+      }
+    ],
+    "nba:2258": [
+      {
+        "date": "2026-10-21",
+        "score": 1.41,
+        "qualifies": false,
+        "minutes": 27.47
+      }
+    ],
+    "nba:2306": [
+      {
+        "date": "2026-10-21",
+        "score": 6.37,
+        "qualifies": true,
+        "minutes": 29.5
+      }
+    ],
+    "nba:2309": [
+      {
+        "date": "2026-10-21",
+        "score": -4.49,
+        "qualifies": false,
+        "minutes": 24.87
+      }
+    ],
+    "nba:2317": [
+      {
+        "date": "2026-10-21",
+        "score": 3.95,
+        "qualifies": false,
+        "minutes": 18.58
+      }
+    ],
+    "nba:2341": [
+      {
+        "date": "2026-10-21",
+        "score": -1.14,
+        "qualifies": false,
+        "minutes": 21.52
+      }
+    ],
+    "nba:2416": [
+      {
+        "date": "2026-10-21",
+        "score": 0.56,
+        "qualifies": false,
+        "minutes": 20.18
+      }
+    ],
+    "nba:2514": [
+      {
+        "date": "2026-10-21",
+        "score": 1.47,
+        "qualifies": false,
+        "minutes": 13.22
+      }
+    ],
+    "nba:2565": [
+      {
+        "date": "2026-10-21",
+        "score": 5.9,
+        "qualifies": false,
+        "minutes": 28.98
+      }
+    ],
+    "nba:2613": [
+      {
+        "date": "2026-10-21",
+        "score": 0.96,
+        "qualifies": false,
+        "minutes": 22.62
+      }
+    ],
+    "nba:2620": [
+      {
+        "date": "2026-10-21",
+        "score": -5.29,
+        "qualifies": false,
+        "minutes": 19.3
+      }
+    ],
+    "nba:2723": [
+      {
+        "date": "2026-10-21",
+        "score": 4.0,
+        "qualifies": false,
+        "minutes": 23.3
+      }
+    ],
+    "nba:2728": [
+      {
+        "date": "2026-10-21",
+        "score": -5.43,
+        "qualifies": false,
+        "minutes": 20.73
+      }
+    ],
+    "nba:2764": [
+      {
+        "date": "2026-10-21",
+        "score": -5.78,
+        "qualifies": false,
+        "minutes": 15.82
+      }
+    ],
+    "nba:2765": [
+      {
+        "date": "2026-10-21",
+        "score": -0.7,
+        "qualifies": false,
+        "minutes": 1.97
+      }
+    ],
+    "nba:2771": [
+      {
+        "date": "2026-10-21",
+        "score": -1.74,
+        "qualifies": false,
+        "minutes": 14.62
+      }
+    ],
+    "nba:4736": [
+      {
+        "date": "2026-10-21",
+        "score": -1.65,
+        "qualifies": false,
+        "minutes": 9.58
+      }
+    ],
+    "nba:4738": [
+      {
+        "date": "2026-10-21",
+        "score": -5.03,
+        "qualifies": false,
+        "minutes": 19.3
+      }
+    ],
+    "nba:4742": [
+      {
+        "date": "2026-10-21",
+        "score": -4.71,
+        "qualifies": false,
+        "minutes": 15.52
+      }
+    ],
+    "nba:4761": [
+      {
+        "date": "2026-10-21",
+        "score": -4.86,
+        "qualifies": false,
+        "minutes": 16.87
+      }
+    ],
+    "nba:4862": [
+      {
+        "date": "2026-10-21",
+        "score": -8.45,
+        "qualifies": false,
+        "minutes": 32.47
+      }
+    ],
+    "nba:4864": [
+      {
+        "date": "2026-10-21",
+        "score": -2.93,
+        "qualifies": false,
+        "minutes": 28.67
+      }
+    ],
+    "nba:4871": [
+      {
+        "date": "2026-10-21",
+        "score": -3.43,
+        "qualifies": false,
+        "minutes": 19.8
+      }
+    ],
+    "nba:4883": [
+      {
+        "date": "2026-10-21",
+        "score": 1.1,
+        "qualifies": false,
+        "minutes": 15.5
+      }
+    ],
+    "nba:1265": [
+      {
+        "date": "2026-10-21",
+        "score": -0.95,
+        "qualifies": false,
+        "minutes": 20.6
+      }
+    ],
+    "nba:1433": [
+      {
+        "date": "2026-10-21",
+        "score": -0.5,
+        "qualifies": false,
+        "minutes": 37.42
+      }
+    ],
+    "nba:1648": [
+      {
+        "date": "2026-10-21",
+        "score": -1.33,
+        "qualifies": false,
+        "minutes": 29.43
+      }
+    ],
+    "nba:1697": [
+      {
+        "date": "2026-10-21",
+        "score": 0.58,
+        "qualifies": false,
+        "minutes": 33.63
+      }
+    ],
+    "nba:1707": [
+      {
+        "date": "2026-10-21",
+        "score": -1.98,
+        "qualifies": false,
+        "minutes": 13.7
+      }
+    ],
+    "nba:1736": [
+      {
+        "date": "2026-10-21",
+        "score": -0.32,
+        "qualifies": false,
+        "minutes": 25.63
+      }
+    ],
+    "nba:1792": [
+      {
+        "date": "2026-10-21",
+        "score": -6.41,
+        "qualifies": false,
+        "minutes": 26.72
+      }
+    ],
+    "nba:1920": [
+      {
+        "date": "2026-10-21",
+        "score": -1.0,
+        "qualifies": false,
+        "minutes": 7.6
+      }
+    ],
+    "nba:2001": [
+      {
+        "date": "2026-10-21",
+        "score": -3.4,
+        "qualifies": false,
+        "minutes": 26.23
+      }
+    ],
+    "nba:2010": [
+      {
+        "date": "2026-10-21",
+        "score": -0.14,
+        "qualifies": false,
+        "minutes": 11.72
+      }
+    ],
+    "nba:2017": [
+      {
+        "date": "2026-10-21",
+        "score": -0.5,
+        "qualifies": false,
+        "minutes": 23.17
+      }
+    ],
+    "nba:2054": [
+      {
+        "date": "2026-10-21",
+        "score": 2.0,
+        "qualifies": false,
+        "minutes": 32.13
+      }
+    ],
+    "nba:2152": [
+      {
+        "date": "2026-10-21",
+        "score": 2.46,
+        "qualifies": false,
+        "minutes": 28.73
+      }
+    ],
+    "nba:2284": [
+      {
+        "date": "2026-10-21",
+        "score": -4.08,
+        "qualifies": false,
+        "minutes": 27.8
+      }
+    ],
+    "nba:2289": [
+      {
+        "date": "2026-10-21",
+        "score": -2.23,
+        "qualifies": false,
+        "minutes": 26.02
+      }
+    ],
+    "nba:2296": [
+      {
+        "date": "2026-10-21",
+        "score": -0.61,
+        "qualifies": false,
+        "minutes": 22.17
+      }
+    ],
+    "nba:2299": [
+      {
+        "date": "2026-10-21",
+        "score": 4.48,
+        "qualifies": false,
+        "minutes": 31.75
+      }
+    ],
+    "nba:2304": [
+      {
+        "date": "2026-10-21",
+        "score": -2.56,
+        "qualifies": false,
+        "minutes": 29.47
+      }
+    ],
+    "nba:2441": [
+      {
+        "date": "2026-10-21",
+        "score": 1.77,
+        "qualifies": false,
+        "minutes": 29.8
+      }
+    ],
+    "nba:2458": [
+      {
+        "date": "2026-10-21",
+        "score": 4.0,
+        "qualifies": false,
+        "minutes": 41.15
+      }
+    ],
+    "nba:2461": [
+      {
+        "date": "2026-10-21",
+        "score": 1.28,
+        "qualifies": false,
+        "minutes": 33.67
+      }
+    ],
+    "nba:2468": [
+      {
+        "date": "2026-10-21",
+        "score": -5.13,
+        "qualifies": false,
+        "minutes": 28.53
+      }
+    ],
+    "nba:2574": [
+      {
+        "date": "2026-10-21",
+        "score": -1.66,
+        "qualifies": false,
+        "minutes": 33.37
+      }
+    ],
+    "nba:2580": [
+      {
+        "date": "2026-10-21",
+        "score": 0.06,
+        "qualifies": false,
+        "minutes": 28.6
+      }
+    ],
+    "nba:2619": [
+      {
+        "date": "2026-10-21",
+        "score": 2.41,
+        "qualifies": false,
+        "minutes": 1.97
+      }
+    ],
+    "nba:2622": [
+      {
+        "date": "2026-10-21",
+        "score": 2.55,
+        "qualifies": false,
+        "minutes": 25.08
+      }
+    ],
+    "nba:2711": [
+      {
+        "date": "2026-10-21",
+        "score": 4.28,
+        "qualifies": false,
+        "minutes": 28.03
+      }
+    ],
+    "nba:2714": [
+      {
+        "date": "2026-10-21",
+        "score": 0.09,
+        "qualifies": false,
+        "minutes": 28.7
+      }
+    ],
+    "nba:2715": [
+      {
+        "date": "2026-10-21",
+        "score": 6.25,
+        "qualifies": true,
+        "minutes": 18.5
+      }
+    ],
+    "nba:2726": [
+      {
+        "date": "2026-10-21",
+        "score": -7.67,
+        "qualifies": false,
+        "minutes": 13.73
+      }
+    ],
+    "nba:1054": [
+      {
+        "date": "2026-10-21",
+        "score": -5.87,
+        "qualifies": false,
+        "minutes": 23.75
+      }
+    ],
+    "nba:1254": [
+      {
+        "date": "2026-10-21",
+        "score": -1.49,
+        "qualifies": false,
+        "minutes": 34.68
+      }
+    ],
+    "nba:1378": [
+      {
+        "date": "2026-10-21",
+        "score": -1.68,
+        "qualifies": false,
+        "minutes": 12.2
+      }
+    ],
+    "nba:1546": [
+      {
+        "date": "2026-10-21",
+        "score": 2.59,
+        "qualifies": false,
+        "minutes": 26.47
+      }
+    ],
+    "nba:1598": [
+      {
+        "date": "2026-10-21",
+        "score": 0.37,
+        "qualifies": false,
+        "minutes": 14.63
+      }
+    ],
+    "nba:1620": [
+      {
+        "date": "2026-10-21",
+        "score": -0.93,
+        "qualifies": false,
+        "minutes": 5.23
+      }
+    ],
+    "nba:1752": [
+      {
+        "date": "2026-10-21",
+        "score": -4.44,
+        "qualifies": false,
+        "minutes": 36.33
+      }
+    ],
+    "nba:1866": [
+      {
+        "date": "2026-10-21",
+        "score": -2.25,
+        "qualifies": false,
+        "minutes": 8.63
+      }
+    ],
+    "nba:1871": [
+      {
+        "date": "2026-10-21",
+        "score": 2.11,
+        "qualifies": false,
+        "minutes": 13.07
+      }
+    ],
+    "nba:1950": [
+      {
+        "date": "2026-10-21",
+        "score": 2.28,
+        "qualifies": false,
+        "minutes": 15.27
+      }
+    ],
+    "nba:1974": [
+      {
+        "date": "2026-10-21",
+        "score": 2.96,
+        "qualifies": false,
+        "minutes": 15.12
+      }
+    ],
+    "nba:1997": [
+      {
+        "date": "2026-10-21",
+        "score": -2.88,
+        "qualifies": false,
+        "minutes": 21.52
+      }
+    ],
+    "nba:2007": [
+      {
+        "date": "2026-10-21",
+        "score": -3.06,
+        "qualifies": false,
+        "minutes": 32.1
+      }
+    ],
+    "nba:2020": [
+      {
+        "date": "2026-10-21",
+        "score": -5.0,
+        "qualifies": false,
+        "minutes": 31.57
+      }
+    ],
+    "nba:2029": [
+      {
+        "date": "2026-10-21",
+        "score": -4.32,
+        "qualifies": false,
+        "minutes": 30.55
+      }
+    ],
+    "nba:2050": [
+      {
+        "date": "2026-10-21",
+        "score": -5.63,
+        "qualifies": false,
+        "minutes": 19.73
+      }
+    ],
+    "nba:2055": [
+      {
+        "date": "2026-10-21",
+        "score": 4.31,
+        "qualifies": false,
+        "minutes": 29.72
+      }
+    ],
+    "nba:2086": [
+      {
+        "date": "2026-10-21",
+        "score": 0.26,
+        "qualifies": false,
+        "minutes": 31.92
+      }
+    ],
+    "nba:2135": [
+      {
+        "date": "2026-10-21",
+        "score": 2.45,
+        "qualifies": false,
+        "minutes": 28.72
+      }
+    ],
+    "nba:2156": [
+      {
+        "date": "2026-10-21",
+        "score": -2.13,
+        "qualifies": false,
+        "minutes": 18.97
+      }
+    ],
+    "nba:2157": [
+      {
+        "date": "2026-10-21",
+        "score": 6.17,
+        "qualifies": true,
+        "minutes": 28.23
+      }
+    ],
+    "nba:2185": [
+      {
+        "date": "2026-10-21",
+        "score": 1.53,
+        "qualifies": false,
+        "minutes": 15.48
+      }
+    ],
+    "nba:2255": [
+      {
+        "date": "2026-10-21",
+        "score": -2.0,
+        "qualifies": false,
+        "minutes": 28.98
+      }
+    ],
+    "nba:2275": [
+      {
+        "date": "2026-10-21",
+        "score": 1.17,
+        "qualifies": false,
+        "minutes": 29.67
+      }
+    ],
+    "nba:2417": [
+      {
+        "date": "2026-10-21",
+        "score": -0.56,
+        "qualifies": false,
+        "minutes": 15.38
+      }
+    ],
+    "nba:2422": [
+      {
+        "date": "2026-10-21",
+        "score": -8.25,
+        "qualifies": false,
+        "minutes": 21.28
+      }
+    ],
+    "nba:2435": [
+      {
+        "date": "2026-10-21",
+        "score": 3.15,
+        "qualifies": false,
+        "minutes": 17.87
+      }
+    ],
+    "nba:2463": [
+      {
+        "date": "2026-10-21",
+        "score": -5.77,
+        "qualifies": false,
+        "minutes": 23.57
+      }
+    ],
+    "nba:2488": [
+      {
+        "date": "2026-10-21",
+        "score": -2.36,
+        "qualifies": false,
+        "minutes": 24.73
+      }
+    ],
+    "nba:2497": [
+      {
+        "date": "2026-10-21",
+        "score": 0.2,
+        "qualifies": false,
+        "minutes": 3.23
+      }
+    ],
+    "nba:2563": [
+      {
+        "date": "2026-10-21",
+        "score": -6.33,
+        "qualifies": false,
+        "minutes": 18.52
+      }
+    ],
+    "nba:2567": [
+      {
+        "date": "2026-10-21",
+        "score": 9.92,
+        "qualifies": true,
+        "minutes": 23.7
+      }
+    ],
+    "nba:2568": [
+      {
+        "date": "2026-10-21",
+        "score": -6.35,
+        "qualifies": false,
+        "minutes": 35.65
+      }
+    ],
+    "nba:2578": [
+      {
+        "date": "2026-10-21",
+        "score": -0.13,
+        "qualifies": false,
+        "minutes": 18.95
+      }
+    ],
+    "nba:2603": [
+      {
+        "date": "2026-10-21",
+        "score": 4.46,
+        "qualifies": false,
+        "minutes": 18.68
+      }
+    ],
+    "nba:2747": [
+      {
+        "date": "2026-10-21",
+        "score": -1.88,
+        "qualifies": false,
+        "minutes": 19.37
+      }
+    ],
+    "nba:2752": [
+      {
+        "date": "2026-10-21",
+        "score": 0.98,
+        "qualifies": false,
+        "minutes": 16.28
+      }
+    ],
+    "nba:4747": [
+      {
+        "date": "2026-10-21",
+        "score": -3.62,
+        "qualifies": false,
+        "minutes": 13.53
+      }
+    ],
+    "nba:4763": [
+      {
+        "date": "2026-10-21",
+        "score": -0.1,
+        "qualifies": false,
+        "minutes": 12.0
+      }
+    ],
+    "nba:4868": [
+      {
+        "date": "2026-10-21",
+        "score": -0.54,
+        "qualifies": false,
+        "minutes": 13.32
+      }
+    ],
+    "nba:4881": [
+      {
+        "date": "2026-10-21",
+        "score": 5.61,
+        "qualifies": false,
+        "minutes": 28.9
+      }
+    ],
+    "nba:4891": [
+      {
+        "date": "2026-10-21",
+        "score": -8.34,
+        "qualifies": false,
+        "minutes": 34.92
+      }
+    ],
+    "nba:4921": [
+      {
+        "date": "2026-10-21",
+        "score": 2.32,
+        "qualifies": false,
+        "minutes": 17.27
+      }
+    ],
+    "nba:1082": [
+      {
+        "date": "2026-10-21",
+        "score": -2.8,
+        "qualifies": false,
+        "minutes": 21.17
+      }
+    ],
+    "nba:1272": [
+      {
+        "date": "2026-10-21",
+        "score": 4.66,
+        "qualifies": false,
+        "minutes": 33.78
+      }
+    ],
+    "nba:1486": [
+      {
+        "date": "2026-10-21",
+        "score": -4.11,
+        "qualifies": false,
+        "minutes": 5.32
+      }
+    ],
+    "nba:1512": [
+      {
+        "date": "2026-10-21",
+        "score": 0.15,
+        "qualifies": false,
+        "minutes": 24.02
+      }
+    ],
+    "nba:1595": [
+      {
+        "date": "2026-10-21",
+        "score": -3.07,
+        "qualifies": false,
+        "minutes": 32.25
+      }
+    ],
+    "nba:1883": [
+      {
+        "date": "2026-10-21",
+        "score": 4.35,
+        "qualifies": false,
+        "minutes": 30.9
+      }
+    ],
+    "nba:1907": [
+      {
+        "date": "2026-10-21",
+        "score": 10.8,
+        "qualifies": true,
+        "minutes": 19.43
+      }
+    ],
+    "nba:1945": [
+      {
+        "date": "2026-10-21",
+        "score": -0.47,
+        "qualifies": false,
+        "minutes": 38.38
+      }
+    ],
+    "nba:1988": [
+      {
+        "date": "2026-10-21",
+        "score": 3.13,
+        "qualifies": false,
+        "minutes": 34.23
+      }
+    ],
+    "nba:2053": [
+      {
+        "date": "2026-10-21",
+        "score": 9.89,
+        "qualifies": true,
+        "minutes": 26.3
+      }
+    ],
+    "nba:2090": [
+      {
+        "date": "2026-10-21",
+        "score": 12.7,
+        "qualifies": true,
+        "minutes": 31.72
+      }
+    ],
+    "nba:2095": [
+      {
+        "date": "2026-10-21",
+        "score": -2.96,
+        "qualifies": false,
+        "minutes": 28.3
+      }
+    ],
+    "nba:2119": [
+      {
+        "date": "2026-10-21",
+        "score": 6.11,
+        "qualifies": true,
+        "minutes": 24.7
+      }
+    ],
+    "nba:2285": [
+      {
+        "date": "2026-10-21",
+        "score": -6.41,
+        "qualifies": false,
+        "minutes": 31.55
+      }
+    ],
+    "nba:2308": [
+      {
+        "date": "2026-10-21",
+        "score": -2.89,
+        "qualifies": false,
+        "minutes": 29.95
+      }
+    ],
+    "nba:2316": [
+      {
+        "date": "2026-10-21",
+        "score": 2.27,
+        "qualifies": false,
+        "minutes": 31.93
+      }
+    ],
+    "nba:2432": [
+      {
+        "date": "2026-10-21",
+        "score": 4.79,
+        "qualifies": false,
+        "minutes": 33.9
+      }
+    ],
+    "nba:2456": [
+      {
+        "date": "2026-10-21",
+        "score": -8.19,
+        "qualifies": false,
+        "minutes": 28.37
+      }
+    ],
+    "nba:2571": [
+      {
+        "date": "2026-10-21",
+        "score": 1.61,
+        "qualifies": false,
+        "minutes": 21.5
+      }
+    ],
+    "nba:2710": [
+      {
+        "date": "2026-10-21",
+        "score": -3.11,
+        "qualifies": false,
+        "minutes": 14.22
+      }
+    ],
+    "nba:2718": [
+      {
+        "date": "2026-10-21",
+        "score": -2.54,
+        "qualifies": false,
+        "minutes": 21.08
+      }
+    ],
+    "nba:2725": [
+      {
+        "date": "2026-10-21",
+        "score": -1.56,
+        "qualifies": false,
+        "minutes": 3.05
+      }
+    ],
+    "nba:2737": [
+      {
+        "date": "2026-10-21",
+        "score": 2.64,
+        "qualifies": false,
+        "minutes": 27.1
+      }
+    ],
+    "nba:2835": [
+      {
+        "date": "2026-10-21",
+        "score": -5.82,
+        "qualifies": false,
+        "minutes": 24.83
+      }
+    ],
+    "nba:4750": [
+      {
+        "date": "2026-10-21",
+        "score": -4.85,
+        "qualifies": false,
+        "minutes": 20.93
+      }
+    ],
+    "nba:4760": [
+      {
+        "date": "2026-10-21",
+        "score": 2.25,
+        "qualifies": false,
+        "minutes": 32.93
+      }
+    ],
+    "nba:4818": [
+      {
+        "date": "2026-10-21",
+        "score": -4.12,
+        "qualifies": false,
+        "minutes": 2.5
+      }
+    ],
+    "nba:4885": [
+      {
+        "date": "2026-10-21",
+        "score": -2.58,
+        "qualifies": false,
+        "minutes": 13.83
+      }
+    ]
+  }
+}

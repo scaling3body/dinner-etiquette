@@ -1131,127 +1131,213 @@
   "nba-2026-10-18": {},
   "nba-2026-10-19": {},
   "nfl-2026-7": {},
-  "nba-2026-10-20": {},
+  "nba-2026-10-20": {
+    "1957": {
+      "count": 1,
+      "baseline": 7.75,
+      "score_version": 2
+    },
+    "1131": {
+      "count": 1,
+      "baseline": 7.94,
+      "score_version": 2
+    },
+    "2126": {
+      "count": 1,
+      "baseline": 7.42,
+      "score_version": 2
+    },
+    "2713": {
+      "count": 1,
+      "baseline": 6.57,
+      "score_version": 2
+    },
+    "1074": {
+      "count": 1,
+      "baseline": 15.83,
+      "score_version": 2
+    }
+  },
   "nba-2026-10-21": {
     "4759": {
       "count": 1,
-      "baseline": 10.92
+      "baseline": 7.66,
+      "score_version": 2
     },
     "2720": {
       "count": 1,
-      "baseline": 12.06
+      "baseline": 10.73,
+      "score_version": 2
     },
     "1450": {
       "count": 1,
-      "baseline": 7.24
+      "baseline": -0.97,
+      "score_version": 2
     },
     "2565": {
       "count": 1,
-      "baseline": 6.83
+      "baseline": 5.9,
+      "score_version": 2
     },
     "2715": {
       "count": 1,
-      "baseline": 7.83
+      "baseline": 6.25,
+      "score_version": 2
     },
     "2571": {
       "count": 1,
-      "baseline": 9.02
+      "baseline": 1.61,
+      "score_version": 2
     },
     "1713": {
       "count": 1,
-      "baseline": 11.83
+      "baseline": 6.12,
+      "score_version": 2
     },
     "2133": {
       "count": 1,
-      "baseline": 13.51
+      "baseline": 11.99,
+      "score_version": 2
     },
     "2324": {
       "count": 1,
-      "baseline": 7.27
+      "baseline": 0.03,
+      "score_version": 2
     },
     "2449": {
       "count": 1,
-      "baseline": 6.15
+      "baseline": 3.54,
+      "score_version": 2
     },
     "1308": {
       "count": 1,
-      "baseline": 7.05
+      "baseline": 4.9,
+      "score_version": 2
     },
     "1444": {
       "count": 1,
-      "baseline": 10.4
+      "baseline": 7.06,
+      "score_version": 2
     },
     "1739": {
       "count": 1,
-      "baseline": 8.76
+      "baseline": 2.56,
+      "score_version": 2
     },
     "2397": {
       "count": 1,
-      "baseline": 6.19
+      "baseline": 4.4,
+      "score_version": 2
     },
     "2445": {
       "count": 1,
-      "baseline": 9.53
+      "baseline": 7.41,
+      "score_version": 2
     },
     "2474": {
       "count": 1,
-      "baseline": 11.99
+      "baseline": 5.61,
+      "score_version": 2
     },
     "2521": {
       "count": 1,
-      "baseline": 15.81
+      "baseline": 6.81,
+      "score_version": 2
     },
     "2258": {
       "count": 1,
-      "baseline": 6.59
+      "baseline": 1.41,
+      "score_version": 2
     },
     "2317": {
       "count": 1,
-      "baseline": 10.64
+      "baseline": 3.95,
+      "score_version": 2
     },
     "2613": {
       "count": 1,
-      "baseline": 6.49
+      "baseline": 0.96,
+      "score_version": 2
     },
     "2299": {
       "count": 1,
-      "baseline": 8.96
+      "baseline": 4.48,
+      "score_version": 2
     },
     "2458": {
       "count": 1,
-      "baseline": 6.3
+      "baseline": 4.0,
+      "score_version": 2
     },
     "2157": {
       "count": 1,
-      "baseline": 7.89
+      "baseline": 6.17,
+      "score_version": 2
     },
     "2567": {
       "count": 1,
-      "baseline": 17.13
+      "baseline": 9.92,
+      "score_version": 2
     },
     "2578": {
       "count": 1,
-      "baseline": 8.56
+      "baseline": -0.13,
+      "score_version": 2
     },
     "2603": {
       "count": 1,
-      "baseline": 10.38
+      "baseline": 4.46,
+      "score_version": 2
     },
     "1883": {
       "count": 1,
-      "baseline": 8.96
+      "baseline": 4.35,
+      "score_version": 2
     },
     "2053": {
       "count": 1,
-      "baseline": 11.76
+      "baseline": 9.89,
+      "score_version": 2
     },
     "2090": {
       "count": 1,
-      "baseline": 13.07
+      "baseline": 12.7,
+      "score_version": 2
     },
     "2119": {
       "count": 1,
-      "baseline": 6.47
+      "baseline": 6.11,
+      "score_version": 2
+    },
+    "1691": {
+      "count": 1,
+      "baseline": 7.46,
+      "score_version": 2
+    },
+    "4880": {
+      "count": 1,
+      "baseline": 6.57,
+      "score_version": 2
+    },
+    "1717": {
+      "count": 1,
+      "baseline": 6.33,
+      "score_version": 2
+    },
+    "2040": {
+      "count": 1,
+      "baseline": 9.34,
+      "score_version": 2
+    },
+    "2306": {
+      "count": 1,
+      "baseline": 6.37,
+      "score_version": 2
+    },
+    "1907": {
+      "count": 1,
+      "baseline": 10.8,
+      "score_version": 2
     }
   }
 }
