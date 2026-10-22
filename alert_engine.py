@@ -2,6 +2,7 @@
 import sys
 from datetime import date, timedelta
 import delivery
+import bot_commands
 import game_context
 import player_insights as insights
 from state_store import load, save, timestamp, utcnow
@@ -11,8 +12,9 @@ PERFORMANCE_PATH = "performance_state.json"
 
 
 def _info(runtime, sport, day, status, **values):
-    info = dict(day=str(day), status=status, checked_at=utcnow().isoformat(), **values)
+    info = dict(sport=sport, day=str(day), status=status, checked_at=utcnow().isoformat(), **values)
     runtime.setdefault("sports", {})[sport] = info
+    runtime.setdefault("checks", []).append(info)
 
 
 def _candidate(bot, config, alerted, history, manager, batch, health_state,
@@ -163,6 +165,7 @@ def run_football(config, alerted, players, history, manager, batch, health_state
     state = bot.sleeper.get_nfl_state()
     if not state:
         bot.health.record_failure(health_state, "sleeper_nfl")
+        _info(runtime, "nfl", bot.today_et(), "data unavailable", matched=0)
         return
     days = context_days or [bot.today_et()]
     games, available = [], True
@@ -252,7 +255,7 @@ def run_cycle(bot):
     runtime = load(RUNTIME_PATH, {})
     previous = timestamp(runtime.get("last_completed"))
     delayed = bool(previous and (utcnow() - previous).total_seconds() > config.get("health_check", {}).get("stale_minutes", 15) * 60)
-    runtime.update(last_started=utcnow().isoformat(), sports={}, games=[])
+    runtime.update(last_started=utcnow().isoformat(), sports={}, games=[], checks=[])
     save(RUNTIME_PATH, runtime)
     delivery.apply_receipts(load(delivery.PATH, {}), alerted, history)
     threshold_state = bot.load_json(bot.TIER_THRESHOLD_PATH, {"threshold": bot.DEFAULT_TIER_THRESHOLD})
@@ -270,11 +273,14 @@ def run_cycle(bot):
             bot.health.record_failure(health_state, "telegram")
         # Retry pending items before calculating fresh escalation levels.
         delivery.dispatch(config, pending, [], health_state, alerted, history)
+        known_events = set(load(delivery.PATH, {}).get("items", {}))
+        requests = runtime.get("scan_requests", [])
+        forced_sports = {sport for request in requests for sport in request["sports"]}
         lookback = min(7, max(0, int(config.get("catchup", {}).get("lookback_days", 2))))
         nba_days = [bot.nba_game_day() - timedelta(days=n) for n in range(lookback, -1, -1)]
         for day in nba_days:
             checked = runtime.get("checked_days", {}).get(str(day), {})
-            if day < bot.nba_game_day() and checked.get("complete"):
+            if day < bot.nba_game_day() and checked.get("complete") and "nba" not in forced_sports:
                 continue
             try:
                 run_basketball(config, alerted, players_nba, history, managers["nba"], batch, health_state,
@@ -283,6 +289,7 @@ def run_cycle(bot):
             except Exception as error:
                 print(f"NBA check failed: {type(error).__name__}")
                 bot.health.record_failure(health_state, "sleeper_nba")
+                _info(runtime, "nba", day, "data unavailable", matched=0)
         try:
             run_football(config, alerted, players_nfl, history, managers["nfl"], batch, health_state,
                          bot=bot, performance=performance, runtime=runtime, delayed=delayed,
@@ -290,7 +297,20 @@ def run_cycle(bot):
         except Exception as error:
             print(f"NFL check failed: {type(error).__name__}")
             bot.health.record_failure(health_state, "sleeper_nfl")
+            _info(runtime, "nfl", bot.today_et(), "data unavailable", matched=0)
         delivery.dispatch(config, pending, batch, health_state, alerted, history)
+        if requests:
+            journal = load(delivery.PATH, {})
+            fresh = [item for item in batch if item.get("kind") != "command"
+                     and delivery.event_id(item) not in known_events]
+            replies = [bot_commands.command_item(request["event_id"],
+                       bot_commands.scan_summary(request, config, runtime["checks"], fresh, journal))
+                       for request in requests]
+            # Freeze results in the outbox before removing durable scan requests.
+            delivery.dispatch(config, pending, replies, health_state, alerted, history, send=False)
+            runtime["scan_requests"] = []
+            save(RUNTIME_PATH, runtime)
+            delivery.dispatch(config, pending, [], health_state, alerted, history)
         runtime["last_completed"] = utcnow().isoformat()
     finally:
         cutoff = utcnow() - timedelta(days=35)
