@@ -246,6 +246,9 @@ set up and will start running once it's on the default branch. It writes
 - **NBA**: a real check, not a guess -- it asks Sleeper for today's
   projections and treats a non-empty result as "games are happening."
 
+NBA alert checks keep using the prior evening's slate until 6am Eastern,
+so late games and delayed runs after midnight still use the right stats.
+
 The main workflow's cron window is also narrowed to `16:00-05:59 UTC`
 (roughly noon-1am Eastern) rather than running truly 24/7, since games
 never happen outside that window regardless of sport or day.

@@ -1,6 +1,6 @@
 import json
 import unittest
-from datetime import date
+from datetime import date, datetime
 from unittest.mock import patch
 
 import game_schedule_checker
@@ -9,6 +9,16 @@ import sleeper_client as sleeper
 
 
 class NbaDataTests(unittest.TestCase):
+    def test_overnight_check_keeps_the_evenings_game_date(self):
+        for timestamp in ["2026-10-22T00:58:00+00:00", "2026-10-22T04:30:00+00:00",
+                          "2026-10-22T09:59:00+00:00"]:
+            self.assertEqual(main.nba_game_day(datetime.fromisoformat(timestamp)), date(2026, 10, 21))
+        self.assertEqual(main.nba_game_day(datetime.fromisoformat("2026-10-22T10:00:00+00:00")), date(2026, 10, 22))
+
+    def test_overnight_game_date_handles_winter_time(self):
+        self.assertEqual(main.nba_game_day(datetime.fromisoformat("2026-01-22T05:30:00+00:00")), date(2026, 1, 21))
+        self.assertEqual(main.nba_game_day(datetime.fromisoformat("2026-01-22T11:00:00+00:00")), date(2026, 1, 22))
+
     def test_parses_records_filters_dates_and_normalizes_shooting(self):
         records = [
             {"player_id": "1", "date": "2026-10-20", "stats": {
@@ -74,7 +84,7 @@ class NbaDataTests(unittest.TestCase):
             "fgm": 15, "fga": 20, "ftm": 4, "fta": 4, "to": 1,
         }}]
         batch, history, state = [], [], {}
-        with patch.object(main, "today_et", return_value=date(2026, 10, 20)), \
+        with patch.object(main, "nba_game_day", return_value=date(2026, 10, 20)), \
              patch.object(sleeper, "get_nba_state", return_value={"season": "2026", "week": 1}), \
              patch.object(sleeper, "_get", side_effect=[projection_records, stats_records]), \
              patch.object(sleeper, "get_schedule", return_value=None), \

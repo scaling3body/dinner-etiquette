@@ -45,6 +45,12 @@ def today_et():
     return datetime.now(ET_ZONE).date()
 
 
+def nba_game_day(now=None):
+    """Keep late games and delayed checks on their starting slate until 6am ET."""
+    now = now or datetime.now(ET_ZONE)
+    return (now.astimezone(ET_ZONE) - timedelta(hours=6)).date()
+
+
 CONFIG_PATH = "config.json"
 ALERTED_PATH = "alerted.json"
 PENDING_PATH = "pending.json"
@@ -702,9 +708,10 @@ def run_football(config, alerted, players, history, manager, batch, health_state
 def run_basketball(config, alerted, players, history, manager, batch, health_state):
     if not config["basketball"]["enabled"]:
         return
+    game_day = nba_game_day()
     nba_state = sleeper.get_nba_state()
-    season = nba_state.get("season") if nba_state else str(today_et().year)
-    today_str = today_et().isoformat()
+    season = nba_state.get("season") if nba_state else str(game_day.year)
+    today_str = game_day.isoformat()
 
     season_type = (nba_state or {}).get("season_type", "regular")
     week = (nba_state or {}).get("week")
@@ -810,7 +817,8 @@ def main():
     schedule_windows = load_json(SCHEDULE_WINDOWS_PATH, {})
     current_schedule = schedule_windows.get("date") == today_et().isoformat()
     nfl_today = schedule_windows.get("nfl_active_today", True) if current_schedule else True
-    nba_today = schedule_windows.get("nba_active_today", True) if current_schedule else True
+    current_nba_schedule = schedule_windows.get("date") == nba_game_day().isoformat()
+    nba_today = schedule_windows.get("nba_active_today", True) if current_nba_schedule else True
 
     batch = []  # collected across both sports, sent as one message by dispatch_alerts()
 
