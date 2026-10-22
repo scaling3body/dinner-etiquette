@@ -7,15 +7,15 @@
     "circuit_open_until": null
   },
   "sleeper_nba": {
-    "consecutive_failures": 2,
-    "last_success": "2026-10-21T10:38:48.749749+00:00",
+    "consecutive_failures": 0,
+    "last_success": "2026-10-22T00:58:05.900617+00:00",
     "last_failure": "2026-10-21T22:48:50.690906+00:00",
     "notified": false,
     "circuit_open_until": null
   },
   "telegram": {
     "consecutive_failures": 0,
-    "last_success": "2026-10-19T05:11:25.451962+00:00",
+    "last_success": "2026-10-22T00:58:16.230643+00:00",
     "last_failure": null,
     "notified": false,
     "circuit_open_until": null

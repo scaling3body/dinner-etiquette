@@ -1,6 +1,48 @@
 {
-  "last_updated": "2026-10-21T22:48:50.693061+00:00",
+  "last_updated": "2026-10-22T00:58:16.233549+00:00",
   "recent_alerts": [
+    {
+      "timestamp": "2026-10-22T00:58:15.522442+00:00",
+      "sport": "nba",
+      "player_name": "Noah Clowney",
+      "message": "\ud83c\udfc0 \ud83d\udd25 BREAKOUT: Noah Clowney (BKN) went 5.0pt/1.0reb/0ast, 0stl/0blk (combined z-score 9.02 vs. projections).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-10-22T00:58:15.432325+00:00",
+      "sport": "nba",
+      "player_name": "Bub Carrington",
+      "message": "\ud83c\udfc0 BREAKOUT: Bub Carrington (WAS) went 10.0pt/1.0reb/2.0ast, 1.0stl/0blk (combined z-score 7.83 vs. projections).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-10-22T00:58:15.381865+00:00",
+      "sport": "nba",
+      "player_name": "Bilal Coulibaly",
+      "message": "\ud83c\udfc0 BREAKOUT: Bilal Coulibaly (WAS) went 6.0pt/1.0reb/1.0ast, 3.0stl/2.0blk (combined z-score 6.83 vs. projections).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-10-22T00:58:15.357049+00:00",
+      "sport": "nba",
+      "player_name": "CJ McCollum",
+      "message": "\ud83c\udfc0 BREAKOUT: CJ McCollum (ATL) went 17.0pt/1.0reb/2.0ast, 0stl/0blk (combined z-score 7.24 vs. projections).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-10-22T00:58:15.336479+00:00",
+      "sport": "nba",
+      "player_name": "Yves Missi",
+      "message": "\ud83c\udfc0 \ud83d\udd25 BREAKOUT: Yves Missi (NOP) went 6.0pt/5.0reb/1.0ast, 1.0stl/2.0blk (combined z-score 12.06 vs. projections).",
+      "notified": true
+    },
+    {
+      "timestamp": "2026-10-22T00:58:15.290026+00:00",
+      "sport": "nba",
+      "player_name": "Kasparas Jaku\u010dionis",
+      "message": "\ud83c\udfc0 \ud83d\udd25 BREAKOUT: Kasparas Jaku\u010dionis (MIL) went 7.0pt/1.0reb/1.0ast, 0stl/1.0blk (combined z-score 10.92 vs. projections).",
+      "notified": true
+    },
     {
       "timestamp": "2026-10-19T05:10:20.397483+00:00",
       "sport": "nfl",
@@ -308,48 +350,6 @@
       "player_name": "Player BAL",
       "message": "\ud83c\udfc8 BREAKOUT: Player BAL (BAL) scored 13.0 pts [Live] vs a projection of 7.79 (166.9% of projection).",
       "notified": true
-    },
-    {
-      "timestamp": "2026-10-18T18:23:42.851962+00:00",
-      "sport": "nfl",
-      "player_name": "Colston Loveland",
-      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Colston Loveland (CHI) scored 12.0 pts [Live] vs a projection of 5.63 (213.1% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-10-16T05:06:43.918663+00:00",
-      "sport": "nfl",
-      "player_name": "Player DEN",
-      "message": "\ud83c\udfc8 \ud83d\udd25 BREAKOUT: Player DEN (DEN) scored 12.0 pts [Final] vs a projection of 5.8 (206.9% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-10-13T04:01:06.429343+00:00",
-      "sport": "nfl",
-      "player_name": "Tyler Bass",
-      "message": "\ud83c\udfc8 BREAKOUT: Tyler Bass (BUF) scored 13.0 pts [Final] vs a projection of 7.36 (176.6% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-10-13T03:43:59.185771+00:00",
-      "sport": "nfl",
-      "player_name": "Josh Allen",
-      "message": "\ud83c\udfc8 BREAKOUT: Josh Allen (BUF) scored 30.2 pts [Live] vs a projection of 21.85 (138.2% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-10-13T03:43:59.172759+00:00",
-      "sport": "nfl",
-      "player_name": "Puka Nacua",
-      "message": "\ud83c\udfc8 BREAKOUT: Puka Nacua (LAR) scored 20.7 pts [Live] vs a projection of 14.26 (145.2% of projection).",
-      "notified": true
-    },
-    {
-      "timestamp": "2026-10-13T03:23:37.484286+00:00",
-      "sport": "nfl",
-      "player_name": "Davante Adams",
-      "message": "\ud83c\udfc8 BREAKOUT: Davante Adams (LAR) scored 17.1 pts [Live] vs a projection of 11.72 (145.9% of projection).",
-      "notified": true
     }
   ],
   "pending_suggestions": [],
@@ -360,13 +360,13 @@
       "circuit_open": false
     },
     "sleeper_nba": {
-      "consecutive_failures": 2,
-      "last_success": "2026-10-21T10:38:48.749749+00:00",
+      "consecutive_failures": 0,
+      "last_success": "2026-10-22T00:58:05.900617+00:00",
       "circuit_open": false
     },
     "telegram": {
       "consecutive_failures": 0,
-      "last_success": "2026-10-19T05:11:25.451962+00:00",
+      "last_success": "2026-10-22T00:58:16.230643+00:00",
       "circuit_open": false
     }
   },
