@@ -1130,7 +1130,33 @@
   "nba-2026-10-17": {},
   "nba-2026-10-18": {},
   "nba-2026-10-19": {},
-  "nfl-2026-7": {},
+  "nfl-2026-7": {
+    "12517": {
+      "count": 1,
+      "baseline": 12.9,
+      "score_version": 2
+    },
+    "12519": {
+      "count": 1,
+      "baseline": 19.7,
+      "score_version": 2
+    },
+    "7611": {
+      "count": 1,
+      "baseline": 17.5,
+      "score_version": 2
+    },
+    "2020": {
+      "count": 1,
+      "baseline": 15.0,
+      "score_version": 2
+    },
+    "11564": {
+      "count": 1,
+      "baseline": 28.44,
+      "score_version": 2
+    }
+  },
   "nba-2026-10-20": {
     "1957": {
       "count": 1,
