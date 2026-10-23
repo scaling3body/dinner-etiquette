@@ -1225,6 +1225,110 @@
       "message_ids": [
         435
       ]
+    },
+    "ec5714ef587b27594f110754": {
+      "send": true,
+      "text": "⏱ Delayed alert · game date 2026-10-22\n🏀 OPPORTUNITY: Jarrett Allen (CLE)\nExpanded involvement: 10 shot attempts in 17.83 minutes; shot/FT/turnover rate is at least 50% above projection. This is a usage proxy.\nQ3 · 3:59",
+      "addable": false,
+      "player_id": null,
+      "player_name": "Jarrett Allen",
+      "sport": "nba",
+      "alert_key": "nba-2026-10-22",
+      "sleeper_player_id": "1787",
+      "kind": "opportunity",
+      "count": 1,
+      "baseline": null,
+      "event_id": "nba-2026-10-22|1787|opportunity|1",
+      "history": {
+        "sport": "nba",
+        "player_name": "Jarrett Allen",
+        "player_id": "1787",
+        "message": "⏱ Delayed alert · game date 2026-10-22\n🏀 OPPORTUNITY: Jarrett Allen (CLE)\nExpanded involvement: 10 shot attempts in 17.83 minutes; shot/FT/turnover rate is at least 50% above projection. This is a usage proxy.\nQ3 · 3:59",
+        "kind": "opportunity",
+        "level": 1,
+        "game_date": "2026-10-22",
+        "game_id": "1392938574764052480",
+        "game_label": "PHI vs CLE",
+        "game_status": "Q3 · 3:59",
+        "score": -4.28,
+        "actual_stats": {
+          "q2_sp": 235.0,
+          "reb": 6.0,
+          "plus_minus": 4.0,
+          "min": 17.83,
+          "blk_stl": 1.0,
+          "fga": 10.0,
+          "h1_reb": 5.0,
+          "oreb": 2.0,
+          "h2_reb": 1.0,
+          "fgmi": 4.0,
+          "pts": 14.0,
+          "q1_reb": 2.0,
+          "q3_reb": 1.0,
+          "dreb": 4.0,
+          "fgm": 6.0,
+          "pts_std": 14.0,
+          "pts_reb": 20.0,
+          "q2_pts": 8.0,
+          "ftmi": 2.0,
+          "q1_sp": 515.0,
+          "reb_ast": 6.0,
+          "fta": 4.0,
+          "to": 1.0,
+          "q3_sp": 320.0,
+          "blk": 1.0,
+          "h2_sp": 320.0,
+          "pf": 1.0,
+          "h1_sp": 750.0,
+          "q1_pts": 6.0,
+          "sp": 1070.0,
+          "h1_pts": 14.0,
+          "q2_reb": 3.0,
+          "pts_reb_ast": 20.0,
+          "pts_std_dfs": 23.2,
+          "pts_ast": 14.0,
+          "ftm": 2.0,
+          "fg3m": 0.0,
+          "fgp": 0.6,
+          "ftp": 0.5
+        },
+        "projected_stats": {
+          "ast": 1.99,
+          "blk": 0.81,
+          "dd": 0.37,
+          "dreb": 8.31,
+          "fga": 8.0,
+          "fgm": 5.14,
+          "fgmi": 2.86,
+          "fta": 3.27,
+          "ftm": 2.34,
+          "ftmi": 0.93,
+          "gp": 1.0,
+          "pts": 12.73,
+          "reb": 9.62,
+          "sp": 1620.0,
+          "stl": 0.86,
+          "to": 1.31,
+          "tpa": 0.45,
+          "tpm": 0.12,
+          "tpmi": 0.32,
+          "min": 27.0,
+          "fg3m": 0.12,
+          "fgp": 0.6425,
+          "ftp": 0.7155963302752293
+        },
+        "projection_pct": null,
+        "delayed": true,
+        "availability": null
+      },
+      "created_at": "2026-10-23T01:00:15.086720+00:00",
+      "message_refs": [
+        "14689b1f85b9cd9a"
+      ],
+      "delivered_at": "2026-10-23T01:00:15.760857+00:00",
+      "message_ids": [
+        437
+      ]
     }
   },
   "messages": {
@@ -1254,6 +1358,15 @@
       "attempts": 1,
       "message_id": 435,
       "sent_at": "2026-10-22T09:35:12.350363+00:00"
+    },
+    "14689b1f85b9cd9a": {
+      "items": [
+        "ec5714ef587b27594f110754"
+      ],
+      "text": "⏱ Delayed alert · game date 2026-10-22\n🏀 OPPORTUNITY: Jarrett Allen (CLE)\nExpanded involvement: 10 shot attempts in 17.83 minutes; shot/FT/turnover rate is at least 50% above projection. This is a usage proxy.\nQ3 · 3:59",
+      "attempts": 1,
+      "message_id": 437,
+      "sent_at": "2026-10-23T01:00:15.760857+00:00"
     }
   }
 }
