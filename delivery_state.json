@@ -1849,6 +1849,117 @@
       "message_ids": [
         438
       ]
+    },
+    "d1a84da325f875ea5759056d": {
+      "send": true,
+      "text": "⏱ Delayed alert · game date 2026-10-23\n🏀 OPPORTUNITY: Isaac Okoro (CHI)\nMinutes opportunity: 27.43 minutes played; pace 28 vs 15 projected. Pace is an estimate.\nQ4 · 20.1",
+      "addable": false,
+      "player_id": null,
+      "player_name": "Isaac Okoro",
+      "sport": "nba",
+      "alert_key": "nba-2026-10-23",
+      "sleeper_player_id": "2120",
+      "kind": "opportunity",
+      "count": 1,
+      "baseline": null,
+      "event_id": "nba-2026-10-23|2120|opportunity|1",
+      "history": {
+        "sport": "nba",
+        "player_name": "Isaac Okoro",
+        "player_id": "2120",
+        "message": "⏱ Delayed alert · game date 2026-10-23\n🏀 OPPORTUNITY: Isaac Okoro (CHI)\nMinutes opportunity: 27.43 minutes played; pace 28 vs 15 projected. Pace is an estimate.\nQ4 · 20.1",
+        "kind": "opportunity",
+        "level": 1,
+        "game_date": "2026-10-23",
+        "game_id": "1393723744752500736",
+        "game_label": "MIL vs CHI",
+        "game_status": "Q4 · 20.1",
+        "score": 1.68,
+        "actual_stats": {
+          "q2_sp": 512.0,
+          "reb": 3.0,
+          "plus_minus": 9.0,
+          "min": 27.43,
+          "q4_pts": 2.0,
+          "blk_stl": 1.0,
+          "fga": 7.0,
+          "h1_reb": 2.0,
+          "oreb": 2.0,
+          "h2_reb": 1.0,
+          "fgmi": 3.0,
+          "pts": 12.0,
+          "q1_reb": 1.0,
+          "h2_pts": 2.0,
+          "tpa": 4.0,
+          "h1_ast": 1.0,
+          "dreb": 1.0,
+          "fgm": 4.0,
+          "pts_std": 10.5,
+          "pts_reb": 15.0,
+          "q2_pts": 8.0,
+          "q1_sp": 356.0,
+          "reb_ast": 4.0,
+          "fta": 3.0,
+          "to": 2.0,
+          "ast": 1.0,
+          "q3_sp": 254.0,
+          "blk": 1.0,
+          "h2_sp": 778.0,
+          "pf": 1.0,
+          "h1_sp": 868.0,
+          "q1_pts": 2.0,
+          "q4_sp": 524.0,
+          "sp": 1646.0,
+          "q4_reb": 1.0,
+          "h1_pts": 10.0,
+          "tpm": 1.0,
+          "q2_ast": 1.0,
+          "q2_reb": 1.0,
+          "pts_reb_ast": 16.0,
+          "pts_std_dfs": 18.1,
+          "tpmi": 3.0,
+          "pts_ast": 13.0,
+          "ftm": 3.0,
+          "fg3m": 1.0,
+          "fgp": 0.5714285714285714,
+          "ftp": 1.0
+        },
+        "projected_stats": {
+          "ast": 2.28,
+          "blk": 0.32,
+          "dreb": 1.4,
+          "fga": 4.05,
+          "fgm": 1.84,
+          "fgmi": 2.21,
+          "fta": 0.98,
+          "ftm": 0.71,
+          "ftmi": 0.26,
+          "gp": 1.0,
+          "pts": 5.12,
+          "reb": 1.95,
+          "sp": 900.0,
+          "stl": 0.56,
+          "to": 0.66,
+          "tpa": 2.01,
+          "tpm": 0.73,
+          "tpmi": 1.28,
+          "min": 15.0,
+          "fg3m": 0.73,
+          "fgp": 0.45432098765432105,
+          "ftp": 0.7244897959183674
+        },
+        "projection_pct": null,
+        "delayed": true,
+        "availability": null
+      },
+      "created_at": "2026-10-23T22:39:38.904890+00:00",
+      "message_refs": [
+        "fd792a7e9cae3d4e"
+      ],
+      "delivered_at": "2026-10-23T22:39:39.460511+00:00",
+      "message_ids": [
+        440
+      ]
     }
   },
   "messages": {
@@ -1900,6 +2011,15 @@
       "attempts": 1,
       "message_id": 438,
       "sent_at": "2026-10-23T05:51:31.423684+00:00"
+    },
+    "fd792a7e9cae3d4e": {
+      "items": [
+        "d1a84da325f875ea5759056d"
+      ],
+      "text": "⏱ Delayed alert · game date 2026-10-23\n🏀 OPPORTUNITY: Isaac Okoro (CHI)\nMinutes opportunity: 27.43 minutes played; pace 28 vs 15 projected. Pace is an estimate.\nQ4 · 20.1",
+      "attempts": 1,
+      "message_id": 440,
+      "sent_at": "2026-10-23T22:39:39.460511+00:00"
     }
   }
 }

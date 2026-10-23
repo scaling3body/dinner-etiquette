@@ -1,6 +1,102 @@
 {
-  "last_updated": "2026-10-23T19:45:31.957208+00:00",
+  "last_updated": "2026-10-23T22:39:39.479012+00:00",
   "recent_alerts": [
+    {
+      "sport": "nba",
+      "player_name": "Isaac Okoro",
+      "player_id": "2120",
+      "message": "⏱ Delayed alert · game date 2026-10-23\n🏀 OPPORTUNITY: Isaac Okoro (CHI)\nMinutes opportunity: 27.43 minutes played; pace 28 vs 15 projected. Pace is an estimate.\nQ4 · 20.1",
+      "kind": "opportunity",
+      "level": 1,
+      "game_date": "2026-10-23",
+      "game_id": "1393723744752500736",
+      "game_label": "MIL vs CHI",
+      "game_status": "Q4 · 20.1",
+      "score": 1.68,
+      "actual_stats": {
+        "q2_sp": 512.0,
+        "reb": 3.0,
+        "plus_minus": 9.0,
+        "min": 27.43,
+        "q4_pts": 2.0,
+        "blk_stl": 1.0,
+        "fga": 7.0,
+        "h1_reb": 2.0,
+        "oreb": 2.0,
+        "h2_reb": 1.0,
+        "fgmi": 3.0,
+        "pts": 12.0,
+        "q1_reb": 1.0,
+        "h2_pts": 2.0,
+        "tpa": 4.0,
+        "h1_ast": 1.0,
+        "dreb": 1.0,
+        "fgm": 4.0,
+        "pts_std": 10.5,
+        "pts_reb": 15.0,
+        "q2_pts": 8.0,
+        "q1_sp": 356.0,
+        "reb_ast": 4.0,
+        "fta": 3.0,
+        "to": 2.0,
+        "ast": 1.0,
+        "q3_sp": 254.0,
+        "blk": 1.0,
+        "h2_sp": 778.0,
+        "pf": 1.0,
+        "h1_sp": 868.0,
+        "q1_pts": 2.0,
+        "q4_sp": 524.0,
+        "sp": 1646.0,
+        "q4_reb": 1.0,
+        "h1_pts": 10.0,
+        "tpm": 1.0,
+        "q2_ast": 1.0,
+        "q2_reb": 1.0,
+        "pts_reb_ast": 16.0,
+        "pts_std_dfs": 18.1,
+        "tpmi": 3.0,
+        "pts_ast": 13.0,
+        "ftm": 3.0,
+        "fg3m": 1.0,
+        "fgp": 0.5714285714285714,
+        "ftp": 1.0
+      },
+      "projected_stats": {
+        "ast": 2.28,
+        "blk": 0.32,
+        "dreb": 1.4,
+        "fga": 4.05,
+        "fgm": 1.84,
+        "fgmi": 2.21,
+        "fta": 0.98,
+        "ftm": 0.71,
+        "ftmi": 0.26,
+        "gp": 1.0,
+        "pts": 5.12,
+        "reb": 1.95,
+        "sp": 900.0,
+        "stl": 0.56,
+        "to": 0.66,
+        "tpa": 2.01,
+        "tpm": 0.73,
+        "tpmi": 1.28,
+        "min": 15.0,
+        "fg3m": 0.73,
+        "fgp": 0.45432098765432105,
+        "ftp": 0.7244897959183674
+      },
+      "projection_pct": null,
+      "delayed": true,
+      "availability": null,
+      "event_id": "d1a84da325f875ea5759056d",
+      "timestamp": "2026-10-23T22:39:39.460511+00:00",
+      "detected_at": "2026-10-23T22:39:38.904890+00:00",
+      "notified": true,
+      "message_ids": [
+        440
+      ]
+    },
     {
       "sport": "nfl",
       "player_name": "Drake Maye",
@@ -1951,13 +2047,13 @@
   "health": {
     "sleeper_nfl": {
       "consecutive_failures": 0,
-      "last_success": "2026-10-23T19:45:31.925510+00:00",
+      "last_success": "2026-10-23T22:39:38.894460+00:00",
       "last_failure": "2026-10-22T04:33:58.422499+00:00",
       "circuit_open": false
     },
     "sleeper_nba": {
       "consecutive_failures": 0,
-      "last_success": "2026-10-23T05:51:30.665916+00:00",
+      "last_success": "2026-10-23T22:39:38.643977+00:00",
       "last_failure": "2026-10-22T04:30:50.880637+00:00",
       "circuit_open": false
     },
@@ -1969,13 +2065,13 @@
     },
     "scoreboard": {
       "consecutive_failures": 0,
-      "last_success": "2026-10-23T19:45:31.649917+00:00",
+      "last_success": "2026-10-23T22:39:38.643957+00:00",
       "last_failure": null,
       "circuit_open": false
     },
     "telegram": {
       "consecutive_failures": 0,
-      "last_success": "2026-10-23T05:51:31.427388+00:00",
+      "last_success": "2026-10-23T22:39:39.464075+00:00",
       "last_failure": null,
       "circuit_open": false
     }
@@ -1983,20 +2079,23 @@
   "health_failure_threshold": 6,
   "stale_after_minutes": 15,
   "runtime": {
-    "last_started": "2026-10-23T19:45:22.209325+00:00",
+    "last_started": "2026-10-23T22:39:37.292637+00:00",
     "sports": {
       "nba": {
         "sport": "nba",
         "day": "2026-10-23",
-        "status": "idle",
-        "checked_at": "2026-10-23T19:45:31.649931+00:00",
-        "matched": 0
+        "status": "checked",
+        "checked_at": "2026-10-23T22:39:38.643983+00:00",
+        "projections": 257,
+        "stats": 22,
+        "matched": 20,
+        "data_updated_at": "2026-10-23T22:39:30.814000+00:00"
       },
       "nfl": {
         "sport": "nfl",
         "day": "2026-10-23",
         "status": "checked",
-        "checked_at": "2026-10-23T19:45:31.925926+00:00",
+        "checked_at": "2026-10-23T22:39:38.894735+00:00",
         "matched": 151,
         "week": 7
       }
@@ -2013,14 +2112,14 @@
         "season": 2027,
         "season_type": "regular",
         "matchup": "MIL vs CHI",
-        "state": "pre",
+        "state": "in",
         "final": false,
-        "period": 0,
-        "clock": "0.0",
-        "remaining_seconds": 0.0,
-        "detail": "10/23 - 4:00 PM EDT",
+        "period": 4,
+        "clock": "20.1",
+        "remaining_seconds": 20.1,
+        "detail": "20.1 - 4th",
         "source": "ESPN",
-        "fetched_at": "2026-10-23T19:45:31.649602+00:00",
+        "fetched_at": "2026-10-23T22:39:38.643662+00:00",
         "sport": "nba"
       },
       {
@@ -2041,7 +2140,7 @@
         "remaining_seconds": 0.0,
         "detail": "10/23 - 7:00 PM EDT",
         "source": "ESPN",
-        "fetched_at": "2026-10-23T19:45:31.649624+00:00",
+        "fetched_at": "2026-10-23T22:39:38.643678+00:00",
         "sport": "nba"
       },
       {
@@ -2062,7 +2161,7 @@
         "remaining_seconds": 0.0,
         "detail": "10/23 - 7:00 PM EDT",
         "source": "ESPN",
-        "fetched_at": "2026-10-23T19:45:31.649632+00:00",
+        "fetched_at": "2026-10-23T22:39:38.643687+00:00",
         "sport": "nba"
       },
       {
@@ -2083,7 +2182,7 @@
         "remaining_seconds": 0.0,
         "detail": "10/23 - 7:00 PM EDT",
         "source": "ESPN",
-        "fetched_at": "2026-10-23T19:45:31.649641+00:00",
+        "fetched_at": "2026-10-23T22:39:38.643693+00:00",
         "sport": "nba"
       },
       {
@@ -2104,7 +2203,7 @@
         "remaining_seconds": 0.0,
         "detail": "10/23 - 7:00 PM EDT",
         "source": "ESPN",
-        "fetched_at": "2026-10-23T19:45:31.649653+00:00",
+        "fetched_at": "2026-10-23T22:39:38.643704+00:00",
         "sport": "nba"
       },
       {
@@ -2125,7 +2224,7 @@
         "remaining_seconds": 0.0,
         "detail": "10/23 - 7:00 PM EDT",
         "source": "ESPN",
-        "fetched_at": "2026-10-23T19:45:31.649659+00:00",
+        "fetched_at": "2026-10-23T22:39:38.643714+00:00",
         "sport": "nba"
       },
       {
@@ -2146,7 +2245,7 @@
         "remaining_seconds": 0.0,
         "detail": "10/23 - 8:00 PM EDT",
         "source": "ESPN",
-        "fetched_at": "2026-10-23T19:45:31.649665+00:00",
+        "fetched_at": "2026-10-23T22:39:38.643719+00:00",
         "sport": "nba"
       },
       {
@@ -2167,7 +2266,7 @@
         "remaining_seconds": 0.0,
         "detail": "10/23 - 9:30 PM EDT",
         "source": "ESPN",
-        "fetched_at": "2026-10-23T19:45:31.649670+00:00",
+        "fetched_at": "2026-10-23T22:39:38.643724+00:00",
         "sport": "nba"
       },
       {
@@ -2188,7 +2287,7 @@
         "remaining_seconds": 0.0,
         "detail": "10/23 - 9:30 PM EDT",
         "source": "ESPN",
-        "fetched_at": "2026-10-23T19:45:31.649674+00:00",
+        "fetched_at": "2026-10-23T22:39:38.643731+00:00",
         "sport": "nba"
       },
       {
@@ -2209,7 +2308,7 @@
         "remaining_seconds": 0.0,
         "detail": "10/23 - 10:00 PM EDT",
         "source": "ESPN",
-        "fetched_at": "2026-10-23T19:45:31.649686+00:00",
+        "fetched_at": "2026-10-23T22:39:38.643735+00:00",
         "sport": "nba"
       },
       {
@@ -2230,7 +2329,7 @@
         "remaining_seconds": 0.0,
         "detail": "10/23 - 10:00 PM EDT",
         "source": "ESPN",
-        "fetched_at": "2026-10-23T19:45:31.649690+00:00",
+        "fetched_at": "2026-10-23T22:39:38.643740+00:00",
         "sport": "nba"
       },
       {
@@ -2251,7 +2350,7 @@
         "remaining_seconds": 0.0,
         "detail": "10/23 - 10:00 PM EDT",
         "source": "ESPN",
-        "fetched_at": "2026-10-23T19:45:31.649694+00:00",
+        "fetched_at": "2026-10-23T22:39:38.643743+00:00",
         "sport": "nba"
       },
       {
@@ -2272,7 +2371,7 @@
         "remaining_seconds": 0.0,
         "detail": "Final",
         "source": "ESPN",
-        "fetched_at": "2026-10-23T19:45:31.768288+00:00",
+        "fetched_at": "2026-10-23T22:39:38.771026+00:00",
         "sport": "nfl"
       }
     ],
@@ -2291,22 +2390,30 @@
         "checked_at": "2026-10-23T10:34:14.770000+00:00",
         "final_seen_at": "2026-10-23T05:51:30.665959+00:00",
         "complete": true
+      },
+      "2026-10-23": {
+        "checked_at": "2026-10-23T22:39:38.644012+00:00",
+        "final_seen_at": null,
+        "complete": false
       }
     },
-    "last_completed": "2026-10-23T19:45:31.945408+00:00",
+    "last_completed": "2026-10-23T22:39:39.467329+00:00",
     "checks": [
       {
         "sport": "nba",
         "day": "2026-10-23",
-        "status": "idle",
-        "checked_at": "2026-10-23T19:45:31.649931+00:00",
-        "matched": 0
+        "status": "checked",
+        "checked_at": "2026-10-23T22:39:38.643983+00:00",
+        "projections": 257,
+        "stats": 22,
+        "matched": 20,
+        "data_updated_at": "2026-10-23T22:39:30.814000+00:00"
       },
       {
         "sport": "nfl",
         "day": "2026-10-23",
         "status": "checked",
-        "checked_at": "2026-10-23T19:45:31.925926+00:00",
+        "checked_at": "2026-10-23T22:39:38.894735+00:00",
         "matched": 151,
         "week": 7
       }
