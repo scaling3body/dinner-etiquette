@@ -8,21 +8,21 @@
   },
   "sleeper_nba": {
     "consecutive_failures": 0,
-    "last_success": "2026-10-25T01:05:13.302095+00:00",
+    "last_success": "2026-10-25T05:58:45.616654+00:00",
     "last_failure": "2026-10-22T04:30:50.880637+00:00",
     "notified": false,
     "circuit_open_until": null
   },
   "telegram": {
     "consecutive_failures": 0,
-    "last_success": "2026-10-25T01:05:14.212027+00:00",
+    "last_success": "2026-10-25T05:58:46.966942+00:00",
     "last_failure": null,
     "notified": false,
     "circuit_open_until": null
   },
   "scoreboard": {
     "consecutive_failures": 0,
-    "last_success": "2026-10-25T01:05:13.302056+00:00",
+    "last_success": "2026-10-25T05:58:45.616616+00:00",
     "last_failure": null,
     "notified": false,
     "circuit_open_until": null
