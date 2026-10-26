@@ -1295,6 +1295,11 @@
       "count": 1,
       "baseline": 15.1,
       "score_version": 2
+    },
+    "SEA": {
+      "count": 1,
+      "baseline": 12.0,
+      "score_version": 2
     }
   },
   "nba-2026-10-20": {
@@ -1613,8 +1618,33 @@
   },
   "nba-2026-10-25": {
     "1970": {
+      "count": 2,
+      "baseline": 12.64,
+      "score_version": 2
+    },
+    "1691": {
       "count": 1,
-      "baseline": 6.14,
+      "baseline": 11.08,
+      "score_version": 2
+    },
+    "4742": {
+      "count": 1,
+      "baseline": 9.38,
+      "score_version": 2
+    },
+    "1801": {
+      "count": 1,
+      "baseline": 7.44,
+      "score_version": 2
+    },
+    "2465": {
+      "count": 1,
+      "baseline": 8.68,
+      "score_version": 2
+    },
+    "2723": {
+      "count": 1,
+      "baseline": 7.31,
       "score_version": 2
     }
   }
