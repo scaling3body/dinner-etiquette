@@ -19717,7 +19717,7 @@
     "nfl:11563": [
       {
         "date": "2026-10-25",
-        "score": 135.60371517027866,
+        "score": 135.08771929824562,
         "qualifies": true,
         "minutes": null
       }
@@ -23477,6 +23477,14 @@
     "nfl:8397": [
       {
         "date": "2026-10-26",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      }
+    ],
+    "nfl:11693": [
+      {
+        "date": "2026-10-25",
         "score": null,
         "qualifies": false,
         "minutes": null
