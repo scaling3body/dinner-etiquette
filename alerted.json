@@ -1795,6 +1795,16 @@
       "count": 1,
       "baseline": 7.48,
       "score_version": 2
+    },
+    "1970": {
+      "count": 1,
+      "baseline": 7.28,
+      "score_version": 2
+    },
+    "1950": {
+      "count": 1,
+      "baseline": 6.25,
+      "score_version": 2
     }
   }
 }
