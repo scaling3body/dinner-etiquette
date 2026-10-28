@@ -1765,5 +1765,36 @@
       "score_version": 2
     }
   },
-  "nba-2026-10-27": {}
+  "nba-2026-10-27": {
+    "1932": {
+      "count": 1,
+      "baseline": 8.34,
+      "score_version": 2
+    },
+    "2494": {
+      "count": 1,
+      "baseline": 7.95,
+      "score_version": 2
+    },
+    "2577": {
+      "count": 1,
+      "baseline": 7.1,
+      "score_version": 2
+    },
+    "2608": {
+      "count": 1,
+      "baseline": 6.36,
+      "score_version": 2
+    },
+    "1988": {
+      "count": 1,
+      "baseline": 6.68,
+      "score_version": 2
+    },
+    "2050": {
+      "count": 1,
+      "baseline": 7.48,
+      "score_version": 2
+    }
+  }
 }
