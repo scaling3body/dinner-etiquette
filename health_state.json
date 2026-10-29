@@ -22,14 +22,14 @@
   },
   "scoreboard": {
     "consecutive_failures": 0,
-    "last_success": "2026-10-29T06:10:51.172970+00:00",
+    "last_success": "2026-10-29T20:50:51.542123+00:00",
     "last_failure": null,
     "notified": false,
     "circuit_open_until": null
   },
   "sleeper_nba_catchup": {
     "consecutive_failures": 0,
-    "last_success": "2026-10-28T20:45:07.260018+00:00",
+    "last_success": "2026-10-29T20:50:50.997360+00:00",
     "last_failure": null,
     "notified": false,
     "circuit_open_until": null
