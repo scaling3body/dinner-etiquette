@@ -1,86 +1,26 @@
 {
-  "last_started": "2026-10-30T20:22:33.609171+00:00",
+  "last_started": "2026-10-30T23:54:54.693155+00:00",
   "sports": {
     "nba": {
       "sport": "nba",
       "day": "2026-10-30",
-      "status": "idle",
-      "checked_at": "2026-10-30T20:22:35.908266+00:00",
-      "matched": 0
+      "status": "checked",
+      "checked_at": "2026-10-30T23:54:56.801617+00:00",
+      "projections": 204,
+      "stats": 83,
+      "matched": 73,
+      "data_updated_at": "2026-10-30T23:54:52.035000+00:00"
     },
     "nfl": {
       "sport": "nfl",
       "day": "2026-10-30",
       "status": "checked",
-      "checked_at": "2026-10-30T20:22:36.036570+00:00",
+      "checked_at": "2026-10-30T23:54:56.891459+00:00",
       "matched": 153,
       "week": 8
     }
   },
   "games": [
-    {
-      "id": "401909893",
-      "date": "2026-10-29",
-      "teams": [
-        "ATL",
-        "CLE"
-      ],
-      "week": null,
-      "season": 2027,
-      "season_type": "regular",
-      "matchup": "ATL vs CLE",
-      "state": "post",
-      "final": true,
-      "period": 4,
-      "clock": "12:00",
-      "remaining_seconds": 720.0,
-      "detail": "Final",
-      "source": "ESPN",
-      "fetched_at": "2026-10-30T20:22:35.385813+00:00",
-      "sport": "nba"
-    },
-    {
-      "id": "401909894",
-      "date": "2026-10-29",
-      "teams": [
-        "NOP",
-        "SAC"
-      ],
-      "week": null,
-      "season": 2027,
-      "season_type": "regular",
-      "matchup": "NOP vs SAC",
-      "state": "post",
-      "final": true,
-      "period": 4,
-      "clock": "12:00",
-      "remaining_seconds": 720.0,
-      "detail": "Final",
-      "source": "ESPN",
-      "fetched_at": "2026-10-30T20:22:35.385834+00:00",
-      "sport": "nba"
-    },
-    {
-      "id": "401909895",
-      "date": "2026-10-29",
-      "teams": [
-        "POR",
-        "MEM"
-      ],
-      "week": null,
-      "season": 2027,
-      "season_type": "regular",
-      "matchup": "POR vs MEM",
-      "state": "post",
-      "final": true,
-      "period": 4,
-      "clock": "12:00",
-      "remaining_seconds": 720.0,
-      "detail": "Final",
-      "source": "ESPN",
-      "fetched_at": "2026-10-30T20:22:35.385842+00:00",
-      "sport": "nba"
-    },
     {
       "id": "401909277",
       "date": "2026-10-30",
@@ -92,14 +32,14 @@
       "season": 2027,
       "season_type": "regular",
       "matchup": "WAS vs CHA",
-      "state": "pre",
+      "state": "in",
       "final": false,
-      "period": 0,
-      "clock": "0.0",
-      "remaining_seconds": 0.0,
-      "detail": "10/30 - 7:00 PM EDT",
+      "period": 2,
+      "clock": "6:32",
+      "remaining_seconds": 392.0,
+      "detail": "6:32 - 2nd",
       "source": "ESPN",
-      "fetched_at": "2026-10-30T20:22:35.908035+00:00",
+      "fetched_at": "2026-10-30T23:54:56.801377+00:00",
       "sport": "nba"
     },
     {
@@ -113,14 +53,14 @@
       "season": 2027,
       "season_type": "regular",
       "matchup": "BOS vs CHI",
-      "state": "pre",
+      "state": "in",
       "final": false,
-      "period": 0,
-      "clock": "0.0",
-      "remaining_seconds": 0.0,
-      "detail": "10/30 - 7:30 PM EDT",
+      "period": 1,
+      "clock": "5:52",
+      "remaining_seconds": 352.0,
+      "detail": "5:52 - 1st",
       "source": "ESPN",
-      "fetched_at": "2026-10-30T20:22:35.908056+00:00",
+      "fetched_at": "2026-10-30T23:54:56.801393+00:00",
       "sport": "nba"
     },
     {
@@ -134,14 +74,14 @@
       "season": 2027,
       "season_type": "regular",
       "matchup": "BKN vs DET",
-      "state": "pre",
+      "state": "in",
       "final": false,
-      "period": 0,
-      "clock": "0.0",
-      "remaining_seconds": 0.0,
-      "detail": "10/30 - 7:30 PM EDT",
+      "period": 1,
+      "clock": "5:31",
+      "remaining_seconds": 331.0,
+      "detail": "5:31 - 1st",
       "source": "ESPN",
-      "fetched_at": "2026-10-30T20:22:35.908064+00:00",
+      "fetched_at": "2026-10-30T23:54:56.801401+00:00",
       "sport": "nba"
     },
     {
@@ -155,14 +95,14 @@
       "season": 2027,
       "season_type": "regular",
       "matchup": "PHI vs NYK",
-      "state": "pre",
+      "state": "in",
       "final": false,
-      "period": 0,
-      "clock": "0.0",
-      "remaining_seconds": 0.0,
-      "detail": "10/30 - 7:30 PM EDT",
+      "period": 1,
+      "clock": "5:15",
+      "remaining_seconds": 315.0,
+      "detail": "5:15 - 1st",
       "source": "ESPN",
-      "fetched_at": "2026-10-30T20:22:35.908069+00:00",
+      "fetched_at": "2026-10-30T23:54:56.801407+00:00",
       "sport": "nba"
     },
     {
@@ -176,14 +116,14 @@
       "season": 2027,
       "season_type": "regular",
       "matchup": "TOR vs ORL",
-      "state": "pre",
+      "state": "in",
       "final": false,
-      "period": 0,
-      "clock": "0.0",
-      "remaining_seconds": 0.0,
-      "detail": "10/30 - 7:30 PM EDT",
+      "period": 1,
+      "clock": "5:59",
+      "remaining_seconds": 359.0,
+      "detail": "5:59 - 1st",
       "source": "ESPN",
-      "fetched_at": "2026-10-30T20:22:35.908073+00:00",
+      "fetched_at": "2026-10-30T23:54:56.801418+00:00",
       "sport": "nba"
     },
     {
@@ -204,7 +144,7 @@
       "remaining_seconds": 0.0,
       "detail": "10/30 - 8:00 PM EDT",
       "source": "ESPN",
-      "fetched_at": "2026-10-30T20:22:35.908078+00:00",
+      "fetched_at": "2026-10-30T23:54:56.801425+00:00",
       "sport": "nba"
     },
     {
@@ -225,7 +165,7 @@
       "remaining_seconds": 0.0,
       "detail": "10/30 - 8:00 PM EDT",
       "source": "ESPN",
-      "fetched_at": "2026-10-30T20:22:35.908084+00:00",
+      "fetched_at": "2026-10-30T23:54:56.801434+00:00",
       "sport": "nba"
     },
     {
@@ -246,7 +186,7 @@
       "remaining_seconds": 0.0,
       "detail": "10/30 - 8:00 PM EDT",
       "source": "ESPN",
-      "fetched_at": "2026-10-30T20:22:35.908088+00:00",
+      "fetched_at": "2026-10-30T23:54:56.801439+00:00",
       "sport": "nba"
     },
     {
@@ -267,7 +207,7 @@
       "remaining_seconds": 0.0,
       "detail": "10/30 - 10:00 PM EDT",
       "source": "ESPN",
-      "fetched_at": "2026-10-30T20:22:35.908092+00:00",
+      "fetched_at": "2026-10-30T23:54:56.801443+00:00",
       "sport": "nba"
     },
     {
@@ -288,7 +228,7 @@
       "remaining_seconds": 0.0,
       "detail": "10/30 - 10:00 PM EDT",
       "source": "ESPN",
-      "fetched_at": "2026-10-30T20:22:35.908096+00:00",
+      "fetched_at": "2026-10-30T23:54:56.801447+00:00",
       "sport": "nba"
     },
     {
@@ -309,7 +249,7 @@
       "remaining_seconds": 0.0,
       "detail": "Final",
       "source": "ESPN",
-      "fetched_at": "2026-10-30T20:22:35.969864+00:00",
+      "fetched_at": "2026-10-30T23:54:56.846671+00:00",
       "sport": "nfl"
     }
   ],
@@ -363,32 +303,30 @@
       "checked_at": "2026-10-30T20:22:35.386025+00:00",
       "final_seen_at": "2026-10-30T06:13:21.795116+00:00",
       "complete": true
+    },
+    "2026-10-30": {
+      "checked_at": "2026-10-30T23:54:56.801654+00:00",
+      "final_seen_at": null,
+      "complete": false
     }
   },
-  "last_completed": "2026-10-30T20:22:36.097018+00:00",
+  "last_completed": "2026-10-30T23:54:56.950667+00:00",
   "checks": [
     {
       "sport": "nba",
-      "day": "2026-10-29",
-      "status": "checked",
-      "checked_at": "2026-10-30T20:22:35.385963+00:00",
-      "projections": 63,
-      "stats": 72,
-      "matched": 58,
-      "data_updated_at": "2026-10-30T06:20:09.855000+00:00"
-    },
-    {
-      "sport": "nba",
       "day": "2026-10-30",
-      "status": "idle",
-      "checked_at": "2026-10-30T20:22:35.908266+00:00",
-      "matched": 0
+      "status": "checked",
+      "checked_at": "2026-10-30T23:54:56.801617+00:00",
+      "projections": 204,
+      "stats": 83,
+      "matched": 73,
+      "data_updated_at": "2026-10-30T23:54:52.035000+00:00"
     },
     {
       "sport": "nfl",
       "day": "2026-10-30",
       "status": "checked",
-      "checked_at": "2026-10-30T20:22:36.036570+00:00",
+      "checked_at": "2026-10-30T23:54:56.891459+00:00",
       "matched": 153,
       "week": 8
     }
