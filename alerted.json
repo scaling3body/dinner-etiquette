@@ -1899,6 +1899,53 @@
       "score_version": 2
     }
   },
-  "nba-2026-10-29": {},
-  "nfl-2026-8": {}
+  "nba-2026-10-29": {
+    "2152": {
+      "count": 1,
+      "baseline": 8.11,
+      "score_version": 2
+    },
+    "4750": {
+      "count": 1,
+      "baseline": 14.74,
+      "score_version": 2
+    },
+    "4891": {
+      "count": 1,
+      "baseline": 7.05,
+      "score_version": 2
+    },
+    "4873": {
+      "count": 1,
+      "baseline": 8.18,
+      "score_version": 2
+    },
+    "2136": {
+      "count": 1,
+      "baseline": 8.34,
+      "score_version": 2
+    },
+    "2752": {
+      "count": 1,
+      "baseline": 6.99,
+      "score_version": 2
+    }
+  },
+  "nfl-2026-8": {
+    "6804": {
+      "count": 1,
+      "baseline": 22.52,
+      "score_version": 2
+    },
+    "7594": {
+      "count": 1,
+      "baseline": 17.9,
+      "score_version": 2
+    },
+    "12501": {
+      "count": 1,
+      "baseline": 13.9,
+      "score_version": 2
+    }
+  }
 }

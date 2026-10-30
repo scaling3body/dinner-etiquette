@@ -2004,6 +2004,12 @@
         "score": -3.75,
         "qualifies": false,
         "minutes": 31.15
+      },
+      {
+        "date": "2026-10-29",
+        "score": 8.34,
+        "qualifies": true,
+        "minutes": 32.63
       }
     ],
     "nba:2141": [
@@ -2070,6 +2076,12 @@
         "score": 0.09,
         "qualifies": false,
         "minutes": 18.53
+      },
+      {
+        "date": "2026-10-29",
+        "score": -2.5,
+        "qualifies": false,
+        "minutes": 32.18
       }
     ],
     "nba:2301": [
@@ -2244,6 +2256,12 @@
         "score": 2.29,
         "qualifies": false,
         "minutes": 27.52
+      },
+      {
+        "date": "2026-10-29",
+        "score": -3.43,
+        "qualifies": false,
+        "minutes": 32.42
       }
     ],
     "nba:2482": [
@@ -2420,6 +2438,12 @@
         "score": -1.82,
         "qualifies": false,
         "minutes": 30.27
+      },
+      {
+        "date": "2026-10-29",
+        "score": -4.07,
+        "qualifies": false,
+        "minutes": 25.02
       }
     ],
     "nba:2768": [
@@ -2504,6 +2528,12 @@
         "score": -5.04,
         "qualifies": false,
         "minutes": 24.9
+      },
+      {
+        "date": "2026-10-29",
+        "score": -6.67,
+        "qualifies": false,
+        "minutes": 22.23
       }
     ],
     "nba:4755": [
@@ -2614,6 +2644,12 @@
         "score": -0.68,
         "qualifies": false,
         "minutes": 4.65
+      },
+      {
+        "date": "2026-10-29",
+        "score": -0.5,
+        "qualifies": false,
+        "minutes": 3.88
       }
     ],
     "nba:4778": [
@@ -2706,6 +2742,12 @@
         "score": -1.31,
         "qualifies": false,
         "minutes": 30.52
+      },
+      {
+        "date": "2026-10-29",
+        "score": 8.18,
+        "qualifies": true,
+        "minutes": 28.15
       }
     ],
     "nba:4882": [
@@ -2752,6 +2794,12 @@
         "score": -1.05,
         "qualifies": false,
         "minutes": 10.73
+      },
+      {
+        "date": "2026-10-29",
+        "score": 0.22,
+        "qualifies": false,
+        "minutes": 12.35
       }
     ],
     "nba:1085": [
@@ -2902,6 +2950,12 @@
         "score": -4.26,
         "qualifies": false,
         "minutes": 31.47
+      },
+      {
+        "date": "2026-10-29",
+        "score": -11.34,
+        "qualifies": false,
+        "minutes": 30.2
       }
     ],
     "nba:1525": [
@@ -3026,6 +3080,12 @@
         "score": -0.9,
         "qualifies": false,
         "minutes": 37.3
+      },
+      {
+        "date": "2026-10-29",
+        "score": -4.52,
+        "qualifies": false,
+        "minutes": 40.3
       }
     ],
     "nba:1799": [
@@ -3264,6 +3324,12 @@
         "score": 1.5,
         "qualifies": false,
         "minutes": 33.35
+      },
+      {
+        "date": "2026-10-29",
+        "score": 1.61,
+        "qualifies": false,
+        "minutes": 32.08
       }
     ],
     "nba:2233": [
@@ -3724,6 +3790,12 @@
         "score": 3.22,
         "qualifies": false,
         "minutes": 31.48
+      },
+      {
+        "date": "2026-10-29",
+        "score": 4.82,
+        "qualifies": false,
+        "minutes": 26.83
       }
     ],
     "nba:4765": [
@@ -3846,6 +3918,12 @@
         "score": 9.92,
         "qualifies": true,
         "minutes": 28.13
+      },
+      {
+        "date": "2026-10-29",
+        "score": -3.03,
+        "qualifies": false,
+        "minutes": 16.33
       }
     ],
     "nba:4880": [
@@ -3994,6 +4072,12 @@
         "score": -5.17,
         "qualifies": false,
         "minutes": 19.63
+      },
+      {
+        "date": "2026-10-29",
+        "score": -4.64,
+        "qualifies": false,
+        "minutes": 31.38
       }
     ],
     "nba:1526": [
@@ -4020,6 +4104,12 @@
         "score": -1.99,
         "qualifies": false,
         "minutes": 30.93
+      },
+      {
+        "date": "2026-10-29",
+        "score": 0.82,
+        "qualifies": false,
+        "minutes": 38.82
       }
     ],
     "nba:1541": [
@@ -4292,6 +4382,12 @@
         "score": 2.21,
         "qualifies": false,
         "minutes": 30.68
+      },
+      {
+        "date": "2026-10-29",
+        "score": -1.54,
+        "qualifies": false,
+        "minutes": 23.23
       }
     ],
     "nba:2131": [
@@ -4318,6 +4414,12 @@
         "score": -0.34,
         "qualifies": false,
         "minutes": 25.93
+      },
+      {
+        "date": "2026-10-29",
+        "score": -3.39,
+        "qualifies": false,
+        "minutes": 24.02
       }
     ],
     "nba:2143": [
@@ -4460,6 +4562,12 @@
         "score": -4.03,
         "qualifies": false,
         "minutes": 16.83
+      },
+      {
+        "date": "2026-10-29",
+        "score": 1.26,
+        "qualifies": false,
+        "minutes": 15.37
       }
     ],
     "nba:2341": [
@@ -4506,6 +4614,12 @@
         "score": -1.24,
         "qualifies": false,
         "minutes": 12.7
+      },
+      {
+        "date": "2026-10-29",
+        "score": -4.83,
+        "qualifies": false,
+        "minutes": 13.7
       }
     ],
     "nba:2514": [
@@ -4584,6 +4698,12 @@
         "score": 2.24,
         "qualifies": false,
         "minutes": 24.28
+      },
+      {
+        "date": "2026-10-29",
+        "score": 3.95,
+        "qualifies": false,
+        "minutes": 25.73
       }
     ],
     "nba:2620": [
@@ -4604,6 +4724,12 @@
         "score": -8.77,
         "qualifies": false,
         "minutes": 16.67
+      },
+      {
+        "date": "2026-10-29",
+        "score": -5.62,
+        "qualifies": false,
+        "minutes": 18.53
       }
     ],
     "nba:2723": [
@@ -4650,6 +4776,12 @@
         "score": -2.44,
         "qualifies": false,
         "minutes": 26.15
+      },
+      {
+        "date": "2026-10-29",
+        "score": 2.71,
+        "qualifies": false,
+        "minutes": 29.23
       }
     ],
     "nba:2764": [
@@ -4926,6 +5058,12 @@
         "score": 2.46,
         "qualifies": false,
         "minutes": 29.5
+      },
+      {
+        "date": "2026-10-29",
+        "score": -2.01,
+        "qualifies": false,
+        "minutes": 24.27
       }
     ],
     "nba:1433": [
@@ -5206,6 +5344,12 @@
         "score": 3.6,
         "qualifies": false,
         "minutes": 31.65
+      },
+      {
+        "date": "2026-10-29",
+        "score": 4.87,
+        "qualifies": false,
+        "minutes": 30.7
       }
     ],
     "nba:2152": [
@@ -5232,6 +5376,12 @@
         "score": -9.49,
         "qualifies": false,
         "minutes": 13.5
+      },
+      {
+        "date": "2026-10-29",
+        "score": 8.11,
+        "qualifies": true,
+        "minutes": 40.6
       }
     ],
     "nba:2284": [
@@ -5264,6 +5414,12 @@
         "score": -2.44,
         "qualifies": false,
         "minutes": 36.13
+      },
+      {
+        "date": "2026-10-29",
+        "score": -5.86,
+        "qualifies": false,
+        "minutes": 34.08
       }
     ],
     "nba:2289": [
@@ -5354,6 +5510,12 @@
         "score": -3.01,
         "qualifies": false,
         "minutes": 23.93
+      },
+      {
+        "date": "2026-10-29",
+        "score": 5.53,
+        "qualifies": false,
+        "minutes": 23.92
       }
     ],
     "nba:2304": [
@@ -5576,6 +5738,12 @@
         "score": -3.36,
         "qualifies": false,
         "minutes": 20.18
+      },
+      {
+        "date": "2026-10-29",
+        "score": -2.39,
+        "qualifies": false,
+        "minutes": 19.05
       }
     ],
     "nba:2711": [
@@ -6114,6 +6282,12 @@
         "score": 7.48,
         "qualifies": true,
         "minutes": 32.7
+      },
+      {
+        "date": "2026-10-29",
+        "score": 1.34,
+        "qualifies": false,
+        "minutes": 37.45
       }
     ],
     "nba:2055": [
@@ -6146,6 +6320,12 @@
         "score": -0.13,
         "qualifies": false,
         "minutes": 32.25
+      },
+      {
+        "date": "2026-10-29",
+        "score": 2.21,
+        "qualifies": false,
+        "minutes": 31.43
       }
     ],
     "nba:2086": [
@@ -6288,6 +6468,12 @@
         "score": -0.7,
         "qualifies": false,
         "minutes": 6.75
+      },
+      {
+        "date": "2026-10-29",
+        "score": -0.07,
+        "qualifies": false,
+        "minutes": 7.82
       }
     ],
     "nba:2255": [
@@ -6424,6 +6610,12 @@
         "score": -2.05,
         "qualifies": false,
         "minutes": 13.98
+      },
+      {
+        "date": "2026-10-29",
+        "score": -2.33,
+        "qualifies": false,
+        "minutes": 18.65
       }
     ],
     "nba:2463": [
@@ -6638,6 +6830,12 @@
         "score": -1.21,
         "qualifies": false,
         "minutes": 15.55
+      },
+      {
+        "date": "2026-10-29",
+        "score": 3.75,
+        "qualifies": false,
+        "minutes": 20.52
       }
     ],
     "nba:2747": [
@@ -6664,6 +6862,12 @@
         "score": 1.2,
         "qualifies": false,
         "minutes": 12.05
+      },
+      {
+        "date": "2026-10-29",
+        "score": 0.82,
+        "qualifies": false,
+        "minutes": 7.32
       }
     ],
     "nba:2752": [
@@ -6690,6 +6894,12 @@
         "score": 3.72,
         "qualifies": false,
         "minutes": 18.08
+      },
+      {
+        "date": "2026-10-29",
+        "score": 6.99,
+        "qualifies": true,
+        "minutes": 22.78
       }
     ],
     "nba:4747": [
@@ -6730,6 +6940,12 @@
         "score": -0.1,
         "qualifies": false,
         "minutes": 12.0
+      },
+      {
+        "date": "2026-10-29",
+        "score": 3.19,
+        "qualifies": false,
+        "minutes": 4.53
       }
     ],
     "nba:4868": [
@@ -6814,6 +7030,12 @@
         "score": -2.62,
         "qualifies": false,
         "minutes": 33.42
+      },
+      {
+        "date": "2026-10-29",
+        "score": 7.05,
+        "qualifies": true,
+        "minutes": 40.52
       }
     ],
     "nba:4921": [
@@ -6840,6 +7062,12 @@
         "score": -2.7,
         "qualifies": false,
         "minutes": 19.9
+      },
+      {
+        "date": "2026-10-29",
+        "score": -3.58,
+        "qualifies": false,
+        "minutes": 18.2
       }
     ],
     "nba:1082": [
@@ -6950,6 +7178,12 @@
         "score": 0.65,
         "qualifies": false,
         "minutes": 23.5
+      },
+      {
+        "date": "2026-10-29",
+        "score": -6.37,
+        "qualifies": false,
+        "minutes": 26.77
       }
     ],
     "nba:1595": [
@@ -7150,6 +7384,12 @@
         "score": -4.93,
         "qualifies": false,
         "minutes": 29.9
+      },
+      {
+        "date": "2026-10-29",
+        "score": -7.46,
+        "qualifies": false,
+        "minutes": 24.18
       }
     ],
     "nba:2095": [
@@ -7182,6 +7422,12 @@
         "score": 0.71,
         "qualifies": false,
         "minutes": 24.38
+      },
+      {
+        "date": "2026-10-29",
+        "score": -3.3,
+        "qualifies": false,
+        "minutes": 22.38
       }
     ],
     "nba:2119": [
@@ -7240,6 +7486,12 @@
         "score": -5.4,
         "qualifies": false,
         "minutes": 30.45
+      },
+      {
+        "date": "2026-10-29",
+        "score": -2.31,
+        "qualifies": false,
+        "minutes": 31.7
       }
     ],
     "nba:2308": [
@@ -7404,6 +7656,12 @@
         "score": -3.53,
         "qualifies": false,
         "minutes": 20.58
+      },
+      {
+        "date": "2026-10-29",
+        "score": -0.63,
+        "qualifies": false,
+        "minutes": 18.5
       }
     ],
     "nba:2725": [
@@ -7502,6 +7760,12 @@
         "score": -3.11,
         "qualifies": false,
         "minutes": 23.55
+      },
+      {
+        "date": "2026-10-29",
+        "score": 14.74,
+        "qualifies": true,
+        "minutes": 29.35
       }
     ],
     "nba:4760": [
@@ -7606,6 +7870,12 @@
         "score": -3.87,
         "qualifies": false,
         "minutes": 33.7
+      },
+      {
+        "date": "2026-10-29",
+        "score": -3.29,
+        "qualifies": false,
+        "minutes": 36.42
       }
     ],
     "nba:1585": [
@@ -7692,6 +7962,12 @@
         "score": -2.26,
         "qualifies": false,
         "minutes": 20.7
+      },
+      {
+        "date": "2026-10-29",
+        "score": -4.82,
+        "qualifies": false,
+        "minutes": 18.0
       }
     ],
     "nba:1845": [
@@ -7718,6 +7994,12 @@
         "score": -3.56,
         "qualifies": false,
         "minutes": 31.28
+      },
+      {
+        "date": "2026-10-29",
+        "score": -3.97,
+        "qualifies": false,
+        "minutes": 33.03
       }
     ],
     "nba:2259": [
@@ -7744,6 +8026,12 @@
         "score": 0.3,
         "qualifies": false,
         "minutes": 31.82
+      },
+      {
+        "date": "2026-10-29",
+        "score": -4.15,
+        "qualifies": false,
+        "minutes": 32.68
       }
     ],
     "nba:2454": [
@@ -7770,6 +8058,12 @@
         "score": -1.2,
         "qualifies": false,
         "minutes": 28.17
+      },
+      {
+        "date": "2026-10-29",
+        "score": -6.77,
+        "qualifies": false,
+        "minutes": 22.37
       }
     ],
     "nba:1321": [
@@ -7822,6 +8116,12 @@
         "score": 4.01,
         "qualifies": false,
         "minutes": 30.45
+      },
+      {
+        "date": "2026-10-29",
+        "score": 0.46,
+        "qualifies": false,
+        "minutes": 30.0
       }
     ],
     "nba:2640": [
@@ -7888,6 +8188,12 @@
         "score": -0.87,
         "qualifies": false,
         "minutes": 17.05
+      },
+      {
+        "date": "2026-10-29",
+        "score": 4.69,
+        "qualifies": false,
+        "minutes": 16.75
       }
     ],
     "nba:1747": [
@@ -7966,6 +8272,12 @@
         "score": -2.11,
         "qualifies": false,
         "minutes": 20.37
+      },
+      {
+        "date": "2026-10-29",
+        "score": 2.36,
+        "qualifies": false,
+        "minutes": 26.8
       }
     ],
     "nba:4934": [
@@ -9322,6 +9634,12 @@
         "score": -3.63,
         "qualifies": false,
         "minutes": 15.37
+      },
+      {
+        "date": "2026-10-29",
+        "score": 3.76,
+        "qualifies": false,
+        "minutes": 16.03
       }
     ],
     "nba:4739": [
@@ -9428,6 +9746,12 @@
         "score": -0.47,
         "qualifies": false,
         "minutes": 13.18
+      },
+      {
+        "date": "2026-10-29",
+        "score": -5.36,
+        "qualifies": false,
+        "minutes": 7.87
       }
     ],
     "nba:1892": [
@@ -9660,6 +9984,12 @@
         "score": 3.73,
         "qualifies": false,
         "minutes": 11.0
+      },
+      {
+        "date": "2026-10-29",
+        "score": 3.37,
+        "qualifies": false,
+        "minutes": 19.55
       }
     ],
     "nba:1328": [
@@ -9794,6 +10124,12 @@
         "score": -1.51,
         "qualifies": false,
         "minutes": 17.7
+      },
+      {
+        "date": "2026-10-29",
+        "score": 3.97,
+        "qualifies": false,
+        "minutes": 27.52
       }
     ],
     "nfl:10926": [
@@ -11106,6 +11442,12 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:9504": [
@@ -11346,6 +11688,12 @@
         "score": 0.0,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": 164.17910447761196,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:12571": [
@@ -11439,6 +11787,12 @@
     "nfl:7120": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -11538,11 +11892,23 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:8389": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -11567,6 +11933,12 @@
     "nfl:12937": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -11599,6 +11971,12 @@
     "nfl:8511": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -11767,6 +12145,12 @@
     "nfl:4104": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -11970,6 +12354,12 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:13400": [
@@ -11983,6 +12373,12 @@
     "nfl:8462": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -12018,6 +12414,12 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:7816": [
@@ -12048,6 +12450,12 @@
       {
         "date": "2026-10-25",
         "score": 11.961722488038278,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": 116.27906976744187,
         "qualifies": false,
         "minutes": null
       }
@@ -12122,6 +12530,12 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:7118": [
@@ -12135,6 +12549,12 @@
     "nfl:13977": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -12191,6 +12611,12 @@
     "nfl:11806": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -12280,6 +12706,12 @@
       {
         "date": "2026-10-25",
         "score": 215.0537634408602,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": 58.333333333333336,
         "qualifies": false,
         "minutes": null
       }
@@ -12402,6 +12834,12 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:13516": [
@@ -12415,6 +12853,12 @@
     "nfl:12611": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -12487,6 +12931,12 @@
     "nfl:13706": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -12578,6 +13028,12 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:4122": [
@@ -12647,6 +13103,12 @@
     "nfl:13586": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -12783,6 +13245,12 @@
     "nfl:7674": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -13242,6 +13710,12 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:13792": [
@@ -13264,6 +13738,12 @@
       {
         "date": "2026-10-25",
         "score": 39.935414424111954,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": 63.32218506131548,
         "qualifies": false,
         "minutes": null
       }
@@ -13295,6 +13775,12 @@
     "nfl:11441": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -13458,6 +13944,12 @@
         "score": 31.496062992125985,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": 76.30522088353413,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:7695": [
@@ -13527,6 +14019,12 @@
     "nfl:5944": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -14042,6 +14540,12 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:11663": [
@@ -14202,11 +14706,23 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:13362": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -14367,6 +14883,12 @@
     "nfl:13485": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -14554,6 +15076,12 @@
         "score": 397.9591836734694,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": 229.16666666666669,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:ATL": [
@@ -14584,6 +15112,12 @@
       {
         "date": "2026-10-25",
         "score": -57.971014492753625,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": 83.16008316008316,
         "qualifies": false,
         "minutes": null
       }
@@ -14634,6 +15168,12 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:10919": [
@@ -14655,6 +15195,12 @@
     "nfl:8451": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -14687,6 +15233,12 @@
     "nfl:6315": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -14767,6 +15319,12 @@
     "nfl:13090": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -14919,6 +15477,12 @@
     "nfl:7659": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -15346,6 +15910,12 @@
         "score": 0.0,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": 0.0,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:13448": [
@@ -15482,6 +16052,12 @@
         "score": 99.20634920634922,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": 4.9261083743842375,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:13156": [
@@ -15575,6 +16151,12 @@
     "nfl:6862": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -15687,6 +16269,12 @@
     "nfl:12610": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -15882,6 +16470,12 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": 0.0,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:12872": [
@@ -16010,6 +16604,12 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:7231": [
@@ -16058,6 +16658,12 @@
         "score": 42.82655246252677,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": 60.103626943005175,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:11775": [
@@ -16087,6 +16693,12 @@
     "nfl:1516": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -16394,6 +17006,12 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:12391": [
@@ -16482,11 +17100,23 @@
         "score": -208.33333333333334,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": 0.0,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:13179": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -16559,6 +17189,12 @@
     "nfl:11771": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -16690,6 +17326,12 @@
         "score": 8.720930232558139,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": 74.2913000977517,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:13316": [
@@ -16703,6 +17345,12 @@
     "nfl:13980": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -16826,6 +17474,12 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:7133": [
@@ -16879,6 +17533,12 @@
     "nfl:6784": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -17039,6 +17699,12 @@
     "nfl:11626": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -17218,6 +17884,12 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:4963": [
@@ -17255,6 +17927,12 @@
     "nfl:12957": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -17383,6 +18061,12 @@
     "nfl:6301": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -17722,6 +18406,12 @@
         "score": 43.63636363636363,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": 133.0,
+        "qualifies": true,
+        "minutes": null
       }
     ],
     "nfl:13507": [
@@ -17735,6 +18425,12 @@
     "nfl:11954": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -17815,6 +18511,12 @@
     "nfl:7559": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -17922,6 +18624,12 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:6947": [
@@ -17991,6 +18699,12 @@
     "nfl:12856": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -18087,6 +18801,12 @@
     "nfl:13522": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -18191,6 +18911,12 @@
     "nfl:12682": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -18386,6 +19112,12 @@
         "score": 225.87268993839837,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": 23.109243697478995,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:13601": [
@@ -18479,6 +19211,12 @@
     "nfl:7697": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -18698,6 +19436,12 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:13051": [
@@ -18914,6 +19658,12 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:11013": [
@@ -18970,6 +19720,12 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:11723": [
@@ -18999,6 +19755,12 @@
     "nfl:12562": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -19246,6 +20008,12 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:10941": [
@@ -19284,6 +20052,12 @@
       {
         "date": "2026-10-25",
         "score": 0.0,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": 34.48275862068966,
         "qualifies": false,
         "minutes": null
       }
@@ -19374,6 +20148,12 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:11714": [
@@ -19395,6 +20175,12 @@
     "nfl:11370": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -19422,11 +20208,23 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:12669": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -19574,6 +20372,12 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:12111": [
@@ -19613,6 +20417,12 @@
         "date": "2026-10-25",
         "score": 91.07505070993915,
         "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": 131.5,
+        "qualifies": true,
         "minutes": null
       }
     ],
@@ -19659,6 +20469,12 @@
     "nfl:11035": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -19774,6 +20590,12 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:11589": [
@@ -19830,6 +20652,12 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:13665": [
@@ -19862,11 +20690,23 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:11660": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -19942,6 +20782,12 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:11803": [
@@ -19963,6 +20809,12 @@
     "nfl:13771": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -19990,11 +20842,23 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:827": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -20086,11 +20950,23 @@
         "score": 43.24734446130501,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": 78.74682472480949,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:13907": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -20150,6 +21026,12 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:12735": [
@@ -20174,6 +21056,12 @@
         "score": 148.96551724137933,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": 172.782874617737,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:7681": [
@@ -20187,6 +21075,12 @@
     "nfl:7197": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -20243,6 +21137,12 @@
     "nfl:13074": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -20308,6 +21208,12 @@
       {
         "date": "2026-10-25",
         "score": 351.7241379310345,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": 70.33639143730886,
         "qualifies": false,
         "minutes": null
       }
@@ -20382,6 +21288,12 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:8472": [
@@ -20430,6 +21342,12 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:5991": [
@@ -20443,6 +21361,12 @@
     "nfl:12729": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -20462,11 +21386,23 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:2333": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -20582,6 +21518,12 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:11799": [
@@ -20595,6 +21537,12 @@
     "nfl:11648": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -20646,6 +21594,12 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:4066": [
@@ -20678,6 +21632,12 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:11686": [
@@ -20686,11 +21646,23 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:13829": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -20763,6 +21735,12 @@
     "nfl:12816": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -20862,6 +21840,12 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:11627": [
@@ -20931,6 +21915,12 @@
     "nfl:12548": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -21022,11 +22012,23 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:13013": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -21043,6 +22045,12 @@
     "nfl:7640": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -21078,12 +22086,24 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:GB": [
       {
         "date": "2026-10-25",
         "score": 144.23076923076923,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": 196.078431372549,
         "qualifies": false,
         "minutes": null
       }
@@ -21134,6 +22154,12 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:13721": [
@@ -21142,11 +22168,23 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:8463": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -21180,6 +22218,12 @@
       {
         "date": "2026-10-25",
         "score": 66.59267480577137,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": 33.898305084745765,
         "qualifies": false,
         "minutes": null
       }
@@ -21246,6 +22290,12 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:11257": [
@@ -21259,6 +22309,12 @@
     "nfl:11042": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -21302,6 +22358,12 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:11023": [
@@ -21334,6 +22396,12 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:12635": [
@@ -21348,6 +22416,12 @@
       {
         "date": "2026-10-25",
         "score": 82.93838862559242,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": 28.933092224231466,
         "qualifies": false,
         "minutes": null
       }
@@ -21427,6 +22501,12 @@
     "nfl:11776": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -21798,6 +22878,12 @@
         "score": 0.0,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": 0.0,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:11729": [
@@ -21830,6 +22916,12 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:11788": [
@@ -21852,6 +22944,12 @@
       {
         "date": "2026-10-25",
         "score": 36.36363636363637,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": 0.0,
         "qualifies": false,
         "minutes": null
       }
@@ -21894,6 +22992,12 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:3207": [
@@ -21926,11 +23030,23 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:11787": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -22038,6 +23154,12 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:4144": [
@@ -22094,6 +23216,12 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:13122": [
@@ -22107,6 +23235,12 @@
     "nfl:8168": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -22163,6 +23297,12 @@
     "nfl:12704": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -22262,6 +23402,12 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:12628": [
@@ -22291,6 +23437,12 @@
     "nfl:6796": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -22331,6 +23483,12 @@
     "nfl:11009": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -22446,6 +23604,12 @@
         "score": 0.0,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": 2666.666666666667,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:1433": [
@@ -22477,6 +23641,12 @@
         "date": "2026-10-25",
         "score": 150.6986027944112,
         "qualifies": true,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": 126.65684830633283,
+        "qualifies": false,
         "minutes": null
       }
     ],
@@ -22550,6 +23720,12 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:13547": [
@@ -22611,6 +23787,12 @@
     "nfl:12931": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -22678,6 +23860,12 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:12230": [
@@ -22699,6 +23887,12 @@
     "nfl:10885": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -22731,6 +23925,12 @@
     "nfl:6788": [
       {
         "date": "2026-10-25",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
         "score": null,
         "qualifies": false,
         "minutes": null
@@ -22773,6 +23973,12 @@
         "date": "2026-10-25",
         "score": 36.79245283018868,
         "qualifies": false,
+        "minutes": null
+      },
+      {
+        "date": "2026-10-29",
+        "score": 149.3,
+        "qualifies": true,
         "minutes": null
       }
     ],
@@ -25436,6 +26642,86 @@
         "score": 1.1,
         "qualifies": false,
         "minutes": 7.27
+      }
+    ],
+    "nba:2358": [
+      {
+        "date": "2026-10-29",
+        "score": -3.52,
+        "qualifies": false,
+        "minutes": 8.63
+      }
+    ],
+    "nba:2464": [
+      {
+        "date": "2026-10-29",
+        "score": 0.68,
+        "qualifies": false,
+        "minutes": 6.35
+      }
+    ],
+    "nfl:13521": [
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      }
+    ],
+    "nfl:13528": [
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      }
+    ],
+    "nfl:7790": [
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      }
+    ],
+    "nfl:12801": [
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      }
+    ],
+    "nfl:12922": [
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      }
+    ],
+    "nfl:1074": [
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      }
+    ],
+    "nfl:7671": [
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      }
+    ],
+    "nfl:13974": [
+      {
+        "date": "2026-10-29",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ]
   }
