@@ -4107,7 +4107,7 @@
       },
       {
         "date": "2026-10-29",
-        "score": 0.82,
+        "score": 2.49,
         "qualifies": false,
         "minutes": 38.82
       }
@@ -4417,7 +4417,7 @@
       },
       {
         "date": "2026-10-29",
-        "score": -3.39,
+        "score": -2.67,
         "qualifies": false,
         "minutes": 24.02
       }
@@ -7033,8 +7033,8 @@
       },
       {
         "date": "2026-10-29",
-        "score": 7.05,
-        "qualifies": true,
+        "score": 5.38,
+        "qualifies": false,
         "minutes": 40.52
       }
     ],
@@ -7065,7 +7065,7 @@
       },
       {
         "date": "2026-10-29",
-        "score": -3.58,
+        "score": -3.24,
         "qualifies": false,
         "minutes": 18.2
       }
@@ -18409,7 +18409,7 @@
       },
       {
         "date": "2026-10-29",
-        "score": 133.0,
+        "score": 132.9866270430906,
         "qualifies": true,
         "minutes": null
       }
@@ -20421,7 +20421,7 @@
       },
       {
         "date": "2026-10-29",
-        "score": 131.5,
+        "score": 131.54205607476635,
         "qualifies": true,
         "minutes": null
       }
@@ -23977,7 +23977,7 @@
       },
       {
         "date": "2026-10-29",
-        "score": 149.3,
+        "score": 149.3018259935553,
         "qualifies": true,
         "minutes": null
       }
