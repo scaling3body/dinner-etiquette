@@ -2003,6 +2003,36 @@
       "count": 1,
       "baseline": 6.74,
       "score_version": 2
+    },
+    "1970": {
+      "count": 1,
+      "baseline": 6.32,
+      "score_version": 2
+    },
+    "1972": {
+      "count": 1,
+      "baseline": 6.09,
+      "score_version": 2
+    },
+    "2422": {
+      "count": 1,
+      "baseline": 11.74,
+      "score_version": 2
+    },
+    "2457": {
+      "count": 1,
+      "baseline": 11.32,
+      "score_version": 2
+    },
+    "1085": {
+      "count": 1,
+      "baseline": 9.12,
+      "score_version": 2
+    },
+    "1913": {
+      "count": 1,
+      "baseline": 8.51,
+      "score_version": 2
     }
   }
 }
