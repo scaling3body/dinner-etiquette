@@ -1946,6 +1946,81 @@
       "count": 1,
       "baseline": 13.9,
       "score_version": 2
+    },
+    "11584": {
+      "count": 1,
+      "baseline": 21.3,
+      "score_version": 2
+    },
+    "PIT": {
+      "count": 1,
+      "baseline": 15.0,
+      "score_version": 2
+    },
+    "6650": {
+      "count": 1,
+      "baseline": 12.0,
+      "score_version": 2
+    },
+    "DAL": {
+      "count": 1,
+      "baseline": 15.0,
+      "score_version": 2
+    },
+    "11576": {
+      "count": 1,
+      "baseline": 20.2,
+      "score_version": 2
+    },
+    "TB": {
+      "count": 1,
+      "baseline": 16.0,
+      "score_version": 2
+    },
+    "5119": {
+      "count": 1,
+      "baseline": 12.0,
+      "score_version": 2
+    },
+    "5967": {
+      "count": 1,
+      "baseline": 15.7,
+      "score_version": 2
+    },
+    "JAX": {
+      "count": 1,
+      "baseline": 23.0,
+      "score_version": 2
+    },
+    "BUF": {
+      "count": 1,
+      "baseline": 12.0,
+      "score_version": 2
+    },
+    "8228": {
+      "count": 1,
+      "baseline": 17.9,
+      "score_version": 2
+    },
+    "11625": {
+      "count": 1,
+      "baseline": 13.8,
+      "score_version": 2
+    },
+    "7042": {
+      "count": 1,
+      "baseline": 14.0,
+      "score_version": 2
+    },
+    "11604": {
+      "count": 1,
+      "baseline": 19.8,
+      "score_version": 2
+    },
+    "MIN": {
+      "count": 1,
+      "baseline": 13.0,
+      "score_version": 2
     }
   },
   "nba-2026-10-30": {
