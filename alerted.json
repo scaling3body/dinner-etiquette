@@ -2106,6 +2106,26 @@
       "count": 1,
       "baseline": 13.4,
       "score_version": 2
+    },
+    "4046": {
+      "count": 1,
+      "baseline": 25.44,
+      "score_version": 2
+    },
+    "9501": {
+      "count": 1,
+      "baseline": 13.6,
+      "score_version": 2
+    },
+    "11563": {
+      "count": 1,
+      "baseline": 19.28,
+      "score_version": 2
+    },
+    "13345": {
+      "count": 1,
+      "baseline": 16.4,
+      "score_version": 2
     }
   },
   "nba-2026-10-30": {
