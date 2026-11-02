@@ -2126,6 +2126,21 @@
       "count": 1,
       "baseline": 16.4,
       "score_version": 2
+    },
+    "8136": {
+      "count": 1,
+      "baseline": 12.0,
+      "score_version": 2
+    },
+    "WAS": {
+      "count": 1,
+      "baseline": 13.0,
+      "score_version": 2
+    },
+    "13968": {
+      "count": 1,
+      "baseline": 16.0,
+      "score_version": 2
     }
   },
   "nba-2026-10-30": {
@@ -2271,6 +2286,26 @@
     "2711": {
       "count": 1,
       "baseline": 6.22,
+      "score_version": 2
+    },
+    "1691": {
+      "count": 1,
+      "baseline": 8.47,
+      "score_version": 2
+    },
+    "1970": {
+      "count": 1,
+      "baseline": 18.09,
+      "score_version": 2
+    },
+    "4864": {
+      "count": 1,
+      "baseline": 9.52,
+      "score_version": 2
+    },
+    "2441": {
+      "count": 1,
+      "baseline": 6.56,
       "score_version": 2
     }
   }
