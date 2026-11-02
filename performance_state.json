@@ -29204,6 +29204,12 @@
         "score": null,
         "qualifies": false,
         "minutes": null
+      },
+      {
+        "date": "2026-11-01",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
       }
     ],
     "nfl:8143": [
@@ -39865,7 +39871,7 @@
     "nfl:8136": [
       {
         "date": "2026-11-01",
-        "score": 139.9,
+        "score": 139.86013986013987,
         "qualifies": true,
         "minutes": null
       }
@@ -40001,7 +40007,7 @@
     "nfl:WAS": [
       {
         "date": "2026-11-01",
-        "score": 169.1,
+        "score": 169.05071521456435,
         "qualifies": true,
         "minutes": null
       }
@@ -40033,7 +40039,7 @@
     "nfl:13968": [
       {
         "date": "2026-11-01",
-        "score": 182.9,
+        "score": 182.85714285714286,
         "qualifies": true,
         "minutes": null
       }
@@ -40447,6 +40453,14 @@
       }
     ],
     "nfl:5423": [
+      {
+        "date": "2026-11-01",
+        "score": null,
+        "qualifies": false,
+        "minutes": null
+      }
+    ],
+    "nfl:5981": [
       {
         "date": "2026-11-01",
         "score": null,
