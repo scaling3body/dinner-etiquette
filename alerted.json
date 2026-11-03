@@ -2143,8 +2143,8 @@
       "score_version": 2
     },
     "6790": {
-      "count": 1,
-      "baseline": 17.9,
+      "count": 2,
+      "baseline": 25.9,
       "score_version": 2
     }
   },
@@ -2393,6 +2393,36 @@
     "4882": {
       "count": 1,
       "baseline": 7.19,
+      "score_version": 2
+    },
+    "1265": {
+      "count": 1,
+      "baseline": 9.28,
+      "score_version": 2
+    },
+    "1747": {
+      "count": 1,
+      "baseline": 6.39,
+      "score_version": 2
+    },
+    "1913": {
+      "count": 1,
+      "baseline": 8.25,
+      "score_version": 2
+    },
+    "4787": {
+      "count": 1,
+      "baseline": 7.37,
+      "score_version": 2
+    },
+    "2728": {
+      "count": 1,
+      "baseline": 7.07,
+      "score_version": 2
+    },
+    "1970": {
+      "count": 1,
+      "baseline": 11.77,
       "score_version": 2
     }
   }
