@@ -2478,5 +2478,38 @@
       "score_version": 2
     }
   },
-  "nfl-2026-9": {}
+  "nfl-2026-9": {
+    "5995": {
+      "count": 1,
+      "baseline": 15.2,
+      "score_version": 2
+    },
+    "11786": {
+      "count": 1,
+      "baseline": 17.0,
+      "score_version": 2
+    }
+  },
+  "nba-2026-11-05": {
+    "1883": {
+      "count": 1,
+      "baseline": 6.04,
+      "score_version": 2
+    },
+    "1648": {
+      "count": 1,
+      "baseline": 6.17,
+      "score_version": 2
+    },
+    "1913": {
+      "count": 1,
+      "baseline": 7.23,
+      "score_version": 2
+    },
+    "4915": {
+      "count": 1,
+      "baseline": 7.94,
+      "score_version": 2
+    }
+  }
 }
