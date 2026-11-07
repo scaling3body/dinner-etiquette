@@ -2582,6 +2582,11 @@
       "count": 1,
       "baseline": 6.26,
       "score_version": 2
+    },
+    "1718": {
+      "count": 1,
+      "baseline": 6.4,
+      "score_version": 2
     }
   }
 }

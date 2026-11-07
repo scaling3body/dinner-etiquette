@@ -33742,6 +33742,119 @@
       "message_ids": [
         498
       ]
+    },
+    "7a5ce8119864dc0960b0ea93": {
+      "send": true,
+      "text": "⏱ Delayed alert · game date 2026-11-06\n🏀 BREAKOUT: Jakob Poeltl (TOR) went 19.0pt/11.0reb/2.0ast, 3.0stl/1.0blk [Final] (combined z-score 6.4 vs. projections).\nActual/projected: PTS 19/9.89 · REB 11/8.15 · AST 2/1.97 · STL 3/0.81 · BLK 1/0.62 · 3PM 0/0.12 · TO 2/1.22\nMinutes: 30.67/26 projected\nFG: 64.3% (9/14) vs 61.2% projected\nFT: 100.0% (1/1) vs 65.9% projected\nDrivers: STL (+3.6), PTS (+1.6), REB (+1.1)",
+      "addable": false,
+      "player_id": null,
+      "player_name": "Jakob Poeltl",
+      "sport": "nba",
+      "alert_key": "nba-2026-11-06",
+      "sleeper_player_id": "1718",
+      "kind": "breakout",
+      "count": 1,
+      "baseline": 6.4,
+      "event_id": "nba-2026-11-06|1718|breakout|1",
+      "history": {
+        "sport": "nba",
+        "player_name": "Jakob Poeltl",
+        "player_id": "1718",
+        "message": "⏱ Delayed alert · game date 2026-11-06\n🏀 BREAKOUT: Jakob Poeltl (TOR) went 19.0pt/11.0reb/2.0ast, 3.0stl/1.0blk [Final] (combined z-score 6.4 vs. projections).\nActual/projected: PTS 19/9.89 · REB 11/8.15 · AST 2/1.97 · STL 3/0.81 · BLK 1/0.62 · 3PM 0/0.12 · TO 2/1.22\nMinutes: 30.67/26 projected\nFG: 64.3% (9/14) vs 61.2% projected\nFT: 100.0% (1/1) vs 65.9% projected\nDrivers: STL (+3.6), PTS (+1.6), REB (+1.1)",
+        "kind": "breakout",
+        "level": 1,
+        "game_date": "2026-11-06",
+        "game_id": "1393301029021310976",
+        "game_label": "MIL vs TOR",
+        "game_status": "Final",
+        "score": 6.4,
+        "actual_stats": {
+          "q2_sp": 287.0,
+          "reb": 11.0,
+          "plus_minus": 6.0,
+          "min": 30.67,
+          "q4_pts": 11.0,
+          "blk_stl": 4.0,
+          "fga": 14.0,
+          "h1_reb": 3.0,
+          "oreb": 6.0,
+          "h2_reb": 8.0,
+          "fgmi": 5.0,
+          "pts": 19.0,
+          "q1_reb": 2.0,
+          "h2_pts": 17.0,
+          "q3_reb": 1.0,
+          "dreb": 5.0,
+          "q3_ast": 1.0,
+          "fgm": 9.0,
+          "pts_std": 29.5,
+          "pts_reb": 30.0,
+          "dd": 1.0,
+          "stl": 3.0,
+          "q1_sp": 443.0,
+          "reb_ast": 13.0,
+          "fta": 1.0,
+          "to": 2.0,
+          "q4_ast": 1.0,
+          "ast": 2.0,
+          "q3_sp": 459.0,
+          "blk": 1.0,
+          "h2_sp": 1110.0,
+          "pf": 3.0,
+          "h1_sp": 730.0,
+          "q1_pts": 2.0,
+          "q4_sp": 651.0,
+          "h2_ast": 2.0,
+          "sp": 1840.0,
+          "q4_reb": 7.0,
+          "h1_pts": 2.0,
+          "q2_reb": 1.0,
+          "q3_pts": 6.0,
+          "pts_reb_ast": 32.0,
+          "pts_std_dfs": 45.2,
+          "pts_ast": 21.0,
+          "ftm": 1.0,
+          "fg3m": 0.0,
+          "fgp": 0.6428571428571429,
+          "ftp": 1.0
+        },
+        "projected_stats": {
+          "ast": 1.97,
+          "blk": 0.62,
+          "dd": 0.06,
+          "dreb": 5.85,
+          "fga": 6.62,
+          "fgm": 4.05,
+          "fgmi": 2.57,
+          "fta": 2.55,
+          "ftm": 1.68,
+          "ftmi": 0.87,
+          "gp": 1.0,
+          "pts": 9.89,
+          "reb": 8.15,
+          "sp": 1560.0,
+          "stl": 0.81,
+          "to": 1.22,
+          "tpa": 0.34,
+          "tpm": 0.12,
+          "tpmi": 0.23,
+          "min": 26.0,
+          "fg3m": 0.12,
+          "fgp": 0.6117824773413897,
+          "ftp": 0.6588235294117647
+        },
+        "projection_pct": null,
+        "delayed": true,
+        "availability": null
+      },
+      "created_at": "2026-11-07T19:51:50.316298+00:00",
+      "message_refs": [
+        "155fe4a292784a81"
+      ],
+      "delivered_at": "2026-11-07T19:51:50.852591+00:00",
+      "message_ids": [
+        500
+      ]
     }
   },
   "messages": {
@@ -34453,6 +34566,15 @@
       "attempts": 1,
       "message_id": 498,
       "sent_at": "2026-11-07T06:48:35.221402+00:00"
+    },
+    "155fe4a292784a81": {
+      "items": [
+        "7a5ce8119864dc0960b0ea93"
+      ],
+      "text": "⏱ Delayed alert · game date 2026-11-06\n🏀 BREAKOUT: Jakob Poeltl (TOR) went 19.0pt/11.0reb/2.0ast, 3.0stl/1.0blk [Final] (combined z-score 6.4 vs. projections).\nActual/projected: PTS 19/9.89 · REB 11/8.15 · AST 2/1.97 · STL 3/0.81 · BLK 1/0.62 · 3PM 0/0.12 · TO 2/1.22\nMinutes: 30.67/26 projected\nFG: 64.3% (9/14) vs 61.2% projected\nFT: 100.0% (1/1) vs 65.9% projected\nDrivers: STL (+3.6), PTS (+1.6), REB (+1.1)",
+      "attempts": 1,
+      "message_id": 500,
+      "sent_at": "2026-11-07T19:51:50.852591+00:00"
     }
   }
 }

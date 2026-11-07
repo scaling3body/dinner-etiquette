@@ -7195,8 +7195,8 @@
       },
       {
         "date": "2026-11-06",
-        "score": 5.83,
-        "qualifies": false,
+        "score": 6.4,
+        "qualifies": true,
         "minutes": 30.67
       }
     ],
@@ -8995,7 +8995,7 @@
       },
       {
         "date": "2026-11-06",
-        "score": -5.1,
+        "score": -5.67,
         "qualifies": false,
         "minutes": 36.83
       }
