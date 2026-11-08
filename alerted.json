@@ -2604,6 +2604,41 @@
       "count": 1,
       "baseline": 7.9,
       "score_version": 2
+    },
+    "1085": {
+      "count": 1,
+      "baseline": 6.48,
+      "score_version": 2
+    },
+    "2715": {
+      "count": 1,
+      "baseline": 6.47,
+      "score_version": 2
+    },
+    "4763": {
+      "count": 1,
+      "baseline": 6.84,
+      "score_version": 2
+    },
+    "2299": {
+      "count": 1,
+      "baseline": 6.07,
+      "score_version": 2
+    },
+    "4888": {
+      "count": 1,
+      "baseline": 6.78,
+      "score_version": 2
+    },
+    "2358": {
+      "count": 1,
+      "baseline": 7.03,
+      "score_version": 2
+    },
+    "2590": {
+      "count": 1,
+      "baseline": 8.45,
+      "score_version": 2
     }
   }
 }
