@@ -1,7 +1,7 @@
 {
   "sleeper_nfl": {
     "consecutive_failures": 0,
-    "last_success": "2026-11-10T13:47:49.879925+00:00",
+    "last_success": "2026-11-10T21:38:09.677673+00:00",
     "last_failure": "2026-10-22T04:33:58.422499+00:00",
     "notified": false,
     "circuit_open_until": null
@@ -22,7 +22,7 @@
   },
   "scoreboard": {
     "consecutive_failures": 0,
-    "last_success": "2026-11-10T13:47:49.673550+00:00",
+    "last_success": "2026-11-10T21:38:08.247389+00:00",
     "last_failure": null,
     "notified": false,
     "circuit_open_until": null
