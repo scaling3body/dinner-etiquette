@@ -3141,15 +3141,56 @@
       "score_version": 2
     },
     "2267": {
-      "count": 1,
-      "baseline": 6.96,
+      "count": 2,
+      "baseline": 15.55,
       "score_version": 2
     },
     "2733": {
       "count": 1,
       "baseline": 7.46,
       "score_version": 2
+    },
+    "2303": {
+      "count": 1,
+      "baseline": 14.8,
+      "score_version": 2
+    },
+    "2737": {
+      "count": 1,
+      "baseline": 14.17,
+      "score_version": 2
+    },
+    "1648": {
+      "count": 1,
+      "baseline": 8.82,
+      "score_version": 2
+    },
+    "2061": {
+      "count": 1,
+      "baseline": 7.11,
+      "score_version": 2
+    },
+    "1945": {
+      "count": 1,
+      "baseline": 6.48,
+      "score_version": 2
     }
   },
-  "nfl-2026-10": {}
+  "nfl-2026-10": {
+    "8131": {
+      "count": 1,
+      "baseline": 18.7,
+      "score_version": 2
+    },
+    "2449": {
+      "count": 1,
+      "baseline": 14.3,
+      "score_version": 2
+    },
+    "12481": {
+      "count": 1,
+      "baseline": 24.2,
+      "score_version": 2
+    }
+  }
 }
