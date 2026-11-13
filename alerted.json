@@ -3123,5 +3123,33 @@
       "baseline": 7.67,
       "score_version": 2
     }
-  }
+  },
+  "nba-2026-11-12": {
+    "2566": {
+      "count": 1,
+      "baseline": 7.2,
+      "score_version": 2
+    },
+    "4737": {
+      "count": 1,
+      "baseline": 9.09,
+      "score_version": 2
+    },
+    "1141": {
+      "count": 1,
+      "baseline": 8.8,
+      "score_version": 2
+    },
+    "2267": {
+      "count": 1,
+      "baseline": 6.96,
+      "score_version": 2
+    },
+    "2733": {
+      "count": 1,
+      "baseline": 7.46,
+      "score_version": 2
+    }
+  },
+  "nfl-2026-10": {}
 }

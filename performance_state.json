@@ -782,12 +782,6 @@
     ],
     "nba:1141": [
       {
-        "date": "2026-10-20",
-        "score": 3.53,
-        "qualifies": false,
-        "minutes": 26.1
-      },
-      {
         "date": "2026-10-22",
         "score": -1.19,
         "qualifies": false,
@@ -852,6 +846,12 @@
         "score": -1.06,
         "qualifies": false,
         "minutes": 15.93
+      },
+      {
+        "date": "2026-11-12",
+        "score": 8.8,
+        "qualifies": true,
+        "minutes": 27.28
       }
     ],
     "nba:1934": [
@@ -2014,6 +2014,12 @@
         "score": -3.85,
         "qualifies": false,
         "minutes": 25.82
+      },
+      {
+        "date": "2026-11-12",
+        "score": -4.81,
+        "qualifies": false,
+        "minutes": 35.52
       }
     ],
     "nba:1830": [
@@ -2160,12 +2166,6 @@
     ],
     "nba:2126": [
       {
-        "date": "2026-10-20",
-        "score": 7.42,
-        "qualifies": true,
-        "minutes": 39.57
-      },
-      {
         "date": "2026-10-22",
         "score": -0.21,
         "qualifies": false,
@@ -2230,6 +2230,12 @@
         "score": -2.88,
         "qualifies": false,
         "minutes": 33.85
+      },
+      {
+        "date": "2026-11-12",
+        "score": 1.7,
+        "qualifies": false,
+        "minutes": 35.3
       }
     ],
     "nba:2128": [
@@ -2752,6 +2758,12 @@
         "score": -6.1,
         "qualifies": false,
         "minutes": 30.85
+      },
+      {
+        "date": "2026-11-12",
+        "score": -2.72,
+        "qualifies": false,
+        "minutes": 28.33
       }
     ],
     "nba:1809": [
@@ -3028,6 +3040,12 @@
         "score": -4.67,
         "qualifies": false,
         "minutes": 14.72
+      },
+      {
+        "date": "2026-11-12",
+        "score": -1.61,
+        "qualifies": false,
+        "minutes": 15.73
       }
     ],
     "nba:2608": [
@@ -3306,6 +3324,12 @@
         "score": -2.07,
         "qualifies": false,
         "minutes": 32.28
+      },
+      {
+        "date": "2026-11-12",
+        "score": 9.09,
+        "qualifies": true,
+        "minutes": 36.42
       }
     ],
     "nba:4888": [
@@ -3434,12 +3458,6 @@
     ],
     "nba:1983": [
       {
-        "date": "2026-10-20",
-        "score": 1.48,
-        "qualifies": false,
-        "minutes": 25.27
-      },
-      {
         "date": "2026-10-22",
         "score": -6.88,
         "qualifies": false,
@@ -3504,6 +3522,12 @@
         "score": 3.29,
         "qualifies": false,
         "minutes": 17.93
+      },
+      {
+        "date": "2026-11-12",
+        "score": 5.97,
+        "qualifies": false,
+        "minutes": 23.32
       }
     ],
     "nba:2142": [
@@ -5374,6 +5398,12 @@
         "score": -6.5,
         "qualifies": false,
         "minutes": 20.48
+      },
+      {
+        "date": "2026-11-12",
+        "score": 4.14,
+        "qualifies": false,
+        "minutes": 31.9
       }
     ],
     "nba:4758": [
@@ -6406,6 +6436,12 @@
         "score": 3.25,
         "qualifies": false,
         "minutes": 11.32
+      },
+      {
+        "date": "2026-11-12",
+        "score": -2.76,
+        "qualifies": false,
+        "minutes": 4.68
       }
     ],
     "nba:1691": [
@@ -8384,6 +8420,12 @@
         "score": 4.88,
         "qualifies": false,
         "minutes": 18.32
+      },
+      {
+        "date": "2026-11-12",
+        "score": -4.86,
+        "qualifies": false,
+        "minutes": 12.83
       }
     ],
     "nba:1029": [
@@ -8992,6 +9034,12 @@
         "score": -3.97,
         "qualifies": false,
         "minutes": 32.08
+      },
+      {
+        "date": "2026-11-12",
+        "score": -2.94,
+        "qualifies": false,
+        "minutes": 24.93
       }
     ],
     "nba:1726": [
@@ -10018,6 +10066,12 @@
         "score": 0.19,
         "qualifies": false,
         "minutes": 35.33
+      },
+      {
+        "date": "2026-11-12",
+        "score": -9.3,
+        "qualifies": false,
+        "minutes": 32.12
       }
     ],
     "nba:2728": [
@@ -10154,6 +10208,12 @@
         "score": -3.79,
         "qualifies": false,
         "minutes": 22.43
+      },
+      {
+        "date": "2026-11-12",
+        "score": -3.79,
+        "qualifies": false,
+        "minutes": 21.97
       }
     ],
     "nba:2765": [
@@ -11272,6 +11332,12 @@
         "score": 0.86,
         "qualifies": false,
         "minutes": 31.48
+      },
+      {
+        "date": "2026-11-12",
+        "score": 5.83,
+        "qualifies": false,
+        "minutes": 36.88
       }
     ],
     "nba:2010": [
@@ -13792,6 +13858,12 @@
         "score": -5.9,
         "qualifies": false,
         "minutes": 28.0
+      },
+      {
+        "date": "2026-11-12",
+        "score": 5.59,
+        "qualifies": false,
+        "minutes": 28.05
       }
     ],
     "nba:2185": [
@@ -21508,6 +21580,12 @@
         "score": 0.58,
         "qualifies": false,
         "minutes": 24.65
+      },
+      {
+        "date": "2026-11-12",
+        "score": 3.57,
+        "qualifies": false,
+        "minutes": 25.45
       }
     ],
     "nba:2597": [
@@ -21972,6 +22050,12 @@
         "score": -1.64,
         "qualifies": false,
         "minutes": 0.48
+      },
+      {
+        "date": "2026-11-12",
+        "score": -2.13,
+        "qualifies": false,
+        "minutes": 0.9
       }
     ],
     "nba:4757": [
@@ -22140,6 +22224,12 @@
         "score": 1.16,
         "qualifies": false,
         "minutes": 22.5
+      },
+      {
+        "date": "2026-11-12",
+        "score": -3.41,
+        "qualifies": false,
+        "minutes": 33.88
       }
     ],
     "nba:2490": [
@@ -51166,6 +51256,12 @@
         "score": -1.26,
         "qualifies": false,
         "minutes": 9.58
+      },
+      {
+        "date": "2026-11-12",
+        "score": -1.21,
+        "qualifies": false,
+        "minutes": 1.52
       }
     ],
     "nfl:2064": [
@@ -57382,6 +57478,12 @@
         "score": 6.76,
         "qualifies": true,
         "minutes": 15.92
+      },
+      {
+        "date": "2026-11-12",
+        "score": 3.21,
+        "qualifies": false,
+        "minutes": 18.15
       }
     ],
     "nba:4913": [
