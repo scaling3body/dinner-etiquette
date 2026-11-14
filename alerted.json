@@ -3192,5 +3192,12 @@
       "baseline": 24.2,
       "score_version": 2
     }
+  },
+  "nba-2026-11-13": {
+    "2304": {
+      "count": 1,
+      "baseline": 6.04,
+      "score_version": 2
+    }
   }
 }
