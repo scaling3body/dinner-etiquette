@@ -3269,5 +3269,72 @@
       "baseline": 9.38,
       "score_version": 2
     }
+  },
+  "nba-2026-11-14": {
+    "1380": {
+      "count": 1,
+      "baseline": 9.91,
+      "score_version": 2
+    },
+    "1941": {
+      "count": 1,
+      "baseline": 6.73,
+      "score_version": 2
+    },
+    "4768": {
+      "count": 1,
+      "baseline": 6.96,
+      "score_version": 2
+    },
+    "2571": {
+      "count": 1,
+      "baseline": 6.64,
+      "score_version": 2
+    },
+    "2118": {
+      "count": 1,
+      "baseline": 6.72,
+      "score_version": 2
+    },
+    "2457": {
+      "count": 1,
+      "baseline": 6.44,
+      "score_version": 2
+    },
+    "4748": {
+      "count": 1,
+      "baseline": 10.19,
+      "score_version": 2
+    },
+    "1054": {
+      "count": 1,
+      "baseline": 10.51,
+      "score_version": 2
+    },
+    "1707": {
+      "count": 1,
+      "baseline": 7.01,
+      "score_version": 2
+    },
+    "2028": {
+      "count": 1,
+      "baseline": 7.14,
+      "score_version": 2
+    },
+    "1081": {
+      "count": 1,
+      "baseline": 8.49,
+      "score_version": 2
+    },
+    "2301": {
+      "count": 1,
+      "baseline": 6.39,
+      "score_version": 2
+    },
+    "2587": {
+      "count": 1,
+      "baseline": 6.65,
+      "score_version": 2
+    }
   }
 }
