@@ -3191,6 +3191,81 @@
       "count": 1,
       "baseline": 24.2,
       "score_version": 2
+    },
+    "9487": {
+      "count": 1,
+      "baseline": 21.2,
+      "score_version": 2
+    },
+    "4046": {
+      "count": 1,
+      "baseline": 29.34,
+      "score_version": 2
+    },
+    "7569": {
+      "count": 1,
+      "baseline": 15.4,
+      "score_version": 2
+    },
+    "13424": {
+      "count": 1,
+      "baseline": 12.5,
+      "score_version": 2
+    },
+    "5119": {
+      "count": 1,
+      "baseline": 14.0,
+      "score_version": 2
+    },
+    "4983": {
+      "count": 1,
+      "baseline": 15.4,
+      "score_version": 2
+    },
+    "9221": {
+      "count": 1,
+      "baseline": 37.2,
+      "score_version": 2
+    },
+    "11786": {
+      "count": 1,
+      "baseline": 14.0,
+      "score_version": 2
+    },
+    "7547": {
+      "count": 1,
+      "baseline": 21.8,
+      "score_version": 2
+    },
+    "13337": {
+      "count": 1,
+      "baseline": 25.6,
+      "score_version": 2
+    },
+    "MIA": {
+      "count": 1,
+      "baseline": 12.0,
+      "score_version": 2
+    },
+    "6528": {
+      "count": 1,
+      "baseline": 16.0,
+      "score_version": 2
+    },
+    "13075": {
+      "count": 1,
+      "baseline": 12.1,
+      "score_version": 2
+    },
+    "4017": {
+      "count": 1,
+      "baseline": 22.16,
+      "score_version": 2
+    },
+    "MIN": {
+      "count": 1,
+      "baseline": 18.0,
+      "score_version": 2
     }
   },
   "nba-2026-11-13": {
@@ -3336,5 +3411,6 @@
       "baseline": 6.65,
       "score_version": 2
     }
-  }
+  },
+  "nba-2026-11-15": {}
 }
