@@ -13793,7 +13793,7 @@
       },
       {
         "date": "2026-11-14",
-        "score": -4.94,
+        "score": -4.55,
         "qualifies": false,
         "minutes": 28.18
       }
@@ -14813,7 +14813,7 @@
       },
       {
         "date": "2026-11-14",
-        "score": 0.02,
+        "score": 0.63,
         "qualifies": false,
         "minutes": 33.07
       }
@@ -66035,8 +66035,8 @@
       },
       {
         "date": "2026-11-14",
-        "score": 6.72,
-        "qualifies": true,
+        "score": 5.06,
+        "qualifies": false,
         "minutes": 25.68
       }
     ],
