@@ -3844,5 +3844,34 @@
       "baseline": 9.84,
       "score_version": 2
     }
+  },
+  "nba-2026-11-19": {
+    "2613": {
+      "count": 1,
+      "baseline": 8.96,
+      "score_version": 2
+    },
+    "2620": {
+      "count": 1,
+      "baseline": 11.64,
+      "score_version": 2
+    },
+    "2007": {
+      "count": 1,
+      "baseline": 6.24,
+      "score_version": 2
+    },
+    "2265": {
+      "count": 1,
+      "baseline": 7.44,
+      "score_version": 2
+    }
+  },
+  "nfl-2026-11": {
+    "HOU": {
+      "count": 1,
+      "baseline": 15.0,
+      "score_version": 2
+    }
   }
 }
