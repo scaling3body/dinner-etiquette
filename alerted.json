@@ -3940,5 +3940,17 @@
       "baseline": 7.1,
       "score_version": 2
     }
+  },
+  "nba-2026-11-21": {
+    "4883": {
+      "count": 1,
+      "baseline": 6.41,
+      "score_version": 2
+    },
+    "2086": {
+      "count": 1,
+      "baseline": 18.48,
+      "score_version": 2
+    }
   }
 }
