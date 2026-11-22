@@ -3872,6 +3872,111 @@
       "count": 1,
       "baseline": 15.0,
       "score_version": 2
+    },
+    "6786": {
+      "count": 1,
+      "baseline": 19.2,
+      "score_version": 2
+    },
+    "3294": {
+      "count": 1,
+      "baseline": 35.9,
+      "score_version": 2
+    },
+    "5995": {
+      "count": 1,
+      "baseline": 13.6,
+      "score_version": 2
+    },
+    "4227": {
+      "count": 1,
+      "baseline": 12.0,
+      "score_version": 2
+    },
+    "4195": {
+      "count": 1,
+      "baseline": 18.0,
+      "score_version": 2
+    },
+    "8137": {
+      "count": 1,
+      "baseline": 16.8,
+      "score_version": 2
+    },
+    "12522": {
+      "count": 1,
+      "baseline": 22.22,
+      "score_version": 2
+    },
+    "4981": {
+      "count": 1,
+      "baseline": 12.8,
+      "score_version": 2
+    },
+    "4983": {
+      "count": 1,
+      "baseline": 15.1,
+      "score_version": 2
+    },
+    "1945": {
+      "count": 1,
+      "baseline": 13.0,
+      "score_version": 2
+    },
+    "8148": {
+      "count": 1,
+      "baseline": 15.3,
+      "score_version": 2
+    },
+    "12526": {
+      "count": 1,
+      "baseline": 13.1,
+      "score_version": 2
+    },
+    "7571": {
+      "count": 1,
+      "baseline": 12.7,
+      "score_version": 2
+    },
+    "6528": {
+      "count": 1,
+      "baseline": 13.0,
+      "score_version": 2
+    },
+    "CHI": {
+      "count": 1,
+      "baseline": 16.0,
+      "score_version": 2
+    },
+    "7594": {
+      "count": 1,
+      "baseline": 26.0,
+      "score_version": 2
+    },
+    "7042": {
+      "count": 1,
+      "baseline": 18.0,
+      "score_version": 2
+    },
+    "1466": {
+      "count": 1,
+      "baseline": 19.4,
+      "score_version": 2
+    },
+    "5095": {
+      "count": 1,
+      "baseline": 13.0,
+      "score_version": 2
+    },
+    "13317": {
+      "count": 1,
+      "baseline": 17.6,
+      "score_version": 2
+    },
+    "13200": {
+      "count": 1,
+      "baseline": 12.1,
+      "score_version": 2
     }
   },
   "nba-2026-11-20": {
@@ -3977,5 +4082,6 @@
       "baseline": 15.97,
       "score_version": 2
     }
-  }
+  },
+  "nba-2026-11-22": {}
 }
