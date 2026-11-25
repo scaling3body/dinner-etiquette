@@ -4357,5 +4357,16 @@
       "score_version": 2
     }
   },
-  "nba-2026-11-24": {}
+  "nba-2026-11-24": {
+    "2028": {
+      "count": 1,
+      "baseline": 15.64,
+      "score_version": 2
+    },
+    "1822": {
+      "count": 1,
+      "baseline": 6.47,
+      "score_version": 2
+    }
+  }
 }
