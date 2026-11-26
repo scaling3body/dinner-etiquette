@@ -4369,5 +4369,93 @@
       "score_version": 2
     }
   },
-  "nba-2026-11-25": {}
+  "nba-2026-11-25": {
+    "1803": {
+      "count": 1,
+      "baseline": 6.73,
+      "score_version": 2
+    },
+    "1946": {
+      "count": 1,
+      "baseline": 7.06,
+      "score_version": 2
+    },
+    "2322": {
+      "count": 1,
+      "baseline": 10.76,
+      "score_version": 2
+    },
+    "2181": {
+      "count": 1,
+      "baseline": 10.2,
+      "score_version": 2
+    },
+    "2726": {
+      "count": 1,
+      "baseline": 6.35,
+      "score_version": 2
+    },
+    "1362": {
+      "count": 1,
+      "baseline": 7.97,
+      "score_version": 2
+    },
+    "1972": {
+      "count": 1,
+      "baseline": 9.38,
+      "score_version": 2
+    },
+    "2135": {
+      "count": 1,
+      "baseline": 12.0,
+      "score_version": 2
+    },
+    "2275": {
+      "count": 1,
+      "baseline": 9.61,
+      "score_version": 2
+    },
+    "4868": {
+      "count": 1,
+      "baseline": 6.27,
+      "score_version": 2
+    },
+    "1444": {
+      "count": 1,
+      "baseline": 6.51,
+      "score_version": 2
+    },
+    "1739": {
+      "count": 1,
+      "baseline": 7.15,
+      "score_version": 2
+    },
+    "1801": {
+      "count": 1,
+      "baseline": 8.07,
+      "score_version": 2
+    },
+    "2488": {
+      "count": 1,
+      "baseline": 8.96,
+      "score_version": 2
+    },
+    "2622": {
+      "count": 1,
+      "baseline": 7.92,
+      "score_version": 2
+    }
+  },
+  "nfl-2026-12": {
+    "11586": {
+      "count": 1,
+      "baseline": 26.5,
+      "score_version": 2
+    },
+    "1433": {
+      "count": 1,
+      "baseline": 17.0,
+      "score_version": 2
+    }
+  }
 }
