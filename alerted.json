@@ -4456,6 +4456,36 @@
       "count": 1,
       "baseline": 17.0,
       "score_version": 2
+    },
+    "6790": {
+      "count": 1,
+      "baseline": 22.2,
+      "score_version": 2
+    },
+    "11620": {
+      "count": 1,
+      "baseline": 20.7,
+      "score_version": 2
+    },
+    "7525": {
+      "count": 1,
+      "baseline": 16.0,
+      "score_version": 2
+    },
+    "9221": {
+      "count": 1,
+      "baseline": 43.2,
+      "score_version": 2
+    },
+    "12534": {
+      "count": 1,
+      "baseline": 14.9,
+      "score_version": 2
+    },
+    "7588": {
+      "count": 1,
+      "baseline": 26.9,
+      "score_version": 2
     }
   }
 }
