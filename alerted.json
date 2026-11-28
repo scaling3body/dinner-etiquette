@@ -4502,5 +4502,87 @@
       "baseline": 28.0,
       "score_version": 2
     }
+  },
+  "nba-2026-11-27": {
+    "1257": {
+      "count": 1,
+      "baseline": 6.85,
+      "score_version": 2
+    },
+    "2255": {
+      "count": 1,
+      "baseline": 8.7,
+      "score_version": 2
+    },
+    "2463": {
+      "count": 1,
+      "baseline": 8.43,
+      "score_version": 2
+    },
+    "2157": {
+      "count": 1,
+      "baseline": 10.34,
+      "score_version": 2
+    },
+    "2613": {
+      "count": 1,
+      "baseline": 6.1,
+      "score_version": 2
+    },
+    "2620": {
+      "count": 1,
+      "baseline": 8.99,
+      "score_version": 2
+    },
+    "2752": {
+      "count": 1,
+      "baseline": 8.08,
+      "score_version": 2
+    },
+    "2284": {
+      "count": 1,
+      "baseline": 6.35,
+      "score_version": 2
+    },
+    "2358": {
+      "count": 1,
+      "baseline": 10.27,
+      "score_version": 2
+    },
+    "4780": {
+      "count": 1,
+      "baseline": 6.64,
+      "score_version": 2
+    },
+    "4871": {
+      "count": 1,
+      "baseline": 7.49,
+      "score_version": 2
+    },
+    "2492": {
+      "count": 1,
+      "baseline": 10.88,
+      "score_version": 2
+    },
+    "2583": {
+      "count": 1,
+      "baseline": 6.6,
+      "score_version": 2
+    },
+    "2285": {
+      "count": 1,
+      "baseline": 8.18,
+      "score_version": 2
+    },
+    "2867": {
+      "count": 1,
+      "baseline": 11.26,
+      "score_version": 2
+    },
+    "4760": {
+      "count": 1,
+      "baseline": 15.95,
+      "score_version": 2
+    }
   }
 }
